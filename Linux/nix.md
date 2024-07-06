@@ -8,9 +8,10 @@ sudo nix-os rebuild switch
 
 Adding RetroArch Emulators on NixOS:
 -----------------------------------
+```
 (retroarch.override {  
   cores = with libretro; [  
     bsnes  
   ];  
 })  
-
+```
