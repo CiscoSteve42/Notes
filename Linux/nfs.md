@@ -7,7 +7,7 @@ sudo vim /etc/exports
 
 add desired IP to the server(rw,sync,no_subtree_check)
 
-sudo exportfs -ra
+sudo exportfs -ra  
 sudo systemctl restart nfs-kernel-server
 
 
