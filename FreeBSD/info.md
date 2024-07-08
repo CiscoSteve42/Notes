@@ -1,3 +1,9 @@
 Install packages on FreeBSD:
 ---------------------------
-@@ pdk install navidrome @@
+pkg install navidrome  
+
+service navidrome onestart  
+
+service navidrome onestatus  
+
+
