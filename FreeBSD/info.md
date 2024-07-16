@@ -1,3 +1,8 @@
+It's JUST different enough from Linux
+-------------------------------------
+Updating regularly throughout my BSD journey  
+
+
 Install packages on FreeBSD:
 ---------------------------
 ```
@@ -24,4 +29,10 @@ Restart Network Service:
 -----------------------
 ```
 service netif restart
+```
+
+Usermod -aG Equivalent:
+----------------------
+```
+sudo pw usermod yourmom -G mypants
 ```
