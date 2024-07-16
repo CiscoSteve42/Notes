@@ -9,6 +9,13 @@ Install packages on FreeBSD:
 pkg install navidrome  
 ```
 
+Search for packages:
+-------------------
+```
+pkg search neofetch
+```
+
+
 Start Services on FreeBSD:
 -------------------------
 ```
