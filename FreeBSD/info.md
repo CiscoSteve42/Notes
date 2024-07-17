@@ -71,4 +71,14 @@ freebsd-update fetch
 freebsd-update install
 ```
 
-
+Using Ports:
+-----------
+Update ports
+```
+portsnap fetch && portsnap extract
+```
+Find and install packages
+```
+cd /usr/ports/editors/neovim
+make install clean
+```
