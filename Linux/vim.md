@@ -2,7 +2,7 @@ Vim Cheatsheet
 --------------
 Various things that I pick up to make my Vim/NeoVim experiece more productive (don't judge me, I'm slow.)    
 
-f, F, t, and T:
+f, F, t, and T
 --------------
 fQ would go to Q in the following line:
 ```
@@ -12,7 +12,7 @@ tQ would take you to the quotation mark right before it.
 
 FQ and TQ do the same thing but backwards.
 
-Capital Letters:
+Capital Letters
 ---------------
 So I don't freak out due to skill issues everytime I hit caps lock.
 ```
@@ -28,12 +28,27 @@ U  #repeat last changes on current line
 
 ```
 
+Swap Files
+----------
+* View the swp filename with:
+```
+:swapname
+```
 
+* or check the path below:
+```
+ls ~/.local/state/nvim/swap  (NeoVim)
 
+ls ~/.cache/vim/swap  (Vim)
+```
 
+* and open the one that you one that you want with:
+```
+vim -r /path/to/swpfile.swp
+```
 
-
-
-
-
+* Then write the file under a new filename:
+```
+:w recovered.txt
+```
 
