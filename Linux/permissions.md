@@ -66,10 +66,10 @@ Chmod beyond +x:
 ---------------
 Based on what we just learned about permissions, we can use chmod to:
 
-+: add permissions 
--: remove permissions
-=: give permissions
-X: people already with permissions keep them
++: add permissions   
+-: remove permissions  
+=: give permissions  
+X: people already with permissions keep them  
 
 to any or all of the following groups:
 
