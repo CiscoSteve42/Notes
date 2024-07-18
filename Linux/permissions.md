@@ -30,13 +30,19 @@ USAGE:
 these are written out like this:  
 ```drwxrw-r--```
 
-which looks like gibberish at first but lets break it down, logically section it off as so: 
+which looks like gibberish at first but lets break it down and logically section it off as so: 
 
-```-|---|---|---```  
-d is the directory   
-  rwx: the OWNER of the folder has read, write, and execute  
-      rw-: people part of the associated GROUP can read and write to the folder but not run things  
-          --r: Anybody else can look, but thats it  
+```
+1  2   3   4
+-|---|---|---
+```
+ 
+
+
+1. d: is the directory   
+2.   rwx: the OWNER of the folder has read, write, and execute  
+3. rw-: people part of the associated GROUP can read and write to the folder but not run things  
+4. --r: Anybody else can look, but thats it.  
 
 
 For example, when you add yourself to the docker group, you're allowing your user to the docker group, which has access to the docker.sock file, lets take a look at it's permissions:
@@ -49,15 +55,14 @@ The owner (root) will be the only person in this group upon it's creation, since
 Directories
 -----------
 / directory (owner is ROOT):
-
+```
 root and lost+found: drwx------ 
 tmp: drwxrwxrwx 
 All other folders in dir: drwxr-xr-x 
-
+```
 
 YOUR home directory (owner is YOU):
-
-drwx------
+```drwx------```
 
 
 Files:
