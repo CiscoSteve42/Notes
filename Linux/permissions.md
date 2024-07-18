@@ -25,7 +25,7 @@ OTHER:
 
 t: sticky bit, users can only modify or delete files that THEY own, even if they technically have permissions.
 
-USAGE
+Usage
 -----
 these are written out like this:  
 ```drwxrw-r--```
@@ -95,7 +95,7 @@ so when I make a folder called foo in my home directory (for the sake of example
 
 lets say that I don't want anybody in this folder except for me and a few people on my team, lets go ahead and make a group for our team called coolpeople:
 
-```sudo groupadd datausers```
+```sudo groupadd coolpeople```
 
 then we can use the same usermod -aG command that we use to add ourselves to groups such as sudo and wireshark (owned by the root account) to add new users to our group since we made it and all.
 ```
