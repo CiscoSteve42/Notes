@@ -2,7 +2,7 @@ User Permissions in Linux/Unix
 ------------------------------
 Because I still haven't learned them, its kinda sad.
 
-Basic Info:
+Basic Info
 ----------
 WHAT: 
 
@@ -25,7 +25,7 @@ OTHER:
 
 t: sticky bit, users can only modify or delete files that THEY own, even if they technically have permissions.
 
-USAGE:
+USAGE
 -----
 these are written out like this:  
 ```drwxrw-r--```
@@ -65,7 +65,7 @@ YOUR home directory (owner is YOU):
 ```drwx------```
 
 
-Files:
+Files
 ------
 ssh private key: -rw-------   
 ssh public key: -rw-r--r--
@@ -76,7 +76,7 @@ after compiling: rwxr-xr-x
 this is the same logic as chmod +x with non-compiled languages.  
 
 
-Chmod beyond +x:
+Chmod beyond +x
 ---------------
 Based on what we just learned about permissions, we can use chmod to:
 
@@ -113,7 +113,7 @@ which gives myself and my trusted associates full access and everybody else unab
 
 Additionally, the -R flag sets permissions recursively to all files/folders in the chosen directory 
 
-Chmod with Numbers:
+Chmod with Numbers
 ------------------
 r = 4  
 w = 2  
