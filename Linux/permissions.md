@@ -21,7 +21,8 @@ c: character device (mouse, keyboard, all peripherals)
 l: symbolic link  
 
 
-WHAT:  
+OTHER: 
+
 t: sticky bit, users can only modify or delete files that THEY own, even if they technically have permissions.
 
 USAGE:
