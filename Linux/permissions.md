@@ -4,20 +4,20 @@ Because I still haven't learned them, its kinda sad.
 
 Basic Info:
 ----------
-WHAT:
-r: read
-w: write
-x: execute
--: no write
+WHAT:  
+r: read  
+w: write  
+x: execute  
+-: no write  
 
-WHERE:
-d: directory
--: file (not a directory)
-b: block device (additional drives or partitions)
-c: character device (mouse, keyboard, all peripherals)
-l: symbolic link
+WHERE:  
+d: directory  
+-: file (not a directory)  
+b: block device (additional drives or partitions)  
+c: character device (mouse, keyboard, all peripherals)  
+l: symbolic link  
 
-WHAT:
+WHAT:  
 t: sticky bit, users can only modify or delete files that THEY own, even if they technically have permissions.
 
 USAGE:
