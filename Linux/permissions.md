@@ -32,8 +32,8 @@ these are written out like this:
 
 which looks like gibberish at first but lets break it down, logically section it off as so: 
 
-```-|---|---|---```
-d is the directory  
+```-|---|---|---```  
+d is the directory   
   rwx: the OWNER of the folder has read, write, and execute  
       rw-: people part of the associated GROUP can read and write to the folder but not run things  
           --r: Anybody else can look, but thats it  
