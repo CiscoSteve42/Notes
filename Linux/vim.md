@@ -30,24 +30,24 @@ U  #repeat last changes on current line
 
 Swap Files
 ----------
-* View the swp filename with:
+View the swp filename with:
 ```
 :swapname
 ```
 
-* or check the path below:
+or check the path below:
 ```
 ls ~/.local/state/nvim/swap  (NeoVim)
-
+OR
 ls ~/.cache/vim/swap  (Vim)
 ```
 
-* and open the one that you one that you want with:
+and open the one that you one that you want with:
 ```
 vim -r /path/to/swpfile.swp
 ```
 
-* Then write the file under a new filename:
+Then write the file under a new filename:
 ```
 :w recovered.txt
 ```

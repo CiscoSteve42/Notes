@@ -24,7 +24,7 @@ If you're on a search engine, and you find an image link, you can copy the link 
 
 
 ```
-wget http://res.cloudinary.com/sagacity/image/upload/c_crop,h_451,w_590,x_0,y_0/c_limit,w_1080/v1434574372/Screen_Shot_2015-06-17_at_1.52.19_PM_ltahyz.png
+wget <your copied URL here>
 ```
 
 and the image should download into the directory that you ran the command in.
