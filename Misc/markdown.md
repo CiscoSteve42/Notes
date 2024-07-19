@@ -17,9 +17,9 @@ Code Blocks
 
 - Triple Backticks (````) 'fence' around your code on the line above and below like this:  
 
-\`\`\`
-#!/usr/bin/env python3
+\`\`\`  
+#!/usr/bin/env python3  
 
-name = input('What is your name?')
-\`\`\`
+name = input('What is your name?')  
+\`\`\`  
 
