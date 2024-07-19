@@ -68,3 +68,10 @@ fi
     else
         echo "laaaame"
     fi
+
+
+Emojis 👓
+--------
+
+- Copypasta from https://emojipedia.org/ into your editor 💀
+- "I could eat a 🍑for hours" ~ Nick Cage, Face/Off
