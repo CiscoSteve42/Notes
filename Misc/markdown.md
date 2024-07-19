@@ -13,9 +13,9 @@ Code Blocks
 -----------
 
 - Backticks (\`) are used for code snippets like this `x = 69`    
-    - Use the Backslash (\) to use without making a snippet  
+    - Use the Backslash (\\) to use without making a snippet  
 
-- Triple Backticks (````) 'fence' around your code on the line above and below, you can also add syntax highlighting by declaring the lang name after the ticks on the top row.   
+- Triple Backticks (\````) 'fence' around your code on the line above and below, you can also add syntax highlighting by declaring the lang name after the ticks on the top row.   
     - The following is what it would look like in your editor:
 
 
