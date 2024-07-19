@@ -11,8 +11,8 @@ Mutable vs Immutable Variables
 * Immutable Variables
 1. ints (x = 69)
 2. floats (x = 2.5)
-3. strings
-4. tuples
+3. strings (x = 'yes')
+4. tuples (x = True)
 
 
 

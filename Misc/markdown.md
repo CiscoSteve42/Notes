@@ -1,5 +1,5 @@
-Markdown Notes
-==============
+Markdown and Neovim
+===================
 Working towards a brighter future with less useless commits.
 
 Headers
