@@ -70,7 +70,7 @@ fi
     fi
 
 
-Emojis 👓
+Emojis 🖖
 --------
 
 - Copypasta from https://emojipedia.org/ into your editor 💀
