@@ -14,7 +14,7 @@ print(x + y * 2)
 ``` 
 
 A. 20     
-B. 25 X    
+B. 25     
 C. 30    
 D. 40    
     
@@ -22,14 +22,14 @@ D. 40
 Which of the following is a valid Python variable name?    
     
 A. 2variable     
-B. _variable X    
+B. _variable     
 C. variable#    
 D. variable!    
     
 ### Question 3:    
 What is the result of 5 / 2 in Python?    
     
-A. 2.5 X    
+A. 2.5     
 B. 2    
 C. 2.0    
 D. 2.25    
