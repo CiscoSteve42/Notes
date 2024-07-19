@@ -7,9 +7,11 @@ Section 1: Basic Concepts
 ### Question 1:    
 What is the output of the following Python code?    
     
-`x = 5    
-y = 3    
-print(x * y)`  
+```python
+x = 5
+y = 3
+print(x * y)
+```  
   
 A) 8    
 B) 15    
@@ -53,13 +55,15 @@ Section 2: Control Structures
 -----------------------------
     
 ### Question 6:    
-What will be the output of the following code?    
-    
-`x = 10    
-if x > 5:    
-    print("x is greater than 5")    
-else:    
-    print("x is less than or equal to 5")`  
+What will be the output of the following code?   
+
+```python
+x = 10  
+if x > 5: 
+    print("x is greater than 5") 
+else: 
+    print("x is less than or equal to 5")
+```  
   
 A) x is greater than 5    
 B) x is less than or equal to 5    
@@ -76,9 +80,11 @@ D) loop
     
 ### Question 8:    
 What will be the output of the following code?    
-    
-`for i in range(1, 5):    
-    print(i)`  
+ 
+```python
+for i in range(1, 5):    
+    print(i)
+```  
   
 A) 1 2 3 4    
 B) 2 3 4 5    
@@ -100,12 +106,14 @@ D) To organize code into reusable blocks
 ### Question 10:    
 What will be the output of the following code?    
 
-```def multiply(a, b):    
-       return a * b    
-       
-   result = multiply(4, 5)    
-   print(result)```
-  
+```python
+def multiply(a, b):
+    return a * b
+
+    result = multiply(4, 5) 
+    print(result)
+```
+
 A) 9    
 B) 20    
 C) 54    
@@ -126,10 +134,10 @@ D) my_list.index(3)
 ### Question 12:    
 What will be the output of the following code?    
     
- `   
-my_dict = {"name": "Alice", "age": 25}    
-print(my_dict["name"])    
-  `  
+```python 
+my_dict = {"name": "Alice", "age": 25} 
+print(my_dict["name"]) 
+```  
   
 A) Alice    
 B) name    
@@ -151,8 +159,10 @@ D) my_string.swapcase()
 ### Question 14:    
 What will be the output of the following code?    
     
-`my_string = "Hello, world!"    
-print(len(my_string))`  
+```python
+my_string = "Hello, world!"    
+print(len(my_string))
+```  
   
 A) 12    
 B) 13    
@@ -173,11 +183,13 @@ D) throw
 ### Question 16:    
 What will be the output of the following code?    
     
-`try:    
+```python
+try:    
     result = 10 / 0    
 except ZeroDivisionError:    
     result = "Cannot divide by zero"    
-print(result)`  
+print(result)
+```  
   
 A) 10    
 B) Cannot divide by zero    
@@ -217,11 +229,13 @@ C) import module math
 D) include math    
     
 ### Question 20:    
-What will be the output of the following code?    
-    
-```import math
+What will be the output of the following code?   
 
-print(math.sqrt(16))```
+```python
+import math
+
+print(math.sqrt(16))
+```
 
 A) 4    
 B) 2    
@@ -263,8 +277,10 @@ D) Copies the class object
 ### Question 24:    
 What will be the output of the following code?    
     
-`x = lambda a: a * 3    
-print(x(5))`  
+```python
+x = lambda a: a * 3    
+print(x(5))
+```  
   
 A) 5    
 B) 3    

@@ -7,10 +7,12 @@ Section 1: Basic Concepts
 ### Question 1:    
 What will be the output of the following Python code?    
     
-`x = 10    
-y = 5    
-print(x + y * 2)`  
-    
+```python
+x = 10 
+y = 5 
+print(x + y * 2)
+``` 
+
 A. 20     
 B. 25 X    
 C. 30    
@@ -43,9 +45,11 @@ D. list
 ### Question 5:    
 What will be the output of the following code?    
     
-`my_list = [1, 2, 3, 4, 5]    
-print(my_list[2])`  
-  
+```python
+my_list = [1, 2, 3, 4, 5]    
+print(my_list[2])
+```
+
 A. 1    
 B. 2    
 C. 3    
@@ -58,12 +62,14 @@ Section 2: Control Structures
 ### Question 6:    
 What will be the value of result after the following code executes?    
     
-`x = 10    
+```python
+x = 10    
 if x > 5:    
     result = "greater than 5"    
 else:    
     result = "less than or equal to 5"    
-print(result)`  
+print(result)
+```  
     
 A. greater than 5    
 B. less than or equal to 5    
@@ -81,9 +87,11 @@ D. repeat
 ### Question 8:    
 What will be the output of the following code?    
     
-`for i in range(3):    
-    print(i)`  
-  
+```python
+for i in range(3): 
+    print(i)
+```
+
 A. 0 1 2    
 B. 1 2 3    
 C. 1 2 3 4    
@@ -104,11 +112,13 @@ D. To create loops
 ### Question 10:    
 What will be the output of the following code?    
     
-```def add_numbers(a, b):    
+```python
+def add_numbers(a, b):    
     return a + b    
-    
-result = add_numbers(3, 4)    
-print(result)```
+
+result = add_numbers(3, 4)  
+print(result)
+```
 
 A. 7    
 B. 34    
@@ -130,9 +140,10 @@ D. my_list.extend(6)
 ### Question 12:    
 What will be the output of the following code?    
     
-`  
-my_dict = {"name": "John", "age": 30}    
-print(my_dict["age"])` 
+```python
+my_dict = {"name": "John", "age": 30} 
+print(my_dict["age"])
+``` 
 
 A. John    
 B. age    
@@ -154,9 +165,11 @@ D. my_string.swapcase()
 ### Question 14:    
 What will be the output of the following code?    
     
-`my_string = "Hello, world!"    
-print(len(my_string))`  
-  
+```python
+my_string = "Hello, world!" 
+print(len(my_string))
+```
+
 A. 13    
 B. 12    
 C. 14    
@@ -177,11 +190,13 @@ D. throw
 ### Question 16:    
 What will be the output of the following code?    
     
-`try:    
+```python
+try:    
     print(10 / 0)    
 except ZeroDivisionError:    
-    print("Cannot divide by zero")`    
-  
+    print("Cannot divide by zero")
+``` 
+
 A. Cannot divide by zero    
 B. ZeroDivisionError    
 C. 10    
@@ -222,10 +237,11 @@ D. include math
 ### Question 20:    
 What will be the output of the following code?    
 
-```import math    
+```python
+import math    
     
-print(math.sqrt(25))```
-
+print(math.sqrt(25))
+```
 
 A. 5    
 B. 625    
@@ -267,8 +283,10 @@ D. Method to handle arithmetic operations
 ### Question 24:    
 What will be the output of the following code?    
     
-`x = lambda a: a * 2    
-print(x(3))`
+```python
+x = lambda a: a * 2    
+print(x(3))
+```
 
 A. 6    
 B. 3    
