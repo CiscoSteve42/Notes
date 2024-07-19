@@ -6,11 +6,9 @@ Section 1: Basic Concepts
 ### Question 1:    
 What is the output of the following Python code?    
     
-`python
-x = 5    
+`x = 5    
 y = 3    
-print(x * y)    
-`  
+print(x * y)`  
   
 A) 8    
 B) 15    
@@ -56,13 +54,11 @@ Section 2: Control Structures
 ### Question 6:    
 What will be the output of the following code?    
     
- `   
-x = 10    
+`x = 10    
 if x > 5:    
     print("x is greater than 5")    
 else:    
-    print("x is less than or equal to 5")    
-  `  
+    print("x is less than or equal to 5")`  
   
 A) x is greater than 5    
 B) x is less than or equal to 5    
@@ -80,10 +76,8 @@ D) loop
 ### Question 8:    
 What will be the output of the following code?    
     
-`    
-for i in range(1, 5):    
-    print(i)    
-`  
+`for i in range(1, 5):    
+    print(i)`  
   
 A) 1 2 3 4    
 B) 2 3 4 5    
@@ -104,14 +98,12 @@ D) To organize code into reusable blocks
     
 ### Question 10:    
 What will be the output of the following code?    
-    
-  `  
-def multiply(a, b):    
-    return a * b    
-    
-result = multiply(4, 5)    
-print(result)    
-  `  
+
+```def multiply(a, b):    
+       return a * b    
+       
+   result = multiply(4, 5)    
+   print(result)```
   
 A) 9    
 B) 20    
@@ -158,10 +150,8 @@ D) my_string.swapcase()
 ### Question 14:    
 What will be the output of the following code?    
     
- `   
-my_string = "Hello, world!"    
-print(len(my_string))    
-  `  
+`my_string = "Hello, world!"    
+print(len(my_string))`  
   
 A) 12    
 B) 13    
@@ -186,8 +176,7 @@ What will be the output of the following code?
     result = 10 / 0    
 except ZeroDivisionError:    
     result = "Cannot divide by zero"    
-print(result)    
-`  
+print(result)`  
   
 A) 10    
 B) Cannot divide by zero    
@@ -213,7 +202,8 @@ A) file.read()
 B) file.readline()    
 C) file.readlines()    
 D) file.write()    
-  
+ 
+
 Section 8: Modules and Packages    
 -------------------------------  
     
@@ -228,18 +218,16 @@ D) include math
 ### Question 20:    
 What will be the output of the following code?    
     
+```import math
 
-```
-import math
-
-print(math.sqrt(16)) 
-   ```
+print(math.sqrt(16))```
 
 A) 4    
 B) 2    
 C) 8    
 D) 16  
-  
+ 
+
 Section 9: Object-Oriented Programming (OOP)    
 -------------------------------------------  
     
