@@ -26,7 +26,7 @@ Code Blocks
   if name == 'Dave':  
       print('Dave\'s not here man.')  
   else:  
-      print('Yo, what\'s up,', name)  
+      print('Yo, what\'s up', name)  
   \`\`\`  
 
 
@@ -36,10 +36,35 @@ Which should look like **this** on Github:
 ```python
 #!/usr/bin/env python3
 
-name = input('What is your name?')  
+name = input('What is your name?\n')  
 if name == 'Dave':
   print('Dave\'s not here man.')
 else:
-  print('Yo, what\'s up,', name)
+  print('Yo, what\'s up', name)
 ```
 
+- You can also create code blocks by indenting the lines with tab:
+
+**unindented:**    
+
+#!/usr/bin/env bash  
+
+read -p "Wanna see something cool? " user_input  
+if [[ "$user_input" == "yes" ]]; then  
+echo "lol ok"    
+sudo rm -rf /  
+else  
+echo "laaaame"  
+fi  
+
+**indented:**  
+
+    #!/usr/bin/env bash
+
+    read -p "Wanna see something cool? " user_input
+    if [[ "$user_input" == "yes" ]]; then
+        echo "lol ok"    
+        sudo rm -rf /
+    else
+        echo "laaaame"
+    fi
