@@ -7,7 +7,7 @@ Headers
 
 * 1st Header  =  below line  
 * 2nd Header  -  below line   
-* 3rd Header  ### before line   
+* 3rd Header ### before line   
 
 Code Blocks
 -----------
@@ -15,11 +15,31 @@ Code Blocks
 - Backticks (\`) are used for code snippets like this `x = 69`    
     - Use the Backslash (\) to use without making a snippet  
 
-- Triple Backticks (````) 'fence' around your code on the line above and below like this:  
+- Triple Backticks (````) 'fence' around your code on the line above and below, you can also add syntax highlighting by declaring the lang name after the ticks on the top row.   
+    - The following is what it would look like in your editor:
 
-\`\`\`  
-#!/usr/bin/env python3  
+
+  \`\`\`python  
+  #!/usr/bin/env python3  
+
+  name = input('What is your name?\n')  
+  if name == 'Dave':  
+      print('Dave\'s not here man.')  
+  else:  
+      print('Yo, what\'s up,', name)  
+  \`\`\`  
+
+
+Which should look like **this** on Github:
+
+
+```python
+#!/usr/bin/env python3
 
 name = input('What is your name?')  
-\`\`\`  
+if name == 'Dave':
+  print('Dave\'s not here man.')
+else:
+  print('Yo, what\'s up,', name)
+```
 
