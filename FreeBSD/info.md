@@ -21,6 +21,12 @@ rcpbind_enable="YES"
 mountd_enable="YES"
 ```
 
+The Shell 
+---------
+
+* The default language for FreeBSD is Bash's dad, **sh**. .rc and .history files reflect this.
+
+
 Install packages on FreeBSD
 ---------------------------
 
