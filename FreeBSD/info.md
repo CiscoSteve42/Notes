@@ -3,6 +3,27 @@ It's JUST different enough from Linux
 Updating regularly throughout my FreeBSD journey in both a desktop and server environment. 
 
 
+Grabbing Patches and Drivers
+----------------------------
+
+```sh
+freebsd-update fetch
+freebsd-update install
+```
+
+Installing pkg and setting up Permissions
+-----------------------------------------
+
+```sh
+su 
+pkg install
+pkg install sudo
+visudo
+```
+
+* G down to the bottom and uncomment the wheel group (ALL:ALL) and exit
+
+
 The Config File
 ---------------
 * Is located at /etc/rc.conf
@@ -97,6 +118,8 @@ Troubleshooting NTP Issues
 --------------------------
 * You should really do this in the config file but I'm gonna keep it here for now
 
+* Even better, do it during install, as I found out on my first install, just installing ntpd by itself will not update the ntp service and you will constantly have time issues so make sure to grab both ntp packages.
+
 Start by setting the wrong date:  
 ```sh
 date 04201984
@@ -111,13 +134,13 @@ ntpdate -v -b in.pool.ntp.org
 I just wrote these 2 commands into a shell script until I figure it out better
 
 
-Grabbing Patches and Drivers
-----------------------------
 
-```sh
-freebsd-update fetch
-freebsd-update install
-```
+
+
+
+
+
+
 
 
 Using Ports:
