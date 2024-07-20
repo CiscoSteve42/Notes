@@ -24,7 +24,13 @@ mountd_enable="YES"
 The Shell 
 ---------
 
-* The default shell choices for FreeBSD is Bash's dad, Bourne Shell **sh**, C Shell *csh*, and *tch*. Your .rc and .history files should reflect this.
+* The default shell choices for FreeBSD are:
+
+    * Bourne Shell **sh** (Bash's dad)
+    * C Shell **csh**
+    * Tcsh **tcsh**. 
+
+* Your .rc and .history files should reflect this (I think, I've only used sh.)
 
 
 Install packages on FreeBSD
