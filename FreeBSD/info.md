@@ -134,15 +134,6 @@ ntpdate -v -b in.pool.ntp.org
 I just wrote these 2 commands into a shell script until I figure it out better
 
 
-
-
-
-
-
-
-
-
-
 Using Ports:
 -----------
 Fetching ports repo:
