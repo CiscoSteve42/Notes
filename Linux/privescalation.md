@@ -37,4 +37,10 @@ Enumeration
 
 ### Linux Services & Internals Enumeration
 
+* `lastlog` to check last login time of all users
+
+* `w` displays currently logged in users
+
+* `ls -l /bin /usr/bin/ /usr/sbin/` check permissions in bin folders
+
 

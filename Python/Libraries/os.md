@@ -12,7 +12,9 @@ cmd = 'cat /etc/passwd'
 os.system(cmd)
 ```
 
+* You can also use it like this to get a shell on a system: 
 
+`python -c 'import os; os.system("/bin/sh")'`
 
 
 
