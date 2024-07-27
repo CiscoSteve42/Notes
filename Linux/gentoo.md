@@ -74,5 +74,38 @@ Mounting Root and Installing the Stage File
 
 * `sudo tar xpvf stage3-*.tar.xz --xattrs-include='*.*' --numeric-owner` make sh!t happen. `stage3-*.tar.xz` should cover all versions via wildcard but adjust if needed I suppose.
 
+* `sudo rm -rf *.tar.xz` to clean up.
 
 
+Installing Base System
+----------------------
+
+* `sudo cp --dereference /etc/resolv.conf /mnt/gentoo/etc/` passes DNS info to the new environment so that you still have intarwebz.
+
+# Mount the necessary filesystems
+
+* If using installation disk, just `sudo arch-chroot /mnt/gentoo`
+
+* If not, mount each of these separately:
+
+```sh
+sudo mount --types proc /proc /mnt/gentoo/proc
+sudo mount --rbind /sys /mnt/gentoo/sys
+sudo mount --make-rslave /mnt/gentoo/sys
+sudo mount --rbind /dev /mnt/gentoo/dev
+sudo mount --make-rslave /mnt/gentoo/dev
+sudo mount --bind /run /mnt/gentoo/run
+sudo mount --make-slave /mnt/gentoo/run
+```
+
+* THEN you can `sudo chroot /mnt/gentoo /bin/bash`
+
+* `source /etc/profile`
+
+* `export PS1="(chroot) ${PS1}`
+
+* `mkdir /efi` and `mount /dev/sda1 /efi` to prepare bootloader
+
+* `emerge-webrsync` installs latest mirrors to System
+
+* `emerge --sync` updates packages
