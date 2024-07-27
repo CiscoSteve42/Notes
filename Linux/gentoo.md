@@ -3,7 +3,7 @@ Gentoo Installation Mini Guide/Tips & Tricks
 
 Creating a user and not locking yourself out of root during Install 
 -------------------------------------------------------------------
-# As far as I know, there is no default root password so you do this
+### As far as I know, there is no default root password so you do this
 
 * `sudo passwd` to change default root password
 
@@ -20,13 +20,13 @@ Creating a user and not locking yourself out of root during Install
 
 Setting generic EFI filesystem with fdisk
 -----------------------------------------
-## (ask explained in the Documentation)
+### (ask explained in the Documentation)
 
 * `lsblk` to confirm your drive (we'll assume sda for simplicity's sake)
 
 * `sudo fdisk /dev/sda` to start partitioning the drive
 
-# IN FDISK:
+### IN FDISK:
 
 * `g` wipes the existing disk and assigns a new disk label
 
@@ -41,7 +41,7 @@ Setting generic EFI filesystem with fdisk
 * `w` writes changes to the disk (don't forget!)
 
 
-# Useful partition type aliases to remember
+### Useful partition type aliases to remember
 
 * 1 = EFI System
 
@@ -52,7 +52,7 @@ Setting generic EFI filesystem with fdisk
 
 Applying Filesystems to Your Partitions
 ---------------------------------------
-# This is based on the partitions that we just created using recommended filesystems in the Documentation.
+### This is based on the partitions that we just created using recommended filesystems in the Documentation.
 
 * `sudo mkfs.xfs /dev/sda3` makes root partition xfs (recommended by Documentation)
 
@@ -82,7 +82,7 @@ Installing Base System
 
 * `sudo cp --dereference /etc/resolv.conf /mnt/gentoo/etc/` passes DNS info to the new environment so that you still have intarwebz.
 
-# Mount the necessary filesystems
+### Mount the necessary filesystems
 
 * If using installation disk, just `sudo arch-chroot /mnt/gentoo`
 
