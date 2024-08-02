@@ -1,5 +1,17 @@
 Gentoo Installation Mini Guide/Tips & Tricks
 ============================================
+* Because when you're compiling this much, you have the time.  
+* Gentoo is great for running in a VM in the background while doing literally anything else. 
+
+NEW NOTES
+=========
+* After multiple failed and successful Gentoo installs and a good amount of research, I've decided to start these notes from scrach but still leave my old notes at the bottom. 
+
+
+
+
+OLDNOTES
+========
 
 Creating a user and not locking yourself out of root during Install 
 -------------------------------------------------------------------
@@ -82,6 +94,8 @@ Installing Base System
 
 * `sudo cp --dereference /etc/resolv.conf /mnt/gentoo/etc/` passes DNS info to the new environment so that you still have intarwebz.
 
+
+
 ### Mount the necessary filesystems
 
 * If using installation disk, just `sudo arch-chroot /mnt/gentoo`
@@ -109,3 +123,13 @@ sudo mount --make-slave /mnt/gentoo/run
 * `emerge-webrsync` installs latest mirrors to System
 
 * `emerge --sync` updates packages
+
+* `eselect news list` lists news items
+
+* `eselect news read` reads items
+
+* These commands will recommend that you update @World `emerge -avuND @world` then `emerge --depclean`
+
+* `eselect profile list` list profiles (may wanna `> plist.txt`)
+
+* `eselect profile set 29` sets up minimal 64-bit environment with no 32 bit support
