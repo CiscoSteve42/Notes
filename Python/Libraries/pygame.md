@@ -5,7 +5,7 @@ A collection of Notes for the Pygame module in Python
 
 Initial Setup
 -------------
-```
+```python
 pygame.init()
 screen = pygame.display.set_mode((x,y))
 pygame.display.set_caption('Super Tux Python World')
@@ -15,14 +15,14 @@ test_font = pygame.font.Font('font type, leave None for default', fontsize)
 
 Add Music
 ---------
-```
+```python
 pygame.mixer.music.load('freesoftwaresong.mp3')
 pygame.mixer.music.play()
 ```
 
 Adding Images and Setting Them in The Grid
 ------------------------------------------
-```
+```python
 bg_surface = pygame.image.load('gamebackground.png').convert()
 text_surface = test_font.render('Super Tux: The Python Adventures', False, 'Yellow')
 tux_surface = pygame.image.load('yourimage.png').convert_alpha()
@@ -42,7 +42,7 @@ while True:
 
 Add WASD Character Movements
 ----------------------------
-```
+```python
     keys = pygame.key.get_pressed()
     if keys[pygame.K_w]:
         #tux_y_pos -= 4
@@ -56,7 +56,7 @@ Add WASD Character Movements
 
 Run Game at 60 FPS
 ------------------
-```
+```python
     pygame.display.update()
     clock.tick(60)
 ```
