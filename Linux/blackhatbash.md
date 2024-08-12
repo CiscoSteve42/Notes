@@ -136,4 +136,30 @@ Chapter 2: Flow Control and Text Processing
     * `-le` less than or equal to
 
 
-* Example of an if condition in Bash
+* Example of an if condition in Bash:
+
+```bash
+#!/bin/bash
+
+echo "what is x?"
+read -r x
+if [[ ${x} == 69 ]]; then
+  echo "nice"
+else
+  echo "x is ${x}"
+fi
+```
+
+* You don't need to use an else statement if it isn't necessary
+
+* `;` needs to separate if and then, `fi` closes the if statement
+
+* `&&` (and) and `||` (or) can be used in statements like you would in the shell. For example, we can append a previous line in our last script to be more specific after adding a new variable:
+
+```bash
+y=$(date +"%m-%d")
+
+if [[ ${x} == 420 ]] && [[ ${y} == "04-20" ]] || [[ ${x} == 69 ]]; then
+```
+
+
