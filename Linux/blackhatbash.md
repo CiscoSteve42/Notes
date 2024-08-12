@@ -107,4 +107,33 @@ cat output.txt
 Chapter 2: Flow Control and Text Processing 
 -------------------------------------------
 
+* File test operators let us perform tests against files in the system, some examples include:
 
+    * `-d` checks whether the file is a directory
+    * `-r` checks whether the file is readable 
+    * `-x` checks where the file is executable
+    * `-w` checks whether its writable
+    * `-f` checks if its a regular file
+    * `-s` checks if the file size is greater than zero
+
+
+* String comparision operators test strings, these are:
+
+    * `=` checks if one string is equal to another
+    * `==` same as `=` in double brackets `[[]]`
+    * `!=` checks if the string isn't equal
+    * `<` BEFORE `>` AFTER, checks whether a string comes before or after another alphabetically
+    * `-z` checks if the string is null
+    * `-n` checks if it isn't null
+
+* Integer comparison operators are exactly what you think that they are, the different ones:
+
+    * `-eq` checks if 2 numbers are equal
+    * `-ne` checks if they're not equal
+    * `-ge` checks if a number is greater than OR equal to a number
+    * `-gt` checks if a number is greater than another
+    * `-lt` checks if it's less
+    * `-le` less than or equal to
+
+
+* Example of an if condition in Bash
