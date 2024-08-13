@@ -1,4 +1,4 @@
-Markdown and Neovim  
+Markdown and Neovim          
 ===================  
 Working towards a brighter future with less useless commits.  
 
@@ -71,7 +71,14 @@ fi
 
 
 Emojis 🖖
---------
+------
 
 - Copypasta from https://emojipedia.org/ into your editor 💀
 - "I could eat a 🍑 for hours" ~ Nick Cage, Face/Off
+
+
+Add Blank Spaces
+----------------
+specifically without messing up other stuff 
+
+* `$~$` adds 1 blank space, so `$~~~~~~$` would make 6
