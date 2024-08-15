@@ -51,7 +51,7 @@ ping "${IP}"
 
 * use `read -r` to do the same, but interpret backslashes literally and not as escape characters
 
-* Example of using Input Prompting with the `read` command:
+* Example of using **Input** **Prompting** with the `read` command:
 
 ```bash
 #!/bin/bash
@@ -87,7 +87,7 @@ exit 69
 
 * `echo $?` will also let you check the exit codes of other programs
 
-* MY EXERCISE 1 SCRIPT:
+# MY EXERCISE 1 SCRIPT:
 
 ```bash
 #!/usr/bin/env bash
@@ -136,7 +136,7 @@ Chapter 2: Flow Control and Text Processing
     * `-le` less than or equal to
 
 
-* Example of an if condition in Bash:
+# Example of an **if** condition in Bash:
 
 ```bash
 #!/bin/bash
@@ -162,4 +162,81 @@ y=$(date +"%m-%d")
 if [[ ${x} == 420 ]] && [[ ${y} == "04-20" ]] || [[ ${x} == 69 ]]; then
 ```
 
+# An Example of **while** Loops in Bash
 
+* Performs function while condition is true
+
+* The following script will run forever:
+
+```bash
+#!/bin/bash
+
+while true; do 
+  echo "Buffering..."
+  sleep 2
+done
+```
+
+* If we wanted to make the loop end on a certain condition, such as the creation of a certain file, we could append the previous script as so:
+
+```bash
+#!/bin/bash
+SIGNAL = 'stahp'
+
+while [[ ! -f "${SIGNAL}" ]]; do 
+  echo "Buffering..."
+  sleep 2
+done
+
+echo "Video failed to load, aborting"
+```
+
+
+# Example of an **until** Loop 
+
+* The loop runs until a condition is met, for example:
+
+```bash
+#!/bin/bash
+
+FILE="your_mom"
+
+touch "${FILE}"
+until [[ -s ${FILE} ]]; do 
+  echo "${FILE} is still empty"
+  echo "Shes blowing up my phone!"
+  sleep 2 
+done
+
+THING=$(cat your_mom)
+echo "${FILE} feels so much better after being filled with ${THING}!"
+```
+
+* The previous script will run forever until the file has been filled, so we can enter `echo my_dick > your_mom` into our terminal and the script can finish.
+
+
+# **For** loop examples
+
+* Interates over a designated sequence, where we define the commands that are ran against each value.
+
+* A common example is interating over series of numbers listed with `seq` (see `man seq` for more details)
+
+```bash
+#!/bin/bash
+
+for index in $(seq 69 420); do
+  echo "${index}"
+done
+```
+
+* It can be used for many more relevant tasks as well, such as renaming every file in a folder
+
+```bash
+#!/bin/bash
+
+DIR=$(ls .)
+for file in ${DIR}; do 
+  mv ${DIR} "Not Porn"
+done
+  
+```
