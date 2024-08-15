@@ -1,1 +1,1 @@
-A collection of markdown files to help me remember how to do various tasks without having to look them up again. 
+My notes for whatever I tech-related stuff that I'm learning or need to remember.
