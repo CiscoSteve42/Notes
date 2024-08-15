@@ -32,23 +32,40 @@ and the image should download into the directory that you ran the command in.
 
 Tricks with Grep
 ----------------
-* You can use `grep -B x foo` with x being the number of lines **BELOW** the output that you want printed with the grep'd line, as seen below:
+* You can use `grep -B x foo` with x being the number of lines **BEFORE** the output that you want printed with the grep'd line, as seen below:
 
 ```bash
-cat foo.txt | grep -B 5 
+cat foo.txt | grep -B 5 cow
 
-
-
-
-
-
+cat
+and
+the
+fiddle,
+the
+cow
 ```
 
-* You can use `grep -A x foo` to the same effect but above the grep'd line:
+* You can use `grep -A x foo` to the same effect but **AFTER** the grep'd line:
 
 ```bash
-cat foo.txt | grep -A 5
+cat foo.txt | grep -A 5 cow
 
-
-
+cow
+jumped
+over
+the
+moon
 ```
+
+
+Tmux Commands that I might Forget
+---------------------------------
+
+* Reattach to a Session:  
+
+```bash
+tmux ls
+tmux attach-session -t 0
+```
+
+* Kill window with Prefix + the `&` key

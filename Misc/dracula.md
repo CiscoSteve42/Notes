@@ -1,6 +1,6 @@
 Dracula Color Palette List
 --------------------------
-colors available at https://draculatheme.com/contribute#color-palette  
+All colors available [here](https://draculatheme.com/contribute#color-palette).  
 
 Hex:
 ---
