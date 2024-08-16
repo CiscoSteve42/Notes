@@ -94,7 +94,7 @@ Links 🧝🏻‍♀️ in MD 👨🏻‍⚕️
 
 * a MD link would look like this written: 
 
-`I often ping [the Gentoo website](https://gentoo.org) as my default URL when testing connectivity`
+`I often ping [the Gentoo website](https://www.gentoo.org) as my default URL when testing connectivity`
 
 
 * and might look like this:
