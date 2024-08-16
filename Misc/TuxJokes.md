@@ -7,4 +7,4 @@ Repo where I store my penguin jokes that I plan on rotating so that I don't forg
 
 * Is a turtle the root user of it's own Shell?
 
-* Don't look in my .bash_history!
+* Don't look at my .bash_history!
