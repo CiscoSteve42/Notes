@@ -94,10 +94,11 @@ Links 🧝🏻‍♀️ in MD 👨🏻‍⚕️
 
 * a MD link would look like this written: 
 
-`I often ping [the Gentoo website](gentoo.org) as my default URL when testing connectivity`
+`I often ping [the Gentoo website](https://gentoo.org) as my default URL when testing connectivity`
 
 
 * and might look like this:
 
     * I previously enjoyed pinging [My VPN Provider](https://airvpn.org) as my default test URL
+
 
