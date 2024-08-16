@@ -99,5 +99,5 @@ Links 🧝🏻‍♀️ in MD 👨🏻‍⚕️
 
 * and might look like this:
 
-    * I previously enjoyed pinging [My VPN Provider](airvpn.org) as my default test URL
+    * I previously enjoyed pinging [My VPN Provider](https://airvpn.org) as my default test URL
 
