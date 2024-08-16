@@ -234,9 +234,37 @@ done
 ```bash
 #!/bin/bash
 
-DIR=$(ls .)
-for file in ${DIR}; do 
-  mv ${DIR} "Not Porn"
+FILES=$(ls .)
+COUNT=1
+
+for file in ${FILE}; do 
+  if [ -f "$file" ]; then
+    mv $"file" "Not_Porn_${COUNT}"
 done
-  
 ```
+
+* Or a creating all of the folders for the previous example to rename
+
+```bash
+#!/bin/bash
+
+for the_Horde in $(seq 1 25); do 
+  touch "${the_Horde}" # Thrall like
+done
+```
+
+# Case Statements 
+
+* keyword case followed by an expression, example:
+
+```bash
+#!/bin/bash
+
+3
+
+```
+
+
+
+
+

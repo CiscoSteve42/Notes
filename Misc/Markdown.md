@@ -1,5 +1,5 @@
 Markdown and Neovim          
-===================  
+==================  
 Working towards a brighter future with less useless commits.  
 
 Headers  
@@ -82,3 +82,18 @@ Add Blank Spaces
 specifically without messing up other stuff 
 
 * `$~$` adds 1 blank space, so `$~~~~~~$` would make 6
+
+
+Links in MD
+-----------
+
+* a MD link would look like this written: 
+
+`I often ping [the Gentoo website](gentoo.org) as my default URL when testing connectivity`
+
+
+* and might look like this:
+
+    * I previously enjoyed pinging [My VPN Provider](airvpn.org) as my default test URL
+
+* You can also just leave the brackets empty if you're trying to be ultra transparent or just don't mind displaying the URLs, because honestly I end up examining the URL out of paranoia anyway [](https://gtfobins.github.io/)
