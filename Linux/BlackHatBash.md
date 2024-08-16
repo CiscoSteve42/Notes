@@ -255,16 +255,37 @@ done
 
 # Case Statements 
 
-* keyword case followed by an expression, example:
+* keyword case followed by an expression, for example:
 
 ```bash
 #!/bin/bash
 
-3
+FOOD="${1}"
 
+case ${FOOD} in
+  "Hot Do"*)
+    echo "Is a Hot Dog"
+  ;;
+  *)
+    echo "Is Not a Hot Dog"
+  ;;
+esac  
 ```
 
+* Now if you chmod the script, we can run it with 1 argument, which will be passed as a variable to `"${1}`. So we can run it with various arguments for our desired results:
+
+```bash 
+$ chmod +x seefood.sh 
+$ ./seefood.sh Hot\ Dog 
+Is a Hot Dog
+
+$ ./seefood.sh Pizza
+Is Not a Hot Dog
+```
+
+* Note that the astrisk `*` (not the one from the Bleach OST) acts like a regular Bash wildcard and does it's thing.
 
 
+# Text Processing and Parsing
 
 
