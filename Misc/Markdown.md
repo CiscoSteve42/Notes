@@ -84,8 +84,8 @@ specifically without messing up other stuff
 * `$~$` adds 1 blank space, so `$~~~~~~$` would make 6
 
 
-Links in MD
------------
+Links 🧝🏻‍♀️ in MD 👨🏻‍⚕️ 
+-------------------------------------
 
 * a MD link would look like this written: 
 
@@ -96,4 +96,3 @@ Links in MD
 
     * I previously enjoyed pinging [My VPN Provider](airvpn.org) as my default test URL
 
-* You can also just leave the brackets empty if you're trying to be ultra transparent or just don't mind displaying the URLs, because honestly I end up examining the URL out of paranoia anyway [](https://gtfobins.github.io/)
