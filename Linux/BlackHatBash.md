@@ -288,4 +288,6 @@ Is Not a Hot Dog
 
 # Text Processing and Parsing
 
+* For references to the wonders of `grep`, check out my [Grep Notes]() on Github!
+
 
