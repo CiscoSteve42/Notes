@@ -1,16 +1,21 @@
-Markdown and Neovim          
-==================  
+💻 Markdown Notes 📒        
+===================  
 Working towards a brighter future with less useless commits.  
 
-Headers  
--------  
+Glow in Neovim 🏮
+----------------
+* I know you forgot again Steven, its `:Glow`
+
+
+Headers 🐲
+---------  
 
 * 1st Header  =  below line  
 * 2nd Header  -  below line   
 * 3rd Header ### before line   
 
-Code Blocks
------------
+Code Blocks 🧱
+-------------
 
 - Backticks (\`) are used for code snippets like this `x = 69`    
     - Use the Backslash (\\) to use without making a snippet  
@@ -71,14 +76,14 @@ fi
 
 
 Emojis 🖖
-------
+--------
 
 - Copypasta from https://emojipedia.org/ into your editor 💀
 - "I could eat a 🍑 for hours" ~ Nick Cage, Face/Off
 
 
-Add Blank Spaces
-----------------
+Add Blank Spaces 🈳
+------------------
 specifically without messing up other stuff 
 
 * `$~$` adds 1 blank space, so `$~~~~~~$` would make 6
