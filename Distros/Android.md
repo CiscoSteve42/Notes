@@ -19,6 +19,10 @@ Tips and tricks
 
 * Having [KDE Connect](https://f-droid.org/packages/org.kde.kdeconnect_tp/) can really help out with moving over things like a keepass file for [KeePassDX](https://f-droid.org/packages/com.kunzisoft.keepass.libre/) or the shared clipboard so you don't have ALL of your passwords in your mobile .kdbx file, which I recommend since this is Android.
 
+* Besides setting up a custom .rc file and aliasing everything, the asterisk `*a` wildcard is going to be your best friend for typing commands.
+
+
+
 
 
 
