@@ -299,36 +299,26 @@ Is Not a Hot Dog
 # Awk 
 
  
-* First off, if you're on Arch Linux (btw) you might've noticed that there's no entry when you `man awk`, these are droid that you're looking for: `man gawk` and here's why:
-
-# Quick History Lesson
-* Because the history of computing is fascinating, get over it. 
-
-* Now lets start off with **gawk** since its what led me down this rabbithole. Gawk is GNU awk, basically when the GNU team made the core utils that we know and love, and greatly extends upon the capabilities and features of...
-
-    * Let it be noted that when I was ran a test on Gentoo, it was also gawk, but `man awk` still worked like normal. Although I tried it in Termux on Android and it had the same issue as Arch.
-
-* **awk**, which was created in the 70s at Bell Labs as a tool to process and analyze text data, meant to fill in the gap between basic Unix utilities and more complex programming languages. It kinda revolutionized text processing, and by extension shell scripting, at the time. And its actually a whole scripting language! Here's Hello World in Awk:
-
-   ``` 
-    BEGIN {
-        print "Hello, world!"
-        exit
-    }
-    ```
-
-
-    * When I `man awk` on my FreeBSD and OpenBSD machines, I get the manpage for awk. I saw it referred to a few times as **nawk**, or new awk which came out in the 80s,
-
-    * But if you'll G down to the bottom of your awk manpage on FreeBSD or OpenBSD, you'll find the name that they fancy for themselves, the **"One True Awk"** and some interesting lore referring to the fabled *Script Compatibility Wars*. 
-
-* But wait, there's more! Next is **mawk**, which is the default awk for Debian-based OSs, as suspected when the manpages for awk in both Debian and Armbian pulled up mawk. Mawk, like myself, was born in 1991 and was designed to be fast and efficient, although it doesn't have as many features a gawk.  
-
-* Other members of the awk multiverse include tawk, jawk, CLAWK, awka, libmauk, xgawk, and goawk...I could keep going, but it might get **awk**-ward...I'll show myself out.
-
-* So there you are, all of the different forms of awk a little background on them and just 1 example of the difference between Linux and Unix core utils. 
-
-
-# Now back to actually using awk 
+* First off, if you're on Arch Linux (btw) you might've noticed that there's no entry when you `man awk`, which is because Arch uses Gnu awk, or gawk, which is a standard GNU util, which is different from mawk, which is the default on Debian. For a full trip down this rabbithole, check out my [Github repo]() covering the history and different forms of awk.
 
 * 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
