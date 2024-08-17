@@ -324,6 +324,11 @@ Is Not a Hot Dog
 
 * But wait, there's more! Next is **mawk**, which is the default awk for Debian-based OSs, as suspected when the manpages for awk in both Debian and Armbian pulled up mawk. Mawk, like myself, was born in 1991 and was designed to be fast and efficient, although it doesn't have as many features a gawk.  
 
-* Other 
+* Other members of the awk multiverse include tawk, jawk, CLAWK, awka, libmauk, xgawk, and goawk...I could keep going, but it might get **awk**-ward...I'll show myself out.
 
-* So there you are, all of the different forms of awk a little background on them and just 1 example of the difference between Linux and Unix core utils.  
+* So there you are, all of the different forms of awk a little background on them and just 1 example of the difference between Linux and Unix core utils. 
+
+
+# Now back to actually using awk 
+
+* 
