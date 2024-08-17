@@ -314,7 +314,8 @@ Is Not a Hot Dog
     BEGIN {
         print "Hello, world!"
         exit
-    }```
+    }
+    ```
 
 
     * When I `man awk` on my FreeBSD and OpenBSD machines, I get the manpage for awk. I saw it referred to a few times as **nawk**, or new awk which came out in the 80s,
