@@ -310,12 +310,12 @@ Is Not a Hot Dog
 
 * **awk**, which was created in the 70s at Bell Labs as a tool to process and analyze text data, meant to fill in the gap between basic Unix utilities and more complex programming languages. It kinda revolutionized text processing, and by extension shell scripting, at the time. Awk is actually it's own complete scripting language! Here's Hello World in Awk:
 
-```
-BEGIN {
+
+    `BEGIN {
         print "Hello, world!"
         exit
-}
-```
+    }`
+
 
     * When I `man awk` on my FreeBSD and OpenBSD machines, I get the manpage for awk. I saw it referred to a few times as **nawk**, or new awk which came out in the 80s,
 
