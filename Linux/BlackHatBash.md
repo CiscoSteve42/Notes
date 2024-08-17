@@ -301,16 +301,52 @@ Is Not a Hot Dog
  
 * First off, if you're on Arch Linux (btw) you might've noticed that there's no entry when you `man awk`, which is because Arch uses Gnu awk, or gawk, which is a standard GNU util, which is different from mawk, which is the default on Debian. For a full trip down this rabbithole, check out my [Github repo]() covering the history and different forms of awk.
 
-* 
+* You can use `awk` to indentify and return specific fields from a file, for example we can take a text file and return just the first field of each line:
+
+```
+$ cat foo.txt
+You may be
+Lost in
+The
+Game of life
+
+$ awk '{print $1}' foo.txt
+```
 
 
+* You can use this same logic to print multiple fields in any desired order:
+
+```
+$ cat footwo.txt
+T O M M A R V O L O R I D D L E
+
+$ awk '{print $12,$5,$3,$9,$10,$6,$13,$7,$2,$15,$14,$16,$4,$8,$11,$1}' foo.txt
+I A M L O R D V O L D E M O R T
+```
 
 
+* Printing `$NF` will display the last field: 
+
+```
+$ cat foodra.txt
+You aren't that bad at the game, those guys just suck
+
+$ awk '{print $1,$NF}'
+You suck
+```
 
 
+* we can use the `-F` flag to change the separaters (*default delimiters*) for each word, like changing commas to spaces in a CSV as so `awk -F',' '{print $1}' users.csv`
 
 
+* You can also use awk to emulate tools like `head`, with `NR` being the total amount of records `awk 'NR < 10' example.sh`
 
+
+* Combining grep and awk can be useful `grep "22/tcp" nmap.txt | awk '{print $}`
+
+
+Sed 
+---
 
 
 
