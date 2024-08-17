@@ -286,8 +286,43 @@ Is Not a Hot Dog
 * Note that the astrisk `*` (not the one from the Bleach OST) acts like a regular Bash wildcard and does it's thing.
 
 
-# Text Processing and Parsing
+## Text Processing and Parsing
 
-* For references to the wonders of `grep`, check out my [Grep Notes]() on Github!
+* This section covers the `grep`, `awk`, and `sed` commands. [Distrotube](https://www.youtube.com/@DistroTube) actually has an amazing [video](https://www.youtube.com/watch?v=0AfPcxOoY4w) that covers ALL 3 of these commands specifically, which I highly recommend along with all of his other content. 
 
 
+# Grep
+
+* The first part of this section goes over the `grep` command. For references to the wonders of grep, check out my [Grep Notes](https://github.com/CiscoSteve42/Notes/blob/main/Linux/Tools/Grep.md) here on Github!
+
+
+# Awk 
+
+ 
+* First off, if you're on Arch Linux (btw) you might've noticed that there's no entry when you `man awk`, these are droid that you're looking for: `man gawk` and here's why:
+
+# Quick History Lesson
+* Because the history of computing is fascinating, get over it. 
+
+* Now lets start off with **gawk** since its what led me down this rabbithole. Gawk is GNU awk, basically when the GNU team made the core utils that we know and love, and greatly extends upon the capabilities and features of...
+
+    * Let it be noted that when I was ran a test on Gentoo, it was also gawk, but `man awk` still worked like normal. Although I tried it in Termux on Android and it had the same issue as Arch.
+
+* **awk**, which was created in the 70s at Bell Labs as a tool to process and analyze text data, meant to fill in the gap between basic Unix utilities and more complex programming languages. It kinda revolutionized text processing, and by extension shell scripting, at the time. Awk is actually it's own complete scripting language! Here's Hello World in Awk:
+
+```
+BEGIN {
+        print "Hello, world!"
+        exit
+}
+```
+
+    * When I `man awk` on my FreeBSD and OpenBSD machines, I get the manpage for awk. I saw it referred to a few times as **nawk**, or new awk which came out in the 80s,
+
+    * But if you'll G down to the bottom of your awk manpage on FreeBSD or OpenBSD, you'll find the name that they fancy for themselves, the **"One True Awk"** and some interesting lore referring to the fabled *Script Compatibility Wars*. 
+
+* But wait, there's more! Next is **mawk**, which is the default awk for Debian-based OSs, as suspected when the manpages for awk in both Debian and Armbian pulled up mawk. Mawk, like myself, was born in 1991 and was designed to be fast and efficient, although it doesn't have as many features a gawk.  
+
+* Other 
+
+* So there you are, all of the different forms of awk a little background on them and just 1 example of the difference between Linux and Unix core utils.  
