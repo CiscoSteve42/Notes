@@ -39,7 +39,7 @@ ping "${IP}"
 * Variables Related to Positional Arguments:
     - `$0` The name of the file
     - `$1, $69, $420` Positional arguments
-    - `$#` The number of passed positional arguments
+    - `$###` The number of passed positional arguments
     - `$*` All positional arguments (in a single string)
     - `$@` All positional arguments, but individually quoted (separate strings)
 
@@ -87,7 +87,7 @@ exit 69
 
 * `echo $?` will also let you check the exit codes of other programs
 
-# MY EXERCISE 1 SCRIPT:
+### MY EXERCISE 1 SCRIPT:
 
 ```bash
 #!/usr/bin/env bash
@@ -136,7 +136,7 @@ Chapter 2: Flow Control and Text Processing
     * `-le` less than or equal to
 
 
-# Example of an **if** condition in Bash:
+### Example of an **if** condition in Bash:
 
 ```bash
 #!/bin/bash
@@ -162,7 +162,7 @@ y=$(date +"%m-%d")
 if [[ ${x} == 420 ]] && [[ ${y} == "04-20" ]] || [[ ${x} == 69 ]]; then
 ```
 
-# An Example of **while** Loops in Bash
+### An Example of **while** Loops in Bash
 
 * Performs function while condition is true
 
@@ -192,7 +192,7 @@ echo "Video failed to load, aborting"
 ```
 
 
-# Example of an **until** Loop 
+### Example of an **until** Loop 
 
 * The loop runs until a condition is met, for example:
 
@@ -215,7 +215,7 @@ echo "${FILE} feels so much better after being filled with ${THING}!"
 * The previous script will run forever until the file has been filled, so we can enter `echo my_dick > your_mom` into our terminal and the script can finish.
 
 
-# **For** loop examples
+### **For** loop examples
 
 * Interates over a designated sequence, where we define the commands that are ran against each value.
 
@@ -253,7 +253,7 @@ for the_Horde in $(seq 1 25); do
 done
 ```
 
-# Case Statements 
+### Case Statements 
 
 * keyword case followed by an expression, for example:
 
@@ -286,31 +286,67 @@ Is Not a Hot Dog
 * Note that the astrisk `*` (not the one from the Bleach OST) acts like a regular Bash wildcard and does it's thing.
 
 
-## Text Processing and Parsing
+###### Text Processing and Parsing
 
 * This section covers the `grep`, `awk`, and `sed` commands. [Distrotube](https://www.youtube.com/@DistroTube) actually has an amazing [video](https://www.youtube.com/watch?v=0AfPcxOoY4w) that covers ALL 3 of these commands specifically, which I highly recommend along with all of his other content. 
 
 
-# Grep
+### Grep
 
 * The first part of this section goes over the `grep` command. For references to the wonders of grep, check out my [Grep Notes](https://github.com/CiscoSteve42/Notes/blob/main/Linux/Tools/Grep.md) here on Github!
 
 
-# Awk 
+### Awk 
 
  
 * First off, if you're on Arch Linux (btw) you might've noticed that there's no entry when you `man awk`, which is because Arch uses Gnu awk, or gawk, which is a standard GNU util, which is different from mawk, which is the default on Debian. For a full trip down this rabbithole, check out my [Github repo]() covering the history and different forms of awk.
 
-* 
+* You can use `awk` to indentify and return specific fields from a file, for example we can take a text file and return just the first field of each line:
+
+```
+$ cat foo.txt
+You may be
+Lost in
+The
+Game of life
+
+$ awk '{print $1}' foo.txt
+```
 
 
+* You can use this same logic to print multiple fields in any desired order:
+
+```
+$ cat footwo.txt
+T O M M A R V O L O R I D D L E
+
+$ awk '{print $12,$5,$3,$9,$10,$6,$13,$7,$2,$15,$14,$16,$4,$8,$11,$1}' foo.txt
+I A M L O R D V O L D E M O R T
+```
 
 
+* Printing `$NF` will display the last field: 
+
+```
+$ cat foodra.txt
+You aren't that bad at the game, those guys just suck
+
+$ awk '{print $1,$NF}'
+You suck
+```
 
 
+* we can use the `-F` flag to change the separaters (*default delimiters*) for each word, like changing commas to spaces in a CSV as so `awk -F',' '{print $1}' users.csv`
 
 
+* You can also use awk to emulate tools like `head`, with `NR` being the total amount of records `awk 'NR < 10' example.sh`
 
+
+* Combining grep and awk can be useful `grep "22/tcp" nmap.txt | awk '{print $}`
+
+
+Sed 
+---
 
 
 
