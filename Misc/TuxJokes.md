@@ -10,3 +10,5 @@ Repo where I store my penguin jokes that I plan on rotating so that I don't forg
 * Don't look at my .bash_history!
 
 * I thought Anonymity was where a clown fish lived
+
+* I was giving her the SystemD and she asked if I was init
