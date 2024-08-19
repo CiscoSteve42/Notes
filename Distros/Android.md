@@ -22,6 +22,10 @@ Tips and tricks
 * Besides setting up a custom .rc file and aliasing everything, the asterisk `*a` wildcard is going to be your best friend for typing commands.
 
 
+Proot and Proot-distro
+----------------------
+
+* 
 
 
 
