@@ -297,7 +297,6 @@ Is Not a Hot Dog
 
 
 ### Awk 
-
  
 * First off, if you're on Arch Linux (btw) you might've noticed that there's no entry when you `man awk`, which is because Arch uses Gnu awk, or gawk, which is a standard GNU util, which is different from mawk, which is the default on Debian. For a full trip down this rabbithole, check out my [Github repo]() covering the history and different forms of awk.
 
@@ -342,19 +341,85 @@ You suck
 * You can also use awk to emulate tools like `head`, with `NR` being the total amount of records `awk 'NR < 10' example.sh`
 
 
-* Combining grep and awk can be useful `grep "22/tcp" nmap.txt | awk '{print $}`
+* Combining grep and awk can be useful `grep "alias" .zshrc | awk '{print $2}`
 
 
-Sed 
----
+### Sed
+
+* That thing that I use in Vim all the time, I now know what its called. 
 
 
+* `s/Kirk/Picard/g captain.txt > TNGcaptain.txt` will output the replaced version and send it to the new file while the original txt file retains all of it's original values.
 
 
+* You can remove all whitespace with `sed 's/ //g' foo.txt`
 
 
+* You can delete lines by giving them the `d` command, you can use it as so `sed '999d' /etc/sudoers`, or you can use `$d` to only delete the last line of the file or `sed 6,9d' bar.txt`  
 
 
+* You can print specific lines using `p` like so `sed -n '1 p' info.txt`  
 
+
+* You can make any of these arguments with the `-i` flag, the changes are made to the file itself of as output.
+
+
+### Job Control 
+
+
+* You can send a command to the background by using the `&` character as so `htop &`
+
+* You can check to see what job is running in the background with `jobs` then bring that process back to the foreground with `fg %1` assuming that the job ID is 1.
+
+
+### Keeping Jobs Running After Logout
+
+* Keep a script running in the background after logout or closing the terminal window with the `nohup` command and `&` to send it into the background as so `nohup ./script.sh &`
+
+
+Bash Customizations for PenTesters 
+---------------------------------- 
+
+* placing a script in your `$PATH` allows you to call it like any other program
+
+
+### Shortening Commands with Aliases
+
+* You can use the `alias` command to set temporary aliases.
+
+
+### Customizing the .bashrc Profile
+
+* you can set aliases in your .bash/zsh/etc.rc file, for example:
+
+```bash
+~ » cat .zshrc | grep alias                    
+        aliases
+alias neo=neofetch
+alias vim=nvim
+alias vi=nvim
+alias v=nvim
+alias t=tmux
+alias iv=sxiv
+alias ..='cd ..'
+alias ...='cd ../..'
+alias cl=clear
+alias Syu='sudo pacman -Syu'
+alias mix=pacmixer
+alias blue=blueman-manager
+alias wifi='nmcli dev wifi list'
+alias news=newsboat
+alias disk='sudo fdisk -l'
+```
+
+* Then add the changes with `source ~/.bashrc` if you're using bash or `source ~/.zshrc` if you're using zsh. Adjust command according to your preferred shell. 
+
+
+### Importing Custom Scripts 
+
+* You can also source your .rc file for specific purposes and source it when needed `source ~./samesmailbsgnowplz.sh`
+
+
+### Capturing Terminal Session Activity
 
 
