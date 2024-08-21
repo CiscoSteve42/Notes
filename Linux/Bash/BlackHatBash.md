@@ -422,4 +422,51 @@ alias disk='sudo fdisk -l'
 
 ### Capturing Terminal Session Activity
 
+* Example listed to create a sessions directory named sessions (if it doesn't already exist) and saves the session capture in a separate file based on the time of the log creation, which happens when you close the terminal window
+
+```bash
+#!/bin/bash
+FILENAME=$(date +%m_%d_%Y_%H:%M:%S).log
+if [[ ! -­
+d ~/sessions ]]; then
+  mkdir ~/sessions
+fi
+# Starting a script session
+if [[ -­
+z $SCRIPT ]]; then
+  export SCRIPT="/home/dad/sessions/${FILENAME}"
+  script -­
+q -­
+f "${SCRIPT}"
+fi
+```
+
+
+### My Exercise 2 Script
+
+```bash
+#!/usr/bin/env bash
+
+NAME="${1}"
+DOMAIN="${2}"
+OUTPUT_FILE="results.csv"
+
+if [ -z "${NAME}" || -z "${DOMAIN}" ; then
+  echo "This script requires 2 positional arguments: a name, and a target domain"
+  exit 1 
+fi
+  
+echo "name,target,result,date" > ${OUTPUT_FILE}
+
+if ping -c 1 "${DOMAIN}" &> /dev/null; then
+  echo "${NAME},${DOMAIN},success,$(date)" >> ${OUTPUT_FILE}
+else
+  echo "${NAME},${DOMAIN},failure,$(date)" >> "${OUTPUT_FILE}"
+fi
+```
+
+
+Chapter 3: Setting up a Hacking Lab
+-----------------------------------
+
 
