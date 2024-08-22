@@ -14,7 +14,7 @@ f, F, t, and T
 
 Capital Letters
 ---------------
- So I don't freak out due to skill issues everytime I hit caps lock.
+So I don't freak out due to skill issues everytime I hit caps lock.
 
 * C  #replace whole line
 
@@ -30,7 +30,7 @@ Capital Letters
 
 Swap Files
 ----------
-# You should still save your files like a kid playing Pokemon 
+### You should still save your files like a kid playing Pokemon 
 
 * View the swp file for a file with `:swapname`
 
@@ -43,5 +43,6 @@ Swap Files
 * Open the file that you one that you want with `vim -r /path/to/swpfile.swp`
 
 * write the file under a new filename `:w recovered.txt`
+
 
 
