@@ -15,10 +15,7 @@ The List
 3. **`cat`**: Concatenates and displays file content, for example `cat .bash_history | grep cat | wc -l` would list how many times your user has used cat in the Bash shell.
 
 
-4. **`chgrp`**: Changes the group ownership of files.
-
-
-
+4. **`chgrp`**: Changes the group ownership of files, for example `chgrp wheel foo.txt`
 
 
 5. **`chmod`**: Changes file permissions, see my [Notes on Permissions]() for more info.
@@ -40,7 +37,7 @@ The List
 
 11. **`date`**: Displays or sets the system date and time, has a lot of options set in the following format `date +"%H:%M"`, which would display the hour and minute in military time, as so `16:20`
 
-12. **`df`**: Reports file system disk space usage.
+12. **`df`**: Reports file system disk space usage, has a `--human-readable` flag.
 
 13. **`dir`**: Lists directory contents (alternative to `ls`).
 
@@ -62,7 +59,7 @@ The List
 
 
 
-21. **`factor`**: Factors integers, for example `factor 420` would give you `420: 2 2 3 5 7`, which you can check with expr `expr 2 \* 2 \* 3 \* 5 \* 7 ` 
+21. **`factor`**: Factors integers, for example `factor 420` would give you `420: 2 2 3 5 7`, which you can check with expr `expr 2 \* 2 \* 3 \* 5 \* 7` 
 
 
 
@@ -227,4 +224,10 @@ The List
 97. **`zcat`**: Displays compressed files (similar to `cat` for `.gz` files).
 
 
+Additional Info from GNU Website
+================================
 
+* Additional info for the GNU coreutils from [The GNU Website](https://www.gnu.org/software/coreutils/manual/coreutils.html)
+
+
+* `cp`, `mv`, `install`, and `ln` all have a `b` (`--backup`) flag that ...backs up the file...yeah. 
