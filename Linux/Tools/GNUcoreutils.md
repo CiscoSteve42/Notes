@@ -35,7 +35,11 @@ The List
 
 10. **`cut`**: Removes sections from each line of files.
 
-11. **`date`**: Displays or sets the system date and time, has a lot of options set in the following format `date +"%H:%M"`, which would display the hour and minute in military time, as so `16:20`
+11. **`date`**: Displays or sets the system date and time, has a lot of options set in the following format `date +"%H:%M"`, which would display the hour and minute in military time, as so `16:20`. See my [Github notes on the date Command]() for more info. 
+
+
+**`dd`**: Copies and converts a file, used to write ISOs to portable media as so `sudo dd bs=1M conv=fdatasync if=proxmox-ve_8.2-1.iso of=/dev/sdb`
+
 
 12. **`df`**: Reports file system disk space usage, has a `--human-readable` flag.
 
