@@ -12,3 +12,5 @@ Repo where I store my penguin jokes that I plan on rotating so that I don't forg
 * I thought Anonymity was where a clown fish lived
 
 * I was giving her the SystemD and she asked if I was init
+
+* Kickin\' it at the ~ with * my\ homies
