@@ -7,7 +7,7 @@ awk nawk, gawk, and mawk
 
     * Let it be noted that when I was ran a test on Gentoo, it was also gawk, but `man awk` still worked like normal. Although I tried it in Termux on Android and it had the same issue as Arch.
 
-* **awk**, which was created in the 70s at Bell Labs as a tool to process and analyze text data, meant to fill in the gap between basic Unix utilities and more complex programming languages. It kinda revolutionized text processing, and by extension shell scripting, at the time. And its actually a whole scripting language! Here's Hello World in Awk:
+* **awk**, which was created in the 70s at Bell Labs by Alfred **A**ho, Peter **W**einberger, and Brian **K**ernighan (think Crosby, Stills, and Nash) as a tool to process and analyze text data, meant to fill in the gap between basic Unix utilities and more complex programming languages. It kinda revolutionized text processing, and by extension shell scripting, at the time. And its actually a whole scripting language! Here's Hello World in Awk:
 
    ``` 
     BEGIN {
