@@ -17,7 +17,7 @@ awk nawk, gawk, and mawk
     ```
 
 
-    * When I `man awk` on my FreeBSD and OpenBSD machines, I get the manpage for awk. I saw it referred to a few times as **nawk**, or new awk which came out in the 80s,
+    * When I `man awk` on my FreeBSD and OpenBSD machines, I get the manpage for awk, which makes total sense on a BSD system. I saw it referred to a few times as **nawk**, or new awk which came out in the 80s,
 
     * But if you'll G down to the bottom of your awk manpage on FreeBSD or OpenBSD, you'll find the name that they fancy for themselves, the **"One True Awk"** and some interesting lore referring to the fabled *Script Compatibility Wars*. 
 
