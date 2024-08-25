@@ -41,3 +41,9 @@ tmux attach-session -t 0
 ```
 
 * Kill window with Prefix + the `&` key
+
+
+Seeing the status of Terminal Processes with pv
+-------------------------------------------------
+
+* `pv` is a pretty awesome little utility that lets you see 
