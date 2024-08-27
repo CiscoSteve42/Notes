@@ -469,4 +469,6 @@ fi
 Chapter 3: Setting up a Hacking Lab
 -----------------------------------
 
+* Sorry for the delay on this chapter, I didn't have a recent Kali ISO as I try to shy away from the distro in particular and I don't have internet currently so I had to install it at my mom's place.
+
 
