@@ -228,6 +228,73 @@ By the end of this chapter, you should be able to:
 
 ### Why Should You Bother?
 
+* "*When you're too poor to buy, the most popular option is to rent*" ~ me, just now.
+
 * **Scaling Success with Flexibility**
 
-    * 
+    * **Flexibility** Dynamic scaling of resources based on demand. The systam can automatically allocate additional server power to handle increased loads, ensuring that apps remain responsive and available.
+
+    
+* **Rapid Prototyping and Innovation**
+
+    * Cloud has like, a bunch of tools and allows devs to leverage IaC and stuff. More in the numerous cloud courses that I'm going to be taking after this one =/
+
+
+### A *Brief* History of Cloud
+
+* **Back in the Day...(1950s-90s)** 
+
+    * Something, something something...Salesforce and AWS...
+
+    * #fill in with the history of cloud when you have a connection [doit](https://www.techtarget.com/whatis/feature/The-history-of-cloud-computing-explained)
+
+ 
+* **The Birth of *Virtualization* (Early 2000s)**
+
+   * VMs laid the foundation for the scalable infrastructure that we associate with the cloud. 
+
+
+* **The Rise of Public Cloud Providers (Mid 2000s)**
+
+    * **AWS**: *Elastic Compute Cloud (EC2)* was launched in 2006 and, was considerd the first major public cloud service. In 2007, AWS introduced *Simple Storage Service (S3)* and launched additional services throughout the years
+
+    * **GCP**: *Google App Engine* was announced in 2008, then *Google Cloud Platform* was launched in 2012, which offered services such as Compute Engine, CLoud Storage, and BigQuery
+
+    * **Azure**: In 2008, Microsoft announced *Project Red Dog*, which was later known as Azure...so red...blue...what? *Anyway*, Azure was launched in 2012 as *Windows Azure*, but got renamed to *Microsoft Azure* in 2014
+
+    
+    * *AWS* is the GOAT, so that's why I'm learning it regardless of how I feel about Mr Yacht-ception Man (the other choices aren't exactly peachy either. I'm just gonna shut up and learn cloud ksrythx)
+
+    * Cloud existed before this in various forms although the term wasn't popularized and used until this era, the *definition* of cloud computing was still evolving in this era
+
+
+* **The Era of PaaS and SaaS (Late 2000s-Early 2010s)**
+
+    * **Paas** (Platform as a Service) platforms like Google App Engine, Cloud Foundry, AWS Beanstalk, etc provided devs with tools to deploy and build apps with out managing underlying infrastructure
+
+    * **SaaS** (Software as a Service) platforms like Dropbox and Salesforce were dope for delivering software through the cloud
+
+
+* **Hybrid Cloud and Multi-Cloud Strategies (Present)**
+
+   * **Hybrid Cloud** allows a combination of on-prem infrastructure with cloud services. Blah blah flexibility compliance
+
+   * **Multi-Cloud Strategies** uses services from multiple Cloud providers to optimize costs and meet company needs
+
+
+* **Innovations and Future Horizons**
+
+    * Serverless Computing, Edge Computing, and AI continue to evolve the cloud
+
+
+### Types of Clouds 
+
+I will always hear all of these in Professor Messer's voice
+
+* **IaaS (Infrastructure as a Service)**
+
+* **PaaS (Platform as a Service)**
+
+* **SaaS (Software as a Service)**
+
+* **FaaS (Function as a Service)**
