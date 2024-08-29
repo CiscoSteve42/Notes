@@ -293,8 +293,131 @@ I will always hear all of these in Professor Messer's voice
 
 * **IaaS (Infrastructure as a Service)**
 
+    * Devs get basic tools, such as servers, storage, and networking to create and manage their own apps (building your house but renting the land and utilities)
+
 * **PaaS (Platform as a Service)**
+
+    * Lets devs focus on building and improving apps (hire a company to build the house)
 
 * **SaaS (Software as a Service)**
 
+    * Fully developed apps available for users on the fly (like moving into a fully furnished house)
+
 * **FaaS (Function as a Service)**
+
+    * Allows devs to deploy apps without managing the servers, with the cloud provider dynanamically managing the allocation of resources, allowing the devs to focus on functionality and scaling while only paying for what they need (House MD...I just wanted to say it)
+
+
+### Cloud Deployment models
+
+* **Public Cloud** computing resources are provided by a third-party cloud provider and are made accessible to the general public over the internet. Examples include the main cloud providers (Azure, AWS, GCP) 
+
+* **Private Cloud** exclusive environment utilized by a single organization, can be hosted on prem or by a third party. Tools used include OpenStack, Hyper-V, XenServer, and vSphere by VMware, which allow orgranizations to esatblish a private cloud in their own datacenters
+
+* **Hybrid Cloud** utilizes features of both public and private clouds, allowing the sharing of data and apps between the 2, allowing for more flexibility and diverse deployment options. Examples include Azure Hybrid Cloud, VMware Cloud Foundation, and CloudHesive 
+
+* **Community Cloud** shared among multiple organizations with shared concerns, such as regulatory compliance. This allows organizations to collaborate within the cloud to complete objectives
+
+* **Multi-Cloud** leveraging multiple cloud providers to avoid vendor lock-in, enhance redundancy, and optimize costs. 
+
+
+### Major Cloud services
+
+* **Compute Services** "Engine" or "virtual brains" of software. VMs are versitile computing environments, and containers, such as those managed by Google Kubernetes Engine (GKE), Azure Kubernetes Service (AKS), or Rancher offerce lightweight and scalable ways to package and deploy apps
+
+* **Storage Services** "Cloud memory". *Object storage*, like Amazon S3, Azure Blob Storage, or wasabi "vast digital warehouse" where you can store your data. *Block storage*, such as Google Cloud Persistent Disks, offers more traditional storage options, while file storage services such as AWS Elastic File System (EFS) or Azure File Storage organize date in a file structure designed for easier access
+
+* **Database Services** "Brain's memory banks" stores and manages structured data. Services like AWS RDS, Azure SQL Database, or DigitalOcean Managed Databases provide scalable and efficient solutions for relational databases. NoSQL databases such as MongoDB Atlas or Google Cloud Firestore offer flexibility when working with unstructured or semi-structured data
+
+* **Networking Services** "Connectors of the cloud" enables communication between various components. Virtual networks such as AWS VPC, Azure Virtual Network, Oracle Cloud Infrastructure (OCI)'s Virtual Cloud Network (VCN), or DigitalOcean's Virtual Private Cloud (VPC) act as the digital infrastructure for applications. CDNs (Content Delivery Networks) like Cloudflare or Akamai speed up content delivery by caching it closer to users
+
+* **Security and Identity Services** "Guardians of the Cloud, out this Fall. Rated PG-13." IAM (Identity and Access Management) services such as AWS IAM or Azure Active Directory manage who has access to what. Encryption services, such as AWS KMS or Azure Key Vault add an extra layer of security by safeguarding sensitive information
+
+* **Machine Learning and AI Servies** Platforms such as Google AI Platform or Azure Machine Learning provide tools and frameworks, NLP (Natural Language Processing) services such as AWS Comprehend or Google Cloud Natural Language API make it easy to analyze and understand human language. 
+
+* **Serverless Computing** akin to "outsourcing mundane tasks", allowing devs to focus purely on writing code. FaaS services such as AWS Lambda or Azure Functions allow you to run code in response to events without worrying about managing servers
+
+* **IoT Services** "Conductors of a digital orchestra" Platforms such as AWS IoT or Azure IoT Hub help you connect, monitor, and manage IoT devices seamlessly. For edge computing, where processing happens closer to the data source, services like Google Cloud IoT Edge or Azure IoT Edge provide a distributed solution
+
+* **DevOps and CI/CD Services** Continuous Integration tools such as Jenkins or GitLab CI automate testing and integration of code changes. Container orchestration tools such as Kubernetes and Docker Swarm help manage and deploy containerized apps, ensuring consistency across different environments
+
+* **Analytics and Big Data Services** Platforms like AWS EMR and Azure HDInsight make it easy to process and analyze large datasets. For data warehousing, where you need to store and query massive amounts of data quickly, services like Google BigQuery or Snowflake provide scalable solutions
+
+* Jesus Christ the GCP UI is a laggy trash fire
+
+
+Introduction to Containers and Kubernetes
+-----------------------------------------
+
+### The Difference Between Containers and VMs
+
+* **Virtual Machines: Isolated and Versatile** fully isolated virtual environment, complete with OS and all necessary dependencies, physical hardware is abstracted
+
+    * **Strong isolation** operates as an independent entity with it's own dedicated resources, making them highly secure
+
+    * **Compatibility** different OSs on same hardware, allows running legacy apps or different OS versions in parallel
+
+    * **Complete Abstraction** VMs operate as if running on dedicated physical machines, giving them full control of the virtual environment
+
+    * **Resource Overhead** Uses more resources than containers due to needing a whole OS instance for each VM, resulting in higher infrastructure costs and slower startup times than containers
+
+
+* **Containers: Lightweight and Efficient** run packages and dependencies isolated from host system, lightweight and highly efficient VM alternative
+
+    * **Resource Efficiency** share the host OS's kernel, elliminating the need for multiple OS instances, making them more resource efficient than VMs
+
+    * **Rapid Startup and Scalability** rapid startup makes containers highly scalable and allows for horizontal scaling (spinning up multiple instances of an app to handle increased workload)
+
+    * **Isolation and Security** containers are isolated from host OS and each other, which provides strong isolation but vulnerable if host OS has a kernel vulnerability
+
+    * **Ease of Management** easy to deploy update and roll back due to their lightweight nature, making them ideal for apps that require frequent updates and CI/CD workflows 
+
+* **Which One to Choose**
+
+    * **Development and Testing** Containers are widely used in development and testing due to agility and easy of management
+
+    * **Microservices Architecture** Containers allow for easy scaling and deployment of individual services
+
+    * **Legacy Applications** VMs are preferred for legacy apps that may not be compatible in modern environments, can run apps without significant modifications to the infrastructure
+
+    * **High Isolation Environments** VMs more secure than containers, better fror when data privacy is paramount
+
+
+### Brief History of Containers 
+
+* **Chroot (1970s)** allows a process to have it's own isolated view of the filesystem by changing the root directory to a specified filepath
+
+* **FreeBSD Jails (2000)** lightweight virtualization by isolating processes, filesystems, and networking. Early form of containerization
+
+* **Solaris Containers (2004)** allowed multiple Solaris instances to be ran isolated on a single host
+
+* **cgroups and Namespaces (2007)** the Linux kernel introduced control groups (cgroups), which enabled resource isolation, and namespaces, which enabled process isolation
+
+* **LXC (Linux Containers) (2008)** used cgroups and namespaces to provide process and resource isolation
+
+* **Docker (2013)** revolutionized container technology, friedly cli and standardized images
+
+* **Container Orchestration (2014+)** tools such as Kubernetes, Docker Swarm, Apache Mesos, or Hashicorp's Nomad automate deployment, scaling, and management of containerized apps
+
+* **OCI (Open Container Initiative) (2015)** specifications define the Open Container Format (OCF) for container images and the Open Container Runtime (OCR) for container runtimes
+
+* **Containerd (2017)** Docker donated containerd (it's container runtime) to the CNCF (Cloud Native Computing Foundation) and it is now a core component of many container platforms and orchestration tools
+
+* **Rise of Alternatives (2020s)** tools like Podman provide flexibility and address some concerns associated with Docker
+
+
+### Docker: What's Under the Hood
+
+* **Docker Engine**
+
+* **Docker Client**
+
+* **Docker Images**
+
+* **Docker Registry**
+
+* **Docker Compose**
+
+* **Docker Swarm**
+
+* **Networking and Storage Drivers**
