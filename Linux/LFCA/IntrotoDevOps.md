@@ -190,7 +190,6 @@ Intro to DevOps and SRE (not JRE, thank god)
 
     * **GitHub**
 
-
 ### The Future of DevOps
 
 * **AI-Powered Automation** AI-powered tools will automate tedious tasks, predict failures, and optimize software delivery processes
@@ -410,14 +409,60 @@ Introduction to Containers and Kubernetes
 
 * **Docker Engine**
 
-* **Docker Client**
+    * **Containerd** Industry standard core container runtime, provides basic functionality for container execution and management. Handles low-level container operations such as container creation, execution, and deletion
 
-* **Docker Images**
+    * **runC** at the core of containerd is runC, the industry standard container runtime. Responsible for spawning and running containers based on OCI (Open Container Initiative) specs. Handles container lifecycle, including creating and running containers from images 
 
-* **Docker Registry**
+    * **libcontainer** original Docker container execution library, eventually it's functionality was incorporated into containerd
 
-* **Docker Compose**
+* **Docker Client** CLI tool that allows users to interact with the Docker Daemon/Engine, such as building, running, and managing containers
 
-* **Docker Swarm**
+* **Docker Images** lightweight, standalone, executable packages that include the app and all of it's dependencies. Images are built from instructions defined in the Dockerfile. Stored in a registry such as Docker Hub so that they can be easily shared and distributed
 
-* **Networking and Storage Drivers**
+* **Docker Registry** place to store docker images, can be public or private
+
+* **Docker Compose** tool for defining and running multi-container Docker apps. Allows users to describe services, networks, and volumes in a docker-compose.yml file (Compose ftw!)
+
+* **Docker Swarm** Docker's native clustering and orchestration solution. Users can create and manage a swarm of Docker nodes, turning them into a single virtual Docker host. Enables deployment and scaling of services across multiple containers
+
+* **Networking and Storage Drivers** Networking and storage drivers containers can be configured on requirements, such as communicating with each other or the outside network
+
+
+### Podman: An Alternative to Docker
+
+* **What makes Podman different from other container engines (Docker)**
+
+    * **Daemonless Architecture** Each command runs in the Podman process, reducing attack surface and allowing non-root (or non-docker group) users to run containers
+
+    * **Root and Rootless Modes**
+        
+        * **Root Mode** similar to traditional Docker, provides root access to the system
+
+        * **Rootless Mode** One of Podman's biggest features, reduces risk of priv escalation
+
+    * **Use of Fork/Exec Model** when a container is started with Podman, it forks itself then execs the runtime (like runc or crun). Each container is it's process or set of processes on the host, managed directly by the kernel and not by a long-running daemon process
+
+    * **Compatibility with Docker** compatible with Docker in CLI syntax, making transition easy. Easy to alias for most commands 
+
+    * **Pods Management** Similar to Kubernetes, groups of containers that share the same network, IPC, and PID namespaces are called pods. Allows Podman to align well with Kubernetes environments
+
+    * **Image Management** uses same images format as Docker, including Docker Compose files!
+
+    * **Networking** supports multiple network modes, including host, bridge, and container networking. Modes are handled per container and can be set up to mimic Docker's networking configurations
+
+    * **Security** daemonless and rootless mode reduce security risks, native integration with SELinux, seccomp, and other security features provided by the Linux kernel
+
+
+### The Need for Container Orchestration
+
+* **Automating Container Management**
+
+* **Streamlining Complex Workflows**
+
+* **Improving Resource Utilization**
+
+* **Enforcing Consistency and Control**
+
+* **Enabling Multi-Cloud Deployments**
+
+* **Popular Orchestration Platforms** 
