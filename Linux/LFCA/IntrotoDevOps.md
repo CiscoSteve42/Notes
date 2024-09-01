@@ -457,12 +457,74 @@ Introduction to Containers and Kubernetes
 
 * **Automating Container Management**
 
-* **Streamlining Complex Workflows**
+    * **Deployment** orchestrators can automatically deploy containers to different nodes in a cluster, ensuring that apps are available and running smoothly
 
-* **Improving Resource Utilization**
+    * **Scaling** containerized apps can automatically scale up or down based on demand, ensuring optimal resource utilization
 
-* **Enforcing Consistency and Control**
+    * **Health Monitoring** orchestrators can monitor the health of containers and automatically restart them if they fail, ensuring app uptime
 
-* **Enabling Multi-Cloud Deployments**
+    * **Networking** networks for containerized apps can be configured and managed, ensuring communication with each other and external resources
+
+* **Streamlining Complex Workflows** orchestration platforms can help simplify and streamline complex workflows, such as CI/CD pipelines. They can automate the build, test, and deployment of containerized apps, allowing devs to do other dev stuff
+
+* **Improving Resource Utilization** make sure containers are only running when needed, saving on costs
+
+* **Enforcing Consistency and Control** enforces consistency and control over containerized apps, helping ensure that they're deployed in a consistent manner and meet security/compliance requirements 
+
+* **Enabling Multi-Cloud Deployments** apps can be deployed across multiple cloud vendors, providing greater flexibility and resilience
 
 * **Popular Orchestration Platforms** 
+
+    * **Kubernetes** 
+
+    * **Docker Swarm**  
+
+    * **Apache Mesos**
+
+    * **Nomad**
+
+
+### Kubernetes: The Orchestrator of Containerized Applications
+
+* **The Breakdown**
+
+    * **Deployment** automated deployment across a cluster of nodes
+
+    * **Scaling** automatic scaling based on demand
+
+    * **Load Balancing** even traffic distribution across different instances, ensuring high availability and responsiveness
+
+    * **Service Discovery** enables apps to discover and communicate with each other, regardless of their location in the cluster
+
+    * **Health Monitory** monitors health of apps and automatically restarts them if they fail
+
+    * **Security** robust security framework for managing access control and protecting apps
+
+    * **Self-healing**
+
+    * **Horizontal Scaling**
+
+* **The History**
+
+    * **2014**
+
+    * **2015**
+
+    * **2017**
+
+    * **2023**
+
+* **Why it's the GOAT**
+
+    * **Open Source**
+
+    * **Scalable**
+
+    * **Flexible**
+
+    * **Community-driven**
+
+    * **Collaboration**
+
+    
+
