@@ -529,10 +529,7 @@ Introduction to Containers and Kubernetes
     
 ### Key Components of Kubernetes
 
-* **Control Plane Node** control plane nodes in K8s play a critical roll in managing the cluster's state and configuration. Responsible for making global cluster decisions such as scheduling, detecting, and responding to cluster events, such as starting up a new pod when a deployment's *replicas* field is unsatisfied. Key components include:
-
-    * **API Server** front end for the K8s control plane. Responsible for handling and validating requests, and updasting corresponding objects in the cluster, exposes the K8s API 
-
+* **Control Plane Node** control plane nodes in K8s play a critical roll in managing the cluster's state and configuration. Responsible for making global cluster decisions such as scheduling, detecting, and responding to cluster events, such as starting up a new pod when a deployment's *replicas* field is unsatisfied. Key components include: **API Server** front end for the K8s control plane. Responsible for handling and validating requests, and updasting corresponding objects in the cluster, exposes the K8s API 
     * **Cluster Data Store - etcd** only stateful part of the cluster which persists the entire cluster config (aka desired state) and the current state of the cluster
 
     * **Controller Manager** controllers are responsible for maintaining the desired state and handling tasks such as node manaement, replication, and endpoints
@@ -545,22 +542,41 @@ Introduction to Containers and Kubernetes
 
     * **Container Runtime** responsible for managing the entire container lifecycle on the node. Containerd is a prime example
 
-    * **Kube Proxy** K8s agent installed on every node in the cluster. 
+    * **Kube Proxy** K8s agent installed on every node in the cluster. Implements local IPTABLES or IPVS rules to handle routing and load-balancing of traffic on the Pod network. Monitors changes that happen to Services objects and their endpoints, and translates them into actual network rules inside the node. Installed as an add-on during installation, usally created as a DaemonSet 
 
-* **Pod**
+* **Pod** smallest deployable unit, encapsulates one or more containers and shares network and storage resources
 
-* **ReplicaSet**
+* **ReplicaSet** manages the lifecycle of pods and ensures that a specified number of replicas for a pod are running at all times, can scale the amount of pods up or down based on defined configs
 
-* **Deployment**
+* **Deployment** provides declaritive updates to applications. Users define the desired staet and the dployment controller changes the actual state to match the desired one, facilitating updates and rollbacks
 
-* **Service**
+* **Service** defines a set of pods and a policy to access them. Allows communication between different sets of pods in the cluster, abstracting the underlying network details
 
-* **Volume**
+* **Volume** manages storage, provides data persistence for containers. Volumes can be attached to pods, allowing data to persist across pod restarts
 
-* **Namespace**
+* **Namespace** provides a way to divide cluster resources into multible virtual clusters, useful for organizing and isolating resources within a cluster
 
-* **ConfigMap and Secret**
+* **ConfigMap and Secret** used to manage config data and sensitive information (ie passwords, API keys) separately from the application code
 
-* **Kubernetes Dashboard**
+* **Kubernetes Dashboard** web-based UI for visually managing and monitoring the cluster. 
 
 
+### What Kubernetes is **Not**
+
+* Kubernetes is **NOT** a...
+
+    * **Traditional Virtualization Platform**
+
+    * **Containerization Platform**
+
+    * **Replacement for Docker**
+
+    * **PaaS**
+
+    * **Config Management Tool**
+
+    * **Inherently Secure**
+
+    * **Just for Microservices**
+
+    * **One-Size-Fits-All Solution**
