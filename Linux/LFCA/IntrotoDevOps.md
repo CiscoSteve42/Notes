@@ -500,19 +500,19 @@ Introduction to Containers and Kubernetes
 
     * **Security** robust security framework for managing access control and protecting apps
 
-    * **Self-healing**
+    * **Self-healing** restarts, replaces, and kills containers that don't respond to the user-defined health check, doesn't advertise them to clients until they're ready to serve
 
-    * **Horizontal Scaling**
+    * **Horizontal Scaling** scale up or down with a command, in the UI, or automatically based on CPU usage
 
 * **The History**
 
-    * **2014**
+    * **2014** originates from Google's internal container management system, Borg (We are Google, Resistance is Futile)
 
-    * **2015**
+    * **2015** K8s open sourced under the Apache 2.0 license
 
-    * **2017**
+    * **2017** K8s 1.0 released
 
-    * **2023**
+    * **2023** shizz is used everywhere
 
 * **Why it's the GOAT**
 
@@ -527,4 +527,40 @@ Introduction to Containers and Kubernetes
     * **Collaboration**
 
     
+### Key Components of Kubernetes
+
+* **Control Plane Node** control plane nodes in K8s play a critical roll in managing the cluster's state and configuration. Responsible for making global cluster decisions such as scheduling, detecting, and responding to cluster events, such as starting up a new pod when a deployment's *replicas* field is unsatisfied. Key components include:
+
+    * **API Server** front end for the K8s control plane. Responsible for handling and validating requests, and updasting corresponding objects in the cluster, exposes the K8s API 
+
+    * **Cluster Data Store - etcd** only stateful part of the cluster which persists the entire cluster config (aka desired state) and the current state of the cluster
+
+    * **Controller Manager** controllers are responsible for maintaining the desired state and handling tasks such as node manaement, replication, and endpoints
+
+    * **Scheduler** ensures the the workload is evenly distributed across the cluster, assigns pods to nodes based on resource availability, constraints, and other policies
+
+* **Worker Node (Minion)** the machines (physical or virtual) where your containers run. Managed by the control plane and perform requested, necessary workloads. Each node has the necessary component to orchestrate and run apps. Key components include:
+
+    * **Kubelet** an agent running on each node that communicates with the control plane node's API server. Ensures that containers are running in a pod and reports back to the control plane about the node's status
+
+    * **Container Runtime** responsible for managing the entire container lifecycle on the node. Containerd is a prime example
+
+    * **Kube Proxy** K8s agent installed on every node in the cluster. 
+
+* **Pod**
+
+* **ReplicaSet**
+
+* **Deployment**
+
+* **Service**
+
+* **Volume**
+
+* **Namespace**
+
+* **ConfigMap and Secret**
+
+* **Kubernetes Dashboard**
+
 
