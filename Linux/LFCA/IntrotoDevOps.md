@@ -594,7 +594,7 @@ Introduction to Containers and Kubernetes
 
 * **CRI-O* Lightweight container runtime specifically designed for K8s, implements with the CRI (Kubernetes Container Runtime Interface) to enable the launching of containers straight from K8s with the need for a platform like Docker (Minikube uses CRI-O as it's container runtime!)
 
-* **KubeVirt**
+* **KubeVirt** extends K8s to support running and managing VMs alongside container workloads, giving them a unified platform
 
 * **Firecracker**
 

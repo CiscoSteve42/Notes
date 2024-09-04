@@ -19,4 +19,10 @@ kubectl Notes
 
 * `helm` is the package manager for K8s
 
-* To launch the Web-UI using minikube, use `minikube dashboard` 
+* To launch the Web-UI using minikube, use `minikube dashboard`
+
+* Like Docker, you can use `kubectl exec -ti yourservice-42069 /bin/sh` to get a shell for your container 
+
+* Also like Docker, you can check logs with `kubectl logs -f yourservice-42069`
+
+* The equivalent of `docker rm` is `kubectl delete`
