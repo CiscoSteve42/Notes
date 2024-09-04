@@ -584,15 +584,15 @@ Introduction to Containers and Kubernetes
 
 ### Developing Container Technologies
 
-* **Containerd**
+* **Containerd** core container runtime, originally part of Docker but now a standalone project and a key component for various container platforms
 
-* **Podman**
+* **Podman** provides daemonless, rootless container experience
 
-* **BuildKit**
+* **BuildKit** toolkit for building container images, provides a more modular and efficient way to build container images, often interated into container build systems. Originally part of the Moby project, the open source project rto advance the software containerization movement
+ 
+* **Kata Containers** an open source project that combines lightweight VMs with the speed and manageability of containers, aims to provide the security benefits of VMs with the performance advantages of containers
 
-* **Kata Containers**
-
-* **CRI-O*
+* **CRI-O* Lightweight container runtime specifically designed for K8s, implements with the CRI (Kubernetes Container Runtime Interface) to enable the launching of containers straight from K8s with the need for a platform like Docker (Minikube uses CRI-O as it's container runtime!)
 
 * **KubeVirt**
 

@@ -16,3 +16,7 @@ kubectl Notes
 * Access URL for the service with `minikube service nameof-service --url`
 
 * Check pods with `kubectl get pods`, similar to `docker ps` with Docker
+
+* `helm` is the package manager for K8s
+
+* To launch the Web-UI using minikube, use `minikube dashboard` 
