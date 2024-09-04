@@ -565,18 +565,41 @@ Introduction to Containers and Kubernetes
 
 * Kubernetes is **NOT** a...
 
-    * **Traditional Virtualization Platform**
+    * **Traditional Virtualization Platform** operates at the container orchestration level, not at the VM level. Does not provide virtualization, manages and orchestrates containerized applications
 
-    * **Containerization Platform**
+    * **Containerization Platform** K8s relies on container runtimes such as containerd or Docker to manage and run containers, Kubernetes focuses or orchestrating and automating deployment, scaling, and management
 
-    * **Replacement for Docker**
+    * **Replacement for Docker** it is not a containerization platform
 
-    * **PaaS**
+    * **PaaS** more granular control than traditional PaaS offerings. Infrastructure details are defined and manged by the user rather than abstracted away from them
 
-    * **Config Management Tool**
+    * **Config Management Tool** focuses on declaring the desired state of apps and managing their lifecycle, but does not handle general-purpose config management tasks like Ansible or Puppet
 
-    * **Inherently Secure**
+    * **Inherently Secure** robust framework, not perfect. Still implement best practices, configure network policies, and regularly update clusters
 
-    * **Just for Microservices**
+    * **Just for Microservices** can manage and orchestrate a wide range of application types, including monolithic apps and those following other architectural patterns
 
-    * **One-Size-Fits-All Solution**
+    * **One-Size-Fits-All Solution** designed primarily for complex, distributed systems that require scalability, resilience, and flexibility
+
+
+### Developing Container Technologies
+
+* **Containerd**
+
+* **Podman**
+
+* **BuildKit**
+
+* **Kata Containers**
+
+* **CRI-O*
+
+* **KubeVirt**
+
+* **Firecracker**
+
+* **OCI Specifications**
+
+* **Kpack**
+
+* **Gvisor**
