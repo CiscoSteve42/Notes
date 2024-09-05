@@ -596,10 +596,115 @@ Introduction to Containers and Kubernetes
 
 * **KubeVirt** extends K8s to support running and managing VMs alongside container workloads, giving them a unified platform
 
-* **Firecracker**
+* **Firecracker** lightweight open source virtualization technology designed for serverless computing, created by AWS. Combines security of VMs with speed and efficiency of containers
 
-* **OCI Specifications**
+* **OCI Specifications** the Open Container Initiave continues to play a crucial role in standardizing container formats and runtimes
 
-* **Kpack**
+* **Kpack** a Kubernetes-native platform for building and updating container images that automates the image-building process, making it easier for devs to create and maintain container images directly within the Kubernetes environment
 
-* **Gvisor**
+* **Gvisor** a user-space kernel developed by Google that provides an additional layer of isolation to container, giving them VM-like security with the performance overhead
+
+
+Infrastructure As Code (IaC)
+----------------------------
+
+* involves describing and provisioning infrastructure elements through machine-readable script files, treating infrastructure in a manner similar to software code 
+
+* Allows devs to define infrastructure configurations using high-level programming language
+
+* Key advantages include the ability to version control the infrastructure code, ensuring traceability, reproducibility, and easy collaboration across dev teams
+
+* Not only simplifies initial deployments but also facilitates scaling, updates and teardowns
+
+
+### Why Would You Bother?
+
+* **Software Engineers**
+
+    * **Efficiency and Consistency** configs can be scripted, ensuring consistency across different environments
+
+    * **Collaboration and Version Control** enables engineers to use tools like Git to manage changes, track history, and collaborate seamlessly, like is done with application code
+
+    * **Automation and DevOps Practices** CI/CD pipelines can trigger automated infrastructure updates, streamlining the development process
+
+* **Developers**
+
+    * **Scalability and Flexibility** applications can be easily scaled by modifying resource allocation in code 
+
+    * **Reduced Downtime and Rollbacks** devs can easily revert to a previous version if needed
+
+    * **Cross-Platform Compatibility** scripts can be adapted for different platforms
+
+* **Product Managers**
+
+    * **Cost Optimization** resources are provisioned as necessary
+
+    * **Rapid Prototyping and Experimentation** environments can quickly be set up and torn down
+
+    * **Risk Mitigation and Compliance** helps enforce standardized configurations, reducing the risk of non-compliance
+
+* **Short-term and Long-term Business Impact**
+
+    * **Agility and Innovation** accelerates development ctcles, allowing for fostering innovation, keeping products competitive, and quick adaptation to market changes
+
+    * **Reliability and Stability** promotes stability by minimizing configuration drifts and automating error-prone manual processes, leading to a better end-user experience
+
+    * **Resource Optimization and Cost Savings** resource usage optimized
+
+
+### Categories of Infrastructure as Code Tools
+
+* **Declaritive IaC Tools** users specify the desired staet of the infrastructure, and the tool ensures that the system reaches that state
+
+    * **Terraform** allows users to define infrastructure using a declarative configuration languate. Supports various providers, enabling multi-cloud and hybrid cloud scenarios
+
+    * **Pulumi** provides IaC in multiple languages, including Python, TS, and Go, allows integration with various cloud providers and offers flexibility
+
+    * **SaltStack** open source platform using .yaml config files for IaC, focuses on automation and offers centralized infrastructure management
+
+* **Configuration Management Tools**
+
+    * **Ansible** uses declarative yaml scripts do define the state of a system. Excels at config management, automating repetitive tasks, and can be used for provisioning infrastructure
+
+    * **Chef** uses a Ruby-based DSL (Domain Specific Language) for writing system configs. Supports declarative, but execution of Chef recipes can be seen as imperitive because the code specifies how to achieve the desired state. Powerful for managing complex environments but has a steep learning curve
+
+    * **Puppet** config management tool that can also be used for IaC using a declarative language called Puppet DSL to define the desired infrastructure state. Good for highly scentralized and controlled infrastructure management  
+
+* **Container Orchestration Tools**
+
+    * **Kubernetes** tools like Helm provide a way to define and version infrastructure configurations in K8s
+
+    * **Nomad** excels in managing heterogeneous environments, handling bare metal, VMs, and cloud platforms with equal ease
+
+    * **CloudHedge** offers container-based VMs and serverless functions alongside container orchestration, suitable for organizations wanting a unified platform for infrastructure and application management
+
+* **Cloud Native IaC Tools**
+
+    * **Azure Resource Manager (ARM)** templates are JSONs that define the resources needed for an Azure solution. Tailored for Azure services, provides a way to automate the deployment and configuration of Azure resources
+
+    * **AWS CloudFormation** templates are JSON or YAML and specify the resources needed and their configurations. Follows a procedural approach to create, update, or delete resources
+
+* **Considerations for Choosing IaC Tools**
+
+    * **Compatibility**
+
+    * **Community Support**
+
+    * **Scalability**
+
+    * **Ease of Learning**
+
+    * **Security**
+
+
+### Five Fundamental Features of an IaC Tool
+
+* **Declarative Configuration** allows users to specify the desired state of their infrastructure without detailing the steps to reach that state
+
+* **Idempotent Operations**
+
+* **Version Control Integration**
+
+* **Dependency Management**
+
+* **Parallel Execution**
