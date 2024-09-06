@@ -701,10 +701,119 @@ Infrastructure As Code (IaC)
 
 * **Declarative Configuration** allows users to specify the desired state of their infrastructure without detailing the steps to reach that state
 
-* **Idempotent Operations**
+* **Idempotent Operations** ensures that applying the same config multiple times produces the same result, regardless of the intial or intermediate states
 
-* **Version Control Integration**
+* **Version Control Integration** Git but for your infrastructure
 
-* **Dependency Management**
+* **Dependency Management** ensures that components are provisioned in the correct order based on their dependencies
 
-* **Parallel Execution**
+* **Parallel Execution** allows the tool to perform multiple operations simultaneously
+
+
+### Introduction to Terraform
+
+* Terraform is a powerful open source IaC tool that lets you define your infrastructure in human-readable config files, the code becomes the blueprint for your infrastructure, allowing you to:
+
+    * Provision and manage infrastructure across multipple cloud providers like AWS, Azure, GCP, and even on-prem datacenters
+
+    * Automate infrastructure changes in a safe and reliable way
+
+    * Version control your infrastructure like any other code, making collaboration and rollbacks a breeze
+
+    * Re-use infrastructure components as modular "Terraform modules," promoting consistency and efficiency 
+
+* By leveraging the power of Terraform, you can:
+
+    * **Ship Code Faster** 
+
+    * **Focus on What Matters**
+
+    * **Collaborate Better**
+
+    * **Achieve Consistency**
+
+    * **Embrace Reusability**
+
+
+### Introduction to Open OpenTofu
+
+* OpenTofu is an open source IaC tool forked from Terraform version 1.5 with familiar syntax and functionality but also introduces many key enhancements and features that cater to the needs of the open source community and address the limitations of the BSL 
+
+* **Advantages of OpenTofu**
+
+    * **Open Source and Community-driven** according to the [OpenTofu FAQ page](https://opentofu.org/faq/), this is under the MPL (Mozilla Public License)
+
+    * **Flexibility and Control** but according to this next paragraph, its under the BSL (MariaDB's Business Source License), which is ACKSHUALLY the license that Terraform adopted, and the last MPL-licensed version of Terraform was forked as the first version OpenTofu and they appear to not have deviated from this licensing. The more you know. 
+
+    * **Future-proof** open sourcing ensures that Terraform-like IaC tools will remain available and accessible to everyone, regardless of HashiCorp's future decisions involving Terraform
+
+    * **Continuous Development and Improvement** open source is the sh!t, but we already knew this
+
+    * **Familiarity for Terraform Users** easy to transition from one to the other
+
+* **How OpenTofu Helps Devs and DevOps Engineers**
+
+    * **Increased Agility and Productivity** 
+
+    * **Improved Collaboration and Communication**
+
+    * **Enhanced Security and Compliance**
+
+    * **Reduced Vendor Lock-in**
+
+    * **Cost-effectiveness**
+
+
+### Introduction to AWS CloudFormation
+
+* Allows you to define, provision, and manage your cloud infrastructure in a declarative way. Templates are either json or yaml and contain a set of instructions for AWS to create and configure the needed resources. Benefits of this approach include:
+
+    * **Improved Consistency and Reliability** eliminates need for manual configuration, ensuring consistency through reduction of the risk of human error
+
+    * **Increased Agility and Speed** infrastructure can be quickly provisioned and scaled based on needs, ability to create new or update existing stacks with minimal effort
+
+    * **Reduced Costs** automation = lower costs
+
+    * **Enhanced Traceability and Auditability** tracks all changes made along with the who and when, valuable for troubleshooting and audits
+
+* **Key Concepts of AWS CloudFormation**
+
+    * **Templates** written in json or taml and define the resources to be created or configured
+
+    * **Stacks** collection of AWS resources that are created and managed together using a CloudFormation template
+
+    * **Resources** building blocks of your cloud infrastructure, such as AWS EC2 instances, S3 bucks, and Lambda functions
+
+    * **Parameters** allow you to pass values into your CloudFormation templates at the time of stack creation or update
+
+    * **Outputs** allows you to retrieve information about the resources created in your CloudFormation stacks
+
+* **Benefits for Devs and DevOps Engineers**
+
+    * **Improved Code Resusability**
+
+    * **Simplified Infrastructure Management**
+
+    * **Enhanced Collaboration**
+
+    * **Reduced Risk of COnfiguration Errors**
+
+    * **Faster Infrastructure Deployment**
+
+* **Comparison with OpenTofu**
+
+    * **Open Source** CloudFormation is AWS. ABSOLUTELY PROPRIETARY
+
+    * **Vendor Lock-in** ties you in with the AWS ecosystem
+
+    * **Community** relies on AWS for support and development
+
+    * **Features** not as many features as OpenTofu
+
+    * **Cost** charges for each CloudFormation operation
+
+    * **Learning Curve** CloudFormation has it's own syntax, therefore separate learning curve
+
+
+
+
