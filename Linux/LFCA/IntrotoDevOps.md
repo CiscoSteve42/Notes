@@ -815,5 +815,33 @@ Infrastructure As Code (IaC)
     * **Learning Curve** CloudFormation has it's own syntax, therefore separate learning curve
 
 
+Continuous Integration/Continuous Delivery (CI/CD)
+--------------------------------------------------
+
+* **CI/CD Overview**
+
+    * **Continuous Delivery** a software development practice that aims to automate the process of releasing software changes to production environments in a frequent and reliable manner. Builds upon the concept of Continuous Integration (CI) by extending the automated pipeline to include deployment and release processes. In CD, the goal is to have software in a state where it can be released to production at any time
+
+    * **CI/CD** development approach that automates the process of building images, running tests, and deploying software updates. Minimizes manual errors, provides dev feedback, and enables rapid product iterations
+
+
+### Why Should You Bother?
+
+* **The Need for Speed and Efficiency** CI/CD automates and streamlines the entire development pipeline, from code integration to deployment, ensuring a swift and efficient release process
+
+* **Early Detection of Bugs and Issues** by integrating code changes frequently, devs can identify and rectify issues at an early stage, reducing the chances of buts accumulating and causing major problems later in the development process, saves time and enhances stability of software
+
+* **Consistent and Reliable Builds** every code commit triggers an automated build process, leading to consistent and reliable builds, minmizing "it works on my machine" and fostering more collaboration and production
+
+* **Automated Testing for Code Quality** validates correctness, and provides documentation for future development
+
+* **Faster Deployment with Continuous Delivery** improves customer experience and allows a faster response to customer feedback and market changes
+
+* **Increased Collaboration and Communication** automation and visibility allow more time and insight to contribute to the project or focus on other aspects of work
+
+* **Cost-Efficiency and Resource Optimization** less human errors = less money spent fixing human errors
+
+
+### What is *Continuous Integration*?
 
 
