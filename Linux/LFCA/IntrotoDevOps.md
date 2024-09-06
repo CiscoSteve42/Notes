@@ -844,4 +844,85 @@ Continuous Integration/Continuous Delivery (CI/CD)
 
 ### What is *Continuous Integration*?
 
+* At it's core, CI involves the regular merging of code changes from multiple contributors into a shared repo, serving as a proactive measure to identify and rectify integration issues at an early stage
 
+* frequent integration, automated build processes (including code compilation, automated testing, and the creation of executable artifacts)  ensure that the codebase is consistently and reliably built
+
+* Devs leverage various types of automated tests, including unit and integration tests, to validate the code
+
+* immediate feedback loop allows for quick identification and resolution of issues due to prompt notifications
+
+* early bug detection, better collaboration and understanding of project's state, more confidence in code and changes
+
+* improved collaboration, increased efficiency, streamlined deployment processes
+
+* more than a practice, it's a *mindset*
+
+
+### What is Continuous **Delivery**?
+
+* practice that extends the principles of CI to ensure that the codebase is always in a deployable state
+
+* primary objective is to make software releases available, predictable, and sustainable
+
+* automated testing and deployment processes are integral components in a CD pipeline
+
+* **Key Characteristics**
+
+    * **Automated Testing** like CI, strong emphasis on automated testing (including unit and integration tests)
+
+    * **Deployment Automation** automation of the process leading up to deployment allows for the creation of a consistent and repeatable method of releasing software. 
+
+    * **Deployment to Staging or Pre-Production** software typically deployed to a staging or pre-production environment where additional testing, user acceptance testing, or other validation processes can take place, ensuring that the software is ready for production release 
+
+    * **Manual Intervention for Production Release** CD stops short of automatically deploying changes to production, ultimate decision requires the user to deploy, providing an additional layer of control and oversight
+
+* **CD Benefits Include:**
+
+    * **Reliable Releases** reliable and consistent releaes reduce the risk of introducting errors into the production environment
+
+    * **Reduced Time to Market** automation minimizes the time required to move from development to a deployable state, allowing faster and more frequent releases
+
+
+### What is Continuous **Deployment** (also CD...)
+
+* CD takes the principals of CD a step further by actually automating the deployment to production after the changes pass automated testing. Goals is to go fast. And efficient, but ASAFP for sure
+
+* **Key Characteristics**
+
+    * **Automated Production Deployment** hallmark of CD is the automatic deployment of code changes to the production environment once they pass testing, minimizing the need for manual intervention
+
+    * **High Level of Automation** heavy reliance on automation throughout the entire dev pipeline, automated testing and deployment scripts play a crucial role in this process
+
+    * **Immediate User Access** new features or fixes immediately become accessible to end-users, allowing for quick responses to user feedback or market changes
+
+* **Benefits Include:**
+
+    * **Faster Time to Market** user get shiny new features faster
+
+    * **Continuous Feedback Loop** Grugs address issues faster
+
+    * **Efficient Resource Utilization** automation let Grugs focus on other Grug tasks
+
+
+### Continuous Integration (CI) Principles and Practices
+
+* **CI Principals**
+
+    * **Frequent Code Integration** devs integrate code changes into a shared repo frequently, ensuring that the codebase is continuously evolving in a collaborative manner (push it, git push it gud...oohhhhhh yeahhhhh)
+
+    * **Automated Builds**
+
+    * **Automated Testing**
+
+    * **Immediate Feedback**
+
+* **CI Practices**
+
+    * **Version Control**
+
+    * **Automated Builds**
+
+    * **Automated Testing**
+
+    * **CI Server**
