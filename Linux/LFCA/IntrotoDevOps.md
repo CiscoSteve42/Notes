@@ -911,18 +911,208 @@ Continuous Integration/Continuous Delivery (CI/CD)
 
     * **Frequent Code Integration** devs integrate code changes into a shared repo frequently, ensuring that the codebase is continuously evolving in a collaborative manner (push it, git push it gud...oohhhhhh yeahhhhh)
 
-    * **Automated Builds**
+    * **Automated Builds** every integration triggers an automated build process, including compiling the code, running tests, and creatin executable artifacts. Automation ensures consistency and reliability
 
-    * **Automated Testing**
+    * **Automated Testing** a comprehensive suite of automated tests is run with each integration to detect and address issues early in the development process
 
-    * **Immediate Feedback**
+    * **Immediate Feedback** devs immediately know if their code integration was a success or failure, allowing for prompt issue resolution which reduces the risk of defects accumulating
 
 * **CI Practices**
 
-    * **Version Control**
+    * **Version Control** using Git or other version control system to manage code changes
 
-    * **Automated Builds**
+    * **Automated Builds** automated builds triggered by commits that compile, run tests, and produce deployable artifacts
 
-    * **Automated Testing**
+    * **Automated Testing** suite of automated tests including unit, integration, and possibly end-to-end tests
 
-    * **CI Server**
+    * **CI Server** (examples include Jenkins and Travis CI) server monitors the version control system and triggers builds and tests upon code changes
+
+
+### CDelivery and CDeployment Principles and Practices
+
+* **Principles**
+
+    * **Consistent Deployment Process** ensure that a deployment process is consistent and repeatable , reducing the risk of errors and ensuring that each release is reliable
+
+    * **Automated Deployment** creates a streamlined and efficient method for releasing software (including deploying to staging for extra testing)
+
+    * **Environment Parity** strive for parity between different environments, such as development, staging, and production, to minimize issues related to environment-specific differences
+
+* **Practices**
+
+    * **Continuous Delivery** software is always deployable, but deployment itself requires human intervention
+
+    * **Continuous Deployment** includes the deployment process in automation
+
+    * **Feature Toggles** use feature toggles or flags to enable/disable specific features in production, allowing for the decoupling of deployment and release, which enables the gradual rollout of features
+
+    * **Rollback Mechanisms** allows rapid response to problems without causing extended downtime
+
+    * **Monitoring and Logging** robust monitoring and logging to track the performance and behavior of the app in real-time, facilitating rapid identification and resolution of issues in production
+
+
+### Understanding Release Strategies
+
+* **Rolling Release** new features and updates are continuously and incrementally realeased as soon as they are ready
+
+    * **Characteristics:**
+
+        * **Continuous Updates**
+
+        * **No Version Numbers**
+
+        * **Incremental Improvements**
+
+    * **Use Cases:**
+
+        * Web applications and services that can be updated seamlessly without user disruption
+
+        * Software where continuous evolution and rapid delivery of features are critical
+
+        * Telling people that you use Arch Linux (btw)
+
+* **Feature Toggles (Feature Flags)** involves wrapping new features in conditional statements that can be controlled externally, allowing devs to enable or disable features without modifying code, providing flexibility in managing future releases
+
+    * **Characteristics:**
+
+        * **Selective Activation**
+
+        * **Gradual Rollout**
+
+        * **Rapid Experimentation**
+
+    * **Use Cases:**
+
+        * testing new features with a subset of users
+
+        * safely releasing features that might be turned off if issues arise
+
+* **Blue-Green Deployment:** two environments are maintained, one is production (blue) while the other is for deploying/testing new releases (green) the switch between environments determines the active production version
+
+    * **Characteristics:**
+
+        * **Zero Downtime**
+
+        * **Quick Rollback**
+
+    * **Use Cases:**
+
+        * web apps where downtime is not acceptable
+
+        * ensuring seamless transition between releases in critical systems
+
+* **Canary Release:** involves deploying a new version of the software to a small subset of users before a full release, allowing real world testing and monitoring
+
+    * **Characteristics:**
+
+        * **Gradual Rollout**
+
+        * **Real-time Monitoring**
+
+        * **Risk Mitigation**
+
+        * **Morbid Naming**
+
+    * **Use Cases:**
+
+        * web and mobile apps where real-world user feedback is valuable
+
+        * minimizing the impact of potential issues on a small user subset
+
+* **Phased (Staged) Rollout** the new version is released to a limited subset of users initially then to a progressively proader audience over time. Each phase allows for monitoring and addressing issues before expanding to the next group
+
+    * **Characteristics:**
+
+        * **Controlled Progression**
+
+        * **Feedback and Monitoring**
+
+        * **Risk Mitigation**
+
+    * **Use Cases:**
+
+        * Large-scall apps with diverse user bases
+
+        * ensuring stabilty and performance in a controlled manner
+
+
+### GitOps as a Deployment Tool
+
+* **Key Principles of GitOps:**
+
+    * **Declarative Configuration** the desired state of the infrastructure and application is declared in Git repos as YAML manifests, Helm charts, or other declarative formats
+
+    * **Single Source of Truth** Git repo is the only source of truth for the desired state of the system, ensuring consistency and traceability
+
+    * **Pull-based Reconciliation** a GitOps controller continuously monitors the repo for changes and automatically applies them to the target environment, ensuring the desired state is achieved
+
+* **Benefits of Using GitOps for Deployment:**
+
+    * **Simplified Deployment Process** provides a straightforward and automated deployment process
+
+    * **Increased Consistency and Reliability** consistent and reliable deployments across different environments
+
+    * **Improved Collaboration** shared platform for managing infrastucture encourages collaboration between devs and ops teams
+
+    * **Enhanced Auditability and Traceability** complete audit trail of changes made, facilitating troubleshooting and compliance audits
+
+* **Popular GitOps Tools:**
+
+    * **Argo CD** open source GitOps CD tool that supports multiple platforms and environments
+
+    * **Flux CD** open source GitOps CD tool specifically designed for Kubernetes deployments
+
+    * **Tekton CD** open source GitOps CD platform built on Kubernetes
+
+    * **Jenkins X** open source platform that combines GitOps principles with Jenkins for CD
+
+* **GitOps Adoption Considerations:**
+
+    * **IaC Adoption**
+
+    * **Tool Selection**
+
+    * **Security Considerations**
+
+
+Introduction to Observability
+-----------------------------
+
+* Observability is the ability to understand the internal state of a system based on it's external outputs. Being able to infer what is happening inside the system based on available information such as logs, metrics, and traces
+
+
+### The Three Pillars of Observability
+
+* **Logs**
+
+    * **Application Logs**
+
+    * **System Logs**
+
+    * **Audit Logs**
+
+* **Metrics**
+
+    * **System Metrics**
+
+    * **Application Metrics**
+
+    * **Business Metrics**
+
+* **Traces**
+
+    * **Components of Traces**
+
+        * **Span**
+
+        * **Trace Context**
+
+        * **Annotations and Metadata**
+
+    * **Types of Traces**
+
+        * **Distributed Tracing**
+
+        * **Real User Monitoring (RUM)**
+
+        * **Synthetic Monitoring**
