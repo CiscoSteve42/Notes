@@ -1319,31 +1319,34 @@ Site Reliability Engineering (SRE)
 
 * **Characteristics of SRE**
 
-    * **Focus on Reliability**
+    * **Focus on Reliability** SREs are specifically tasked with maintaining a high level of service reliability and meeting SLOs
 
-    * **Error Budgets**
+    * **Error Budgets** quantifies the allowable amount of downtime or errors within a specific timeframe, allowing for a balance between reliability and innovation as long as the error budget isn't exhausted
 
-    * **Measurable Objectives**
+    * **Measurable Objectives** uses SLOs and SLIs to quantify the performance and reliability of systems to guide decision-making and help prioritize efforts
 
-    * **Blame-Free Post-Mortems**
+    * **Blame-Free Post-Mortems** conducted to understand the root causes of issues and to implement preventative measures for the future
 
-    * **Automation**
+    * **Automation** a core principle of SRE, leveraged to handle routine operational tasks, enabling them to focus on strategic improvements and proactive measures
 
 * **Characteristics of DevOps**
 
-    * **Cultural Approach**
+    * **Cultural Approach** emphasizes collaboration and communication between dev and ops teams
 
-    * **CI/CD**
+    * **CI/CD** aims for streamlined and automated software delivery pipeline, facilitating frequent and reliable releases
 
-    * **IaC**
+    * **IaC** enables the automation of infrastruction provisioning and configuration, resulting in consistent and reproducible environments
 
-    * **Cross-Functional Teams**
+    * **Cross-Functional Teams** collaboration through the development process to deliver more resilient and scalable systems
 
 * **SRE vs DevOps: Relationship and Overlap**
 
-    * **Collaboration**
+    * **Collaboration** both emphasize collaboration, but SRE is a specific role with a narrower focus on reliability, while DevOps is more of a cultural approach that spans the entire development cycle
 
-    * **Automation**
+    * **Automation** both seek to improve efficiency and reduce manual errors
 
-    * **Shared Goals**
+    * **Shared Goals** both seek to improve system reliability, reduce downtime, and accelerate the delivery of software
+
+
+### Measuring Reliability with SLIs
 
