@@ -1310,4 +1310,40 @@ Introduction to Observability
 Site Reliability Engineering (SRE)
 ---------------------------------
 
+* Final Chapter!
+
+* SRE is an approach to running large-scale, reliable services, with Google being widely credited for formalizing and popularizing the term. Primary focus is to improve the reliability of services, measured through SLIs, SLOs, and SLAs 
+
+
+### SRE versus DevOps
+
+* **Characteristics of SRE**
+
+    * **Focus on Reliability**
+
+    * **Error Budgets**
+
+    * **Measurable Objectives**
+
+    * **Blame-Free Post-Mortems**
+
+    * **Automation**
+
+* **Characteristics of DevOps**
+
+    * **Cultural Approach**
+
+    * **CI/CD**
+
+    * **IaC**
+
+    * **Cross-Functional Teams**
+
+* **SRE vs DevOps: Relationship and Overlap**
+
+    * **Collaboration**
+
+    * **Automation**
+
+    * **Shared Goals**
 
