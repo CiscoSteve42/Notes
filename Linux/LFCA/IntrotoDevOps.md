@@ -1210,4 +1210,104 @@ Introduction to Observability
 
         * **Role** helps assess the performance and reliability of infrastructure changes, ensuring that they meet operational requirements
 
-* **Observability in SRE**
+* **Observability in SRE** is not just about monitoring, but understanding the entire system's behavior, from application code to infrastructure, and leveraging that understanding to ensure reliability, efficiency, and continuous improvement. Understanding Service Level Agreement (SLA), Service Level Objective (SLO), and Service Level Indicator (SLI) is crucial in the field of cloud native technologies and observability
+
+
+### Challenges in Observability 
+
+* **Data Volume and Overhead**
+
+    * **Challenge** modern systems generate vast amounts of data, including logs, metrics, and traces. Managing and analyzing this volume of data can be overwhelming, leading to challenges in storage, processing, and the associated costs
+
+    * **Solution** implementing intelligent data sampling and aggregation techniques can help reduce the dasta volume without sacrificing essential insights
+
+* **Integration Complexity**
+
+    * **Challenge** integrating various observability tools and platforms can be complex. Different tools may use different formats and standards, leading to integration challenges
+
+    * **Solution** adopting standard formats, such as OpenTelemetry for tracing, and using observability platforms that offer easy integration with common monitoring and logging tools can streamline the process
+
+* **Lack of Standardization**
+
+    * **Challenge** lack of standardized practices and formats can make it challenging to implement a consistent approach
+
+    * **Solution** adopting formats such as OpenTelemetry
+
+* **Complex Distributed Systems**
+
+    * **Challenge** in microservices architectures and distributed systems, understanding the relationship and dependencies between different components can be complex. Tracing requests across various services and components can be a b!tch
+
+    * **Solution** implementing distributed tracing tools and practices, combined with well-defined service meshes, can help visualize and understand the flow of requests through a system
+
+* **Security and Privacy Concerns**
+
+    * **Challenge** collecting and storing observability data may raise security and privacy concerns
+
+    * **Solution** implementing proper access controls, encyption, and anonymization of sensitive data
+
+* **Alert Fatigue**
+
+    * **Challenge** too many false positives or irrelevant alerts can lead to alert fatigue
+
+    * **Solution** fine-tuning alerting thresholds, implementing intelligent alerting strategies, and usuing anomaly detection techniques
+
+* **Tool Proliferation**
+
+    * **Challenge** adopting too many tools can lead to tool sprawl, making it challenging to manage and maintain
+
+    * **Solution** carefully evaluate and select observability tools based on specific use cases. Aim for tools that provide comprehensive coverage without unnecessary duplication
+
+* **Cultural Resistance**
+
+    * **Challenge** lack of understanding, cultural barriers, concerns about change
+
+    * **Solution** fostering a culture of collaboration and emphasizing the benefits of observability in terms of faster issue resolution, improved system reliability, and better user experience
+
+
+### Popular Observability Tools
+
+* **Monitoring and Metrics**
+
+    * **Prometheus** open source monitoring and alerting toolkit designed for reliability and scalability. Collects metrics from configured targets, stores them, and makes them available for querying
+
+    * **Grafana** popular open source platform for visualizing and analyzing metrics. Integrates with various data sources, such as Prometheus, InfluxDB, and Elasticsearch
+
+    * **InfluxDB** high-performance, distributed, and scalable time-series database commonly used for storing and querying metrics data
+
+    * **Datadog** cloud-based observability platform that integrates monitoring, logging and APM (application performance monitoring) capabilties, supports wide range of integrations
+
+* **Logging**
+
+    * **ELK Stack** Elasticsearch is a distributed search and analytics engine, Logstash is a log pipeline tool, and Kibana is a visualization platform
+
+    * **Splunk** widely used platform for searching, monitoring, and analyzing machine-generated data, including logs
+
+* **Tracing**
+
+    * **Jaeger** open source, end-to-end distributed tracing system that helps in monitoring and troubleshooting the latency of requests in complex, microservices-based architectures
+
+    * **Zipkin** another open source distributed tracing system that allows users to trace requests as they travel through various services in a distributed system
+
+* **Application Performance Monitoring (APM)**
+
+    * **New Relic** (Frontalot, with the bad speller. Yo keep it logged in) a cloud-based APM tool that provides detailed insights into application performance. Offers features like transaction tracing, error tracking, and infrastructure monitoring
+
+    * **AppDynamics** a comprehensive AP solution that provides real-time monitoring of applications, user experience, and infrastructure, helps identify performance bottlenecks
+
+* **Infrastructure Monitoring**
+
+    * **Nagios** widely-used open source infrastructure monitoring solution, can monitor and provide alerts for hosts, services, and networking devices
+
+    * **Zabbix** open source monitoring solution that offers features for monitoring servers, networks, applications, and services, supports range of data visualization options
+
+* **Cloud Native Observability**
+
+    * **AWS CloudWatch** monitoring and observability service for AWS resources
+
+    * **Azure Monitor** MS Observability service for Azure
+
+
+Site Reliability Engineering (SRE)
+---------------------------------
+
+
