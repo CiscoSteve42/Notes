@@ -1083,36 +1083,131 @@ Introduction to Observability
 
 ### The Three Pillars of Observability
 
-* **Logs**
+* **Logs** they're better than bad, they're good! Logs are digital records of events that have occurred within a system, which are often sequential and timestamped.  
 
-    * **Application Logs**
+* Types of logs include:
 
-    * **System Logs**
+    * **Application Logs** record events happening within the application layer, such as user actions, system errors, or transactions
 
-    * **Audit Logs**
+    * **System Logs** documents events at the OS level, including system calls, scheduled tasks, and messages from the kernel
 
-* **Metrics**
+    * **Audit Logs** focuses on security-related events, tracking user activities and changes to the system configuration
 
-    * **System Metrics**
+* **Metrics** numerical values that represent the characteristics of a system at a given point in time, ranging from simple measurements such as CPU utilization and memory usage, to more complex ones, such as request rates, error counts, or transaction durations. Quantifiable, high-level view of the system crucial for setting benchmarks, identifying trends, and triggering alerts when predefined thresholds are exceeded 
 
-    * **Application Metrics**
+    * **System Metrics** provides insights into the health and performance of the underlying infrastucture, such as CPU load, memory consumption, disk I/O, and network bandwidth
 
-    * **Business Metrics**
+    * **Application Metrics** tracks app performance, including request latency, throughput, error rates, and transaction volumes
 
-* **Traces**
+    * **Business Metrics** daily active users, conversion rates, revinue metrics, etc. Metrics that impact business outcomes
+
+* **Traces** capturing the path of the journey of a single request or transaction across a distributed system and measuring it's latency across various services
 
     * **Components of Traces**
 
-        * **Span**
+        * **Span** a single operation or component interactio within a trace, often including start and end times for measurement
 
-        * **Trace Context**
+        * **Trace Context** carries the trace's identity across process, network, and service boundaries, ensuring that all spans belonging to a single trace are correctly associated 
 
-        * **Annotations and Metadata**
+        * **Annotations and Metadata** additional info attached to spans, such as IDs, error messages, or other contextual data
 
     * **Types of Traces**
 
-        * **Distributed Tracing**
+        * **Distributed Tracing** tracks the journey of requests through microservices or distributed architectures, highlighting the interactions and latency between services
 
-        * **Real User Monitoring (RUM)**
+        * **Real User Monitoring (RUM)** captures traces of actual user interactions within a system, providing insights into user experience and performance issues
 
-        * **Synthetic Monitoring**
+        * **Synthetic Monitoring** uses simulated requests to monitor system performance and availability in a controlled manner, complementing real user data with consistent, baseline measurements
+
+
+### Why is Observability Needed?
+
+* **Complexity of Modern Systems** with the rise of microservices architecture, cloud computing, and distributed systems, apps have become more complex
+
+* **Faster Incident Resolution** Observability tools enable quicker detection and resolution of issues
+
+* **Improved User Experience** proactive monitoring and analytics of system behavior lead to a better user experience as performance issues can be identified and addressed more quickly
+
+* **Improved Troubleshooting** identify and diagnose problems quickly with analysis to pinpoint the root issue
+
+* **Enhanced Performance** can identify bottlenecks and resource constraints
+
+* **Reduced Costs** makes sense
+
+
+### Components of an Observability Stack
+
+* **Data Collection**
+
+    * **Instrumentation** involves adding code to your applications and infrastucture to collect telemetry data, including metrics, logs, and traces. Popula technologies include OpenTelemetry, Prometheus, and ELK Stack (Elasticsearch, Logstash, Kibana)
+
+    * **Agents** lightweight programs that run on your systems and collect data from various sources, such as apps, containers, and OSs. Popular examples include Datadog Agent, Fluentd, and Telegraf
+
+* **Data Storage and Management**
+
+    * **Metric Stores** store and manage time-series metric data, examples include Prometheus, InfluxDB, and TimescaleDB
+
+    * **Log Aggregators** collect, centralize, and store log data from various sources, examples include Elasticsearch, Logstash, and Graylog
+
+    * **Trace Storage** traces require specialized storage solutions due to their high volume and complex structure, options include Jaeger, Zipkin, and Honeycomb
+
+* **Data Analysis and Visualization**
+
+    * **Dashboards and Graphs** help visualize data in a way that's easy to understand and analyze, tools include Grafana, Kibana, and Datadog dashboards
+
+    * **Alerting and Notification** help you stay informed about critical events and incidents by sending alerts when predefined thresholds are breached, choices include Prometheus Alertmanager, PaerDuty, and Slack integrations
+
+    * **Analytics and Troubleshooting Tools** help analyze data in depth to identify the root cause of problems and find solutions, choices include Honeycomb, Datadog APM, and New Relic APM
+
+* **Additional Components**
+
+    * **Service Mesh** provides additional observability features like distributed tracing and traffic management, popular service meshes include Istio and Linkerd
+
+    * **Chaos Engineering** practice that involves intentionally injecting faults into your system to see how it reacts, helping to identify and mitigate potential weaknesses, popular choices include Chaos Monkey and Gremlin
+
+* **Building Your Observability Stack**
+
+    * **Open Source Solutions** offers flexibility and cost-effectiveness but requires more effort and expertise
+
+    * **Managed Services** Cloud providers and other vendors offer managed observability solutions that are easy to set up and use but can be more expensive
+
+    * **Hybrid Approach** combination of both for specific needs and budget
+
+* **Examples of Tools**
+
+    * **Monitoring Tools** systems for collecting and aggregating data, such as Prometheus, Grafana, or Datadog
+
+    * **Logging Systems** platforms for collecting and analyzing logs, such as Splunk or ELK Stack (Elasticsearch, Logstash, Kibana)
+
+    * **Tracing Systems** Distributed tracing tools for tracking requests as they move through a distributed system, such as Jaegar, Zipkin, or OpenTelemetry
+
+
+### Observability in DevOps and SRE
+
+* **Observability in DevOps**
+
+    * **Continuous Monitoring**
+
+        * **Objective** DevOps emphasizes CI/CD and continuous monitoring, the latter of which observability is very much a part of
+
+        * **Role** DevOps use observability tools to do DevOps stuff
+
+    * **Feedback Loops** 
+
+        * **Objective** Observability helps shortening feedback loops by providing actionable insights into the impact of changes on the system
+
+        * **Role** Devs receive feedback about how code changes system behavior, helping them make informed decisions and improvements
+
+    * **Collaboration Across Teams**
+
+        * **Objective** Observability tools provide a common language and platform for better collaboration
+
+        * **Role** fosters a culture of shared responsibility where Devs and Ops teams work together to solve problems
+
+    * **IaC**
+
+        * **Objective** Observability integrated into IaC to monitor changes
+
+        * **Role** helps assess the performance and reliability of infrastructure changes, ensuring that they meet operational requirements
+
+* **Observability in SRE**
