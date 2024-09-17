@@ -1350,3 +1350,109 @@ Site Reliability Engineering (SRE)
 
 ### Measuring Reliability with SLIs
 
+* **Service Level Indicators** specific, quantitative metrics that define the performance and reliability of a serivce, typically expressed as a ratio, percentage, or specific numerical value. Represents the aspects of a service that are most critical to it's users. SLIs should align with user expectations and business goals, such as latency for fast response times
+
+* For a web service, SLIs could include metrics like:
+
+    * **Latency** time it takes for a request to be processed
+
+    * **Availability** percentage of time the service is operational
+
+    * **Error Rate** proportion of request that result in errors
+
+* **Importance of SLIs in Measuring Reliability**
+
+    * **Quantifiable Objectives** sets reliability of a service in a quantifiable numeric sense
+
+    * **Baseline for Comparison** teams can compare actual performance against the defined SLIs to asses whether the service is meeting it's reliability goals
+
+    * **Decision-Making** if SLIs are consistently not met, it may trigger actions to improve the service's reliability, such as infrastucture upgrades, code optimizations, or architectural changes
+
+    * **Communication** SLIs offer a clear and objective measure of reliability
+
+* **SLIs in Action**
+
+    * **Monitoring** monitor aspects, such as the response time of API calls to calculate latency, to continuously collect data for monitoring and improvement
+
+    * **Alerting** set up alerts based on SLIs to notify teams when performance deviates from the defined objectives. If latency exceeds the acceptable threshold, it triggers san alert for investigation
+
+    * **Analysis and Improvement** conduct regular analysis on SLI dat ato identify patterns and areas for improvement. If SLIs indicate an increase in errors, it might prompt a code review or optimization efforts
+
+
+### Embracing Risks with SLOs and Error Budgets
+
+* **Service Level Optimizations** specific, measurable targets that define the acceptable level of reliability for a service, expressed as a percentage or ration and represents the agreed-upon performance level that a service should achieve. SLOs allow teams to set realistic goals based on user expectations and business requirements, they provide a clear metric for measuring the success of a service. If it meets or exceed it's SLO, it's considered reliable 
+
+* **Error Budgets** represents the allowed amount of errors or downtime within a specified timeframe, error budget is essentially the inverse of the SLO (the .01%). As long as the team stays withing it's error budget, teams have the flexibility to deploy new features and make changes without compromising reliability. Teams use error budgets to inform decision-making, team may shift focus based on budget 
+
+* **Embracing Risks** encourages a culture of innovation and experimentation, 
+
+
+
+### Service Level Agreements (SLAs)
+
+* an SLA is a formal contract between a service provider and it's customers, outlining the expected level of service, defines the agreed-upon QoS, including performance metrics, availability, and support expectations, plays a crucial role in managing expectations and meeting end-user needs service-wise in SRE
+
+* **Benefits of SLAs**
+
+    * **Clear Communication** establishes communication between SREs, devs, and stakeholders regarding expected performance of a service
+
+    * **Improved Reliability** defined SLAs motivate SREs to proactively monitor and improve the systems's reliability to meet agreed-upon targets
+
+    * **Risk Management** clear SLAs help manage customer expectations and define potential consequences for outages, allowing for proactive planning and mitigation strategies
+
+
+### The 7 Principles of SRE
+
+* **Embracing Risk** identify acceptable amount of risk and manage it appropriately
+
+* **SLOs (Service Level Objectives)** defines the target level of reliability for a service with specific, measurable goals that represent the acceptable level of performance
+
+* **Simplicity** Grugs no want confusing big brain solution, make hard to troubleshoot and fix, not necessary when simple system MUCH more efficient
+
+* **Toil Automation** automate everything that can be for Justice
+
+* **Monitoring and Alerting** alerts set up to notify teams when predefined thresholds are breached, enabling quick responses
+
+* **Capacity Planning** forecasting usage patterns and ensuring that systems can handle future loads, aiming to prevent under or over-provisioning and ensuring optimal performance and reliability
+
+* **Emergency Response and Blameless Postmortems** teams learn from incidents in a blame-free culture where the focus is on fixing the problem and not flaming anybody for it. RCAs (root cause analysis) are meant to learn from mistakes and improve the system, not make somebody feel like they just asked a question on Stack Overflow
+
+
+### Building SRE Practices in Your Organization
+
+* **Gain Buy-in and Support** demonstrate value to stakeholders, secure funding and resources, foster a culture of collaboration
+
+* **Start Small and Iterate** identify critical systems, automate routine tasks, implement monitoring and logging, establish metrics and SLOs
+
+* **Build a Dedicated SRE Team** hire skilled professionals, provide training and development, and foster a learning culture
+
+* **Embrace Automation and Tooling** invest in automation tools, implement monitoring and alerting tools, and utilize incident management tools
+
+* **Cultivate a Blameless Culture** focus on learning from failures, reward proactive problem solving, and create a safe environment for sharing knowledge
+
+* **Continuously Improve and Evolve** regularly review and update SRE practices based on new tools, technologies, or experiences. Measure and track progress and seek feedback from stakeholders, continuously improve your SRE approach
+
+
+### Future Trends and Evolutions in SRE
+
+* **AI and Machine Learning Integration** moving towards development of self-healing systems that can automatically detect and rectify issues without human intervention
+
+* **Observability Over Monitoring** signifies a deeper focus on understanding the internal state of systems through generated output data, using this data with advanced analytics tools to predict and prevent issues
+
+* **DevSecOps Integration** integration of security considerations into SRE practices, emphasizes incorporation of security measures from the earliest stages of development, ensuring security as a foundational aspect with reliability
+
+* **Broader Organizational Impact** the influence of SRE principals and practices will increase beyond IT into business-decision making, customer experience, and product development. Focus will shift to end-to-end reliability, encompassing the entire lifecycle of services and products. Resistance is Futile.
+
+* **Cloud Native Reliability** SRE practices will be cucial in managing the complexity and dynamic nature of cloud environments
+
+* **Sustainable Operations** growing emphasis on sustainability within SRE practices like that company using crypto miners to heat the pools for their resort. Seriously, talk about a 9001 IQ move right there   
+
+
+### The End of the Notes
+
+* That's the end...you can stop now, go take the Exam. 
+
+
+
+
