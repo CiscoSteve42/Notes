@@ -67,15 +67,62 @@ Virtualization
 
 * **Public Cloud** AWS, GCP, Azure. Cloud for anybody that will pay
 
-* **Hybrid Cloud** Cloud fusion
+* **Hybrid Cloud** combination of public and private cloud, beneficial for storing sensitive information on the private cloud and meeting temporary resource needs during peak or times of high demand by cloud scaling (known as **Bursting**)
 
-* **Community Cloud**
+* **Community Cloud** multiple organizations sharing a common cloud Infrastructure
 
-* **Distributed Cloud**
+* **Distributed Cloud** formed by distributed systems connected to a single network
 
-* **Multicloud**
+* **Multicloud** organization using multiple cloud vendors for it's workload, usually to avoid vendor lock-in
 
-* **Poly Cloud**
+* **Poly Cloud** one organization uses multiple public cloud providers to leverage specific services from each provider
 
 
+### Virtualization
 
+* **Examples of Type-1 Hypervisors:**
+
+    * **Proxmox** They didn't ACTUALLY put it on this list, but less people are sleeping on it everyday
+
+    * **AWS Nitro**
+
+    * **Microsoft Hyper-V**
+
+    * **Nutanix AHV**
+
+    * **Oracle VM Server for SPARC**
+
+    * **Oracle VM Server for x86**
+
+    * **Red Hat Virtualization**
+
+    * **VMWare ESXi**
+
+    * **Xen**
+
+* **Type-2 Hypervisors:**
+
+    * **Parallels Desktop for Mac**
+
+    * **VirtualBox**
+
+    * **VMware Player**
+
+    * **VMWare Workstation**
+
+* **Linux Kernel Modules that Fit Both Categories:**
+
+    * KVM
+
+    * bhyve
+
+* **Software Emulation** occurs at both the system and user space levels, as supported by a tool such as QEMU, allows for any OS to run on any architecture, or for programs to run on originally unsupported systems. Can be used in conjunction with hypervisors such as KVM to provision VMs
+
+
+### KVM Overview
+
+* [Mental Outlaw](https://www.youtube.com/MentalOutlaw) has a great [video](https://www.youtube.com/watch?v=wxxP39cNJOs) on getting KVM set up with QUEMU/virt-manager.
+
+* **KVM** is a loadable virtualization module of the Linux kernel that converts the kernel into a hypervisor capable of managing guest VMs. Originally designed for x86, but ported to FreeBSD(umm what? this is listed but it's an OS, not a CPU architecture...maybe they know something I don't? Whatever.), S/390, PowerPC, IA-64, and ARM
+
+### KVM Features
