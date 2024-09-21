@@ -126,3 +126,60 @@ Virtualization
 * **KVM** is a loadable virtualization module of the Linux kernel that converts the kernel into a hypervisor capable of managing guest VMs. Originally designed for x86, but ported to FreeBSD(umm what? this is listed but it's an OS, not a CPU architecture...maybe they know something I don't? Whatever.), S/390, PowerPC, IA-64, and ARM
 
 ### KVM Features
+
+* **KVM** is an open-source software that provides hardware-assisted virtualization with support for various guest OSs, such as Windows, Solaris, or Linux
+
+* Enables device abstraction of network interfaces, disk, but not the processor. Instead, it exposes /dev/kvm interface that can be used by an external user space host for emulation. 
+
+* **Examples of User-Space Tools** for KVM VM management include **KubeVirt**, **QEMU**, and **virt-manager**
+
+* Supports **nested guests**, which is exactly what it sounds like. Also supports hotpluggable devices such as CPUs and PCI devices 
+
+* **Overcommitting** is possible for the allocation of additional virtualized resources that may not be available on the system
+
+
+### Creating a Virtual Machine Instance on the KVM Hypervisor 
+
+* **virt-manager** GUI/ VMM (Virtual Machine Manager) for KVM VM instances
+
+* This is honestly pretty straightforward and similar to VirtualBox as far as setting up a VM goes, although I did have to follow the Mental Outlaw video linked above with the installation and setting up services/configs
+
+
+### Benefits of Using KVM
+
+* its FOSS
+
+* provides efficient hardware-assisted virtualization for a crapload of OSs (Linux, BSD, Solaris, Windows, MacOS, ReactOS, Haiku)
+
+* provides para-virtualization of Ethernet cards, disk I/O controllers, and graphical interfaces for guest OSes
+
+* highly scalable
+
+* employs advanced security features, utilizing SELinux. Provides **MAC (Mandatory Access Control)** between VMs, and won a bunch of military awards for being dope as shit
+
+
+### VirtualBox Overview
+
+* It's like KVM but not as good
+
+* GPLv2 license
+
+
+### Benefits of Using VirtualBox 
+
+* Also FOSS 
+
+* Runs on all mainstream OSs 
+
+* choose between software or hardware-based virtualization
+
+* easy to use 
+
+* run virtualized apps side-by-side with normal desktop applications 
+
+* provides **teleportation** (live migration)
+
+
+### Vagrant Overview
+
+
