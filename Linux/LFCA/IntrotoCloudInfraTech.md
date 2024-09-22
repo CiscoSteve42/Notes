@@ -182,4 +182,60 @@ Virtualization
 
 ### Vagrant Overview
 
+* **Benefits of using VMs in a development environment:**
+
+    * Reproducible environment
+
+    * Management of multiple projects, each in it's isolated and restricted environment
+
+    * Sharing the environment with other teammates
+
+    * Keeping the development and deployment environments in sync
+
+    * Running consistently the same VM on different OSes leveraging hypervisors such as VirtualBox, VMware, and KVM
+
+* **Vagrant** is a cross-platform cli tool by HashiCorp used to build and distribute virtualized development environments, ships with limited features but has extensive plugin support, recently added Docker support allowing it to manage containers as well as VMs
+
+
+### Managing VMs with Vagrant
+
+* **Vagrantfile** describes how VMs should be configured and provisioned, Ruby syntax config file contains all the information about provisioning and configuring a set of machines. Is portable, but there should only be 1 Vagrantfile per project. The **vagrant** command reads the configuration given to the config file and does different opperations such as **up**, **ssh**, **destroy**, etc. **vagrant** also has sub-commands such as **box** to manage Box images, **rdp** to connect to VMs using RDP protocol. Link to the documentation [here](https://developer.hashicorp.com/vagrant/docs/cli). 
+
+* **Boxes** the package format for the Vagrant environment. The Vagrantfile requires an image, which is then used to instantiate VMs. Box images can be versioned and customized to specific needs simply by updating the Vagrantfile accordingly
+
+* **Providers** the underlying engines or hypervisors used to provision VMs or containers. Vagrant default is Virtualbox, but also supports Hyper-V, VMware, and Docker out of the box. Custom providers like AWS may be configured as well
+
+* **Synced Folders** feature that allows us to sync a directory on the host system with a VM, helping the user manage shared files/directories easily
+
+* **Provisioners** allow us to automatically install software and make configuration changes after the machine is booted, part of the **vagrant up** process. Types of provisioners available include File, Shell, Ansible, Puppet, Chef, Docker, Podman, Puppet, and Salt
+
+* **Plugins** extend the functionality of Vagrant
+
+* **Networking** Vagrant provides high-level networking options for port forwarding, network connectivity, and network creation, allowing for cross-provider portability
+
+* **Multi-Machine** Vagrantfile can describe multiple VMs, typically intended to work together or may be linked between themselves
+
+
+### Benefits of Using Vagrant
+
+* Automates setup of 1 or more VMs
+
+* Introduces consistency in infrastructure provisioning though Vagrantfile
+
+* Flexible cross-platform tool
+
+* Support for Docker containers as well as VMs provisioned with VMware, VirtualBox, and Hyper-V
+
+* Easy to install/configure 
+
+* Very useful in multi-dev teams
+
+
+Infrastructure as a Service (IaaS)
+---------------------------------
+
+
+
+
+
 
