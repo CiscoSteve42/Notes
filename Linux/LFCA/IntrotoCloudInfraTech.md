@@ -247,4 +247,43 @@ Infrastructure as a Service (IaaS)
 
 * EC2 instances are VMs that run on Amazon's physical infrastructure (duh) and Amazon also has a [**CLI tool**](https://aws.amazon.com/cli/) that you can use.
 
+* EC2 services run on various type-1 hypervisors, such as Xen, KVM, and **Nitro**, which is a newer KVM-based lightweight hypervisor that delivers close to bare-metal performance
 
+
+### Features and Tools
+
+* When provisioning EC2 instances, users can manage hardware profile, OS image with software package, additional storage, attached network, and firewall rules
+
+* **Amazon Machine Images (AMI)** are preconfigured images with the information needed to launch EC2 instances, including OS and software packages. Stored in the AWS repo and used to quickly launch instances, images customizable by anybody
+
+* **Instance Types** determine the virtualized hardware profile of the instance to be launched. Each instance is preconfigured with different compute, memory, and storage capabilities, and are categorized in instance families such as:
+
+    * General purpose instances
+
+    * Optimized instances for:
+
+        - CPU-intensive applications such as ML, HPC (High-Performance Computing), batch workloads, and media transcoding
+
+        - GPU-intensive applications such as ML and graphically, intensive, scientific engineering applications
+
+        - RAM for in-memory databases, in-memory caches, and real-time data processing
+
+        - Machine Learning, it gets its own category tool
+
+        - SSD Storage for data-intensive workloads and distributed filesystems
+
+* Additional configurable aspects of EC2 instances, related services and tools may include:
+
+    * **Virtual Private Cloud (VPC)** for network isolation
+
+    * **Security Groups** for VPC networks to control EC2 inbound/outbound traffic
+
+    * **Amazon Elastic Block Store (EBS)** for persistent storage attachment
+
+    * Dedicated hosts to provision instances on a physical machine reserved for our use
+
+    * **Elastic IP** to remap a Static IP automatically
+
+    * **CloudWatch** for monitoring resources and applications
+
+    * **Auto Scaling** to dynamically resize resources
