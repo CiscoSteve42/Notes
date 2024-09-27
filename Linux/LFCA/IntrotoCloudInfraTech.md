@@ -287,3 +287,29 @@ Infrastructure as a Service (IaaS)
     * **CloudWatch** for monitoring resources and applications
 
     * **Auto Scaling** to dynamically resize resources
+
+
+### Benefits of Using Amazon EC2
+
+* Easy-to-use IaaS solution
+
+* Flexble and scalable
+
+* Provides a secure and robust functionality for computing resources
+
+* Provides guest OS options that include *a handful* of Linux distributions, macOS, and Windows
+
+* Enables automation
+
+* Cost-effective (only pay for resources used)
+
+* Designed to work in conjunction with other AWS components, while integrating with third-party automation tools
+
+* Promises up to 99.99% uptime
+
+* Provides specialized instances for workloads, such as HPC, ML, databases/data processing, batch workloads, media transcoding, and graphically intensive or engineering applications
+
+
+### Azure Virtual Machine Overview
+
+* **Azure Virtual Machine** service allows you to do cloud stuff through both the **Web Portal** and the **Azure Cloud Shell**, which is configurable in PowerShell or Bash
