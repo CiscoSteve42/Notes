@@ -313,3 +313,12 @@ Infrastructure as a Service (IaaS)
 ### Azure Virtual Machine Overview
 
 * **Azure Virtual Machine** service allows you to do cloud stuff through both the **Web Portal** and the **Azure Cloud Shell**, which is configurable in PowerShell or Bash
+
+
+### Features and Tools
+
+* **VM Image** defines the base OS or the app for the VM. Both Linux and Windows VMs can be launched from images available through the **Azure Marketplace** Why no MacOS bro? Oh yeah.....ha. 
+
+* **VM Size** determines the type and capacity of the compute, memory, storage, and network resources for the VM to be launched
+
+* VMs are grouped in **families** 
