@@ -321,4 +321,40 @@ Infrastructure as a Service (IaaS)
 
 * **VM Size** determines the type and capacity of the compute, memory, storage, and network resources for the VM to be launched
 
-* VMs are grouped in **families** 
+* VMs are grouped in **families** based on their inteded usage:
+
+    * General purpose for development and testing environments, low traffic web servers, and small databases
+
+    * Optimized VMs for:
+
+        - CPU for medium traffic web servers, batch processes, and application servers 
+
+        - GPU for heavy graphic rendering, video editing, and deep learning 
+
+        - RAM for relational databases and in-memory analysis
+
+        - **HPC** (High Performane Compute)
+
+        - Storage for data warehousing and large transactional databases
+
+* **Additional Configurable Aspects of VMs:**
+
+    * Network security groups to manage network traffic
+
+    * SSD or HDD for persistent storage attachment, with optional encryption
+
+    * Dedicated hosts to provision VMs on a physical machine reserved for OUR (Communism intensifies) use
+
+    * Accelerated networking for low latency and high throughput
+
+    * Virtual network for network isolation
+
+    * Monitoring resources and applications
+
+    * Resource Manager templates for VM development
+
+    * Seamless hybrid connections
+
+    * Automated backups
+
+
