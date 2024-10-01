@@ -358,3 +358,23 @@ Infrastructure as a Service (IaaS)
     * Automated backups
 
 
+### Benefits of Using Azure Virtual Machine
+
+* Easy-to-use IaaS solution
+
+* Flexible and scalable
+
+* Provides a secure and robust functionality for your compute resources
+
+* Provides guest OS options such as *several* Linux distros and Windows
+
+* Enables automation
+
+* Cost-effective, only pay for time and resources used
+
+* Designed to work in conjunction with other Azure services
+
+
+### DigitalOcean Droplet Overview
+
+* **DigitalOcean** is a leading cloud service provider
