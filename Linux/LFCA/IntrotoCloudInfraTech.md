@@ -377,4 +377,69 @@ Infrastructure as a Service (IaaS)
 
 ### DigitalOcean Droplet Overview
 
-* **DigitalOcean** is a leading cloud service provider
+* **DigitalOcean** is a leading cloud service provider. Instances are Linux VMs launched on top of the KVM type- hypervisor (primarily with SSDs) called **droplets**
+
+
+### Features and Tools
+
+* Monitoring to collect performance metrics
+
+* Cloud firewalls to secure network infrastructure
+
+* Backups that can be automated, allowing for easy droplet restores or to launch new pre-configured droplets
+
+* Snapshots to be used as restore points after a failed upgrade or config change
+
+* Team Management for collaboration
+
+* Block Storage for droplet storage
+
+* Spaces for scalable and secure storage solutions aimed to store and deliver data
+
+* Load Balancers for traffic distribution 
+
+* Floating IPs for flexibility when assigning IPs to droplets and to release them when no longer needed 
+
+* APIs for programmatic droplet launching
+
+* Networking features, such as DNS IPv6, and private networking 
+
+
+### Benefits of Using DigitalOcean
+
+* Allows you to configure a cloud within 55 seconds
+
+* Flexible and scalable
+
+* Promises up to 99.99% uptime for select services 
+
+* Provides a high level of security by using KVM virtualized droplets 
+
+* Provides sever Linux distros as guest OS options
+
+* Enables automation
+
+* Cost-effective, blah blah cloud blah blah pay for what you use 
+
+* Focused on providing a simple, user-friendly experience
+
+* Uses high-performance SSDs 
+
+* Offers a one-click installation of a multitude of applications and application stacks, including CloudBees, Jenkins, LAMP, Docker, K8s, NGINX, and WordPress 
+
+
+### Google Compute Engine Overview 
+
+* **GCP (Google Cloud Platform)** is...yeah, its GCP dawg
+
+* **GCE (Google Compute Engine)** is part of Google's IaaS model service, services are enable by KVM type-1 hypervisor, running on Google's physical infrastructure, enabling Windows and Linux guest VMs
+
+
+### Features and Tools
+
+* **GCE Machine Types:** 
+
+    * General-purpose machines 
+
+* **Console** is GCP's web interface
+
