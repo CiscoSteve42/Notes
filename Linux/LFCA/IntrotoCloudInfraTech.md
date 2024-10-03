@@ -434,6 +434,8 @@ Infrastructure as a Service (IaaS)
 
 * **GCE (Google Compute Engine)** is part of Google's IaaS model service, services are enable by KVM type-1 hypervisor, running on Google's physical infrastructure, enabling Windows and Linux guest VMs
 
+* **Console** is GCP's web interface
+
 
 ### Features and Tools
 
@@ -441,5 +443,92 @@ Infrastructure as a Service (IaaS)
 
     * General-purpose machines 
 
-* **Console** is GCP's web interface
+    * Memory-optimized
+
+    * Compute-optimized
+
+    * Accelerator-optimized
+
+    * Shared-core
+
+* **Configurable Aspects of GCE VMs (and related services):**
+
+    * Storage disks
+
+    * Networking VPC and firewalls
+
+    * Snapshots
+
+    * Cloud Security Scanner
+
+    * Health checks
+
+    * Sole-tenant nodes
+
+    * Network Endpoint Group
+
+
+### Benefits of Using Google Compute Engine
+
+* Flexible, allows you to scale easily
+
+* Fast boot time 
+
+* Very secure, encrypts all stored data
+
+* Enables automation
+
+* Provides *several* Linux Distros and Windows
+
+* Cloud Cost-effective, that's the new term for it.
+
+* Supports custom machine Types
+
+* Supports VPC, load balancers, etc
+
+
+### IBM Cloud Virtual Servers Overview
+
+* **IBM Cloud**  is another cloud service provider (REALLY??!?!!), it's IaaS model is the **IBM Cloud Virtual Servers** service. 
+
+
+### Features and Tools
+
+* The 4 Supported Types of VMs:
+
+    * **Public** for multi-tenants
+
+    * **Dedicated** for single-tenants
+
+    * **Transient** for ephemeral multi-tenants
+
+    * **Reserved** for mult-tenants committed for a pre-specified term
+
+* Like every cloud service so far, there are optimized profiles for specific workloads, these are:
+
+    * **Balanced** for common cloud workloads
+
+    * **Balanced Local Storage** for medium to large databases
+
+    * **Compute** for compute-intensive deployments 
+
+    * **Memory** for caching and analytics workloads
+
+    * **Variable Compute** for workloads without constant high-CPU performance
+
+    * **GPU** for high-performance deployments
+
+
+### Benefits of Using IBM Cloud Virtual Servers
+
+* Copypasta from every other single cloud benefits package
+
+
+### Introduction to Linode Compute Instances
+
+* **Linode** is brought to you by **Akamai Technologies**, defintiely read that one in Jack Rhysider's voice.
+
+
+### Features and tools
+
 
