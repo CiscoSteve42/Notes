@@ -531,4 +531,31 @@ Infrastructure as a Service (IaaS)
 
 ### Features and tools
 
+* Linode Plan Types:
+
+    * Shared CPU
+
+    * Dedicated CPU
+
+    * Premium Plans
+
+    * High Memory Plans
+
+    * GPU Plans
+
+
+### Benefits of Using Linode Compute Instances
+
+* Copypasta
+
+
+### Oracle Cloud Compute Virtual Machines Overview
+
+* One of **Oracle Cloud**'s most commonly used infrastructure products is **Cloud Compute**, which does all of the same old cloud stuff
+
+* **Oracle Cloud Infrastructure Compute Virtual Machines** are offered in many shapes with **Oracle Compute Units (OCPUs)** to support a wide range of workloads and software platforms
+
+
+### Features and Tools
+
 
