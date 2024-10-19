@@ -5,7 +5,17 @@ Gentoo Installation Mini Guide/Tips & Tricks
 
 NEW NOTES
 =========
+
 * After multiple failed and successful Gentoo installs and a good amount of research, I've decided to start these notes from scrach but still leave my old notes at the bottom. 
+
+Designing a Partition Scheme
+----------------------------
+
+* Edit partitions with `fdisk /dev/sda` assuming that's the main drive that you're installing on. 
+
+
+
+
 
 
 

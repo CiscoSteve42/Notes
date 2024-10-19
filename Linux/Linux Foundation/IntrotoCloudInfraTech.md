@@ -558,4 +558,14 @@ Infrastructure as a Service (IaaS)
 
 ### Features and Tools
 
+* Different Infrastructure VM Types:
 
+    - **Standard/General Purpose Instances** for most use cases
+
+    - **Dense IO** high performance instances suitable for large database applications
+
+* When provisioning cloud VMs, users are able to manage additional instance aspects and related services:
+
+    - Flexible image Management
+
+    - 
