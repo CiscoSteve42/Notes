@@ -566,6 +566,10 @@ Infrastructure as a Service (IaaS)
 
 * When provisioning cloud VMs, users are able to manage additional instance aspects and related services:
 
-    - Flexible image Management
+    - Flexible Image Management
 
-    - 
+    - Low latency block storage for boot volumes, for increased performance and reliability, and to facilitaet backups and restores
+
+    - Secure and flexible network through full customizable private VCN (Virtual Cloud Networks)
+
+    - High availability
