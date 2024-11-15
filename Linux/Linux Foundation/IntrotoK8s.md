@@ -39,4 +39,30 @@ Chapter 1
 
 * A "Big-bang" approach focuses all efforts with the refactoring of the monolith, postponing the development and implementation of any new features, essentially delaying progress and possibly, in the process, even breaking the monolith
 
-* An incremental refactoring approach guarentees that new features are developed and implemented as modern microservices which are able to communicate with the monolith through APIs, without appending the monolith's code. During this time, features are refactored out of the monlith which slowly fades away while all, or most of it's functionality is modernized into microservices, allowing a gradual transition from the monolith to to 
+* An incremental refactoring approach guarentees that new features are developed and implemented as modern microservices which are able to communicate with the monolith through APIs, without appending the monolith's code. During this time, features are refactored out of the monlith which slowly fades away while all, or most of it's functionality is modernized into microservices, allowing a gradual transition from the monolith to microservices architecture and allows for phased migration of app features into the cloud
+
+
+### Challenges
+
+* Some apps won't 'survive' refactoring, some need to be written from the ground up in the cloud, choosing runtimes can also provided a challenge. **Application Containers** solved these issues by allowing multiple apps to be deployed on a single server, each with their own isolated runtime environments and all of the other perks of isolated, containerized environments
+
+
+### Success Stories
+
+* **AppDirect**
+
+* **box**
+
+* **Crowdfire**
+
+* **GolfNow**
+
+* **Pinterest**
+
+
+Container Orchestration
+-----------------------
+
+### What Are Containers?
+
+
