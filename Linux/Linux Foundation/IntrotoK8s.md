@@ -65,4 +65,17 @@ Container Orchestration
 
 ### What Are Containers?
 
+* **Containers** are things you put stuff in. JK lol (but not really), they're application-centric methods to deliver high-performing, scalable applications on any infrastructiure of your choice. They're best suited to deliver microservices by providing portable, isolated virtual environments for applications to run without interfaces from other running applications
 
+* **Microservices** are lightweight apps written in various modern programming languages, with specific dependencies, libraries, and environmental requirements, apps are packaged with their dependencies so they, like, work and stuff
+
+* Containers encapsulate Microservices and their dependencies but do not run them directly. Containers run container images
+
+
+### What is Container Orchestration?
+
+* Wrong Answers only:
+    
+    * A symphony written for a group of boxes
+
+    * Not whatever the fuck was happening at the Suez Canal
