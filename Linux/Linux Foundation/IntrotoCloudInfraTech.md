@@ -573,3 +573,16 @@ Infrastructure as a Service (IaaS)
     - Secure and flexible network through full customizable private VCN (Virtual Cloud Networks)
 
     - High availability
+
+**blah blah blah, more of the same cloud service bs, lets move on to OpenStack because its actually pretty cool**
+--------------------------------------------------------
+
+* **OpenStack** lets you build cloud computing platforms
+
+    * It began as a joint project betwenn NASA (nasasucks.gov) and Rackspace in 2010 (the year I graduated! (barely lol))
+
+    * it's an open source software platform released under the Apache 2.0 License, also part of the OpenOpera...OtepIntern...OprahInfared??? ...OpenInfra Foundation. Yeah, that one.
+
+* **Components and Features (Strap in Buckaroos)**
+
+
