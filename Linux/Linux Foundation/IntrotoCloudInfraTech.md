@@ -585,4 +585,14 @@ Infrastructure as a Service (IaaS)
 
 * **Components and Features (Strap in Buckaroos)**
 
+    * **Nova** a compute service that implements scalable and on-demand access to compute resources, including bare metal, virtual machines, and containers (yes, I started copypasta'ing instead of handwriting EVERYTHING, it's a 50 hour course I'm not worried about typing speed (I'm also not handwriting because I'm left handed and I drag my hand like a mf'er), fight me.)
 
+    * **Ironic** a bare metal provisioning service part of hardware lifecycle services (and the reason that I use the word "yeet" as a 33 year old that has never played Fortnite a second in their life)
+
+    * **Cyborg** *DC Reference* is a lifecycle management service for GPU and ASIC-based devices, part of Hardware lifecycle services.
+
+    * **Swift** (I'm torn between making a TayTay or iOS joke here) is the object store part of Storage services that provides a highly available, distributed, eventually consistent object/blob store.
+
+    * **Cinder** the block storage part of Storage services that provides an abstraction layer over the management of block storage devices through a self-service API.
+
+    * **Manilla** 
