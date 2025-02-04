@@ -144,4 +144,29 @@ Basic Rust Programs
 
 ### Types of Tokens
 
+* **Keywords**
+
+    * **Strict Keywords** These are the backbone of Rust's syntax; they dictate how the fundamental building blocks like loops, conditionals, and functions are defined. For example, fn is used to define functions, let for declaring variables, and loop for infinite loops. Misusing these keywords will result in compile-time errors. 
+
+    * **Reserved Keywords** While these words don't serve any purpose yet, they are reserved for future language expansions. Using them as identifiers will result in a compilation error, ensuring that future versions of Rust will not break existing codebases.
+
+    * **Weak Keywords** These have a particular function but only under certain circumstances. For example, self is a weak keyword that refers to the instance on which a method is invoked, but it has no special meaning outside that context.
+
+
+* **Identifiers** Identifiers are the customizable part of your code. You define what a variable or function is called and then use that name to refer to it throughout your code. Following naming conventions and keeping names descriptive can significantly improve the readability and maintainability of your code.
+
+* **Literals** Literals let you embed simple values directly into your code. They are immutable and offer a performance advantage because they are evaluated simultaneously. Rust supports a range of literals, including numeric types (42, 3.14), text ('a', "hello"), and more complex ones like array and tuple literals ((1, 'a')).
+
+* **Lifetimes** Lifetimes are perhaps one of the most groundbreaking features in Rust. Unlike garbage-collected or reference-counted languages, Rust uses lifetimes to manage memory safely at compile time. Understanding lifetimes is crucial for mastering Rust, as they ensure that references don't outlive the data they point to, avoiding *dangling references*.
+
+* **Punctuation** Characters like ;, :, and others serve to structure your code. For example, semicolons (;) are used to terminate statements, and colons (:) are used to specify types. These may seem trivial, but they are critical in syntactically correcting the code.
+
+* **Delimiters** 
+
+    * **Curly Braces {}** These define a block of code. Everything between the {} is a separate scope. Variables declared inside are not accessible outside this block.
+
+    * **Square Brackets []** Used in array declarations and for array indexing. For example, let arr = [1, 2, 3]; declare an array, and arr[0] would access the first element.
+
+    * **Parentheses ()** These are used in function declarations and calls to encapsulate parameters and arguments. They are also used to clarify the order of operations in mathematical expressions.
+
 
