@@ -1,5 +1,9 @@
 Getting Started With Rust
 ========================
+* Just some basic, low-effort notes for my Linux Foundation Course on Rust
+
+Why Learn Rust?
+---------------
 
 ### Memory Safety and the Borrow Checker
 
@@ -103,5 +107,41 @@ Beyond these, Rust's ecosystem extends to scientific computing, machine learning
 
 ### Embedded systems
 
+* **Resource Efficiency** Rust's absence of a garbage collector and efficient memory management makes it ideal for environments where resource usage must be minimized.
+
+* **Safety Guarantees** The safety guarantees that come with Rust's type system are invaluable in embedded contexts, where a simple mistake can lead to catastrophic failures.
+
+* **Concurrency** With its advanced concurrency features, Rust can handle multi-threaded tasks commonly encountered in embedded systems.
+
+* **Robust Ecosystem** Specialized crates for embedded development, such as those for real-time operating systems (RTOS) and hardware abstraction layers (HAL), are readily available. You can browse many of these specialized crates in the [embedded category on crates.io](https://crates.io/categories/embedded).
+
+
+### Cross-Platform Development
+
+* **Platform Independence** 
+
+One of Rust’s foundational philosophies is platform independence. This is facilitated through its standard libraries and APIs, which are built to abstract away most of the underlying platform-specific implementations.
+
+* **Standard Libraries and APIs** Rust's standard libraries provide a unified way of accessing essential functionalities such as file I/O, threading, and networking. By using these standard APIs, developers can write operational code across Windows, macOS, and various Linux distributions without fussing over the nuances of each operating system.
+
+* **Runtime Dependencies** Languages like Java and Python rely on a runtime or virtual machine to execute code, requiring an extra layer of software installed on the target system. Rust takes a different approach.
+
+* **Standalone Executables** In Rust, the final product is usually a standalone executable. The absence of a runtime reduces the size of the deliverable and eliminates the need to install additional software. This is especially beneficial for constrained environments or platforms where installing a runtime might not be an option.
+
+* **Undefined Behavior** Undefined behavior can be a significant stumbling block in cross-platform development. What may work on one platform due to some compiler optimizations could completely fail on another.
+
+* **Memory Safety and Strict Compiler Checks** Rust's emphasis on memory safety and rigorous compiler checks protects against undefined behavior. When code compiles successfully in Rust, it is guaranteed to be devoid of a whole class of bugs that can result in undefined behavior. This offers a predictable and consistent performance across multiple platforms.
+
+* **Cross-Compilation** Rust’s package manager and build tool, Cargo, simplifies this process by providing robust support for cross-compilation. Simple configuration changes allow you to develop your project for different targets from your primary development environment.
+
+    * **Cargo's Support for Cross-Compilation** By combining platform abstraction, zero runtime dependencies, stringent checks against undefined behavior, and versatile build tools, Rust sets a new standard for cross-platform development. Its holistic approach ensures you can focus on implementing features rather than wrestling with platform-specific quirks.
+
+
+Basic Rust Programs
+-------------------
+
+* [Rust Language Reference](https://doc.rust-lang.org/reference/index.html)
+
+### Types of Tokens
 
 
