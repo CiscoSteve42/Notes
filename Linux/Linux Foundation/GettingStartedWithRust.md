@@ -165,7 +165,7 @@ Basic Rust Programs
 
     * **Curly Braces {}** These define a block of code. Everything between the {} is a separate scope. Variables declared inside are not accessible outside this block.
 
-    * **Square Brackets []** Used in array declarations and for array indexing. For example, let arr = [1, 2, 3]; declare an array, and arr[0] would access the first element.
+    * **Square Brackets []** Used in array declarations and for array indexing. For example, `let arr = [1, 2, 3];` declare an array, and `arr[0]` would access the first element.
 
     * **Parentheses ()** These are used in function declarations and calls to encapsulate parameters and arguments. They are also used to clarify the order of operations in mathematical expressions.
 
