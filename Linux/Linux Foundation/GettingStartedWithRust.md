@@ -170,3 +170,24 @@ Basic Rust Programs
     * **Parentheses ()** These are used in function declarations and calls to encapsulate parameters and arguments. They are also used to clarify the order of operations in mathematical expressions.
 
 
+### Hello world
+
+```rust
+fn main() {
+    println!("Low Taper Fade Meme is Massive");
+}
+// Hi Mom.
+```
+
+* **Function Declaration** *fn main()* signifies the primary function where execution begins. The keyword fn stands for 'function', and *main* is the function's name.
+
+* **Curly Braces {}** These define the scope of the main function. All Rust functions have an opening { and a closing } to delineate their boundaries.
+
+* **Standard Output** *println!()* is a macro that prints text to the standard output, typically your terminal or command prompt. The text to be printed is enclosed in double quotes (" ")
+
+* **Semicolon ;** In Rust, a semicolon is used to signify the end of an expression that has an effect. It's the equivalent of a full stop in a sentence.
+
+* **Comments** The // syntax initiates a line comment. Everything following // on the same line is ignored by the Rust compiler. This is great for adding short explanations or notes alongside your code.
+
+
+### Factorial Calculation
