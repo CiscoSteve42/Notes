@@ -191,3 +191,38 @@ fn main() {
 
 
 ### Factorial Calculation
+
+```rust
+fn factorial(n: u64) -> u64
+
+    if n == 0 || n == 1 {
+        1
+    } else {
+        n * factorial(n - 1)
+    }
+}
+
+fn main() {
+    let num: u64 = 69;
+    let result = factorial(num)
+    println!("Factorial of {} is: {}", num, result)
+}
+```
+
+* **Function Definition** The fn factorial(n: u64) -> u64 { ... } syntax defines a function named factorial that takes one argument n of type u64 (unsigned 64-bit integer) and returns a value of the same type.
+
+* **Base Case** Inside the function, we specify the base cases for n = 0 and n = 1. In mathematics, 0! = 1 and 1! = 1. Our function returns 1 for these cases.
+
+* **Recursive Case** We employ recursion for values of n greater than 1. The factorial(n-1)) call performs the factorial calculation for n-1, and then we multiply the result by n.
+
+* **Main Function** Here, we initialize a variable num of type u64 to 5. This is the number whose factorial we aim to calculate.
+
+* **Function Call** We invoke our factorial function with num as an argument and store the result in a variable called result.
+
+* **Output** Finally, we output the calculated factorial to the console using the println! macro, interpolating the value of num and result into the output string.
+
+
+Basic Troubleshooting
+---------------------
+
+### Troubleshooting Steps
