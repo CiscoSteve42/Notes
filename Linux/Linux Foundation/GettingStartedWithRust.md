@@ -225,4 +225,33 @@ fn main() {
 Basic Troubleshooting
 ---------------------
 
-### Troubleshooting Steps
+### Tools to Identify and Resolve Typos and Syntax errors
+
+* **Rust Compiler (rustc)** The Rust compiler, rustc, is your first defense against syntax errors. When you compile your program, rustc flags any syntax errors, detailing each issue's line number and nature.
+
+* **Clippy (Would you like some assistance today?)** Clippy is a linting tool that goes a step further, catching not just syntax errors, but also common programming mistakes, style issues, and more. You can run Clippy as a standalone command or integrate it into your editor. It analyzes your code and offers a plethora of warnings and suggestions, focusing on areas such as: 
+
+    * **Simplified Code** Clippy recommends simpler, more readable code constructs.
+    * **Unsafe Code** Flags unsafe code that could lead to undefined behavior.
+    * **Performance** Suggests optimizations, like faster operation alternatives.
+    * **Style Guidelines** Enforces consistent coding styles in line with Rust's best practices.
+    * **Deprecated Items** Warns against the use of deprecated elements in the language.
+    * **Error Handling** Recommends more idiomatic ways to handle errors.
+    * **Redundant Code** Highlights and suggests removal of redundant code.
+    * **Type Conversions** Flags unnecessary type conversions and advises on type appropriateness.
+    * Pattern Matching: Provides guidance on making your code more expressive via better matching patterns.
+    * **Complex Expressions** Suggests breaking down intricate expressions into simpler parts.
+
+    * Clippy evolves with time, so the exact warnings may vary depending on your version.
+
+    * **Warnings *ans* Suggestions Offered by Clippy**
+
+       * **Unnecessary 'let' Binding** Clippy warns when you create a variable with let, but never use it.
+        ```rust
+        fn unnecessary_let() {
+            let x = 42; // Clippy will warn about this unused binding
+            println!("Hello, Rust!");
+        }
+        ```
+
+        
