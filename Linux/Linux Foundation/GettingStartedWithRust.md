@@ -254,4 +254,10 @@ Basic Troubleshooting
         }
         ```
 
-        
+        * **Unused Variable** Clippy warns when you declare a variable that is never used, even if it's not a let variable! Hey!
+        ```rust
+        fn unused_variable() {
+            let x = 10 // Clippy be like "WTF BRAHHHHhh"
+        }
+        ```
+        * **Unnecessary Cloning** 
