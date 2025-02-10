@@ -260,4 +260,52 @@ Basic Troubleshooting
             let x = 10 // Clippy be like "WTF BRAHHHHhh"
         }
         ```
-        * **Unnecessary Cloning** 
+        * **Unnecessary Cloning** Clippy will warn you when you use an unnecessary clone operation.
+        ```rust
+        fn unnecessary_cloning() {
+            let name = "Alice";
+            let _greeting = String::from(name.clone());
+        // Clippy is Disappointed and will let you know 
+        }
+        ```
+       
+       * **Suspicious Operations** Clippy can catch potentially unintended operations.
+       ```rust
+       fn suspicious_operation(x: i32) {
+           if x = 10 { // Clippy will warn you about using '=' instead of '==' in the if conditions
+               println!("x is equal to 10");
+           }  
+       }
+       ```
+
+       * **Simplify Boolean Expressions** Clippy can suggest simplifying boolean expressions.
+       ```rust
+       fn simplify_boolean() {
+           let condition = true;
+           if condition == true { // Clippy will suggest simplifying this to just 'if condition'
+               println!("Condition is true");
+            }
+       }
+       ```
+
+       * **Unnecessary Return** Clippy will warn when a function unnecessarily returns a value at the end.
+        ```rust
+        fn unnecessary_return(x: i32) -> i32 {
+            if x > 0 {
+                return x; // Clippy will warn you about this
+            }
+            0 // Instead, we can omit the 'return' keyword here
+        }
+        ```
+
+        * **'if let' Instead of 'match'** Clippy may suggest using *match* instead of *if let* for better readability.
+        ```rust
+        fn if_let_instead_of_match() {
+            let option_value = Some(42);
+            if let Some(x) = option_value { // Clippy will suggest using a 'match' statement instead
+                println!("Got value: {}", x);
+            }
+        }
+        ```
+
+        * **Manual 'collect()' on an Iterator**
