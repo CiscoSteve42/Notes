@@ -385,6 +385,46 @@ Cargo Package Manager
 
     * **authors** An array listing the names and contact information of the authors.
 
-* **Dependency** 
+* **Dependency** The *dependencies* table lists all the external crates your project relies on. These are specified as key-value pairs, with the key being the crate's name and the value indicating the version requirement.
+
+    * ```toml
+      [dependencies]
+      rand = "0.8.4"
+      ```
+
+    * Version requirements can be specified in various ways, such as `0.8.4` for an exact version, `^0.8.4` for compatible updates, or `~0.8.4` for patch updates.
+
+* **Development Dependencies** The *dev-dependencies* section is for dependencies used exclusively for development and testing. These are not bundled with the final binary in a release build.
+
+    * ```toml
+      [dev-dependencies]
+      test_crate = "0.1.0"
+      ```
+
+* **Custom Build Script** If your project requires a custom build script, you can specify it in the build field within the *package* section. For instance, here's how you can reference a build.rs script located in the root directory:
+
+    * ```toml
+        [package]
+        name = "first_project"
+        version = "0.1.0"
+        authors = ["Your Name <your@email.com>"]
+        build = "build.rs"
+      ```
+
+### Configuring a Workspace in 'Cargo.toml'
+
+* The *workspace* section in the Cargo.toml file specifies the projects that belong to the workspace. These projects are known as member projects.
+
+* ```toml
+  [workspace]
+  members = [
+  "first_project",
+  "Another_project",
+  "Third_project",
+  ]
+
+  ```
+
+### Other Project settings
 
 
