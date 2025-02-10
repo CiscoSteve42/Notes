@@ -376,7 +376,7 @@ Cargo Package Manager
       [package]
       name = "first_project"
       version = "0.1.0"
-      authors = ["Tux Penguin <tux@linux.com>"]
+      authors = ["The Rizzler <TheRizzler@brain.rot>"]
       ```
 
     * **name** Specifies the package name, which must be unique on [crates.io](crates.io), Rust's central package registry.
