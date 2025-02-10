@@ -308,4 +308,49 @@ Basic Troubleshooting
         }
         ```
 
-        * **Manual 'collect()' on an Iterator**
+        * **Manual 'collect()' on an Iterator** Clippy will suggest using the *collect()* method directly instead of using *collect()* with *FromIterator*.
+        ```rust
+        fn manual_collect() {
+            let numbers = vec![1, 2, 3];
+            let _vec: Vec<i32> = Vec::from_iter(numbers.iter().cloned());
+            // Clippy will suggest that you use 'collect()'
+        }xtagstartz
+        ```
+
+* **IDE and Code Editors** Laughs in NeoVim superiority
+
+* **Rust Analyzer** This advanced language server provides real-time code analysis and integrates well with IDEs, offering instant feedback on errors and potential improvements. It can also be accessed via the command line and incorporated into text editors like Vim. Key features include:
+
+    * **Auto-Completion** Offers context-aware code completion suggestions.
+
+    * **Code Diagnostics** Highlights issues directly in the code editor.
+
+    * **Find References and Go to Definition** Provides a quick navigation to definitions and usages.
+
+    * **Documentation on Hover** Displays relevant documentation when hovering over code elements.
+
+    * **Organize Imports** Automatically sorts and cleanus up your import statements.
+
+    * **Rename Symbol** Safely renames variables and functions across your code. 
+
+    * **Code Formatting** Uses *rustfmt* to format code according to Rust's guidelines. 
+
+    * **Macro Expansion** Helps debug macros by showing how they expand.
+
+* **Rustfmt** Though not directly related to troubleshooting, rustfmt improves code readability and can help avoid syntax errors by automatically formatting your code according to Rust's style guidelines.
+
+* **Compile-Time Checks** The Rust type system and borrow checker identify many issues at compile-time, mitigating common issues like use-after-free and null pointer dereferences.
+
+* **Testing** Writing unit and integration tests help catch syntax and logical errors, verifying that your code performs as intended.
+
+* **Continuous Integration (CI)** CI pipelines like GitHub Actions or Travis CI help catch errors early by running automated tests and checks before merging the code.
+
+* **Debugging Techniques** Rust offers excellent debugging support. You can use the println! or dbg! macros for debug prints, or specialized binaries like rust-gdb and rust-gdbgui for more complex debugging.
+
+
+Cargo Package Manager
+---------------------
+
+### Initializing a New Project
+
+
