@@ -353,4 +353,23 @@ Cargo Package Manager
 
 ### Initializing a New Project
 
+* `cargo new` initializes a new Rust project by creating a new directory containing essential files structured as follows: 
+
+    * ```rust
+        first_project/
+        |- Cargo.toml
+        |- src/
+        |- main.rs
+        ```
+
+    * **Cargo.toml** This is the project's configuration file. It holds vital metadata like the project's name, version, authors, and dependencies. Written in TOML (Tom's Obvious, Minimal Language), this file can also contain various other project-specific settings and configurations.
+
+    * **src/** This directory houses the project's source code files. By default, Cargo looks for the main code file named *main.rs*.
+
+    * **main.rs** Serving as the executable's entry point, this file contains the main function, which marks the beginning of program execution.
+
+### The Anatomy of Cargo.toml
+
+* **Package Information** 
+
 
