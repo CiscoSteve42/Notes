@@ -370,6 +370,21 @@ Cargo Package Manager
 
 ### The Anatomy of Cargo.toml
 
-* **Package Information** 
+* **Package Information** The *package* section provides essential metadata about your Rust project. This section includes fields like name, version, and authors. Here is an example:
+
+    * ```toml
+      [package]
+      name = "first_project"
+      version = "0.1.0"
+      authors = ["Tux Penguin <tux@linux.com>"]
+      ```
+
+    * **name** Specifies the package name, which must be unique on [crates.io](crates.io), Rust's central package registry.
+
+    * **version** Follows the Semantic Versioning (SemVer) guidelines and specifies the package version.
+
+    * **authors** An array listing the names and contact information of the authors.
+
+* **Dependency** 
 
 
