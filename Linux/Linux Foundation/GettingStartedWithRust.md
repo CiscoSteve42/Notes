@@ -539,7 +539,143 @@ Security Tools
 
 ### Security Tool Example
 
+```rust
+use std::fs::File;
+use std::io::{self, BufRead, BufReader};
+use regex::Regex; 
+
+fn main() {
+    let file_path = "input.txt"; 
+
+    // Open the input file and print to standard error
+    let file = match File::open(file_path) {
+        Ok(file) => file,
+        Err(error) => {
+            eprintln!("Error opening the file: {}", error);
+            return;
+        }
+    };
+
+    // Create a BufReader to efficiently read the file line by line
+    let reader = BufReader::new(file); 
+
+    // Define a regular expression to match potential passwords or API keys
+    let password_regex = Regex::new(r"(?i)(password|api[_\s]?key)[:=]\s*(\w+)").unwrap();    
+
+    // Perform the security check by scanning each line of the file
+    for (line_number, line) in reader.lines().enumerate() {
+        let line = match line {
+            Ok(line) => line,
+            Err(error) => {
+                eprintln!("Error reading line {}: {}", line_number + 1, error);
+                continue;
+            }
+        }; 
+
+        // Search for matches in the current line using the password_regex
+        if password_regex.is_match(&line) {
+            println!("Potential security issue found in line {}: {}", line_number + 1, line);
+        }
+    }
+}
+```
+
+* **Import Modules** Import the required modules for File I/O and regular expressions
+
+* **Define File Path** The path to the input file is set
+
+* **Open File** Attempt to open the file and handle errors gracefully
 
 
+* **Buffered Reader** A buffered reader reads the file line by line efficiently
+
+* **Regular Expression** Define a regex pattern to match potential passwords or API keys
+
+* **Read Lines** Loop through each line in the file using `enumerate()` to get line numbers
+
+* **Pattern Matching** The program checks for matches with the defined regex pattern for each line
 
 
+More Complex Syntax
+-------------------
+
+### File I/O and Stdout
+
+```rust
+// Annotated Basic Rust Example: File I/O and Stdout 
+
+use std::fs::File;
+use std::io::{self, BufRead, BufReader, Write}; 
+
+fn main() -> io::Result<()> {
+    // Open the input file for reading using BufReader
+    let file = File::open("input.txt")?;
+    let reader = BufReader::new(file);
+
+    // Read lines from the input file and process them
+    for line in reader.lines() {
+        let input_line = line?;
+        let number: i32 = input_line.trim().parse().expect("Invalid number in file"); 
+
+        // Perform a simple operation (multiply by 2 in this case)
+        let result = number * 2; 
+
+        // Print the result to stdout
+        println!("Input: {}, Output: {}", number, result); 
+
+        // Open the output file for writing
+        let mut output_file = File::create("output.txt")?; 
+
+        // Write the result to the output file
+        writeln!(output_file, "{}", result)?;
+    } 
+
+    Ok(())
+}
+```
+
+* **Import Modules** We import the required modules from the standard library. `BufRead` and `BufWriter` are used for buffered reading and writing, respectively, which is more efficient than handling one byte at a time.
+
+* **Opening Input File** We use `File::open()` to open the input file and create a BufReader for efficient reading.
+
+* **Opening Output File** We use `File::create()` to create (or truncate) the output file. A *BufWriter* is used for efficient writing.
+
+* **Reading and Writing** We read each line from the input file, prepend it with a line number, and then write it to both the standard output *(stdout)* and the output file.
+
+* **Error Handling** The `?` operator is used for error propagation. If any I/O operation fails, the function will return an *Err* variant, terminating the program.
+
+### Fibonacci Sequence
+
+```rust
+// Annotated Advanced Rust Example: Fibonacci Sequence 
+
+// Declare a function to calculate the nth Fibonacci number using dynamic programming.
+fn fibonacci_dynamic(n: u64) -> u64 {
+    // Create a vector to store the Fibonacci numbers.
+    let mut fib_nums: Vec<u64> = Vec::with_capacity(n as usize + 1); 
+
+    // Initialize the first two Fibonacci numbers.
+    fib_nums.push(0);
+    fib_nums.push(1); 
+
+    // Calculate and store Fibonacci numbers from the 3rd to the nth.
+    for i in 2..=n {
+        let next_fib = fib_nums[i as usize - 1] + fib_nums[i as usize - 2];
+        fib_nums.push(next_fib);
+    } 
+
+    // Return the nth Fibonacci number.
+    fib_nums[n as usize]
+} 
+
+fn main() {
+    // Define the value of n for which we want to calculate the Fibonacci number.
+    let n: u64 = 10; 
+
+    // Call the fibonacci_dynamic function and store the result.
+    let result = fibonacci_dynamic(n); 
+
+    // Print the result.
+    println!("The {}th Fibonacci number is: {}", n, result);
+}
+```
