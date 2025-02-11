@@ -597,7 +597,31 @@ Infrastructure as a Service (IaaS)
 
 * Skipping the rest of these to move onto the PaaS Chapter.
 
-### Platform as a Service (PaaS)
+Platform as a Service (PaaS)
+----------------------------
+
+### Cloud Foundry Overview
+
+* **Cloud Foundry (CF)** is an open source Platform as a Service (PaaS) framework aimed at developers in large organizations, that is portable to any cloud, highly interoperable, has an architecture supporting any programming language, and integrates easily with various cloud and on-premises tools. In addition to supporting any type of application, it provides means for these applications to access external resources through application services gateway.
+
+* While CF can be deployed on-premises, it is recommended to install it on one of the supported [IaaS](https://www.cloudfoundry.org/the-foundry/#providers), such as Amazon AWS, Microsoft Azure, Google Cloud Platform (GCP), IBM Cloud, OpenStack, or VMware vSphere. Stable Cloud Foundry releases are also available through several certified commercial [distributions](https://www.cloudfoundry.org/#cert-distros) as well, such as Atos Cloud Foundry, Cloud.gov, SAP Cloud Platform, VMware Tanzu (formerly known as Pivotal Cloud Foundry), or others.
+
+* CF aims to address challenges faced by developers in large organizations through a collection of customized technologies. Popular core components such as the Cloud Foundry API, CF CLI, Korifi, Garden, Diego, Eirini, Paketo Buildpacks, Stratos UI, together with BOSH, Quarks, and a set of extensions such as the Open Service Broker API make up the Cloud Foundry platform.
+
+### Features
+
+* Application portability
+* Application auto-scaling
+* Application isolation
+* Centralized platform management
+* Centralized logging
+* Dynamic routing
+* Application health management
+* Role-based application deployment
+* Horizontal and vertical scaling
+* Security
+* Support for different IaaS platforms.
+
+### Cloud Foundry BOSH
 
 
-    
