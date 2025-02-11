@@ -595,4 +595,9 @@ Infrastructure as a Service (IaaS)
 
     * **Cinder** the block storage part of Storage services that provides an abstraction layer over the management of block storage devices through a self-service API.
 
-    * **Manilla** 
+* Skipping the rest of these to move onto the PaaS Chapter.
+
+### Platform as a Service (PaaS)
+
+
+    
