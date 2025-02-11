@@ -1,5 +1,5 @@
 Getting Started With Rust
-========================
+=========================
 * Just some basic, low-effort notes for my Linux Foundation Course on Rust
 
 Why Learn Rust?
@@ -426,5 +426,67 @@ Cargo Package Manager
   ```
 
 ### Other Project settings
+
+* **Cargo.toml** can also hold additional configurations like specifying the Rust edition (e.g., 2015, 2018, 2021), documentation settings, and other project-specific configurations.
+
+* ```toml
+  [package]
+  name = "first_project"
+  version = "0.1.0"
+  edition = "2018" 
+
+  [dependencies]
+  rand = "0.8.4" 
+
+  [workspace]
+  members = [
+      "first_project",
+      "Another_project",
+      "Third_project",
+  ] 
+  ```
+
+### Cargo Subcommands
+
+* `cargo build` Compiles your project, producing an executable binary and a main() function for a binary crate and library create would be built without either.
+
+* `cargo test` Automatically compiles and runs all unit tests in your project.
+
+* `cargo doc` Generates HTML documentation for your project using the *rustdoc* tool
+
+* `cargo publish` Publishes your Rust crate to the central package registry, [crates.io](crates.io), making it accessible to the broader Rust community.
+
+* **Dependency Resolution** Cargo uses a robust version resolution algorithm to ensure that all dependencies are compatible, resolving potential conflicts automatically.
+
+* **Built-in Testing Support** Cargo has built-in support for unit testing. Running `cargo test` will automatically compile and execute all unit tests defined in your project, providing a comprehensive report.
+
+* **Documentation Generation** Using the `cargo doc` command, invokes the rustdoc tool to generate HTML documentation for all public items in your code. This makes it easier for developers to understand the code and for users to use it effectively.
+
+* **Sharing and Publishing** With `cargo publish`, you can easily share your Rust project and its dependencies with the global Rust community by uploading it to the central package registry, [crates.io](crates.io).
+
+
+Security Tools
+--------------
+
+### Examples of Security Tools in Rust
+
+* **AFL.rs**
+
+* **honggfuzz**
+
+* **RustScan**
+
+* **Rustls**
+
+* **cargo-audit**
+
+* **RustSec**
+
+* **Cargo-Geiger**
+
+* **Parity Ethereum**
+
+
+
 
 
