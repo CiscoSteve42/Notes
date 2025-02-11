@@ -796,12 +796,12 @@ fn main() {
 
 * **Explanation:**
 
-    1. We start by importing the necessary libraries. embedded_hal provides a hardware abstraction layer for embedded systems, and cortex_m::asm allows us to use ARM Cortex-M assembly macros, like the delay function we use for simulation.
-    2. We define a GpioController struct to represent the GPIO controller, which contains three MyGpioPin instances representing the individual pins (A, B, and C).
-    3. We define a MyGpioPin struct to represent an individual GPIO pin. In this example, we use a simple boolean field is_on to describe whether the pin is high (on) or low (off).
-    4. The GpioController has functions to turn on and off specific LEDs (GPIO pins) by calling the respective set_high() and set_low() methods of the MyGpioPin struct.
-    5. We implement the OutputPin trait for MyGpioPin, part of the embedded_hal crate. The OutputPin trait provides methods to set the pin high or low. In our implementation, we simply update the is_on state and print a message to simulate the pin state change.
-    6. In the main() function, we create a new instance of the GpioController and turn on LED A. We then simulate the LED being on by delaying execution with the asm::delay() function.
+    1. We start by importing the necessary libraries. `embedded_hal` provides a hardware abstraction layer for embedded systems, and `cortex_m::asm` allows us to use ARM Cortex-M assembly macros, like the delay function we use for simulation.
+    2. We define a `GpioController` struct to represent the GPIO controller, which contains three `MyGpioPin` instances representing the individual pins (A, B, and C).
+    3. We define a `MyGpioPin` struct to represent an individual GPIO pin. In this example, we use a simple boolean `field is_on` to describe whether the pin is high (on) or low (off).
+    4. The `GpioController` has functions to turn on and off specific LEDs (GPIO pins) by calling the respective `set_high()` and `set_low()` methods of the MyGpioPin struct.
+    5. We implement the `OutputPin` trait for `MyGpioPin`, part of the `embedded_hal` crate. The `OutputPin` trait provides methods to set the pin high or low. In our implementation, we simply update the is_on state and print a message to simulate the pin state change.
+    6. In the main() function, we create a new instance of the GpioController and turn on LED A. We then simulate the LED being on by delaying execution with the `asm::delay()` function.
     7. Next, we turn off LED A and simulate.
 
 ### User Input Example
@@ -900,6 +900,217 @@ fn get_car_details() -> Car {
 
 ### More Advanced Language Features
 
+* The following program reads a CSV file, processes the data, and performs some computations
+
+```rust
+use std::fs::File;
+use std::io::{self, BufRead};
+use std::error::Error; 
+
+// Define a struct to hold the data from the CSV file
+#[derive(Debug)]
+struct Record {
+    name: String,
+    age: u32,
+    score: f64,
+} 
+
+impl Record {
+    // A method to create a new Record from a CSV line
+    fn from_csv_line(line: &str) -> Result<Record, Box<dyn Error>> {
+        let fields: Vec<&str> = line.split(',').collect();
+        if fields.len() != 3 {
+            return Err("Invalid CSV line".into());
+        } 
+
+        let name = fields[0].to_string();
+        let age = fields[1].parse::<u32>()?;
+        let score = fields[2].parse::<f64>()?; 
+
+        Ok(Record { name, age, score })
+    }
+} 
+
+fn main() -> Result<(), Box<dyn Error>> {
+    let filename = "data.csv";
+    let mut records: Vec<Record> = Vec::new(); 
+
+    // Read the CSV file line by line and parse into Record struct
+    let file = File::open(filename)?;
+    for line in io::BufReader::new(file).lines() {
+        let line = line?;
+        let record = Record::from_csv_line(&line)?;
+        records.push(record);
+    } 
+
+    // Process the data: calculate the average score
+    let total_score: f64 = records.iter().map(|r| r.score).sum();
+    let average_score = total_score / records.len() as f64; 
+
+    println!("Number of records: {}", records.len());
+    println!("Average score: {:.2}", average_score); 
+
+    Ok(())
+}
+```
+
+* Explanation:
+
+    1. **Import Modules** Import libraries for file handling, reading, and errors.
+    2. **Create Record Struct** Define a structure to hold the name, age, and score from the CSV file.
+    3. **Parse CSV to Record** Create a method that turns a CSV line into a Record object with error checking.
+    4. **Open File and Read Lines** Open the CSV file, read it line by line, and convert each string to a Record object.
+    5. **Calculate Average Score** Use the Record objects to calculate and display the average score.
+
+### More Complex Rust Example
+
+```rust
+use std::collections::HashMap;
+use std::io::{self, Write}; 
+
+// Define the Pizza struct with available pizza options and their prices
+#[derive(Debug, Clone)]
+struct Pizza {
+    name: String,
+    price: f64,
+} 
+
+// Create a hashmap to store available pizza options
+fn create_pizza_menu() -> HashMap<String, Pizza> {
+    let mut pizza_menu = HashMap::new();
+    pizza_menu.insert(
+        "Margherita".to_string(),
+        Pizza {
+            name: "Margherita".to_string(),
+            price: 9.99,
+        },
+    );
+    pizza_menu.insert(
+        "Pepperoni".to_string(),
+        Pizza {
+            name: "Pepperoni".to_string(),
+            price: 11.99,
+        },
+    );
+    pizza_menu.insert(
+        "Vegetarian".to_string(),
+        Pizza {
+            name: "Vegetarian".to_string(),
+            price: 10.99,
+        },
+    );
+    pizza_menu
+} 
+
+// Define the Order struct to represent a pizza order
+#[derive(Debug)]
+struct Order {
+    pizza: String,
+    quantity: u32,
+} 
+
+impl Order {
+    // Method to calculate the total price of an order
+    fn total_price(&self, pizza_menu: &HashMap<String, Pizza>) -> Option<f64> {
+        match pizza_menu.get(&self.pizza) {
+            Some(pizza) => Some(pizza.price * self.quantity as f64),
+            None => None,
+        }
+    }
+} 
+
+fn main() {
+    let pizza_menu = create_pizza_menu();
+    let mut orders: Vec<Order> = Vec::new(); 
+
+    loop {
+        // Display the pizza menu to the user
+        println!("Available Pizzas:");
+        for (_, pizza) in &pizza_menu {
+            println!("{} - ${:.2}", pizza.name, pizza.price);
+        } 
+
+        // Get user input for pizza order
+        println!("Enter your pizza choice (or 'q' to quit):");
+        let mut input = String::new();
+        io::stdin()
+            .read_line(&mut input)
+            .expect("Failed to read input");
+        let pizza_choice = input.trim().to_string();
+        input.clear(); 
+
+        if pizza_choice == "q" {
+            break;
+        } 
+
+        // Get user input for quantity
+        println!("Enter quantity:");
+        io::stdout().flush().unwrap();
+        io::stdin()
+            .read_line(&mut input)
+            .expect("Failed to read input");
+        let quantity: u32 = match input.trim().parse() {
+            Ok(qty) => qty,
+            Err(_) => {
+                println!("Invalid quantity. Please enter a valid number.");
+                continue;
+            }
+        }; 
+        input.clear(); 
+
+        // Check if the chosen pizza exists in the menu
+        if !pizza_menu.contains_key(&pizza_choice) {
+            println!("Invalid pizza choice. Please select a pizza from the menu.");
+            continue;
+        }
+
+        // Create and store the order
+        let order = Order {
+            pizza: pizza_choice.clone(),
+            quantity,
+        };
+        orders.push(order);
+    }
+
+    // Display the final order and total price
+    println!("Your order:");
+    let mut total_cost = 0.0;
+    for order in &orders {
+        println!(
+            "{} - {} x ${:.2} each = ${:.2}",
+            order.pizza,
+            order.quantity,
+            pizza_menu[&order.pizza].price,
+            order.total_price(&pizza_menu).unwrap()
+        );
+        total_cost += order.total_price(&pizza_menu).unwrap();
+    }
+    println!("Total Cost: ${:.2}", total_cost);
+}
+```
+
+* Explanation:
+
+    1. **Structs for Data** Use the Pizzaand Order structs to represent pizzas and orders, including their attributes like name, price, and quantity.
+    2. **Menu Creation** Populate a hashmap with different types of pizzas available for order.
+    3. **Order Management** Use the Order struct and its method total_price to calculate the cost of an individual order based on the pizza's price and quantity.
+    4. **User Input** Create a loop to continuously accept user input for ordering pizzas, allowing users to choose and specify the quantity.
+    5. **Validation** Check the user's input to ensure it corresponds to available pizzas and valid quantities. If not, prompt the user again.
+    6. **Final Summary** Once the user decides to quit (q), display the complete list of orders and the total cost.
+
+### Useful resources
+
+* [The Rust Programming Language (official book)](https://doc.rust-lang.org/book/)
+
+* [Rust Official Website](https://www.rust-lang.org/)
+
+* [Rust Reference Documentation](https://doc.rust-lang.org/std/index.html)
+
+* [The Rust Programming Language Forum](https://users.rust-lang.org/)
+
+* [Rust Internals](https://internals.rust-lang.org/) (nice.)
 
 
+It's Lab Time(!)
+----------------
 
