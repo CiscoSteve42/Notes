@@ -666,4 +666,16 @@ Platform as a Service (PaaS)
 
 ### Red Hat OpenShift Overview
 
+* [Red Hat OpenShift](https://www.redhat.com/en/technologies/cloud-computing/openshift) is an open source PaaS solution provided by Red Hat. It is built on top of the container technology orchestrated by [Kubernetes](https://kubernetes.io/). OpenShift can be deployed in the cloud as a managed service or as a self-managed deployment on a public or private cloud optimized to run containers and Kubernetes.
 
+* **OpenShift Products**
+
+    * **Red Hat OpenShift - Managed** Hosted OpenShift deployments on public cloud platforms managed by Red Hat. This model includes the Red Hat OpenShift Service on AWS, Red Hat OpenShift on IBM Cloud, and Microsoft Azure Red Hat OpenShift.
+
+    * **Red Hat OpeShift Platform Plus - Self-Managed** Creat your own private, secure K8s multi-cluster PaaS.
+
+    * **Red Hat OpenShift Container Platform** Create your own self-managed consistent hybrid cloud PaaS to build and scale containerized applications.
+
+    * **Red Hat OpenShift Kubernetes Engine - Self-Managed** An entry-level solution promoting the advantages of OpenShift over other Kubernetes solutions, supported by Red Hat.
+
+### Deploying a Sample App on Red Hat OpenShift
