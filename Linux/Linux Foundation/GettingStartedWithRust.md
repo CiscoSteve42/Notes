@@ -505,21 +505,39 @@ Security Tools
 
 ### Examples of Security Tools in Rust
 
-* **AFL.rs**
+* **AFL.rs** A fuzzing tool for automatically discovering vulnerabilities in software. Rust's memory safety features help make the fuzzing process more reliable. The tools can be used to discover issues such as crashes, hangs, and memory problems in software. It does this by automatically generating a wide range of test inputs and analyzing how the program behaves with each input.
 
-* **honggfuzz**
+    * AFL.rs uses techniques like genetic algorithms to mutate test inputs. It then monitors the code's behavior, measuring what parts of the code are being "touched" by these inputs. This allows it to explore different program paths and identify areas that might contain hidden bugs or vulnerabilities.
 
-* **RustScan**
+* **honggfuzz** is similar to AFL.rs, but allows fuzzing of native Rust and non-Rust programs. It uses genetic algorithms to mutate input data and measure code coverage to identify unexplored paths in the program. This intelligent approach helps Honggfuzz uncover hidden vulnerabilities and weaknesses.
 
-* **Rustls**
+* **RustScan** A high-speed network scanning tool that benefits from Rust's concurrency features, RustScan uses multithreading to scan multiple ports simultaneously, significantly speeding up the scanning process. It manages sockets to minimize overhead and resource consumption, allowing for rapid scanning without causing undue strain on the host system. RustScan can also perform banner grabbing, which involves collecting information about the services running on open ports. This feature aids in service identification and version detection.
 
-* **cargo-audit**
+* **Rustls** is a TLS library that emphasizes security, making it suitable for secure networking applications. It implements modern cryptographic protocols to protect data against eavesdropping and tampering.
 
-* **RustSec**
+    * When two entities, like a client and server, want to establish a secure connection, they initiate a handshake. Rustls manages this handshake process, negotiating the cryptographic algorithms and keys to use for secure communication. Rustls encrypts data using state-of-the-art cryptographic algorithms like AES-GCM and ChaCha20-Poly1305. This encryption ensures that data exchanged between the client and server is unreadable to unauthorized parties. Rustls validates digital certificates presented during the handshake to ensure they are issued by trusted authorities. This step prevents man-in-the-middle attacks and guarantees the authenticity of the communication partners.
 
-* **Cargo-Geiger**
+    * Once the handshake is completed and the connection is established, Rustls facilitates secure communication by encrypting and decrypting data as it flows between the client and server.
 
-* **Parity Ethereum**
+* **cargo-audit** audits *Cargo.lock* files for known vulnerable dependencies. It scans the project's dependency tree and cross-references it with a database of known vulnerabilities, alerting developers to potential security risks. At the moment, Cargo-audit references the [RustSec Advisory Database](https://github.com/rustsec/advisory-db). This database is maintained by the RustSec organization, which is dedicated to tracking and reporting security vulnerabilities in Rust crates (dependencies). The RustSec Advisory Database contains information about known security vulnerabilities in Rust crates, including details about the vulnerabilities, affected versions, and remediation steps.
+
+* **RustSec** is a security advisory organization and database for Rust, which provides an essential resource for the Rust security community. It is a central hub for tracking and reporting security vulnerabilities in Rust crates.
+
+* **Cargo-Geiger** scans Rust projects for usage of unsafe code. It analyzes the dependencies listed in the Cargo.toml file of a Rust project. It extracts information about the crates used, including their licenses and versions. Cargo-Geiger can be integrated into the development workflow, enabling developers to perform regular scans for licensing and safety compliance as part of their continuous integration and continuous deployment (CI/CD) processes.
+
+* **Parity Ethereum** Parity Ethereum is an Ethereum client built in Rust. Rust's memory safety and performance are critical for blockchain networks that require high security and reliability. Parity Ethereum synchronizes with the Ethereum blockchain by downloading and verifying blocks, transactions, and state data. It maintains a local copy of the blockchain to provide quick access for users and applications.
+
+    * Parity Ethereum supports the execution of smart contracts written in Solidity and other Ethereum-compatible languages. These contracts automate actions within the blockchain, enabling decentralized applications.
+
+    * supports various consensus mechanisms, including Proof of Work (PoW) and Proof of Stake (PoS), depending on the network configuration. PoS is becoming more prominent as Ethereum transitions to Ethereum 2.0. It is a versatile client suitable for various blockchain applications, from decentralized finance (DeFi) to supply chain management and beyond. More information can be found online:
+
+        * [Parity Ethereum Github Repo](https://github.com/paritytech/parity-ethereum)
+
+        * [Parity Technologies Website](https://www.parity.io/ethereum/)
+
+        * [Ethereum Official Site](https://ethereum.org/)
+
+### Security Tool Example
 
 
 
