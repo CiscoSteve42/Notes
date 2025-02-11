@@ -586,7 +586,6 @@ fn main() {
 
 * **Open File** Attempt to open the file and handle errors gracefully
 
-
 * **Buffered Reader** A buffered reader reads the file line by line efficiently
 
 * **Regular Expression** Define a regex pattern to match potential passwords or API keys
@@ -794,3 +793,113 @@ fn main() {
     asm::delay(1000000);
 } 
 ```
+
+* **Explanation:**
+
+    1. We start by importing the necessary libraries. embedded_hal provides a hardware abstraction layer for embedded systems, and cortex_m::asm allows us to use ARM Cortex-M assembly macros, like the delay function we use for simulation.
+    2. We define a GpioController struct to represent the GPIO controller, which contains three MyGpioPin instances representing the individual pins (A, B, and C).
+    3. We define a MyGpioPin struct to represent an individual GPIO pin. In this example, we use a simple boolean field is_on to describe whether the pin is high (on) or low (off).
+    4. The GpioController has functions to turn on and off specific LEDs (GPIO pins) by calling the respective set_high() and set_low() methods of the MyGpioPin struct.
+    5. We implement the OutputPin trait for MyGpioPin, part of the embedded_hal crate. The OutputPin trait provides methods to set the pin high or low. In our implementation, we simply update the is_on state and print a message to simulate the pin state change.
+    6. In the main() function, we create a new instance of the GpioController and turn on LED A. We then simulate the LED being on by delaying execution with the asm::delay() function.
+    7. Next, we turn off LED A and simulate.
+
+### User Input Example
+
+```rust
+use std::io; 
+
+// Define the Car struct
+struct Car {
+    make: String,
+    model: String,
+    year: u16,
+    color: String,
+    mileage: u32,
+} 
+
+impl Car {
+    // Method to display car details
+    fn display(&self) {
+        println!(
+            "Make: {}\nModel: {}\nYear: {}\nColor: {}\nMileage: {} miles",              self.make, self.model, self.year, self.color, self.mileage
+        );
+    }
+} 
+
+fn main() {
+    // Get car details from the user
+    let car1 = get_car_details();
+    let car2 = get_car_details(); 
+
+    // Display car details
+    println!("Car 1:");
+    car1.display(); 
+
+    println!("Car 2:");
+    car2.display();
+} 
+
+fn get_car_details() -> Car {
+    println!("Enter car details:"); 
+
+    // Get input from the user
+    let mut input = String::new(); 
+
+    // Make
+    println!("Make:");
+    io::stdin().read_line(&mut input).expect("Failed to read input");
+    let make = input.trim().to_string();
+    input.clear(); 
+
+    // Model
+    println!("Model:");
+    io::stdin().read_line(&mut input).expect("Failed to read input");
+    let model = input.trim().to_string();
+    input.clear(); 
+
+    // Year
+    println!("Year:");
+    io::stdin().read_line(&mut input).expect("Failed to read input");
+    let year: u16 = input.trim().parse().expect("Invalid input");
+    input.clear(); 
+
+    // Color
+    println!("Color:");
+    io::stdin().read_line(&mut input).expect("Failed to read input");
+    let color = input.trim().to_string();
+    input.clear(); 
+
+    // Mileage
+    println!("Mileage (in miles):");
+    io::stdin().read_line(&mut input).expect("Failed to read input");
+    let mileage: u32 = input.trim().parse().expect("Invalid input"); 
+
+    // Create and return the car instance
+    Car {
+        make,
+        model,
+        year,
+        color,
+        mileage,
+    }
+}
+```
+
+* **Explanation:**
+
+    1. We define the `Car` struct with fields for make, model, year, color, and mileage.
+    2. Inside the `impl` block, we define the display method to display the car details.
+    3. The main function calls the `get_car_details` function twice to get input from the user and create two instances of cars (car1 and car2).
+    4. The `get_car_details` function reads user input to create a car instance. We use `io::stdin()` to read information from the user and `String::new()` to initialize an empty string for storing the input.
+    5. We display prompts to the user for each car detail (make, model, year, color, and mileage) and use `read_line` to read the user input. Using the `parse` method, we then parse the input to the appropriate data type (`u16` for year and `u32` for mileage).
+    6. The function returns the car instance with the user-provided details.
+    7. Finally, we display the details of both cars using the `display` method.
+
+    * This Rust example demonstrates how to use input/output (I/O) with the `std::io` module and create instances of structs with user input. It also showcases Rust's error handling with `expect`, which will panic if the user enters invalid input. Remember that in a real-world application, you'd want to handle errors gracefully with proper error messages and error-handling mechanisms.
+
+### More Advanced Language Features
+
+
+
+
