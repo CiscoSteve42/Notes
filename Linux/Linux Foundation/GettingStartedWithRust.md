@@ -1110,7 +1110,3 @@ fn main() {
 
 * [Rust Internals](https://internals.rust-lang.org/) (nice.)
 
-
-It's Lab Time(!)
-----------------
-
