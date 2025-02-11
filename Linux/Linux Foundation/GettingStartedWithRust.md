@@ -679,3 +679,118 @@ fn main() {
     println!("The {}th Fibonacci number is: {}", n, result);
 }
 ```
+
+* **Function Declaration** `fn fibonacci_dynamic(n: u64) -> u64:` This declares a function named fibonacci_dynamic that takes an unsigned 64-bit integer (u64) as an argument and returns another u64.
+
+* **Dynamic Storage** `let mut fib_nums: Vecu64 = Vec::with_capacity(n as usize + 1);:` We declare a mutable vector to store the Fibonacci sequence. The `with_capacity` method pre-allocates memory for efficiency.
+
+* **Initialization**
+    `fib_nums.push(0); fib_nums.push(1);:` We initialize the first two Fibonacci numbers in the vector.
+    
+* **Looping**
+    `for i in 2..=n:` We use a for loop to fill up the `fib_nums` vector from index `2` to `n`.
+
+* **Computation** `let next_fib = fib_nums[i as usize - 1] + fib_nums[i as usize - 2];:` Inside the loop, we compute the next Fibonacci number by summing the two most recent numbers in the sequence.
+
+* **Insertion into Vector** `fib_nums.push(next_fib);:` The computed Fibonacci number is made into the vector.
+
+* **Returning** `fib_nums[n as usize]:` The function returns the nth Fibonacci number.
+
+* **Main Function** `fn main():` This is the program's entry point.
+
+* **Calling the Function** `let result = fibonacci_dynamic(n);:` The fibonacci_dynamic function is called, and the result is stored in a variable.
+
+* **Output** `println!("The {}th Fibonacci number is: {}", n, result);:` The result is printed to the console.
+
+### Device Driver Code Example
+
+```rust
+// Import the necessary library for interacting with hardware registers
+// embedded_hal is a library that provides a common hardware abstraction layer for embedded systems
+use embedded_hal::digital::v2::OutputPin;
+use cortex_m::asm; // Import the ARM Cortex-M assembly macros for delaying 
+
+// Define a struct to represent the GPIO controller
+pub struct GpioController {
+    pin_a: MyGpioPin,
+    pin_b: MyGpioPin,
+    pin_c: MyGpioPin,
+} 
+
+// Define a struct to represent an individual GPIO pin
+pub struct MyGpioPin {
+    // Add any necessary fields here to store the pin configuration and state
+    // For simplicity, we'll just use a boolean to represent the pin state (on/off)
+    is_on: bool,
+} 
+
+impl GpioController {
+    // Constructor to create a new instance of the GPIO controller
+    pub fn new() -> GpioController {
+        // Initialize the individual GPIO pins here (this is just for illustration)
+        let pin_a = MyGpioPin { is_on: false };
+        let pin_b = MyGpioPin { is_on: false };
+        let pin_c = MyGpioPin { is_on: false }; 
+
+        GpioController { pin_a, pin_b, pin_c }
+    } 
+
+    // Function to turn on a specific LED (GPIO pin)
+    pub fn turn_on_led(&mut self, led: char) {
+        match led {
+            'A' => self.pin_a.set_high(),
+            'B' => self.pin_b.set_high(),
+            'C' => self.pin_c.set_high(),
+            _ => (),
+        }
+    } 
+
+    // Function to turn off a specific LED (GPIO pin)
+    pub fn turn_off_led(&mut self, led: char) {
+        match led {
+            'A' => self.pin_a.set_low(),
+            'B' => self.pin_b.set_low(),
+            'C' => self.pin_c.set_low(),
+            _ => (),
+        }
+    }
+} 
+
+// Implement the OutputPin trait for our custom GpioPin struct
+impl OutputPin for MyGpioPin {
+    type Error = (); 
+
+    fn set_high(&mut self) -> Result<(), Self::Error> {
+        // Simulate the hardware behavior by changing the state of the GPIO pin
+        self.is_on = true;
+        // For a real implementation, you would write to the hardware register to set the pin high
+        // For demonstration purposes, we'll just print the action for now
+        println!("Set GPIO pin high");
+        Ok(())
+    } 
+
+    fn set_low(&mut self) -> Result<(), Self::Error> {
+        // Simulate the hardware behavior by changing the state of the GPIO pin
+        self.is_on = false;
+        // For a real implementation, you would write to the hardware register to set the pin low
+        // For demonstration purposes, we'll just print the action for now
+        println!("Set GPIO pin low");
+        Ok(())
+    }
+} 
+
+fn main() {
+    // Create a new instance of the GPIO controller
+    let mut gpio_controller = GpioController::new(); 
+
+    // Turn on LED 'A'
+    gpio_controller.turn_on_led('A');
+    // Wait for some time (simulate LED being on)
+    asm::delay(1000000); 
+
+    // Turn off LED 'A'
+    gpio_controller.turn_off_led('A');
+    // Wait for some time (simulate LED being off)
+    asm::delay(1000000);
+} 
+```
