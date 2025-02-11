@@ -624,4 +624,46 @@ Platform as a Service (PaaS)
 
 ### Cloud Foundry BOSH
 
+**Cloud Foundry BOSH** is an open source tool for release engineering, deployment, lifecycle management, and monitoring of complex distributed systems, enabling developers to easily version, package and deploy software in a reproducible manner.
+
+* BOSH aims to ease the process of building and administering consistently similar environments from development to staging and production. BOSH was designed to be the one tool to solve versioning, packaging, and reproducible software deployments as a whole, a collection of activities otherwise performed by tools such as Chef, Puppet, and Docker in various non-standard approaches. 
+
+* BOSH follows the four principles of release management:
+
+    * *identifiability* of all components making up a release,
+    * *reproducibility* of integration that guarantees operational stability,
+    * *consistency* through a stable framework for development, deployment, audit and software components accountability, and
+    * *agility* for software release automation according to software engineering best practices for Continuous Integration and Continuous Delivery.
+
+* BOSH can be installed on-premises on supported OSes such as several Linux distributions, macOS, and Windows. A popular on-premises hypervisor, VirtualBox is also supported. BOSH can be installed on supported IaaS providers as well, such as AWS, Microsoft Azure, GCP, IBM Cloud, OpenStack, VMware.
+
+### Running Apps with `cf push`
+
+* A powerful feature of the Cloud Foundry platform is its command line interface (CLI) that allows users to interact with various components of the platform to manage infrastructure and application deployments. 
+
+* Applications can be pushed to Cloud Foundry through the cf push command, one of the many commands part of the cf CLI. This command is highly customizable, however, it can be easily run with default settings even by novice users of the Cloud Foundry platform. It supports popular programming languages such as Java, Node.js, Python, PHP, Go, Ruby, and .Net, but it can be extended to support additional languages and developer frameworks through community-developed buildpacks.
+
+### Korifi: Cloud Native Cloud Foundry
+
+* Current trends require applications to become lighter, faster, easier to share, secure, maintain, and manage. And most often these applications are designed to run in the cloud, whether on-premises, public, or hybrid, named cloud native applications. These application characteristics also reshape the application build models and tools that need to become cloud native themselves. While containers and container orchestration concepts and tools will be discussed in later chapters, complex platforms such as Cloud Foundry can become cloud native as well. Converting CF into a cloud native tool is not an effortless process, however, the result is a CF project named Korifi. It is a CF offering redesigned from the ground up for another platform, Kubernetes, a popular container orchestrator.
+
+* The [Korifi](https://www.cloudfoundry.org/technology/korifi/) project aims to abstract CF components and dependency configuration, enabling the developer to focus on building applications. This further helps to widen the environment options where CF can be deployed, as containers and container orchestrators are platforms supported by a large array of cloud services, IaaS, and certified solution providers.
+
+### Benefits of Using Cloud Foundry
+
+* It is an open source platform, but there are also many commercial Cloud Foundry providers.
+* It offers centralized platform management.
+* It enables horizontal and vertical scaling.
+* It provides infrastructure security.
+* It provides multi-tenant compute efficiency.
+* It offers support for multiple IaaS providers.
+* It supports the full application lifecycle: development, testing, and deployment, thus enabling a continuous delivery strategy. It also provides integration with CI/CD tools.
+* It allows for application virtualization using containers for application isolation.
+* It leverages Kubernetes' workload management capabilities to optimize application deployments in containers.
+* It is a flexible solution, supported by an extensive community of developers.
+* It reduces the chance of human errors.
+* It is cost-effective, reducing the overhead for Ops teams.
+
+### Red Hat OpenShift Overview
+
 
