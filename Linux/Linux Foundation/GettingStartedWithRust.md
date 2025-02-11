@@ -2,7 +2,7 @@ Getting Started With Rust
 =========================
 * Just some basic, low-effort notes for my Linux Foundation Course on Rust
 
-```
+```rust
 
                                             .:.     -=:     ::
                                      ..     ===-  .====:  :===:     .
