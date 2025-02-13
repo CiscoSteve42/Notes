@@ -678,4 +678,30 @@ Platform as a Service (PaaS)
 
     * **Red Hat OpenShift Kubernetes Engine - Self-Managed** An entry-level solution promoting the advantages of OpenShift over other Kubernetes solutions, supported by Red Hat.
 
-### Deploying a Sample App on Red Hat OpenShift
+### Benefits of Using Red Hat OpenShift
+
+* It is an open source PaaS solution.
+
+* It can scale applications easily and quickly.
+
+* It uses Kubernetes for workload management.
+
+* It provides integration with CI/CD tools.
+
+* It is a simple and flexible solution, supported by an active community of developers.
+
+* It enables developers to be more efficient and productive, allowing them to quickly develop, host, and scale applications in the cloud in a streamlined and standardized manner.
+
+* It enables application portability, meaning that any application created on Red Hat OpenShift can run on any platform that supports Kubernetes.
+
+* Red Hat OpenShift users have the choice to deploy their applications on top of physical or virtual infrastructures, as well as on public, private or hybrid clouds.
+
+* With Red Hat OpenShift, applications are easily built with integrated service discovery and persistent storage.
+
+* The web console and the CLI can be used to build and monitor applications.
+
+* Red Hat OpenShift integrates Quay registry, automatic edge load balancing, cluster logging, and integrated metrics.
+
+### Heroku Platform
+
+
