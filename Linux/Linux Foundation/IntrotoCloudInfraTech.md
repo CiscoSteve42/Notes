@@ -704,4 +704,21 @@ Platform as a Service (PaaS)
 
 ### Heroku Platform
 
+* [Heroku](http://www.heroku.com/) is a fully-managed container-based cloud platform with integrated data services and a strong ecosystem. Heroku is used to deploy and run enterprise level modern applications, and it is a [Salesforce](https://www.salesforce.com/) company.
+
+* Heroku offers multiple products; however, its core remains the Heroku Platform, a PaaS solution used to deploy large scale applications. The [Heroku Platform](https://www.heroku.com/platform) supports the following popular languages and frameworks:
+
+    * Node.js
+    * Ruby
+    * Python
+    * Go
+    * PHP
+    * Clojure
+    * Scala
+    * Java
+
+* However, it can be easily extended to other languages and frameworks through custom [buildpacks](https://elements.heroku.com/buildpacks).
+
+### Heroku Core Concepts
+
 
