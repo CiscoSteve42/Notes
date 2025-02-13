@@ -721,4 +721,42 @@ Platform as a Service (PaaS)
 
 ### Heroku Core Concepts
 
+* Applications should contain the source code, its dependency information and the list of named commands to be executed when deployed, in a file called Procfile.
 
+* For each supported language, it has a pre-built image which contains a compiler for that language. This pre-built image is referred to as a buildpack. Multiple buildpacks can be used together. We can also create a custom buildpack.
+
+* While deploying, we need to send the application's content to Heroku, either via Git, GitHub, or via an API. Once the application is received by Heroku, a buildpack is selected based on the language of preference.
+
+* To create the runtime which is ready for execution, we compile the application after fetching its dependency and configuration variables on the selected buildpack. This runtime is often referred to as a slug.
+
+* We can also use third-party add-ons to enable access to value-added services like logging, caching, monitoring, etc.
+
+* A combination of slug, configuration variables, and add-ons is referred to as a release, on which we can perform upgrade or rollback.
+
+* Depending on the process-type declaration in the Procfile, a virtualized UNIX container is created to serve the process in an isolated environment, which can be scaled up or down, based on the requirements. Each virtualized UNIX container is referred to as a dyno. Each dyno gets its own ephemeral storage.
+
+* Dyno Manager manages dynos across all applications running on Heroku.
+
+### Features
+
+* The Heroku Platform allows users to deploy, run, and manage applications written in multiple programming languages or frameworks, from source code that may also include dependencies.
+
+* By encapsulating the application in a dyno, which is a lightweight and secure container, the application can be scaled based on demand.
+
+* Application configuration can be decoupled from the application source code, allowing for application customization based on the environment where the application is deployed. Configuration customization is achieved through config vars, which combined with the application slug, produce a release.
+
+* It is a very rich ecosystem, and it allows us to extend the functionality of an application with add-ons available in the Elements Marketplace. Add-ons allow us to easily integrate our applications with other fully-managed cloud services such as storage, database, monitoring, logging, pipelines, email, message queue, security, and networking.
+
+* Applications deployed on the Heroku Platform can be easily integrated with Salesforce.
+
+
+Containers
+----------
+
+* [Wikipedia Article on OS-level Virtualization](https://en.wikipedia.org/wiki/Operating-system-level_virtualization)
+
+* [The Docker Blog Link, because this is Obviously a Container Chapter](https://www.docker.com/blog/)
+
+### The Container Technology: Building Blocks
+
+* **Namespaces**
