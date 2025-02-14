@@ -760,3 +760,28 @@ Containers
 ### The Container Technology: Building Blocks
 
 * **Namespaces**
+
+* A namespace wraps a particular global system resource like network and process IDs in an abstraction, that makes it appear to the processes within the namespace that they have their own isolated instance of the global resource. The following global resources are namespaced:
+
+    * **pid** provides each namespace to have the same PIDs. Each container has its own PID 1.
+    * **net** allows each namespace to have its network stack. Each container has its own IP address.
+    * **mnt** allows each namespace to have its own view of the filesystem hierarchy.
+    * **ipc** allows each namespace to have its own interprocess communication.
+    * **uts** allows each namespace to have its own hostname and domain name.
+    * **user** allows each namespace to have its own user and group ID number spaces. A root user inside a container is not the root user of the host on which the container is running.
+
+* **cgroups** *Control groups* are used to organize processes hierarchically and distribute system resources along the hierarchy in a controlled and configurable manner. The following cgroups are available for Linux:
+
+    * **blkio**
+    * **cpu**
+    * **cpuacct**
+    * **cpuset**
+    * **devices**
+    * **freezer**
+    * **memory**
+
+* **Union Filesystem** The Union filesystem allows files and directories of separate filesystems, known as layers, to be transparently overlaid on top of each other, to create a new virtual filesystem. At runtime, a container is made of multiple layers merged to create a read-only filesystem. On top of a read-only filesystem, a container gets a read-write layer, which is an ephemeral layer and it is local to the container.
+
+### Container Runtimes
+
+
