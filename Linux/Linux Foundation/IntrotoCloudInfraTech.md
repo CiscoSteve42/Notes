@@ -792,8 +792,12 @@ Containers
 
     * **runC** Over the past few years, we have seen rapid growth in the interest and adoption of container technologies. Most of the cloud providers and IT vendors offer support for containers. To make sure there is no vendor locking and no inclination towards a particular company or project, IT companies came together and formed an open governance structure, called The [Open Container Initiative](https://opencontainers.org/) (OCI), under the auspices of the Linux Foundation. The governance body came up with both [runtime](https://github.com/opencontainers/runtime-spec) and [image](https://github.com/opencontainers/image-spec) specifications to create standards on the Operating System process and application containers. [runC](https://github.com/opencontainers/runc/) is the CLI tool for spawning and running containers according to these specifications, also categorized as a low-level runtime. runc is a Go language-based tool that creates and starts container processes. An OCI container runtime is expected to fork off the first process in the container, but Go does not have good support for the fork/exec model of computing. Go follows a threading model that expects programs to fork a second process and then to exec immediately.
 
-    * **crun**
+    * **crun** [crun](https://github.com/containers/crun) is a much faster and low-memory footprint OCI-conformant runtime written in C. crun is lighter than runc because its C source code allows its compiled size to be 50x smaller and to run about 2x faster. C is not multi-threaded, but it follows the fork/exec model, meeting the OCI runtime expectation (Whaaaa, C is faster than Go??!? whaaat /s)
 
-    * **containerd**
+    * **containerd** [containerd](https://containerd.io/) is an OCI-compliant container runtime with an emphasis on simplicity, robustness, and portability. As a high-level runtime, it runs as a daemon and manages the entire lifecycle of containers. It is available on Linux and Windows operating systems. Docker, also run as a daemon, is a containerization platform that uses containerd as a runtime to manage runC containers.
 
-    * **CRI-O**
+    * **CRI-O** [CRI-O](https://cri-o.io/) is an OCI-compatible runtime, which is an implementation of the Kubernetes [Container Runtime Interface](https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/) (CRI). It is a lightweight high-level alternative to using Docker as the runtime for Kubernetes.
+
+### Containers vs VMs
+
+
