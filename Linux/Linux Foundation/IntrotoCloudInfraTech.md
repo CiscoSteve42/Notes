@@ -798,6 +798,32 @@ Containers
 
     * **CRI-O** [CRI-O](https://cri-o.io/) is an OCI-compatible runtime, which is an implementation of the Kubernetes [Container Runtime Interface](https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/) (CRI). It is a lightweight high-level alternative to using Docker as the runtime for Kubernetes.
 
-### Containers vs VMs
+### Docker
 
+* **Docker Personal** is free for individual developers, education, and small businesses, and it becomes a paid subscription for medium to larger-sized organizations. Docker Personal includes essential Docker tools, such as Docker CLI, Docker Compose, Docker Build/BuildKit, Docker Engine, Docker Desktop, low image pull limits from Docker Hub, and Docker Official Images.
 
+* **Docker Pro** [Docker Pro](https://docker.com/products/pro) subscription is aimed at professional developers by providing increased image pull limits from Docker Hub, private repositories, vulnerability scans, improved volume management, concurrent automated builds, and integrations with CI/CD tools.
+
+* **Docker Team** [Docker Team](https://docker.com/products/team) subscription improves the developer experience with collaboration, security, and management tools.
+
+* **Docker Business** [Docker Business](https://docker.com/products/business) subscription extends the developer experience with features such as image access controls, unified control plane, secure supply chain, and IP allow listing.
+
+### Basic Docker Operations
+
+* List images available in the local cache: `$ docker image ls`
+
+* Pulling an alpine image from the registry into the local cache: `$ docker image pull alpine`
+
+* Run a container from an image (if the image is not found in the local cache, it will be pulled from the registry). The run command is equivalent of docker container create followed by docker container <id> start: `$ docker container run -it alpine sh`
+
+* Run a container in the background (-d option) from an nginx image: `$ docker container run -d nginx`
+
+* List only running containers: `$ docker container ls`
+
+* List all containers: `$ docker container ls -a`
+
+* Inject a process inside a running container. This will start a bash shell in interactive (-i option) terminal (-t option) mode inside the container: `$ docker container exec -it <container_id/name> bash`
+
+* Stop a running container: `$ docker container stop <container id/name>`
+
+* Delete a stopped container: `$ docker container rm <container id/name>`
