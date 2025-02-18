@@ -827,3 +827,50 @@ Containers
 * Stop a running container: `$ docker container stop <container id/name>`
 
 * Delete a stopped container: `$ docker container rm <container id/name>`
+
+### Podman
+
+* [Podman](https://podman.io/), or Pod Manager, is an open source, daemonless tool designed to simplify the searching, running, building, sharing, and deploying of applications using Open Containers Initiative (OCI) containers and container images. Podman provides a command line interface (CLI) that is very similar to the Docker CLI. It comes with a GUI that allows developers to interact with images and containers in a visual fashion - the Podman Desktop for Linux, macOS, and Windows. Podman also relies on an OCI-compliant Container Runtime such as runc to create the running containers, making it a great alternative containerization tool to Docker. Another Podman advantage is its capability to run containers in rootless mode by default, while rooted mode is also supported if desired. Docker on the other hand only recently has introduced rootless mode, while rooted container mode has been its default mode. Podman's image building process may use a Containerfile, similar in format to the popular Dockerfile.
+
+* Red Hat, the developers of Podman, created two additional open source tools designed to operate within the container images landscape. [Buildah](https://buildah.io/) supports container image builds one step at a time by taking an interactive approach to processing Dockerfile instructions, while [Skopeo](https://github.com/containers/skopeo) is a tool designed to work with container images in both local and remote repositories.
+
+### Basic Podman Operations
+
+* List images available in the local cache: `$ podman image ls`
+* Pulling an alpine image from the Docker Hub registry into the local cache: `$ podman image pull docker.io/library/alpine`
+* Run a container from an image (if the image is not found in the local cache, it will be pulled from registry). The run command is equivalent of podman container create followed by podman container <id> start: `$ podman container run -it alpine sh`
+* Run a container in the background (-d option) from an nginx image from the Docker Hub registry: `$ podman container run -d docker.io/library/nginx`
+* List only running containers: `$ podman container ls`
+* List all containers: `$ podman container ls -a`
+* Inject a process inside a running container. This will start a bash shell in interactive (-i option) terminal (-t option) mode inside the container: `$ podman container exec -it <container_id/name> bash`
+* Stop a running container: `$ podman container stop <container id/name>`
+* Delete a stopped container: `$ podman container rm <container id/name>`
+
+### Additional CLI Tools
+
+* The containerd runtime came paired with the [ctr](https://github.com/projectatomic/containerd/tree/master/ctr) client, which was no match for Docker and Podman clients. While the ctr project is no longer maintained, a newer client, [nerdctl](https://github.com/containerd/nerdctl), advertised as a Docker-compatible client for containerd aims to make containerd more user friendly. Eventually, another client, [crictl](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md), was created to support CRI-O. However, crictl can be configured for containerd and Docker as well.
+
+### Basic nerdctl and crictl Operations
+
+* List images available in the local cache: `$ nerdctl images`
+* Pulling an alpine image from the Docker Hub registry into the local cache: `$ nerdctl pull docker.io/library/alpine`
+* Run a container from an image (if the image is not found in the local cache it will be pulled from the registry): `$ nerdctl run -it alpine sh`
+* Run a container in the background (-d option) from an nginx image from the Docker Hub registry: `$ nerdctl run -d docker.io/library/nginx`
+* List images available in the local cache: `$ crictl images`
+* Pulling an alpine image from the Docker Hub registry into the local cache: `$ crictl pull alpine`
+* Run a container from an image (if the image is not found in the local cache it will be pulled from the registry): `$ crictl run -it alpine sh`
+* List running containers: `$ crictl ps`
+
+### Benefits of Using Containers
+
+Key benefits of using containers are:
+
+* They have a very light footprint.
+* They can be deployed very fast (within milliseconds).
+* They are a flexible solution, as they can run on any computer, infrastructure, or cloud environment.
+* They can be scaled up or down with ease.
+* There is a very rich ecosystem built around them.
+* Problem containers can be easily and quickly isolated when troubleshooting and solving problems.
+* Containers use less memory and CPU than VMs running similar workloads.
+* Increased productivity with reduced overhead.
+* They offer portability and consistency.
