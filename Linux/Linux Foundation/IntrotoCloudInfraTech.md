@@ -912,3 +912,22 @@ Containers: Micro OSes for Containers
 * Alpine Linux was designed with security in mind, with embedded proactive security features that prevent the exploitation of entire classes of zero-day and other vulnerabilities.
 
 ### Features
+
+* Upon installation completion, Alpine Linux makes available tools for the initial configuration of the system. Once prepared for reboot, it can be configured to boot in one of the three available runtime modes:
+
+    * **diskless mode** The default mode, where the entire system runs from RAM.
+    * **data mode** Mostly runs from RAM, but mounts /var as a writable data partition.
+    * **sys mode** The typical hard disk install that mounts /boot, swap and /.
+
+* Alpine Linux is available in many flavors:
+
+    * **Standard** It requires a network connection.
+    * **Extended** Includes the most used packages, and runs from RAM.
+    * **Netboot** Includes kernel, initramfs and modloop.
+    * **Mini root filesystem** Minimal for containers and chroots.
+    * **Virtual** Lighter kernel than Standard.
+    * **Xen** Supports the Xen hypervisor.
+    * **Raspberry Pi** Includes the Raspberry Pi kernel.
+    * **Generic ARM** Includes the default ARM kernel with the uboot bootloader.
+
+
