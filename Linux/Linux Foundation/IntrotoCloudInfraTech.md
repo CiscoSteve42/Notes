@@ -891,4 +891,24 @@ Key benefits of using containers are:
 Containers: Micro OSes for Containers
 -------------------------------------
 
+* Popular examples include: 
 
+    * Alpine Linux
+    * Busybox
+    * Fedora CoreOS
+    * Flatcar Container Linux
+    * k3OS
+    * Ubuntu Core
+    * VMware Photon OS.
+
+### Alpine Linux Overview
+
+* [Alpine Linux](https://www.alpinelinux.org/about/) is an independent, non-commercial, Linux distribution designed for security, simplicity and resource efficiency. Built on top of the capabilities of BusyBox, Alpine Linux combines the security features of a Linux-based Operating System with a collection of small footprint, yet fully functional utilities.
+
+* Although small between 5 MB and 8 MB per container, or 130 MB as a minimal standalone OS install, it is more resource-efficient than typical distributions. Users can control what binary packages to install, thus ensuring a small yet efficient system.
+
+* Alpine Linux uses its own package manager called apk, the OpenRC init system, and set-up scripts. Users can add packages as needed such as PVR, iSCSI storage controllers, a mail server container, or an embedded switch.
+
+* Alpine Linux was designed with security in mind, with embedded proactive security features that prevent the exploitation of entire classes of zero-day and other vulnerabilities.
+
+### Features
