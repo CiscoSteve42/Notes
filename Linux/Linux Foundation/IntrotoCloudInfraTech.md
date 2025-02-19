@@ -874,3 +874,21 @@ Key benefits of using containers are:
 * Containers use less memory and CPU than VMs running similar workloads.
 * Increased productivity with reduced overhead.
 * They offer portability and consistency.
+
+### Project Moby
+
+* Moby is particularly useful for engineers who want to build their container-based system, to customize and patch an existing Docker build, or just to experiment with the latest container technologies. It uses a Lego-like approach to assemble various open source toolkits, such as:
+
+    * **LinuxKit** to build minimal Linux distributions for containers.
+    * **InfraKit** to manage infrastructure in a declarative manner.
+    * **SwarmKit** to orchestrate distributed systems at scale.
+    * **containerd** as container runtime.
+    * **runc** to spawn and run OCI-compliant containers.
+    * **Notary** for trusted data sets.
+    * **LibNetwork** for networking.
+
+
+Containers: Micro OSes for Containers
+-------------------------------------
+
+
