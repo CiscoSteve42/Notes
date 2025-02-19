@@ -930,4 +930,18 @@ Containers: Micro OSes for Containers
     * **Raspberry Pi** Includes the Raspberry Pi kernel.
     * **Generic ARM** Includes the default ARM kernel with the uboot bootloader.
 
+* Alpine be smol
+
+### Benefits of Using Alpine Linux
+
+* It is a minimal OS designed to run containerized applications as well.
+* It is designed for security, simplicity, and resource efficiency.
+* It requires between 5 MB and 8 MB as a container.
+* It requires 130 MB as a standalone minimal OS installation.
+* It provides increased security by compiling user binaries as Position Independent Executables (PIE) with stack smashing protection.
+* It can be installed as a container, on bare metal, as well as VMs.
+* It offers flavors optimized to support Xen and Raspberry Pi.
+
+### BusyBox Overview
+
 
