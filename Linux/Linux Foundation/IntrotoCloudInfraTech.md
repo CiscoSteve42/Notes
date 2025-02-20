@@ -1018,4 +1018,20 @@ Containers: Micro OSes for Containers
 
 * [k3OS](https://k3os.io/) (the Kubernetes Operating System) is a Linux distribution that aims to minimize the OS maintenance tasks in a Kubernetes cluster. It was designed to work with Rancher's K3s lightweight Kubernetes distribution. k3OS installs fast, boots fast, requires no package manager, and is managed through Kubernetes, being optimized to run in a low-resource computing environment by running only necessary services.
 
-### Components of k3OS
+* k3OS speeds up the K3s cluster boot time. At boot time, the k3OS image becomes available to K3s and the cluster takes full control over all the nodes' maintenance, eliminating the need to log in to each individual node for upgrades or other maintenance activities.
+
+### Benefits of Using k3OS
+
+* It is a minimalist OS that eliminates unnecessary libraries and services.
+* It decreases complexity and boot time.
+* It is highly secure due to a small code base and a decreased attack surface.
+* It was designed to integrate with Rancher's K3s Kubernetes distribution.
+* Updates and other OS maintenance tasks are performed directly from within the K3s Kubernetes cluster.
+* OS configuration is simplified though `cloud-init`
+
+### Ubuntu Core Overview
+
+* [Ubuntu Core](https://ubuntu.com/core) is a lightweight version of Ubuntu, predominantly designed for IoT embedded devices, but also found in large container deployments. In comparison with other container OSes, its size of around 260MB places Ubuntu Core behind much lighter container OSes, such as Alpine Linux, but ahead of much larger OSes like CoreOS, sized around 800MB. Similar to Ubuntu Server and Ubuntu Desktop, Ubuntu Core works with software packages called [snaps](https://www.youtube.com/watch?v=JPXLpLwEQ_E&pp=ygUPbHVrZSBzbWl0aCBzbmFw).
+
+
+
