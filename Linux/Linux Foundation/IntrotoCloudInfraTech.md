@@ -985,3 +985,23 @@ Containers: Micro OSes for Containers
 .
 
 ### Benefits of Using Fedora CoreOS
+
+* It is an OS designed to run containerized applications, in both clustered environments or as stand-alone.
+* It enables us to perform quick updates and rollbacks.
+* It provides increased security through SELinux.
+* It can be installed on bare metal, virtual environments, and the cloud.
+* It combines features of both Fedora Atomic Host and CoreOS Container Linux.
+* It works well with Kubernetes.
+* It uses Ignition as a provisioning tool for early boot disk partitioning, formatting, and other administrative configuration tasks.
+
+### Flatcar Container Linux Overview
+
+* [Flatcar Container Linux](https://www.flatcar-linux.org/) is a container-optimized OS, with a minimal image size including only the tools needed to run containers. Its name, "Flatcar", represents a flat and open railcar that is used in containers transportation. Flatcar's greatest strengths are its immutable filesystem and automated atomic updates. 
+
+* Flatcar Container Linux is a drop-in replacement for Red Hat CoreOS Container Linux, being directly derived from CoreOS and enabling a seamless in-place migration. Users of CoreOS can effortlessly migrate to Flatcar Container Linux either by modifying a deployment to install Flatcar Container Linux, or by updating directly from Red Hat CoreOS Container Linux. 
+
+* Flatcar Container Linux became increasingly popular once Red Hat announced the end-of-life of the CoreOS Container Linux. 
+
+### Benefits of Using Flatcar Container Linux
+
+
