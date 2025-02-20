@@ -967,4 +967,21 @@ Containers: Micro OSes for Containers
 
 * Fedora CoreOS is a minimal operating system for running containerized workloads, that updates automatically and is available on multiple platforms. Although a container-focused operating system, by design, CoreOS is operable in both clusters and standalone instances. In addition, it is optimized to work with Kubernetes, but it also works very well without the containerized workload orchestrator.
 
-* Fedora servers also have a dope GUI, just wanted to throw that out there with my limited experience
+### Components of Fedora CoreOS
+
+* **Ignition from CoreOS Container Linux** A provisioning utility designed specifically for CoreOS Container Linux, which allows users to manipulate disks during early boot, such as partitioning disks, formatting partitions, writing files, and configuring users. Ignition runs early in the boot process (in the initramfs) and runs its configuration before the userspace boot, which provides advanced features to administrators.
+
+* **rpm-ostree from FAH** One cannot manage individual packages on Atomic Host, as there is no *rpm* or other related commands. To get any required service, you would have to start a respective container. Atomic Host has two bootable, immutable, and versioned filesystems; one is used to boot the system and the other is used to fetch updates from upstream. *rpm-ostree* is the tool to manage these two versioned filesystems.
+
+* **SELinux hardening from FAH** Containers secured with SELinux provide close-to-VM isolation, security, increased flexibility, and efficiency.
+
+* **Installation Methods Include:**
+
+    * **Cloud launchable** To launch directly on Amazon's AWS platform.
+
+    * **Bare metal and virtualized** For bare-metal installs from ISO, PXE (Preboot Execution Environment) or Raw, and virtual installs on OpenStack, QEMU, Raspberry Pi 4, VirtualBox, or VMware.
+
+    * **For cloud operators** Optimized for the following cloud services providers: Alibaba Cloud, AWS, Azure, DigitalOcean, Exoscale, GCP, IBM Cloud, OpenStack, and Vultr
+.
+
+### Benefits of Using Fedora CoreOS
