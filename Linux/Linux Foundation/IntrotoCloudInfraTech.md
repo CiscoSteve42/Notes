@@ -1004,4 +1004,18 @@ Containers: Micro OSes for Containers
 
 ### Benefits of Using Flatcar Container Linux
 
+* It is a container-optimized Linux OS distribution.
+    An immutable/read-only filesystem makes it less vulnerable.
+* A minimal OS implies a minimized attack surface.
+* It receives automated security updates and patches.
+* As a CoreOS successor, it supports two easy migration methods from Red Hat CoreOS Container Linux to Flatcar Container Linux.
+* It runs on bare-metal and virtualization platforms such as QEMU, libVirt, VirtualBox, and Vagrant.
+* It runs on public clouds such as Amazon EC2, GCE, Azure, Equinix, VMware, and DigitalOcean.
+* Its first time boot is supported by the [Ignition](https://coreos.github.io/ignition/) provisioning utility.
+* Supports containerd and Docker container runtimes for Kubernetes clusters.
 
+### k3OS Overview
+
+* [k3OS](https://k3os.io/) (the Kubernetes Operating System) is a Linux distribution that aims to minimize the OS maintenance tasks in a Kubernetes cluster. It was designed to work with Rancher's K3s lightweight Kubernetes distribution. k3OS installs fast, boots fast, requires no package manager, and is managed through Kubernetes, being optimized to run in a low-resource computing environment by running only necessary services.
+
+### Components of k3OS
