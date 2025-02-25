@@ -1115,3 +1115,19 @@ Containers: Micro OSes for Containers
 * It can be easily managed, patched, and updated. It also provides support for persistent volumes to store the data of cloud-native applications on VMware vSAN™.
 
 * Although promoted as an enterprise grade appliance operating system, Photon OS can be installed on Raspberry Pi, ARM64, and x86 as well.
+
+### Benefits of Using VMware Photon OS 
+
+* It is an open source technology with a small footprint.
+* It supports various container runtimes as a standalone container host, or as a Kubernetes cluster node.
+* We can use Kubernetes in the full version, to allow for container cluster management, but it also supports Apache Mesos.
+* It boots extremely quickly on VMware platforms.
+* It provides an efficient lifecycle management with a yum-compatible package manager.
+* Its kernel is tuned for higher performance when it is running on VMware platforms.
+* It is a security-enhanced Linux as its kernel and other aspects of the operating system are configured according to the security parameter recommendations given by the Kernel Self-Protection Project.
+
+
+Container orchestration
+-----------------------
+
+
