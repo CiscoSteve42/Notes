@@ -1140,16 +1140,31 @@ Container Orchestration
 
 ### The Kubernetes Architecture: Key Components
 
-* **Key Components**
+* **Key Components:**
 
-    * **Cluster**
-    * **Control-Plane Node**
-    * **Worker Node** 
-    * **Namespace**
+    * **Cluster** a collection of systems (bare-metal or virtual) and other infrastructure resources used by Kubernetes to run containerized applications.
+    * **Control-Plane Node** The control-plane node is a system that takes containerized workload scheduling decisions, manages the worker nodes, enforces access control policies, and reconciles changes in the state of the cluster. Its main components are the kube-apiserver, etcd, kube-scheduler, and kube-controller-manager responsible for coordinating tasks around container workload scheduling, deployment, scaling, self-healing, state persistence, state reconciliation, and delegation of container management tasks to worker node agents. Multiple control-plane nodes may be found in clusters as a solution for High Availability.
+    * **Worker Node** A system where containers are scheduled to run in workload management units called Pods. The node runs a daemon called kubelet responsible for intercepting container deployment and lifecycle management related instructions from the kube-apiserver, delegating such tasks to the container runtime found on the node, implementing container health checks, enforcing resource utilization limits, and reporting node status information back to the kube-apiserver. kube-proxy, a network proxy, enables applications running in the cluster to be accessible by external requests. Both node agents - kubelet and kube-proxy, together with a container runtime are found on worker nodes and on control-plane nodes as well.
+    * **Namespace** The namespace allows us to logically partition the cluster into virtual sub-clusters by segregating the cluster's resources, addressing the multi-tenancy requirements of enterprises requiring ab isolation method for their projects, applications, users, and teams.
 
-* **Key API Resources**
+* **Key API Resources:**
 
-    * **Pod**
+    * **Pod** The pod is a logical workload management unit, enabling the co-location of a group of containers with shared dependencies such as storage Volumes. However, a pod is often managing a single container and its dependencies such as Secrets or ConfigMaps. The pod is the smallest deployment unit in Kubernetes. A pod can be created independently, but it is lacking the self-healing, scaling, and seamless update capabilities which Kubernetes is know for. In order to overcome the pod's shortcomings, controller programs, or operators, such as the ReplicaSet, Deployment, DaemonSet, or the StatefulSet are recommended to be used to manage pods, even if only a single application pod replica is desired.
+    ```
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: nginx-pod
+      labels:
+        run: nginx-pod
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.17.9
+        ports:
+        - containerPort: 80
+    ```
+
     * **ReplicaSet**
     * **Deployment**
     * **DaemonSet**
