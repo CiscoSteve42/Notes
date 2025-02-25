@@ -1127,7 +1127,34 @@ Containers: Micro OSes for Containers
 * It is a security-enhanced Linux as its kernel and other aspects of the operating system are configured according to the security parameter recommendations given by the Kernel Self-Protection Project.
 
 
-Container orchestration
+Container Orchestration
 -----------------------
 
+### K8s Overview
+
+* [Kubernetes](https://kubernetes.io/) is an Apache 2.0-licensed open source project for automating deployment, operations, and scaling of containerized applications. It was started by Google in 2014, but many other companies like Docker, Red Hat, and VMware contributed to its success.
+
+* In July 2015, [Cloud Native Computing Foundation](https://cncf.io/) (CNCF), the nonprofit organization dedicated to advancing the development of cloud-native applications and services and driving alignment among container technologies, accepted Kubernetes as its first hosted project. Intellectual Property (IP) was transferred to CNCF from Google.
+
+* As the Kubernetes project matures, the list of supported container [runtimes](https://kubernetes.io/docs/setup/production-environment/container-runtimes/) may change, however, currently containerd, CRI-O, Docker Engine, and Mirantis Container Runtime are supported to run containers.
+
+### The Kubernetes Architecture: Key Components
+
+* **Key Components**
+
+    * **Cluster**
+    * **Control-Plane Node**
+    * **Worker Node** 
+    * **Namespace**
+
+* **Key API Resources**
+
+    * **Pod**
+    * **ReplicaSet**
+    * **Deployment**
+    * **DaemonSet**
+    * **Service**
+    * **Label**
+    * **Selector**
+    * **Volume**
 
