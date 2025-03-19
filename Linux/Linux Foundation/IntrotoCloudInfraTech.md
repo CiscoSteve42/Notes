@@ -1165,7 +1165,8 @@ Container Orchestration
         - containerPort: 80
     ```
 
-    * **ReplicaSet**
+    * **ReplicaSet** The ReplicaSet is a mid-level controller, or operator, that manages the lifecycle of pods. It rolls out a desired amount of pod replicas, uses state reconciliation to ensures that the desired number of application pod replicas is running at all times, and to self-heal the application if a pod replica is unexpectedly lost due to a crash or lack of computing resources.
+
     * **Deployment**
     * **DaemonSet**
     * **Service**
@@ -1173,4 +1174,3 @@ Container Orchestration
     * **Selector**
     * **Volume**
 
-* Final Test!
