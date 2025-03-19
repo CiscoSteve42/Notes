@@ -1167,9 +1167,41 @@ Container Orchestration
 
     * **ReplicaSet** The ReplicaSet is a mid-level controller, or operator, that manages the lifecycle of pods. It rolls out a desired amount of pod replicas, uses state reconciliation to ensures that the desired number of application pod replicas is running at all times, and to self-heal the application if a pod replica is unexpectedly lost due to a crash or lack of computing resources.
 
-    * **Deployment**
-    * **DaemonSet**
-    * **Service**
+    * **Deployment** The Deployment is a top-level controller that allows us to provide declarative updates for pods and ReplicaSets. We can define Deployments to create new resources, or replace existing ones with new ones. The Deployment controller, or operator, represents the default stateless application rollout mechanism. Typical Deployment use cases and a sample deployment are provided below:
+
+        * Create a Deployment to roll out a desired amount of pods with a ReplicaSet.
+        * Check the status of a Deployment to see if the rollout succeeded or not.
+        * Later, update that Deployment to recreate the pods (for example, to use a new image) - through the Rolling Update mechanism.
+        * Roll back to an earlier Deployment revision if the current Deployment isn’t stable.
+        * Scale, pause and resume a Deployment. Below we provide a sample deployment: 
+    ```
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: nginx-deployment
+      labels:
+        app: nginx-deployment
+    spec:
+      replicas: 3
+      selector:
+        matchLabels:
+          app: nginx-deployment
+    template:
+      metadata:
+        labels:
+          app: nginx-deployment
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.17.9
+        ports:
+        - containerPort: 8
+    ```
+
+    * **DaemonSet** The DaemonSet is a controller, or operator, that manages the lifecycle of node agent pods. It rolls out a desired amount of pod replicas while ensuring that each cluster node will run exactly one application pod replica. It also uses state reconciliation to ensures that the desired number of application pod replicas is running at all times, and to self-heal the application if a pod replica is unexpectedly lost due to a crash or lack of computing resources.
+
+    * **Service** 
+
     * **Label**
     * **Selector**
     * **Volume**
