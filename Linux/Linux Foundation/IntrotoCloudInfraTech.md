@@ -1226,5 +1226,15 @@ Container Orchestration
 
 ### Features
 
-
+* It automatically distributes containers on cluster nodes based on containers' resource requirements, cluster topology, and other custom constraints.
+* It supports horizontal scaling through the CLI or a UI. In addition, it can auto-scale based on resource utilization.
+* It supports rolling updates and rollbacks.
+* It supports several volume drivers from public cloud providers such as AWS, Azure, GCP, and VMware, together with network and distributed storage plugins like NFS, iSCSI, and the CephFS driver to orchestrate storage volumes for containers running in pods.
+* It automatically self-heals by restarting failed containers, rescheduling containers from failed nodes, and supports custom health checks to ensure containers are continuously ready to serve.
+* It manages sensitive and configuration data for an application without rebuilding the image.
+* It supports batch execution.
+* It supports High Availability of the control-plane node to add control plane resiliency.
+* It eliminates infrastructure lock-in by providing core capabilities for containers without imposing restrictions.
+* It supports application deployments and updates at scale.
+* It supports cluster topology aware routing of traffic to service endpoints.
 
