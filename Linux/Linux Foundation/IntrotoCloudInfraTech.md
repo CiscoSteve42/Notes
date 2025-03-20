@@ -1238,3 +1238,15 @@ Container Orchestration
 * It supports application deployments and updates at scale.
 * It supports cluster topology aware routing of traffic to service endpoints.
 
+### Benefits of Using K8s
+
+* It is an open source system that packages all the necessary features: orchestration, service discovery, and load balancing.
+* It manages multiple containers at scale.
+* It automates deployment, scaling, and operations of application containers.
+* It is portable, extensible and self-healing.
+* It provides consistency across development, testing, and production environments, on-premise and across clouds.
+* It is highly efficient with resource utilization.
+
+### K8s Hosted Solutions and platforms
+
+
