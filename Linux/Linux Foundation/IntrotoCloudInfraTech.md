@@ -1249,12 +1249,40 @@ Container Orchestration
 
 ### K8s Hosted Solutions and platforms
 
-* [Amazon EKS (Aamazon Elastic K8s Service)](https://aws.amazon.com/eks/)
+* **Hosted Solutions** 
 
-* [AKS (Azure K8s Service)](https://azure.microsoft.com/en-us/services/kubernetes-service/)
+    * [Amazon EKS (Aamazon Elastic K8s Service)](https://aws.amazon.com/eks/)
 
-* [GKE (Google K8s Engine)](https://cloud.google.com/kubernetes-engine/)
+    * [AKS (Azure K8s Service)](https://azure.microsoft.com/en-us/services/kubernetes-service/)
 
-* [IBM Cloud K8s Service](https://www.ibm.com/cloud/container-service/)
+    * [GKE (Google K8s Engine)](https://cloud.google.com/kubernetes-engine/)
 
-* [NetApp Project Astra](https://cloud.netapp.com/project-astra)
+    * [IBM Cloud K8s Service](https://www.ibm.com/cloud/container-service/)
+
+    * [NetApp Project Astra](https://cloud.netapp.com/project-astra)
+
+    * [OKE (Oracle Container Engine for K8s)](https://www.oracle.com/cloud/compute/container-engine-kubernetes.html)
+
+    * [Red Hat OpenShift](https://www.openshift.com/products)
+
+    * [VKE (Vultr K8s Engine)](https://www.vultr.com/kubernetes/)
+
+    * [TKG (VMware Tanzu K8s Grid)](https://tanzu.vmware.com/kubernetes-grid)
+
+* **Platform Solutions**
+
+    * [Managed K8s](https://ubuntu.com/kubernetes/managed)
+
+    * [D2iQ Enterprise K8s Platform](https://d2iq.com/kubernetes-platform)
+
+    * [Kubermatic K8s Platform](https://www.kubermatic.com/products/kubermatic/)
+
+    * [PMK (Platform9 Managed K8s)](https://platform9.com/managed-kubernetes/)
+
+    * [MPK (Rackspace Managed Platform for K8s)](https://www.rackspace.com/cloud/kubernetes)
+
+    * [RKE (Rancher K8s Engine)](https://www.rancher.com/products/rke)
+
+### Amazon EKS (Amazon Elastic K8s Service)
+
+
