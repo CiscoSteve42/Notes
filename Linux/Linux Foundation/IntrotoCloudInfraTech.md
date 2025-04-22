@@ -1249,4 +1249,12 @@ Container Orchestration
 
 ### K8s Hosted Solutions and platforms
 
+* [Amazon EKS (Aamazon Elastic K8s Service)](https://aws.amazon.com/eks/)
 
+* [AKS (Azure K8s Service)](https://azure.microsoft.com/en-us/services/kubernetes-service/)
+
+* [GKE (Google K8s Engine)](https://cloud.google.com/kubernetes-engine/)
+
+* [IBM Cloud K8s Service](https://www.ibm.com/cloud/container-service/)
+
+* [NetApp Project Astra](https://cloud.netapp.com/project-astra)
