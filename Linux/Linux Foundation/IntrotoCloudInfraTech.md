@@ -1286,6 +1286,22 @@ Container Orchestration
 
 ### Docker Swarm Overview
 
-* **Swarm Manager Nodes**
+* **Swarm Manager Nodes** Accept commands on behalf of the cluster and make scheduling decisions. They also maintain the cluster state and store it using the *Internal Distributed State Store*, which uses the [Raft](https://raft.github.io/raft.pdf) consensus algorithm. One or more nodes can be configured as managers for fault-tolerance. When multiple managers are present, they are configured in active/passive modes.
 
-* **Swarm Worker Nodes**
+* **Swarm Worker Nodes** Run the Docker Engine and the sole purpose of the worker nodes is to run the container workload given by the manaer node(s).
+
+### Features
+
+* It is compatible with Docker tools and API, so that the existing workflow does not change much.
+* It provides native support to Docker networking and volumes.
+* It can scale up to large numbers of nodes.
+* It supports failover and High Availability for the cluster manager for fail-tolerance.
+* It uses a declarative approach to define the desired state of the various services of the application stack.
+* For each service, you can declare the number of tasks you want to run. When you scale up or down, the Swarm manager automatically adapts by adding or removing tasks to maintain the desired state.
+* The Docker Swarm manager node constantly monitors the cluster state and reconciles any differences between the actual state and your expressed desired state.
+* The communication between the nodes of Docker Swarm is enforced with Transport Layer Security (TLS), which makes it secure by default.
+* It supports rolling updates to control a delay between service deployment to different sets of nodes. If a task rollout is unsuccessful, you can roll back a task to a previous version of the service.
+
+### Docker Swarm Solutions
+
+
