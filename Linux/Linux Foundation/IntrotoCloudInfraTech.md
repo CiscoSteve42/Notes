@@ -1304,4 +1304,22 @@ Container Orchestration
 
 ### Docker Swarm Solutions
 
+* [yes.](https://docs.docker.com/engine/swarm/)
+
+### Benefits of Using Docker Swarm
+
+* Native clustering for Docker
+
+* Well integrated with the existing Docker tools and workflow
+
+* Setup is easy, straightforward, and flexible
+
+* Manages containerized workload in a cluster of Docker Entines that are treated as a single entity
+
+* Provides scalability and supports High Availability
+
+* Efficiently and productivity are incread by reducing deployment and management time, as well as duplication of efforts 
+
+
+
 
