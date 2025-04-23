@@ -1283,6 +1283,9 @@ Container Orchestration
 
     * [RKE (Rancher K8s Engine)](https://www.rancher.com/products/rke)
 
-### Amazon EKS (Amazon Elastic K8s Service)
 
+### Docker Swarm Overview
 
+* **Swarm Manager Nodes**
+
+* **Swarm Worker Nodes**
