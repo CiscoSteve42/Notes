@@ -91,4 +91,22 @@ Kubernetes
 
 ### From Borg to Kubernetes
 
+* From [Google's Borg paper](https://research.google/pubs/pub43438/), published in 2015:
+
+    * "Google's Borg system is a cluster manager that runs hundreds of thousands of jobs, from many thousands of different applications, across a number of clusters each with up to tens of thousands of machines."
+
+* Borg runs Google's workloads, Gmap, Maps, all that jazz.
+
+* K8s features that can be traced back to Borg include:
+
+    * **API Servers**
+    * **Pods**
+    * **IP-per-Pod**
+    * **Services**
+    * **Labels**
+
+K8s Features
+------------
+
+
 
