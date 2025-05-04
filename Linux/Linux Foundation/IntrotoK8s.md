@@ -19,13 +19,7 @@ Chapter 1
     * Describe the transformation path from a monolith to microservices
 
 
-### The Legacy Monolith
-
-* So basically, a bunch of apps were built without foresight and now maintaining them just kinda sucks. Mainly due to hardware requirements being very specific, they can't be moved to the cloud like a normal ass app. It's old and shitty and needs to be re-written in Rust.
-
-
-### The Modern Microservice
-
+### The Legacy Monolith * So basically, a bunch of apps were built without foresight and now maintaining them just kinda sucks. Mainly due to hardware requirements being very specific, they can't be moved to the cloud like a normal ass app. It's old and shitty and needs to be re-written in Rust. ### The Modern Microservice
 * Microservices can be deployed individually on separate servers provisioned with fewer resources (only what is required by each service and the host system itself, helping to lower compute resources)
 
 * Microservices-based architecture is aligned with Event-driven Architecture and Service-Oriented Architecture (SOA) principals, where complex apps are composed of small independent processes which communicate through APIs over the network
@@ -79,3 +73,22 @@ Container Orchestration
     * A symphony written for a group of boxes
 
     * Not whatever the fuck was happening at the Suez Canal
+
+* Ummm sure, anywaayyyys....
+
+Kubernetes
+----------
+
+### What is Kubernetes?
+
+* "K8s is an open-source system for automating deployment, scaling, and management of containerized apps."
+
+* It comes from the Greek Word "κυβερνήτης", which means helmsman or ship pilot.
+
+* It's written in Go and is licensed under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) and highly inspired by Google Borg.
+
+* Google donated it to the [CNCF](https://www.cncf.io/) (the Cloud Native Computing Foundation), which is one of the largest sub-foundations of the Linux Foundation.
+
+### From Borg to Kubernetes
+
+
