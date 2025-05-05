@@ -1320,6 +1320,72 @@ Container Orchestration
 
 * Efficiently and productivity are incread by reducing deployment and management time, as well as duplication of efforts 
 
+### Amazon ECS Overview
 
+* [The Docs](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html)
 
+### Amazon ECS Components
 
+* **Cluster** a logical grouping of tasks or services. With the EC2 launch type, a cluster is also a grouping of container instances.
+
+* **Container Instance** only applicable if we use the EC2 launch type. We define the Amazon EC2 instance to become part of the ECS cluster and to run the container workload.
+
+* **Container Agent** only applicable if we use the Fargate launch type. It allows container instances to connect to your cluster.
+
+* **Task Definition** specifies the blueprint of an application, which consists of one or more containers.
+
+* **Scheduler** places tasks on the cluster.
+
+* **Service** allows one or more instances of tasks to run, depending on the task definition. 
+
+* **Task** a running container instance from the task definition.
+
+* **Container** created from the task definition.
+
+### Amazon ECS Features
+
+* It is compatible with Docker containers and Windows containers as well.
+
+* It provides a managed cluster so that users do not have to worry about managing and scaling the cluster.
+
+* The task definition allows the user to define the applications through a JSON file. Shared data volumes, as well as resource constraints for memory and CPU, can also be defined in the same file.
+* It provides APIs to manage clusters, tasks, etc.
+
+* It allows easy updates of containers to new versions.
+
+* The monitoring feature is available through AWS CloudWatch.
+
+* The logging facility is available through AWS CloudTrail.
+
+* It supports third party hosted Docker registries, the public Docker Hub, or the [Amazon Elastic Container Registry](https://aws.amazon.com/ecr/) (ECR).
+
+* AWS Fargate allows you to run and manage containers without having to provision or manage servers.
+It allows you to build all types of containers. You can build a long-running service or a batch service in a container and run it on ECS.
+
+* You can apply your Amazon Virtual Private Cloud (VPC), security groups and AWS Identity and Access Management (IAM) roles to the containers, which helps maintain a secure environment.
+
+* You can run containers across multiple availability zones within regions to maintain High Availability.
+
+* It can be integrated with AWS services like Elastic Load Balancing (ELB), Virtual Private Cloud (VPC), Identity and Access Management (IAM), Amazon ECR, AWS Batch, Amazon CloudWatch, AWS CloudFormation, AWS CodeStar, AWS CloudTrail, and more.
+
+### Benefits of Using Amazon ECS
+
+* It provides a managed cluster on public, private, or hybrid cloud.
+* It is built on top of Amazon Elastic Compute Cloud (EC2).
+* It is highly available and scalable.
+* It leverages other AWS services, such as CloudWatch Metrics.
+* We can manage it using CLI, Dashboard or APIs.
+
+### Azure Container Instances (ACI) Overview
+
+* [The docs.](https://azure.microsoft.com/en-us/services/container-instances/)
+
+### ACI Features
+
+* They expose containers directly to the internet through IP addresses and *fully qualified domain names* (FQDN).
+* Allow user interaction with the environment of a running container by executing commands in the container through a shell.
+* Offer VM-like application isolation in the container. 
+* Allow for resource specification, such as CPU and memory. 
+* They allow containers to mount directly Azure File shares to persist their state.
+* They support the running of both Linux and Windows containers.
+* They support the scheduling of single- and multi-container groups, thus allowing patterns like the sidecar pattern.
