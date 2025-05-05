@@ -1393,4 +1393,37 @@ It allows you to build all types of containers. You can build a long-running ser
 Unikernels
 ----------
 
+* "Unikernels are specialized, single-address-space machine images constructed by using library operating systems". ~ [unikernels website](http://unikernel.org/)
+
+### Specialized VM Images
+
+* The Unikernel creates specialized VM images with just:
+
+    * The Application Code
+    * The config files of the app
+    * The user-space libraries needed by the app
+    * The application runtime (such as JVM)
+    * The system libs of the unikernel, which allow back and forth communication with the hypervisor
+
+* According to the [x86 protection ring docs](https://en.wikipedia.org/wiki/Protection_ring), the kernel runs on **ring0**, and the application runs on **ring3**.
+
+* [Comparison of a Traditional OS Stack and a MirageOS Unikernel](https://en.wikipedia.org/wiki/Unikernel#/media/File:Unikernel_mirage_example.png)
+
+### Benefits of Unikernels
+
+* A minimalistic VM image to run an application, which allows us to have more applications per host.
+* A faster boot time.
+* Efficient resource utilization.
+* A simplified development and management model.
+* A more secured application than the traditional VM, as the attack surface is reduced.
+* An easily-reproducible VM environment, which can be managed through a source control system like Git.
+
+
+### Unikernel Implementations
+
+* **Specialized and purpose-built unikernels** Utilize all the modern features of software and hardware, while disregarding backward compatibility. **NOT** POSIX-compliant, examples include [HaLVM], [MirageOS](https://mirage.io/), and [Clive](http://lsub.org/ls/clive.html)
+
+* **Generalized 'fat' unikernels** run unmodified applications, which make them *fat*, examples include [OS](http://osv.io/) and [Drawbridge](https://www.microsoft.com/en-us/research/project/drawbridge/)
+
+
 
