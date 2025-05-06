@@ -1428,5 +1428,11 @@ Unikernels
 Microservices
 -------------
 
+* So far a bunch of stuff I learned in my [Intro to DevOps and SRE Course](https://github.com/CiscoSteve42/Notes/blob/main/Linux/Linux%20Foundation/IntrotoDevOps.md)
+
+* Yeah, that was it.
+
+SDN and Networking for Containers
+---------------------------------
 
 
