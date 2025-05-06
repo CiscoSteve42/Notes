@@ -1435,4 +1435,16 @@ Microservices
 SDN and Networking for Containers
 ---------------------------------
 
+* **Software-defined networking (SDN)** dcouples the network control layer from the traffic forwarding layer, allowing SDN to program the control layer and to create custom rules in order to meet these new networking requirements.
+
+### SDN Architecture
+
+* **Data Plane** also known as the *Forwarding Plane*, is responsible for handling data packets and apply actions to them based on rules which we program into lookup-tables.
+
+* **Control plane** tasked with calculating and programming the actions for the Data Plane. This is where the forwarding decisions are made and where services such as QoS and VLANs are implemented.
+
+* **Management Plane** place where we can configure, monitor, and manage the network devices.
+
+### Activities Performed by a Network Device
+
 
