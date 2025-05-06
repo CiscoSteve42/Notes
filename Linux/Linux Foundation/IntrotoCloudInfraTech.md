@@ -1447,4 +1447,19 @@ SDN and Networking for Containers
 
 ### Activities Performed by a Network Device
 
+* **Ingress and egress packets** These are performed at the lowest layer, which decides what to do with ingress packets and which packets to forward, based on forwarding tables. These activities are mapped as Data Plane activities. All routers, switches, modem, etc., are part of this plane.
 
+* **Collect, process, and manage the network information** By collecting, processing, and managing the network information, the network device makes the forwarding decisions, which the Data Plane follows. These activities are mapped by the Control Plane activities. Some of the protocols which run on the Control Plane are routing and adjacent device discovery.
+
+* **Monitor and manage the network** Using the tools available in the Management Plane, we can interact with the network device to configure it and monitor it with tools like SNMP (Simple Network Management Protocol).
+
+### Container Networking standards
+
+* **Container Network Model (CNM)** Implemented using [libnetwork](https://github.com/moby/libnetwork#libnetwork---networking-for-containers), which standardizes the container network creation process through three main build components: a network sandbox, one or multiple endpoints, and one or multiple networks. Libnetwork is used in one of the following modes:
+
+    * **Null** NOOP implementation of the driver, used when no networking is required.
+    * **Bridge** provides a Linux-specific bridging implementation based on Linux Bridge.
+    * **Overlay/Swarm** provides [multi-host communication](https://github.com/docker/libnetwork/blob/master/docs/overlay.md) over VXLAN.
+    * **Remote** does not provide a driver, instead provides a means of supporting drivers over a remote transport, by which we cant write third-party drivers.
+
+* **Container Networking Interface (CNI)**
