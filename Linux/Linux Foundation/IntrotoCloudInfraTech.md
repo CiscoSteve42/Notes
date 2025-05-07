@@ -1462,4 +1462,25 @@ SDN and Networking for Containers
     * **Overlay/Swarm** provides [multi-host communication](https://github.com/docker/libnetwork/blob/master/docs/overlay.md) over VXLAN.
     * **Remote** does not provide a driver, instead provides a means of supporting drivers over a remote transport, by which we cant write third-party drivers.
 
-* **Container Networking Interface (CNI)**
+* **Container Networking Interface (CNI)** a Cloud Native Computing Foundation (CNCF) project which consists of specifications and libraries for writing plugins to configure network interfaces in Linux containers, along with a number of supported plugins. It is limited to providing network connectivity of containers and removing allocated resources when the container is deleted. As such, it has a wide range of support. It is used by projects like Kubernetes, OpenShift, and Cloud Foundry.
+
+### Service Discovery
+
+* **Service discovery** is a mechanism that enables processes and services to find each other automatically and talk to  each other. In relation to containers, it maps the container name with it's IP, so we can access the container by name instead of my it's IP, which will change if it's not static.
+
+* Service discovery is achieved in 2 steps:
+
+    * **Registration** When a container starts, the container scheduler registers the container name to the container IP mapping in a key-value store such as etcd or Consul. And, if the container restarts or stops the scheduler updates the mapping accordingly.
+
+    * **Lookup** Services and applications use *Lookup* to retrieve the IP address of a container, so that they can connect to it. Generally, this is supported by DNS (Domain Name Server), which is local to the environment. The DNS used resolves the requests by looking at the entries in the key-value store, which is used for *Registration*. Consul, CoreDNS, SkyDNS and Mesos-DNS are examples of such DNS services.
+
+### Multi-Host Networking
+
+* [**Docker Overlay Drivers**](https://docs.docker.com/network/overlay/)
+
+* [**Macvlan Driver](https://docs.docker.com/network/macvlan/)
+
+### Third-Party Network Plugins
+
+* [**Kuryr Network Plugin]
+
