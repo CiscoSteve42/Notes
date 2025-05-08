@@ -1506,4 +1506,14 @@ $ podman network inspect bridgenet
 
 ### K8s Networking
 
+* Requirements that need to be implemented by K8s networking drivers , as specified in the Container Network Interface (CNI):
+
+    * All pods on a node can communicate with all pods on all nodes without NAT 
+
+    * Agents on a Node (eg system daemonds, kubelet) can communicate with all Pods on that Node
+
+    * The Pods in the host network of a Node can communicate with all Pods on all Nodes without NAT (for Linux or other platforms supporting Pods running in the host network)
+
+### Multi-Node Networking with K8s
+
 
