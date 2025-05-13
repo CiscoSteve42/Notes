@@ -1516,4 +1516,10 @@ $ podman network inspect bridgenet
 
 ### Multi-Node Networking with K8s
 
+* `kubectl -n demos get po,svc,ep -l demo=demo3 -owide`
 
+* `kubectl -n demos exec client-app-7d9bb6c977 fslxq -- sh -c 'curl -s 192.168.142.153' WEBSERVER`
+
+* `kubectl -n demos exec client-app-7d9bb6c977-fslxq -- sh -c 'curl -s 10.98.67.45' WEBSERVER`
+
+* `kubectl -n demos exec client-app-7d9bb6c977-fslxq -- sh -c 'curl -s web-app-svc' WEBSERVER`
