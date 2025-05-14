@@ -1523,3 +1523,22 @@ $ podman network inspect bridgenet
 * `kubectl -n demos exec client-app-7d9bb6c977-fslxq -- sh -c 'curl -s 10.98.67.45' WEBSERVER`
 
 * `kubectl -n demos exec client-app-7d9bb6c977-fslxq -- sh -c 'curl -s web-app-svc' WEBSERVER`
+
+### Cloud Foundry: Container-to-Container Networking
+
+* By default, [Gorouter](https://docs.cloudfoundry.org/concepts/cf-routing-architecture.html) (which, you may have guessed, is [written in Go.](https://github.com/cloudfoundry/gorouter)), routes external and internal traffic to different Cloud Foundry components. 
+
+* The [container-to-container networking](https://docs.cloudfoundry.org/concepts/understand-cf-networking.html) feature of CF enables app instances to communicate with each other directly, *HOWEVER*, when the container-tocontainer networking feature is disabled, all application-to-application traffic must go through the Gorouter.
+
+* Components of the CF architecture that make container-to-container networking possible: 
+
+    * **Network Policy Server** A management node hosting a database of app traffic policies.
+
+    * **Garden External Networker** Sets up networking for each app through the CNI plugin, exposing apps to the outside, by allowing incoming traffic from Gorouter, TCP Router, and SSH Proxy.
+
+    * **Silk CNI Plugin** For IP management through a shared VXLAN overlay network that assigns each container a unique IP address. The overlay network is not externally routable and it prevents the container-to-container traffic from escaping the overlay.
+
+    * **VXLAN Policy Agent** Enforces network policies between apps. When creating routing rules for network policies, we should include the source app, destination app, protocol, and ports, without going through the Gorouter, a load balancer, or a firewall.
+
+
+
