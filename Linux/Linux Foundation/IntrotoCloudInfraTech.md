@@ -1546,6 +1546,20 @@ Software-Defined Storage and Storage Management for Containers
 
 * **SDS (Software-defined Storage)** represents storage virtualization aimed to separate the underlying storage hardware from the software that manages and provisions it. Physical hardware from various sources can be combined and managed with software, as a single storage pool. Examples include [TrueNAS](https://www.truenas.com/) and [VMware vSAN](https://www.vmware.com/products/vsan.html).
 
-### Ceph Overview/Architecture
+### Ceph Overview
 
+* **Ceph** is an open source distributed storage system that supports applications with different storage interface needs, as it provides *object*, *block*, and *filesystem* storage in a single unified storage cluster, making it flexible, highly reliable, and easy to manage.
 
+* Ceph uses the **Controlled Replication Under Scalable Hashing (CRUSH)** algorithm to deterministically find, write, and read the location of objects.
+
+### Ceph Architecture
+
+* **Reliable Autonomic Distributed Object Store (RADOS)**
+
+* **Librados**
+
+* **Ceph Block Device (RBD)**
+
+* **RADOS Gateway (RADOSGW)**
+
+* **Ceph File System (CephFS)**
