@@ -1435,7 +1435,7 @@ Microservices
 SDN and Networking for Containers
 ---------------------------------
 
-* **Software-defined networking (SDN)** dcouples the network control layer from the traffic forwarding layer, allowing SDN to program the control layer and to create custom rules in order to meet these new networking requirements.
+* **Software-defined networking (SDN)** decouples the network control layer from the traffic forwarding layer, allowing SDN to program the control layer and to create custom rules in order to meet these new networking requirements.
 
 ### SDN Architecture
 
@@ -1540,5 +1540,12 @@ $ podman network inspect bridgenet
 
     * **VXLAN Policy Agent** Enforces network policies between apps. When creating routing rules for network policies, we should include the source app, destination app, protocol, and ports, without going through the Gorouter, a load balancer, or a firewall.
 
+
+Software-Defined Storage and Storage Management for Containers
+------
+
+* **SDS (Software-defined Storage)** represents storage virtualization aimed to separate the underlying storage hardware from the software that manages and provisions it. Physical hardware from various sources can be combined and managed with software, as a single storage pool. Examples include [TrueNAS](https://www.truenas.com/) and [VMware vSAN](https://www.vmware.com/products/vsan.html).
+
+### Ceph Overview/Architecture
 
 
