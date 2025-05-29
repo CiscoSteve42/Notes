@@ -1552,14 +1552,44 @@ Software-Defined Storage and Storage Management for Containers
 
 * Ceph uses the **Controlled Replication Under Scalable Hashing (CRUSH)** algorithm to deterministically find, write, and read the location of objects.
 
+* **[Ceph Documentation by Red Hat](https://docs.ceph.com/en/latest/architecture/)
+
 ### Ceph Architecture
 
-* **Reliable Autonomic Distributed Object Store (RADOS)**
+* **Reliable Autonomic Distributed Object Store (RADOS)** *is the object store which stores the objects* (I swear that I almost got a stroke from reading that sentence.) This layer makes sure that data is always in a consistent and reliable state. Performs operations like replication, failure detection, recovery, data migration, and rebalancing across the cluster nodes. 3 major components are:
 
-* **Librados**
+    * **Object Storage Device (OSD)** where the actual user content is written and retrieved with read operations. One OSD daemon is typically tied to one physical disk in the cluster.
 
-* **Ceph Block Device (RBD)**
+    * **Ceph Monitors (MON)** resonsible for monitoring the cluster state, all cluster nodes report to Monitors. Monitors map the cluster state through the OSD, Place Groups (PG), CRUST and Monitor maps.
 
-* **RADOS Gateway (RADOSGW)**
+    * **Ceph Metadata Server (MDS)** needed only by CephFS to store the file hierarchy and metadata for files.
 
-* **Ceph File System (CephFS)**
+* **Librados** a lib that allows direct access to RADOS from langs like C, C++, Python, Java, PHP, etc. Ceph Block Device, RADOSGW, and CephFS are implemented on to of Librados.
+
+* **Ceph Block Device (RBD)** provides the block interface for Ceph. Works as a block device and has enterprice features like thin provisioning and snapshots.
+
+* **RADOS Gateway (RADOSGW)** provides a REST API interface for Ceph, which is compatible with Amazon S3 and OpenStack Swift. 
+
+* **Ceph File System (CephFS)** privdes a POSIX-compliant distributed filesystem on top of Ceph. It relies on Ceph MDS to track the file hierarchy.
+
+### Benefites of Using Ceph
+
+* Its an open source storage solution that supports *Object*, *Block*, and *File System* storage
+
+* Runs on any commodity hardware, without any vendor lock-in
+
+* Provides data safety for mission-critical apps
+
+* Provides automatic balance of filesystems for maximu performance
+
+* Scalable and highly available, with no single point of failure
+
+* Reliable, flexible, and cost-effective storage solution
+
+* Achieves higher throughput by stripping the files/data across multiple nodes
+
+* Achies adaptive load-balancing by replicating frequently accessed objects over multiple nodes
+
+### GlusterFS Volumes
+
+
