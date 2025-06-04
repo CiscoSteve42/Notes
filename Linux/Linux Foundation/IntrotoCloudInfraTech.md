@@ -1592,4 +1592,18 @@ Software-Defined Storage and Storage Management for Containers
 
 ### GlusterFS Volumes
 
+* **FUSE** [Filesystem in Userspace](https://en.wikipedia.org/wiki/Filesystem_in_Userspace) 
+
+* Types of Volumes Supported by GlusterFS:
+
+    * Distributed GlusterFS volume
+
+    * Replicated GlusterFS volume
+
+    * Distributed replicated GlusterFS volume
+
+    * Dispersed GlusterFS volumes
+
+    * Distributed dispersed GlusterFS volume
+
 
