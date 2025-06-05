@@ -1606,4 +1606,32 @@ Software-Defined Storage and Storage Management for Containers
 
     * Distributed dispersed GlusterFS volume
 
+* GlusterFS does not have a centralized metadata server, it uses an elastic hashing algorithm to store files on bricks (I got bricks in the Benzzz)
 
+* GlusterFS volumes can be accessed using one of the following methods:
+
+    * Native FUSE mount 
+    * Network File System (NFS)
+    * Common Internet File System (CIFS)
+
+### Benefits of Using GlusterFS
+
+* Scales to several petabytes
+
+* Can be configured on commodity hardware
+
+* Open source storage solution that supports *Object*, *Block*, and *Filesystem* storage
+
+* Does NOT have a metadata server
+
+* Scalable, modular, and extensible
+
+* Provides features like replications, quotas, geo-replication, snapshots, and BitRot detection
+
+* POSIX-compliant, providing High Availability via local and remote data replication
+
+* Allows optimization for differnt workloads
+
+### Docker Storage Drivers
+
+* Docker uses the [copy-on-write](https://en.wikipedia.org/wiki/Copy-on-write) mechanism when containers are started from images
