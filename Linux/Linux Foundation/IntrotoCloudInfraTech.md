@@ -1634,4 +1634,32 @@ Software-Defined Storage and Storage Management for Containers
 
 ### Docker Storage Drivers
 
-* Docker uses the [copy-on-write](https://en.wikipedia.org/wiki/Copy-on-write) mechanism when containers are started from images
+* Docker uses the [copy-on-write](https://en.wikipedia.org/wiki/Copy-on-write) mechanism when containers are started from images.
+
+* Docker supports the following storage drivers on Linux:
+
+    * **BtrFS** Supports snapshots
+
+    * **Device Mapper** For earlier CentOS and RHEL releases
+
+    * **Fuse-Overlay** Preferred for rootless mode 
+
+    * **Overlay2** Preferred for all supported Linux distros (Ubuntu, Debian, CentOS, Fedora, RHEL, SLES 15)
+
+    * **VFS (Virtual File System)** For testing only, not for production
+
+    * **ZFS** Supports snapshots 
+
+### Managing Data in Docker
+
+* **Volumes** are stored in the `/var/lib/docker/volumes` dir and they are directly managed by Docker. Volumes are the recommended method of storing persistent data in Docker
+
+* **Blind Mounts** allow Docker to mount any file or directory from the *host system* into a container 
+
+* **Tmpfs** stored in the host's memory only, but not persisted on it's filesystem, recommended for non-persistent state data 
+
+### Docker Containers with Volumes 
+
+
+
+
