@@ -1697,4 +1697,16 @@ $ docker container run -d --name web -v /mnt/webvol:/webdata myapp:latest
 
 ### Managing Data in Podman
 
+* **Volumes** Volumes are stored under the `/var/lib/containers/storage/volumes` dir for root, and under the `~/.local/share/containers/storage/volumes` dir for reular users. They are directoly managed by Podman, and represent the recommended method of storing persistent data with Podman.
+
+* **Bind** Podman can mount a named vol from the *host system* into the container.
+
+* **Tmpfs** It is stored in the host's memory only but not persisted on it's filesystem, and the content is erased when the container is stopped (think TailsOS)
+
+* **Image** to mount an OS image file
+
+* **Devpts** to mount a filesystem storing pseudoterminal (telnet, ssh, xterm)
+
+### Podman Containers with Volumes
+
 
