@@ -1648,7 +1648,7 @@ Software-Defined Storage and Storage Management for Containers
 
     * **VFS (Virtual File System)** For testing only, not for production
 
-    * **ZFS** Supports snapshots 
+    * **ZFS** Supports snapshots (FreeBSD gang represent!)
 
 ### Managing Data in Docker
 
@@ -1660,6 +1660,41 @@ Software-Defined Storage and Storage Management for Containers
 
 ### Docker Containers with Volumes 
 
+* In Docker, a container with a mounted volume can be created using either the `docker container run` or `docker container create` commands:
 
+```bash
+$ docker container run -d --name web -v webvol:/webdata myapp:latest
+```
+
+* The above command would create a Docker volume inside the Docker working directory `/var/lib/docker/volumes/webvol/_data` on the host system, mounted on the container at the `/webdata` mount point. We may list the exact mount path via the `docker container inspect` command.
+
+* A container bind mount can be created using either the `docker container run` or the `docker container create` commands:
+
+```bash
+$ docker container run -d --name web -v /mnt/webvol:/webdata myapp:latest
+```
+
+* This mounts the host's `/mnt/webvol` dir to the `/webdata` mount point on the container as it's being started.
+
+### Docker Volume Plugins
+
+* "We can extend the functionality of the Docker Engine with the use of plugins." *Proceeds to list like 20 plugins.*
+
+### Podman Storage Drivers
+
+* Podman also uses the Volume feature to store persistent data, together with Volume drivers
+
+* Podman is also capable of using the copy-on-write mechanism when containers are ran. The container image is saved on a read-only filesystem layer while all changes performed by the container are saved on a writable filesystem of the container.
+
+* The following storage driver choices are available for Podman:
+
+    * **AUFS (Another Union File System)**
+    * **BtrFS**
+    * **Thinpool (Device Mapper)**
+    * **Overlay**
+    * **VFS (Virtual File System)**
+    * **ZFS**
+
+### Managing Data in Podman
 
 
