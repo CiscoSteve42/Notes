@@ -1662,7 +1662,7 @@ Software-Defined Storage and Storage Management for Containers
 
 * In Docker, a container with a mounted volume can be created using either the `docker container run` or `docker container create` commands:
 
-```bash
+```sh
 $ docker container run -d --name web -v webvol:/webdata myapp:latest
 ```
 
@@ -1670,7 +1670,7 @@ $ docker container run -d --name web -v webvol:/webdata myapp:latest
 
 * A container bind mount can be created using either the `docker container run` or the `docker container create` commands:
 
-```bash
+```sh
 $ docker container run -d --name web -v /mnt/webvol:/webdata myapp:latest
 ```
 
@@ -1708,5 +1708,59 @@ $ docker container run -d --name web -v /mnt/webvol:/webdata myapp:latest
 * **Devpts** to mount a filesystem storing pseudoterminal (telnet, ssh, xterm)
 
 ### Podman Containers with Volumes
+
+* A container with a mounted volume can be created using either the `podman container run` or the `podman container create` commands:
+
+```sh
+$ podman container run -d --name=web -v webvol:/webdata myapp:latest 
+```
+
+* The above command would create a volume on the host system in the Podman of the current user `~/.local/share/containers/storage/volumes/webvol/_data` or `/var/lib/containers/storage/volumes/webvol/_data` if ran by root and mount it on the container at the `/webdata` mount point. We may display the mount path with the `podman container inspect` command.
+
+* A bind mount can be achieved with either the `podman container run` or the `podman container create` commands.
+
+### Creating a Named Volume with Podman
+
+* A volume can be easily created with the following command. By default it uses the local driver
+
+```sh 
+$ podman volume create container-volumecontainer-volume
+container-volume
+```
+
+* Once created, the volume listing displays the volume driver and the volume name 
+
+```sh 
+$ podman volume ls
+DRIVER    VOLUME NAME 
+local     container-volume
+```
+
+* Inspecting the volume reveals additional details, such as the mountpoint on the host system where the volume is created by the container engine.
+
+```sh 
+$ podman volume inspect container-volume
+[
+    {
+        "Name":"container-volume",
+        "Driver": "local",
+        "Mountpoint": "/home/yourmom/.local/share/containers/storage/volumes/container-volume/_data",
+        "CreatedAt": "2025-06-18T10:47:24.128418284-05:00",
+        "Labels": {},
+        "Scope": "local",
+        "Options": {},
+        "MountCount": 0, 
+        "NeedsCopyUp": true,
+        "NeedsChown": true
+        "LockNumber": 0
+    }
+]
+```
+
+* We run an Alpine image in the data-container and attach the container volume, which opens up the container shell in interactive mode using the following command `podman container run -v container-volume:/data -it --name data-container alpine sh` and the container shell will appear as so `/# `. Navigate to the `/data` dir, create any kind of file, then `exit` the container shell. Then go to the `.local/share/containers/storage/volumes/container-volumes/_data` dir in your home directory and notice that the file that you created is there.
+
+* Describing the container rebeals it's config details, together with the mounted volume details. These details are aligned with the ones displayed by the volume described above `podman container inspect data-container | grep Mounts -A16`
+
+### Volume Management in K8s 
 
 
