@@ -1763,4 +1763,36 @@ $ podman volume inspect container-volume
 
 ### Volume Management in K8s 
 
+* K8s uses volumes to attach external storage to containers managed by Pods. The volume is basically a directory, backed by a storage medium, with contents determined by the volume type.
 
+* A volume is linked to a Pod and shared among containers of that Pod. If the pod is deleted, the volume and data are lost as well.
+
+* A volume can be shared by some containers in the same Pod.
+
+### Volume Types
+
+* **awsElasticBlockStore**
+
+* **azureDisk**
+
+* **azureFile**
+
+* **cephfs**
+
+* **configMap**
+
+* **emptyDir**
+
+* **gcePersistentDisk**
+
+* **hostPath**
+
+* **nfs**
+
+* **persistentVolumeClaim**
+
+* **rdb**
+
+* **secret**
+
+* **vshpereVolume**
