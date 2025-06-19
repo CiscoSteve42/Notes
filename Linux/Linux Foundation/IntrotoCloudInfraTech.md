@@ -1781,15 +1781,15 @@ $ podman volume inspect container-volume
 
 * **configMap** `configMap` lets us attach a decoupled storage object that encaps config data, scripts, and possibly entire filesystems, to containers of a Pod (sounds pretty dope.)
 
-* **emptyDir**
+* **emptyDir** An empty vol is created for the Pod as soon as it is scheduled on a worker node. The life of the vol is tightly coupled the Pod. Pretty basic shit, if you delete it, that shit be gone.
 
-* **gcePersistentDisk**
+* **gcePersistentDisk** with the `gcePersistenDisk` vol type, we can mount a [GCE](https://cloud.google.com/compute/docs/disks/) persistent disk into a Pod (Cloud integration and shit, amirite? IS THAT NOT WHY I'M TAKING THIS COURSE)
 
-* **hostPath**
+* **hostPath** the `hostPath` vol type allows us to share a dir from the host with the containers of a Pod. If the content of the vol dies, it's still available on the host.
 
-* **nfs**
+* **nfs** allows you to mount a `nfs` share on containers in a pod 
 
-* **persistentVolumeClaim**
+* **persistentVolumeClaim** 
 
 * **rdb**
 
