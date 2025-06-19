@@ -1771,15 +1771,15 @@ $ podman volume inspect container-volume
 
 ### Volume Types
 
-* **awsElasticBlockStore**
+* **awsElasticBlockStore** *With the* `awsElasticBlockStore` vol type, we can mount an [AWS EBS](https://aws.amazon.com/ebs/) vol on containers of a Pod.
 
-* **azureDisk**
+* **azureDisk** `azurDisk` allows us to mount an [Azure Data Disk](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/managed-disks-overview?toc=%2Fazure%2Fvirtual-machines%2Flinux%2Ftoc.json) on containers of a Pod.
 
-* **azureFile**
+* **azureFile** `azurefile` lets us mount an Azure File Volume on containers in a Pod.
 
-* **cephfs**
+* **cephfs** `cephfs` lets us mount a CephFS vol on containers of a Pod.
 
-* **configMap**
+* **configMap** `configMap` lets us attach a decoupled storage object that encaps config data, scripts, and possibly entire filesystems, to containers of a Pod (sounds pretty dope.)
 
 * **emptyDir**
 
