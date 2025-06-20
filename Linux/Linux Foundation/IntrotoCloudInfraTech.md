@@ -1793,6 +1793,6 @@ $ podman volume inspect container-volume
 
 * **rdb** `rdb` lets us mount a [Radios Block Device](https://docs.ceph.com/docs/master/rbd/) vol on containers in a Pod.
 
-* **secret**
+* **secret** `secret` lets us attach storage objects that encapsulate encoded *sensitive* information such as pws, keys, certs, or tolkiens to containers in a Pod.
 
 * **vshpereVolume**
