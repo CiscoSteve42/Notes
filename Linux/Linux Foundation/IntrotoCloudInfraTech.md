@@ -1787,11 +1787,11 @@ $ podman volume inspect container-volume
 
 * **hostPath** the `hostPath` vol type allows us to share a dir from the host with the containers of a Pod. If the content of the vol dies, it's still available on the host.
 
-* **nfs** allows you to mount a `nfs` share on containers in a pod 
+* **nfs** allows you to mount a `nfs` share on containers in a Pod. 
 
-* **persistentVolumeClaim** 
+* **persistentVolumeClaim** the `persistentVolumeClaim` type lets us attach a persistent vol to a Pod.
 
-* **rdb**
+* **rdb** `rdb` lets us mount a [Radios Block Device](https://docs.ceph.com/docs/master/rbd/) vol on containers in a Pod.
 
 * **secret**
 
