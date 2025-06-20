@@ -1795,4 +1795,8 @@ $ podman volume inspect container-volume
 
 * **secret** `secret` lets us attach storage objects that encapsulate encoded *sensitive* information such as pws, keys, certs, or tolkiens to containers in a Pod.
 
-* **vshpereVolume**
+* **vshpereVolume** `vsphereVolume` lets us mount a vSphere VMDK vol to containers in a Pod.
+
+### Persisten Volumes
+
+
