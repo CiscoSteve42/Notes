@@ -1797,6 +1797,6 @@ $ podman volume inspect container-volume
 
 * **vshpereVolume** `vsphereVolume` lets us mount a vSphere VMDK vol to containers in a Pod.
 
-### Persisten Volumes
+### Persistent Volumes
 
 
