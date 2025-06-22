@@ -1801,4 +1801,24 @@ $ podman volume inspect container-volume
 
 * The **Persistent Volume Subsystem** in K8s provides us with APIs to manage and consume the storage. TO manage a vol, it uses the [PV (PersistenVolume)](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) resource type to consume it, it uses the [PersistentVolumeClaim (PVC)](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) resource type
 
-* PVs can be provisioned statically or dynamically.
+* PVs can be provisioned statically or dynamically. For [dynamic provisioning](https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/), K8s uses the [StorageClass](https://kubernetes.io/docs/concepts/storage/storage-classes/) resource, which contains predefined provisioners and parameters for PV creation. With PVC, a user sends the reuqests for dynamic PV creation, which gets wired to the StorageClass resource.
+
+* Some vol types that support managing storage using PVs are:
+
+    * **AWSElasticBlockStore**
+    * **AzureFile**
+    * **AzureDisk**
+    * **GCEPersistentDisk**
+    * **NFS**
+    * **iSCSI**
+    * **RBD**
+    * **CephFS**
+    * **vsphereVolume**
+
+### Persistent Volumes Claim
+
+* [**PersistentVolumeClaim**](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) is a request for service by a user.
+
+
+
+
