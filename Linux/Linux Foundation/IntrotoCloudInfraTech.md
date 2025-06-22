@@ -1799,4 +1799,6 @@ $ podman volume inspect container-volume
 
 ### Persistent Volumes
 
+* The **Persistent Volume Subsystem** in K8s provides us with APIs to manage and consume the storage. TO manage a vol, it uses the [PV (PersistenVolume)](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) resource type to consume it, it uses the [PersistentVolumeClaim (PVC)](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) resource type
 
+* PVs can be provisioned statically or dynamically.
