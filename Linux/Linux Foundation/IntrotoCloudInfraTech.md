@@ -1817,7 +1817,13 @@ $ podman volume inspect container-volume
 
 ### Persistent Volumes Claim
 
-* [**PersistentVolumeClaim**](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) is a request for service by a user.
+* [**PersistentVolumeClaim**](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) is a request for service by a user. Users request for PV resources based on size, access modes, and vol type. Once a suitable one is found, it is bound to the PVC. After a successful bind, the PVC can be used in a Pod, to allow the containers' access to the PV.
+
+* Once the Pod is deleted, the PVC may be detached from the PV releasing it for possible future use. The PV can either be deleted, retrained or recycled, all based on the user-defined [reclaim policy](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaim-policy.)
+
+### Adding Storage Volumes to K8s Pods
+
+
 
 
 
