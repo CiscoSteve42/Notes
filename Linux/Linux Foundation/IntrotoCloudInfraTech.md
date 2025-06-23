@@ -1823,8 +1823,40 @@ $ podman volume inspect container-volume
 
 ### Adding Storage Volumes to K8s Pods
 
+* The Pod definition manifest sets up an Ubuntu container with a hostPath vol. The hostPath vol plugin binds the `/tmp/data-vol` host dir with the `/data` container dir. If the host directory does not exist prior to the Pod's deployment, it will be created upon deployment.
 
+```yaml
+apiVersion: v1 
+kind: Pod 
+metadata:
+  creationTimestamp: null 
+  labels:
+    run: storage-pod
+  name: storage-pod 
+  namespace: infra 
+spec:
+  containers:
+  - command:
+    - bash
+    - -c 
+    - sleep 3600
+    image: ubuntu
+    name: storage-pod 
+    resources: {} 
+    volumeMounts:
+    - name: vol
+      mountPath: /data
+  volumes:
+    - name: vol
+      hostPath:
+        path: /tmp/data-vol 
+        type: DirectoryOrCreate
+  dnsPolicy: ClusterFirst
+  nodeName: wo1-admn6
+  restartPolicy: Always 
+status: {}
+```
 
-
+* The `nodeName` ensures that the Pod is scheduled on a specific nod. Prior to deploying the Pod, the targed node does not have a `/tmp/data-vol` dir. For example `kubectl apply -f storage-pod.yaml`
 
 
