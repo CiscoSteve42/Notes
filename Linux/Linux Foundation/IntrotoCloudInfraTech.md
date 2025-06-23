@@ -1857,6 +1857,12 @@ spec:
 status: {}
 ```
 
-* The `nodeName` ensures that the Pod is scheduled on a specific nod. Prior to deploying the Pod, the targed node does not have a `/tmp/data-vol` dir. For example `kubectl apply -f storage-pod.yaml`
+* The `nodeName` ensures that the Pod is scheduled on a specific nod. Prior to deploying the Pod, the targed node does not have a `/tmp/data-vol` dir. 
+
+* For example `kubectl apply -f storage-pod.yaml` will create a storage pod, and list it with `kubectl -n infra get pod -o wide`
+
+### Distributed Storage Management System
+
+
 
 
