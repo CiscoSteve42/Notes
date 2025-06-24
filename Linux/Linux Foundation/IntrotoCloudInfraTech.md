@@ -1863,6 +1863,13 @@ status: {}
 
 ### Distributed Storage Management System
 
+* K8s' best practices recommend that we should aim for decoupling as much as possible, that includes decoupling our applications from the underlying storage infrastructure. This can be achieved by introducing a new abstraction layer between the Kubernetes storage resource definitions and the storage infrastructure - storage interfaces that are not available as Kubernetes native storage plugins such as the following:
+
+* **Rook** [Rook](https://rook.io/) is a graduated project of the [Cloud Native Computing Foundation (CNCF)](https://cncf.io/) capable of managing File, Block, and Object storage for K8s clusters. It simplifies and automates the deployment, scalability, self-healing, disaster recovery, management, and monitoring of distributed storage systems such as Ceph. Minimizes data loss through distribution and replication, and optimizes the usage of commodity hardware in favor of costly storage solutions, preventing possible vendor lock-in.
+
+* **Longhorn**  [Longhorn](https://longhorn.io/) is an incubating project of the CNCF originally developed by [Rancher](https://rancher.com/). It implements highly available persistent storage for K8s. It is capable of managing cloud-native persistent block storage at reduced costs, unlike (absolutely) proprietary cloud storage service alts. It has built-in backups and incremental snapshot capabilties, along with cross-cluster disaster recovery, which are much desired features for today's multi-cluster K8s deployment model.
+
+### Cloud Foundry Volume Service
 
 
 
