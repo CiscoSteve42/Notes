@@ -1799,7 +1799,7 @@ $ podman volume inspect container-volume
 
 ### Persistent Volumes
 
-* The **Persistent Volume Subsystem** in K8s provides us with APIs to manage and consume the storage. TO manage a vol, it uses the [PV (PersistenVolume)](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) resource type to consume it, it uses the [PersistentVolumeClaim (PVC)](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) resource type
+* The **Persistent Volume Subsystem** in K8s provides us with APIs to manage and consume the storage. To manage a vol, it uses the [PV (PersistenVolume)](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) resource type to consume it, it uses the [PersistentVolumeClaim (PVC)](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) resource type
 
 * PVs can be provisioned statically or dynamically. For [dynamic provisioning](https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/), K8s uses the [StorageClass](https://kubernetes.io/docs/concepts/storage/storage-classes/) resource, which contains predefined provisioners and parameters for PV creation. With PVC, a user sends the reuqests for dynamic PV creation, which gets wired to the StorageClass resource.
 
@@ -1871,5 +1871,24 @@ status: {}
 
 ### Cloud Foundry Volume Service
 
+* With *volume services*, the volume service broker allows Cloud Foundry apps to attach external storage.
+
+* With the `volume bind` command, the service broker issues a vol mount instruction, which instructs the Diego schedule to schedule the app instances on cells which have the appropriate vol driver. In the backend, the vol driver gets attached to the device. Cells then mount the device into the container and start the app instance.
+
+* **CF Volume Services**
+
+    * **nfs-volume-release** allows for easy mounting of NFS shares for Cloud Foundry apps.
+
+    * **smb-volume-release** same but with SMB shares.
+
+### CSI (Container Storage Interface)
+
+* The aim of [CSI](https://github.com/container-storage-interface/spec) is to have the same vol plugin work with container orchestrators out of the box, usually through the help of third party storage plugins.
+
+* The role of CSI is to maintain the [specification](https://github.com/container-storage-interface/spec/blob/master/spec.md) and the [protobuf](https://github.com/container-storage-interface/spec/blob/master/csi.proto), which is a protocol buffer and platform-neutral lang that serializes structured data.
+
+
+DevOps and CI/CD 
+----------------
 
 
