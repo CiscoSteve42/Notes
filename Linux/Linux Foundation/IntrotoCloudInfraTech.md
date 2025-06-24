@@ -1896,3 +1896,17 @@ DevOps and CI/CD
 ### Jenkins Overview 
 
 * [Jenkins](https://jenkins.io/) is one of the most popular automation tools, and a graduated project of the [CD Foundation](https://cd.foundation/). It's written in Java and is CI/CD compliant.
+
+* [CloudBees](https://www.cloudbees.com/) offers a variety of Jenkins-based CI/CD products.
+
+* [Servana](https://servanamanaged.com/services/managed-jenkins/) uses CloudBees Jenkins distribution hosted in Servana's own datacenters.
+
+* Jenkins can also be hosted on major cloud platforms.
+
+### Jenkins Functionality
+
+* Jenkins can build Freestyle, Apache Ant, and Apache Maven-based projects.
+
+* Jenkins supports over 1900 plugins in different categories, such as *Source Code Management* *Administration*, *Build Management*, *User Interface*, and *Platforms*.
+
+
