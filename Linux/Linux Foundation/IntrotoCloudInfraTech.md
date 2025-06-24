@@ -1909,4 +1909,18 @@ DevOps and CI/CD
 
 * Jenkins supports over 1900 plugins in different categories, such as *Source Code Management* *Administration*, *Build Management*, *User Interface*, and *Platforms*.
 
+* Jenkins supports the build of a **Pipeline**, which is a concept representing an entire app's lifecycle. A Jenkins Pipeline is a series of plugins that collectively implement CD. Pipeline's features (according to the [Jenkins Documentation](https://jenkins.io/doc/book/pipeline/)) are:
 
+    * **Code** Pipelines are implemented in code and typically checked into source control, giving teams the ability to edit, review, and iterate upon their delivery pipeline.
+
+    * **Durable** Pipelins can survive both planned and unplanned restarts of your Jenkins master.
+
+    * **Pausable** Pipelines can optionally stop and wait for human input or approval before completing the jobs for which they were built.
+
+    * **Versatile** Pipelines support complex real-world CD requirements, including the ability to fork or join, loop, and work in parallel with each other.
+
+    * **Extensible** The Pipeline plugin supports custom extensions to it's DSL (domain scripting lang) and multiple options for integration with other plugins.
+
+* [Blue Ocean](https://www.jenkins.io/doc/book/blueocean/) is a UI designed to improve user experience.  
+
+* [Pipeline: Stage View](https://plugins.jenkins.io/pipeline-stage-view/) and [Pipeline: Graph View](https://plugins.jenkins.io/pipeline-graph-view/) are visualization plugins that aim to offer the same functionality as, and eventually replace, Blue Ocean UI.
