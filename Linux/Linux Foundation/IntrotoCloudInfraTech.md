@@ -1891,4 +1891,8 @@ status: {}
 DevOps and CI/CD 
 ----------------
 
+* Gonna blow through this chapter pretty fast since I've already taken a Linux Foundation course on DevOps ([my notes for the course](https://github.com/CiscoSteve42/Notes/blob/main/Linux/Linux%20Foundation/IntrotoDevOps.md)) but it should make a good review.
 
+### Jenkins Overview 
+
+* [Jenkins](https://jenkins.io/) is one of the most popular automation tools, and a graduated project of the [CD Foundation](https://cd.foundation/). It's written in Java and is CI/CD compliant.
