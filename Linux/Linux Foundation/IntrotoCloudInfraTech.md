@@ -1924,3 +1924,18 @@ DevOps and CI/CD
 * [Blue Ocean](https://www.jenkins.io/doc/book/blueocean/) is a UI designed to improve user experience.  
 
 * [Pipeline: Stage View](https://plugins.jenkins.io/pipeline-stage-view/) and [Pipeline: Graph View](https://plugins.jenkins.io/pipeline-graph-view/) are visualization plugins that aim to offer the same functionality as, and eventually replace, Blue Ocean UI.
+
+### Travis CI Overview
+
+* [Travis CI](https://travis-ci.com/) is a hosted, distributed CI solution for projects hosted on GitHub, BitBucket, and others.
+
+* To run a test with CI, link your GitHub account with Travis and select a repo and create a `.travis.yml` file that defines how the build should be executed.
+
+### Executing Build with Travis CI
+
+The following are build options that can be defined in a `.travis.yml` file, options marked with an asterisk are optional:
+
+* `before_install`
+* `install`
+* `before_script`
+
