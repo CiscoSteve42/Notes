@@ -1933,9 +1933,9 @@ DevOps and CI/CD
 
 ### Executing Build with Travis CI
 
-The following are build options that can be defined in a `.travis.yml` file, options marked with an asterisk are optional:
+* The following are build options that can be defined in a `.travis.yml` file, options marked with an asterisk are optional:
 
-* `before_install`
-* `install`
-* `before_script`
-
+    * `before_install`
+    * `install`
+    * `before_script`
+    * `script`
