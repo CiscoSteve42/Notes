@@ -1994,9 +1994,14 @@ DevOps and CI/CD
 
 * [**JFrog Pipelines**](https://jfrog.com/pipelines/)
 
-* **CircleCI**
+* [**CircleCI**](https://circleci.com/) is a fast, highly scalable, reliable, and extensible CI/CD tool that builds pipelines into K8s. It provides native Docker support and integrates with K8s services and tools such as GKE, Amazon EKS, AKS, Red Hat OpenShift, Kublr, Nirmata, and Helm. It uses orbs to package CircleCI configuration defining commands, executors, and jobs. Has free and paid versions.
 
-* **Jenkins X**
+* [**Jenkins X**](https://jenkins-x.io/) popular CI/CD tool that can be used on K8s as well. It leverages Terraform for infrastructure management, Helm for GitOps, open source or cloud secret management servies, and [Tekton](https://tekton.dev/) for cloud native pipeline orchestration. Helps deploy, simplify, and automate CI/CD pipelines. Also automates the preview of pull requests for fast feedback before changes are merged, then it automates the environment management and the promotion of the new app versions between different environments.
 
-* **Spinnaker**
+* [**Spinnaker**](https://spinnaker.io/) is an open source multi-cloud continuous delivery platform, originally created for Netflix (btw), for releaseing software changes with high velocity. Supports all major cloud providers and integrates with K8s natively.
 
+
+Tools for Cloud Infrastructure: Configuration Management
+--------------------------------------------------------
+
+* 
