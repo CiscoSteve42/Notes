@@ -1939,3 +1939,32 @@ DevOps and CI/CD
     * `install`
     * `before_script`
     * `script`
+    * `before_cache`*
+    * `after_success` or `after_failure`
+    * `before_deploy`*
+    * `deploy`*
+    * `after_deploy`*
+    * `after_script`
+
+### Travis CI Characteristics
+
+* It supports various databases
+
+* The build phase is supported by various VMs/Containers, and various OSs 
+
+* Travis CI supports [most languages](https://docs.travis-ci.com/user/language-specific/)
+
+* After testing, we can deploy the app on [many cloud providers](https://docs.travis-ci.com/user/deployment)
+
+### Benefits of Using Travis CI
+
+* its a hosted, distributed solution integrated with GitHub and BitBucket
+* easily set up and configured
+* has free and several paid tiers
+* supports testing for different versions of the same runtime
+
+### Concourse Overview
+
+* [Concourse](https://concourse-ci.org/) is an open source CI/CD system started in 2014 and written in Go.
+
+
