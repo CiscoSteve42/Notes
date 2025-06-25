@@ -1982,17 +1982,17 @@ DevOps and CI/CD
 
 ### Cloud Native CI/CD Tools
 
-* **Helm** [Helm](https://helm.sh/) is a popular package manager for K8s. It packages K8s apps into Charts, with all the artifacts, objects, and dependencies an entire app needs in order to successfully be deployed in a K8s cluster.
+* [**Helm**](https://helm.sh/) is a popular package manager for K8s. It packages K8s apps into Charts, with all the artifacts, objects, and dependencies an entire app needs in order to successfully be deployed in a K8s cluster.
 
-* **Skaffold**
+* [**Skaffold**](https://github.com/GoogleContainerTools/skaffold) is a tool from Google that helps to build, push, pull, and deploy code to the K8s cluster. Supports Helm.
 
-* **Argo**
+* [**Argo**](https://argoproj.github.io/) is a cloud native family of tools aimed at workflow management on K8s clusters. The [Argo Workflows](https://argoproj.github.io/workflows/) tool is responsible for orchestrating multi-step task sequences as CI/CD pipelines on K8s, while also managing clusters. [Argo CD](https://argoproj.github.io/cd/) performs GitOps, and [Argo Rollouts](https://argoproj.github.io/rollouts/) is used for advanced deployment strategies.
 
-* **Flux**
+* [**Flux**](https://fluxcd.io/) is a set of open source tools that enable GitOps and CD on K8s. It integrates with Helm, GitHub, GitLab, Harbor, and can be extended with components from the GitOps Toolkit for source control management, K8s kustomization, Helm, notifications, and image management automation. 
 
-* **GitLab**
+* [**GitLab**](https://about.gitlab.com/) is a DevOps platform that incorporates CI, automated delivery piplines, enables GitOps and DevSecOps. Integrates with Terraform to allow for easy deployment from bare metal, VMs, or containers wo the public cloud. Built in security compliance through automated vulnerability scanes, static and dynamic application security testing and implementing supply chain security.
 
-* **JFrog Pipelines**
+* [**JFrog Pipelines**](https://jfrog.com/pipelines/)
 
 * **CircleCI**
 
