@@ -1967,4 +1967,36 @@ DevOps and CI/CD
 
 * [Concourse](https://concourse-ci.org/) is an open source CI/CD system started in 2014 and written in Go.
 
+* For containerization, it uses Docker and Docker-Compose, while the series of tasks together with resources allow us to build a job or pipeline.
+
+* Concourse is driven by the *fly* CLI, and also has a web GUI.
+
+### Benefits of Using Concourse
+
+* Open source
+* Can be set up on-prem or in the cloud
+* Very simple method of configuring and managing CI pipelines
+* Good visualization web UI 
+* Can be scaled across many servers
+* Data to run the pipeline can be provided by resources that never affect the performance of a worker
+
+### Cloud Native CI/CD Tools
+
+* **Helm**
+
+* **Skaffold**
+
+* **Argo**
+
+* **Flux**
+
+* **GitLab**
+
+* **JFrog Pipelines**
+
+* **CircleCI**
+
+* **Jenkins X**
+
+* **Spinnaker**
 
