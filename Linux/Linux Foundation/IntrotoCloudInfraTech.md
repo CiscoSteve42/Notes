@@ -1982,7 +1982,7 @@ DevOps and CI/CD
 
 ### Cloud Native CI/CD Tools
 
-* **Helm**
+* **Helm** [Helm](https://helm.sh/) is a popular package manager for K8s. It packages K8s apps into Charts, with all the artifacts, objects, and dependencies an entire app needs in order to successfully be deployed in a K8s cluster.
 
 * **Skaffold**
 
