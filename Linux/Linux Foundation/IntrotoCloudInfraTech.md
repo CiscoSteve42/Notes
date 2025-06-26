@@ -2004,4 +2004,31 @@ DevOps and CI/CD
 Tools for Cloud Infrastructure: Configuration Management
 --------------------------------------------------------
 
-* 
+* **Infrastructure as Code** the infrastructure resources are defined in a declarative fashion in config files that ultimately can be re-used io be able to provision consistently reproducible systems across environments.
+
+* *Configuration management* tools allow us to define the desired stae of the systems in an automated way.
+
+### Ansible Overview
+
+* [**Ansible**](https://www.ansible.com/) is an easy-to-use, open source configuration management (CM) tool. It is an agentless tool that works through SSH. It can automate infrastructure provisioning (on-prem or public cloud), app deployment, and orchestration.
+
+### Deployment Workflows
+
+* Ansible has agentless architecture, which ensures that maintenance tasks are restricted to a single management node, and not in every instance of the cluster. All updates to managed notes are pushed via SSH, to lists of nodes that are managed through inventory files. To list the nodes, we must do the following:
+```
+[webservers]
+www1.example.com
+www2.example.com
+
+[dbservers]
+db0.example.com
+db1.example.com
+```
+
+* Ansible supports dynamic inventory files for cloud providers. The management node connects with either a password or SSH key.
+
+* [Default Ansible Modules](https://github.com/ansible/ansible/tree/devel/lib/ansible/modules)
+
+### Playbooks
+
+
