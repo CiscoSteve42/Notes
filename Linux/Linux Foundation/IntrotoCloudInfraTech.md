@@ -2031,4 +2031,12 @@ db1.example.com
 
 ### Playbooks
 
+* [Playbooks](https://docs.ansible.com/ansible/latest/user_guide/playbooks.html) are Ansible's configuration, deployment, and orchestration language.
+
+* [Ansible Galaxy](https://galaxy.ansible.com/) is a free site for finding, downloading, and sharing community-developed Ansible roles.
+
+* [Ansible Automation Platform](https://www.ansible.com/products/controller) is an enterprise product that introduces a UI interface, access control, and central management.
+
+### Configuring a System with Ansible Playbooks
+
 
