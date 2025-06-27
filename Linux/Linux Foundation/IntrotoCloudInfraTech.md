@@ -2037,6 +2037,22 @@ db1.example.com
 
 * [Ansible Automation Platform](https://www.ansible.com/products/controller) is an enterprise product that introduces a UI interface, access control, and central management.
 
-### Configuring a System with Ansible Playbooks
+### Benefits of Using Ansible
+
+* easy-to-use open source configuration management tool
+* agentless
+* automates cloud provisioning, app deployment, and orchestration
+* provides consistent, reliable, and secure management
+* supported by a large and active community of devs
+* low learning curve 
+* provides role-based access control
+* is available for all major OSs
 
 
+### Puppet Overview
+
+* [Puppet](https://puppet.com/) is an open source config management tool that usees the agent/server model to configure the systems. The Agent is referred to as the Puppet Agent and the server is the Puppet Server. It also supports the agentless model to manage target systems.
+
+* [Puppet Enterprise](https://puppet.com/products/puppet-enterprise/) ...is the Enterprise version. Duh.
+
+### Puppet Agent
