@@ -2078,3 +2078,49 @@ db1.example.com
     * Gathering reports form each Agent and then preparing the overall report.
 
 ### The Catalog File
+
+* Puppet prepares a Catalog File based on the manifest file. A manifest file is created using the Puppet Code:
+```
+user { 'stuudent':
+  ensure    => present,
+  uid       => '1001',
+  gid       => '1001',
+  shell     => ''/bin/bash',
+  home      => '/home/student'
+}
+```
+
+* This defines and creates a user `student` with:
+
+    * UID/GID as 1001
+    * The login shell is set to `/bin/bash`
+    * The ~ dir is set to `/home/student`
+
+* A manifest file can have one or more sections of code in this format:
+```
+resource_type { 'resource_name'
+  attribute => value 
+  ...
+}
+```
+
+* After processing the manifest file, the Puppet Server prepares the Catalog File based on the target platform.
+
+* [Puppet Core Documentation](https://puppet.com/docs/puppet/latest/resource_types.html)
+
+### Puppet Tools
+
+* [PuppetDB](https://puppet.com/docs/puppetdb/latest/index.html) helps generate reports, search a system, etc.
+
+* [Puppet Forge](https://forge.puppet.com/) has ready-to-use modules for manifest files from the community.
+
+### Benefits of Using Puppet
+
+* Open source config management tool
+* Provides scalability, automation, and centralized reporting
+* Available for all major OSs
+* Provides role-based access control
+
+### Chef Overview
+
+
