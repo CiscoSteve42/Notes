@@ -2056,3 +2056,25 @@ db1.example.com
 * [Puppet Enterprise](https://puppet.com/products/puppet-enterprise/) ...is the Enterprise version. Duh.
 
 ### Puppet Agent
+
+* Puppet Agent needs to be installed on each system we want to manage/configure with Puppet. Each agent is responsible for:
+
+    * Connecting securely to the Puppet Server to pull updates and a series of instructions in a file referred to as the *Catalog File*.
+
+    * Sending back the status to the Puppet Server.
+
+* Puppet Agent is available for Linux, Mac, and Windows (it's apparently also available for BSD systems via ports)
+
+### Puppet Server
+
+* Puppet Server can be installed only on Unix-based systems. But what they REALLY mean by this is that you should run it on Linux, as it CAN work in FreeBSD or MacOS, since it IS a Java program and all, but is generally not recommended from what I've read. ANYWAY, the Puppet Server is responsible for:
+
+    * Compiling the Catalog File for hosts based on the system, configuration, manifest file, etc
+
+    * Sending the Catalog File to Agents when they query the Server.
+
+    * Storing Information about the entire environment, such as host information, metadata (such as authentication keys), etc.
+
+    * Gathering reports form each Agent and then preparing the overall report.
+
+### The Catalog File
