@@ -2123,4 +2123,47 @@ resource_type { 'resource_name'
 
 ### Chef Overview
 
+* [Chef](https://www.chef.io/) uses the client/server model or the clientless model to perform the configuration management[.](https://www.youtube.com/watch?v=EEbQSROxkFw&pp=ygUPY2hlZiBzb3V0aCBwYXJr) The client is installed on each host which we want to manage and is referred to as [Chef Client](https://docs.chef.io/chef_client_overview/), while pulling updates from the server is referred to as [Chef Server](https://docs.chef.io/server_overview/). Additionally, there is the [Chef Workstaion](https://docs.chef.io/workstation/), which is used to[:](https://www.youtube.com/watch?v=QrGrOK8oZG8&pp=ygUOdG9vIG1hbnkgY29va3M%3D)
 
+    * Develop [cookbooks](https://docs.chef.io/chef_overview/#cookbooks) and [recipes](https://docs.chef.io/recipes/)
+    * Sync [chef-repo](https://docs.chef.io/chef_repo/) with the version control system
+    * Run command line tools
+    * Configure [policy](https://docs.chef.io/policy/), [roles](https://docs.chef.io/roles/), etc
+    * Interact with nodes to perform a one-off configuration
+
+### Chef Cookbook
+
+* A Chef Cookbook is the basic unit of configuration which defines a scenario and contains everything that supports the scenario.
+
+* A **recipe** is the most fundamental unit for configuration, which mostly contains resources, resource names, attribute-value pairs, and actions.
+```
+package "apache2" do 
+  action :install
+end
+
+service "apache2" do 
+  action [:enable, :start]
+end
+```
+
+* An [**attribute**](https://docs.chef.io/attributes.html) helps us define the state of the node. After each *chef-client* run, the node's state is updated on the *Chef Server*.
+
+* [Knife](https://docs.chef.io/knife.html) provides an interface between a local `chef-repo` and the *Chef Server*.
+
+### Supported Platforms
+
+* *Chef Client* supports the following platforms:
+
+    * AIX 
+    * Linux Distros 
+    * FreeBSD and other Unix-based Systems
+    * MacOS
+    * Windows 
+
+* *Chef Server* is supported on:
+
+    * RHEL 
+    * SUSE 
+    * Ubuntu
+
+### Configuring a System with Chef Cookbooks
