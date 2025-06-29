@@ -2178,5 +2178,24 @@ end
 
 * [Salt](https://saltproject.io/) is an open source configuration management system built on top of a remote execution framework.
 
+* It can be used in a client/server or agentless model.
+
+* The client/server model* It can be used in a client/server or agentless model.
+
+* In the client/server model, the server pushes commands and configs to all clients in a parallel manner, which the client runs, which returns back the status.
+
+* In agentless mode, the server connects with remote systems via SSH, but it offers limited functionality.
+
+* Salt is developed by VMware, and [VMware Aria Automation](https://www.vmware.com/products/aria-automation.html) is a Salt-based enterprise product.
+
+### Salt Minions and Salt Masters
+
+* **Salt Minions** Each client is referred to as a Salt minon, receiving config commands from the Master, and reporting back results.
+
+* **Salt Masters** A central management server is referred to as a *Salt master*. Multi-master is also supported.
+
+* In a default setup, the Salt master and minions communicate over a high speed data bus, [ZeroMQ](https://zeromq.org/), which requires an agent to be installed on each minion.
+
+### Other Components: modules, Returners, Grains, Pillar Data
 
 
