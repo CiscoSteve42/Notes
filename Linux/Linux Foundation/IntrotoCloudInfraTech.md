@@ -2166,4 +2166,16 @@ end
     * SUSE 
     * Ubuntu
 
-### Configuring a System with Chef Cookbooks
+### Benefits of Using Chef
+
+* Open source systems integration framework
+* provides automation, scalability, High Availability and consistency in deployment
+* Available for all major OSs
+* Provides role-based access control.
+* Provides real-time visibility, audits, and compliance with [Chef Automate](https://automate.chef.io/)
+
+### Salt Overview
+
+* [Salt](https://saltproject.io/) is an open source configuration management system built on top of a remote execution framework.
+
+
