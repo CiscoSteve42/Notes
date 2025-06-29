@@ -2198,4 +2198,4 @@ end
 
 ### Other Components: modules, Returners, Grains, Pillar Data
 
-
+* Remote execution is based on [Execution Modules](https://docs.saltproject.io/en/latest/ref/modules/all/index.html) and [Returner Modules](https://docs.saltproject.io/en/latest/ref/returners/all/index.html).
