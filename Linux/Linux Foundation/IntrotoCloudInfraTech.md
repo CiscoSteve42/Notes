@@ -2196,6 +2196,34 @@ end
 
 * In a default setup, the Salt master and minions communicate over a high speed data bus, [ZeroMQ](https://zeromq.org/), which requires an agent to be installed on each minion.
 
-### Other Components: modules, Returners, Grains, Pillar Data
+### Other Components: Modules, Returners, Grains, Pillar Data
 
 * Remote execution is based on [Execution Modules](https://docs.saltproject.io/en/latest/ref/modules/all/index.html) and [Returner Modules](https://docs.saltproject.io/en/latest/ref/returners/all/index.html).
+
+* Execution Modules provide basic functionality, like installing packages, managing files, managing containers, etc. All support modules are listed in the [Salt Module Index](https://docs.saltproject.io/en/latest/py-modindex.html), but we can also write custom modules.
+
+* Returner Modules allow for minions' responses to be saved on the master or other locations. We can use default Returners or write custom ones.
+
+* All information collected from minions is saved on the master, and is referred to as [Grains](https://docs.saltproject.io/en/latest/topics/grains/). [Pillar Data](https://docs.saltproject.io/en/latest/topics/pillar/) includes private information such as cryptographic keys and other specific information about eac minion which the master has. Pillar Data is shared between the master and the individual minion.
+
+* **Configuration Management** is where the master can easily set up a minion with a specific state.
+
+* Salt has different [State Modules](https://docs.saltproject.io/en/latest/ref/states/all/index.html) to manage a state.
+
+### Benefits of Using Salt
+
+* Open source config management system
+* Provides automation, High Availability, and event-driven infrastructure
+* Provides role-based access control
+* Supports agent-based and agentless deployments
+* Available for all major OSs
+
+
+Tools for Cloud Infrastructure: Build and Release
+-------------------------------------------------
+
+* **Chapter Objectives**: Discuss and use build and release tools: Terraform, CloudFormation, and BOSH.
+
+### Terraform Overview
+
+* [Terraform](https://www.terraform.io/) is a tool that allows to define the IaC.
