@@ -2226,4 +2226,24 @@ Tools for Cloud Infrastructure: Build and Release
 
 ### Terraform Overview
 
-* [Terraform](https://www.terraform.io/) is a tool that allows to define the IaC.
+* [Terraform](https://www.terraform.io/) is a tool that allows to define the IaC. The config files can be written in [HashiCorp Configuration Language](https://github.com/hashicorp/hcl)(HCL).
+
+### Terraform Providers
+
+* Terraform [Providers](https://www.terraform.io/docs/providers/index.html) in different stacks:
+
+    * **IaaS**: AWS, DigitalOcean, GCP, OpenStack, Azure, Alibab Cloud, etc.
+    * **PaaS**: Heroku, Cloud Foundry, etc.
+    * **SaaS**: DNSimple, etc.
+
+### Features
+
+* **IaC**: Infrastructure is described using a high-level configuration syntax. This allows a blueprint of your datacenter to be versioned and treated as you would any other code. Additionally, infrastructure can be shared and re-used.
+
+* **Execution Plans**: Terraform has a "planning" step whre it generates an execution plan. The execution plan shows what Terraform will do when you call apply. This lets you avoid any suprises when Terraform manipulates infrastructure.
+
+* **Resource Graph**: Terraform builds a graph of all your resources, and parallelizes the creation and modification of any non-dependent resources. Because of this, Terraform builds infrastructure as efficiently as possible, and operators get insight into dependencies in their infrastructure.
+
+* **Change Automation**: Complex changesets can be applied to your infrastucture with minimal human interaction.With the previously mentioned execution plan and resource graph, you know exactly what Terraform will change and in what order, avoiding many possible human errors.
+
+
