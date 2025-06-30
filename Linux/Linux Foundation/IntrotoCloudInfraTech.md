@@ -2285,10 +2285,93 @@ Tools for Cloud Infrastructure: Build and Release
 
 ### BOSH Overview
 
+* **BOSH** is an open source tool for release engineering, deployment, lifecycle management, and monitoring of distributed systems.
 
+* It was originally developed to deploy the Cloud Foundry PaaS, but can deploy other software as well.
 
+* It supports multiple IaaS providers.
 
+* BOSH creates VMs on top of IaaS, configures them to suit the requirements, and then deploys the applications on them.
 
+* Supported IaaS providers for BOSH are *VMware vSphere* and *vCloud Director*, and with the **CPI (Cloud Provider Interface)**, BOSH also supports additional IaaS providers such as *Google Compute Engine*, *Amazon AWS*, and *OpenStack*.
 
+### Key Concepts
+
+* **Stemcell** A [stemcell](https://bosh.io/docs/stemcell.html) is a versioned, IaaS-specific, OS image with some pre-installed utilities such as the BOSH Agent. Stemcells do not contain any app-specific code. The BOSH team is in charge of releascing stemcells, which are listed on the ["Stemcells"](https://bosh.io/stemcells) web page.
+
+* **Release** A [release](https://bosh.io/docs/release.html) is placed on top of a stemcell, and consists of a ersioned collection of configuration properties, templates, scripts, source code, and source code to build and deply software.
+
+* **Deployment** A [deployment](https://bosh.io/docs/deployment.html) is a collection of VMs which are built from stemcells, populated with specific releases on top of them and having disks to keep persistent data.
+
+* **BOSH Director** The [BOSH Director](https://bosh.io/docs/bosh-components.html#director) is the central orchestrator component of BOSH, which controls the VM creation and deployment. It also controls software and service lifecycle events. We need to upload stemcells, releases, and deployment manifest files to the Director. The Director processes the manifest file and does the deployment.
+
+### Sample Deployment
+
+* The following is an example of a sample [deployment manifest](https://bosh.io/docs/deployment-basics.html) from the BOSH website:
+```
+---
+name: zookeeper
+
+releases:
+- name: zookeeper
+  version: 0.0.5
+  url: ht‌tps://bosh.io/d/github.com/cppforlife/zookeeper-release?v=0.0.5
+  sha1: 65a07b7526f108b0863d76aada7fc29e2c9e2095
+
+stemcells:
+- alias: default
+  os: ubuntu-xenial
+  version: latest
+
+update:
+  canaries: 2
+  max_in_flight: 1
+  canary_watch_time: 5000-60000
+  update_watch_time: 5000-60000
+
+instance_groups:
+- name: zookeper
+  azs: [z1, z2, z3]
+  instances: 5
+  jobs:
+  - name: zookeeper
+    release: zookeeper
+    properties: {}
+  vm_type: default
+  stemcell: default
+  persistent_disk: 10240
+  networks:
+  - name: default
+
+- name: smoke-test
+  azs: [z1]
+  lifecycle: errand
+  instances: 1
+  jobs:
+  - name: smoke-tests
+    release: zookeeper
+    properties: {}
+  vm_type: default
+  stemcell: default
+  networks:
+  - name: default
+```
+
+### Benefits of Using BOSH
+
+* It is an open source tool "for release engineering, deployment, lifecycle management, and monitoring of distributed systems."
+
+* Allows for easy identification of a release's components, such as the source, tools, and environment.
+
+* Guarantees stability and reproducibility.
+
+* Provides a stable framework for the development and consisten deployments of software components.
+
+* It integrates with CI/CD.
+
+* Supports IaaS providers like AWS, OpenStack, VMware vSphere, Google Compute Engine, etc.
+
+Tools for Cloud Infrastructure: Key-Value Pair Store
+----------------------------------------------------
 
 
