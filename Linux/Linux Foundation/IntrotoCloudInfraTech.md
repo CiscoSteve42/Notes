@@ -2246,4 +2246,36 @@ Tools for Cloud Infrastructure: Build and Release
 
 * **Change Automation**: Complex changesets can be applied to your infrastucture with minimal human interaction.With the previously mentioned execution plan and resource graph, you know exactly what Terraform will change and in what order, avoiding many possible human errors.
 
+### Benefits of Using Terraform
+
+* It allows to build, change, and version infrastructure in a safe and effiecient manner.
+* I can manage existing, as well as customized service providers. Is provider agnostic.
+* It can manage a single app or an entire datacenter.
+* It is a flexible abstraction of resources.
+
+### CloudFormation Overview
+
+* [CloudFormation](https://aws.amazon.com/cloudformation/) is a tool that allows us to define our infrastructure as code on AWS. The config file can be written in either YAML or JSON, and it can be used via Web Console or the command line.
+
+### Features
+
+* *Extensibility*: It supports the modeling, provisioning, and management of third-party app resources through the [AWS CloudFormation Registry](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html), for monitoring, incident management, and version control.
+
+* *Authoring with JSON or YAML* To model the infrastucture and describe resources in a text file. The CloudFormation Designer helps with vidual design when required.
+
+* *Authoring with programming languages*
+
+* *Safety controls*
+
+* *Preview environment changes*
+
+* *Dependency management*
+
+* *Cross-account and cross-region management*
+
+
+
+
+
+
 
