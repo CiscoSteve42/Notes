@@ -2374,4 +2374,24 @@ instance_groups:
 Tools for Cloud Infrastructure: Key-Value Pair Store
 ----------------------------------------------------
 
+* Key-value pair storage provides the functionality to store or retrieve the value of a key, mostly providing REST APIs to support operations like `GET`, `PUT`, and `DELETE`, which help with operations over `HTTP`.
+
+* Examples include *etcd*, *Consul KV*, and *ZooKeeper*.
+
+### etcd Overview
+
+* [**etcd**](https://etcd.io/) is an open source *distributed key-value pair* storage that uses the [Raft consesus algorithm](https://raft.github.io/) for communication between instances of distributed multi-instance scenarios.
+
+### Features
+
+* etcd can be configured to run standalone or in a distributed cluster.
+
+* In cluster mode, for High Availiability, it can *gracefully* handle the leader election during network partitions and can tolerate machine failures, including the leader. 
+
+* It allows users or services to watch the value of a key, to then perform certain operations as a result of any change in that particular value.
+
+* Currently used in many projects such as K8s, rook, vulcand, CoreDNS, and OpenStack.
+
+### Use cases
+
 
