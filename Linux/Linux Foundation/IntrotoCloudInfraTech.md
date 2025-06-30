@@ -2263,15 +2263,28 @@ Tools for Cloud Infrastructure: Build and Release
 
 * *Authoring with JSON or YAML* To model the infrastucture and describe resources in a text file. The CloudFormation Designer helps with vidual design when required.
 
-* *Authoring with programming languages*
+* *Authoring with programming languages* Through AWS Cloud Development Kit (AWS CDK) it supports TS, Python, Java, and .Net to model cloud apps, integrated with CloudFormation for infrastructure provisioning.
 
-* *Safety controls*
+* *Safety controls* It provides Rollback Triggers to safely roll back to a prior state.
 
-* *Preview environment changes*
+* *Preview environment changes* To model the possible impact of the proposed changes to any of the existing resources.
 
-* *Dependency management*
+* *Dependency management* Determines actions sequence during stack operations.
 
-* *Cross-account and cross-region management*
+* *Cross-account and cross-region management* Allowed from a single template, called *StackSet*.
+
+### Benefits of Using CloudFormation
+
+* It allows us to build, change, and version all AWS infrastructure in a safe and efficient manner.
+
+* It supports text file configuration files (YAML and JSON), multiple programming langs (TS, Python, Java, .NET), and CLI.
+
+* It allows for safe and repeatable infrastructure management.
+
+* It treats infrastructure as code, allowing quick edits and version control (IaC).
+
+### BOSH Overview
+
 
 
 
