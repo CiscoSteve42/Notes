@@ -2418,3 +2418,28 @@ Tools for Cloud Infrastructure: Key-Value Pair Store
     * Service discovery in conjunction with DNS or HTTP
     * Health checks for services and nodes
     *  Multi-datacenter support
+
+* While it can be configured on a single node, a multi-node config is recommended.
+
+* Consul KV is built on top of [Serf](https://www.serf.io/), which provides membership, failure detection, and event broadcast.
+
+* Consul KV uses the [Raft consesus algorithm](https://raft.github.io/) for leadership election and consistency.
+
+### Use cases
+
+* Stores connections, configuration, and other settings.
+* Service discovery and health checks in conjunction with DNS and HTTP.
+* Network infrastructure automation with dynamic load balancing while reducing downtime and outages.
+* Multi-platform secure service-to-service communication.
+
+### Benefits of Using Consul KVM
+
+* It is a distributed, scalable, highly-available system which can be used for service discovery and configuration.
+* It provides health checks for services and nodes, together with load balancing.
+* It provides out-of-the-box native multi-datacenter support.
+* It implements an embedded service discovery and telemetry.
+* It provides traffic management by leveraging Blue/Green or Canary deployment patterns.
+
+### ZooKeeper Overview
+
+
