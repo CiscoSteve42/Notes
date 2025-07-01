@@ -2460,3 +2460,24 @@ Tools for Cloud Infrastructure: Key-Value Pair Store
 * Its nodes store data in a hierarchical namespace, similar to a filesystem or a tree data structure.
 * It manages updates in an ordered fashion by behaving like an atomic broadcast system.
 
+
+Tools for Cloud Infrastructure: Image Building
+----------------------------------------------
+
+* **Objectives**: Create container images with Docker, Podman, Buildah, and VM images for different cloud platforms using Packer.
+
+### Dockerfiles 
+
+* A custom container image can be created with Docker by starting a container from a base image, and after making any changes, you can use the `docker commit` command to save these changes to persistent storage and creating a new container image (this is neither scalable nor efficient.)
+
+* The text file with instructions to generate an image is referred to as a [**Dockerfile**](https://docs.docker.com/engine/reference/builder/)
+
+* The `docker build` command is used to build a container image from a Dockerfile.
+
+* Dockerfiles usually start with a [base image](https://docs.docker.com/develop/develop-images/baseimages/) or a parent image, which is used as a reference to edit.
+
+* Parent images can be built directly out of working machines, or from tools such as [Debootstrap](https://wiki.debian.org/Debootstrap).
+
+### Multi-Stage Dockerfile
+
+
