@@ -2394,4 +2394,27 @@ Tools for Cloud Infrastructure: Key-Value Pair Store
 
 ### Use cases
 
+* Store connections, configuration, cluster bootstrapping keys, and other settings.
+* Service Discovery in conjunction with tools like [skyDNS](https://github.com/skynetservices/skydns).
+* Metadata and configuration data for service discovery.
+* Container management.
 
+### Benefits of Using etcd
+
+* Open souce *distributed key-value pair* storage
+* It's the default key-value store for K8s
+* Provides reliable data storage across a cluster of machines
+* Fast; benchmarked at 10k writes per instance
+* Easy to deploy, set up, and use.
+* Provides seamless cluster management across a distributed system
+* Secured by optional SSL client certs for authentication and offers very good documentation.
+
+### Consul KV Overview
+
+* [Consul KV](https://www.consul.io/docs/dynamic-app-config/kv) is a distributed, highly-available system which can be used for service discovery and configuration.
+
+* It also provides features such as:
+
+    * Service discovery in conjunction with DNS or HTTP
+    * Health checks for services and nodes
+    *  Multi-datacenter support
