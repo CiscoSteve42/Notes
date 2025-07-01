@@ -2442,4 +2442,21 @@ Tools for Cloud Infrastructure: Key-Value Pair Store
 
 ### ZooKeeper Overview
 
+* [ZooKeeper](https://zookeeper.apache.org/) is a centralized service for maintaining configuration information, providing distributed synchronization together with group services for distributed applications.
+
+### Use cases
+
+* To implement node coordination in a clustered environment.
+* To manage cloud node memberships while coordinating distributed jobs.
+* As a backing store for distributed and scalable data structures.
+* Election of a High Availability leader.
+* As light-weight failover and load balancing manager.
+
+### Benefits of Using ZooKeeper
+
+* It offers a hierarchical key-value store for distributed systems.
+* It is the default key-value store for Apache Mesos.
+* It supports high availability through redundant services.
+* Its nodes store data in a hierarchical namespace, similar to a filesystem or a tree data structure.
+* It manages updates in an ordered fashion by behaving like an atomic broadcast system.
 
