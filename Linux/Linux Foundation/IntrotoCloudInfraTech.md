@@ -2480,4 +2480,12 @@ Tools for Cloud Infrastructure: Image Building
 
 ### Multi-Stage Dockerfile
 
+* [multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/) are very useful for optimizing the Dockerfiles and minimizing the size of a container image.
 
+* We create a new Docker image in every stage, every stage can copy files from images created either in earlier stages or from already available images.
+
+### Containerfile and Dockerfile
+
+* A custom container image can be created with Podman by starting a container from a base image and, after making the required changes, you can use the `podman commit` command to save it to persistent storage, resulting in a new container image.
+
+* Like Docker, Podman can read instructions from a text file, and then generate the requested image.
