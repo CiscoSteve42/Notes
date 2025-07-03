@@ -2491,3 +2491,53 @@ Tools for Cloud Infrastructure: Image Building
 * Like Docker, Podman can read instructions from a text file, and then generate the requested image. Internally, it creates a container after each instruction and then commits it to persistent storage. The file can either be a [Containerfile](https://www.mankier.com/5/Containerfile) or a Dockerfile, offering more flexibility.
 
 * The `podman build` command is ran to build the container images from a Containerfile or Dockerfile. 
+
+### Containerfile and Dockerfile (Buildah)
+
+* Same stuff, but you build the Dockerfile or Containerfile with `buildah bud`.
+
+* [Buildah Command Reference](https://github.com/containers/buildah/blob/main/README.md#commands)
+
+### Packer Overview
+
+* [Packer](https://www.packer.io/) is an open source tool for creating VM images from a config file for different platforms. Config files are written using HCL (HashiCorp Config Lang).
+
+### Steps to Create VM Images
+
+* **Building the Base Image** Defined under the `builders` section of the config file, it supports Amazon EC2 (AMI), DigitalOcean, Docker, GCE, Azure, OpenStack, Parallels (PVM), QEMU, VirtualBox (OVF), and VMware (VMX) with other platforms available via plugins. *Parallel builds* allow you to create multiple images to be created from the same template file.
+
+* **Provision the Base Images for Configuration** Once we build the base image, we can then provision it to further configure it and make changes such as installing software, etc. Packer supports different provisioners such as Shell, Ansible, Puppet, and Chef.
+
+* **Perform Optional Post-build Operations** Post-processors allow us to copy/move the resulted machine image to a central repo or create a Vagrant box.
+
+### Benefits of Using Packer
+
+* Its an open source tool for creating VM images from a config file for different platforms.
+* Easy to use
+* It automates the create of machine images from a template. 
+* It provides an extramely fast infrastructure deployment, benefiting both development and production environments.
+* It offers multi-provider portability.
+
+### Image Registries Overview
+
+* After container images have been built and configured, it's good practice to store them in a safe, easy-to-access location, as it helps the CI/CD pipeline with uncomplicated future image retrieval, sharing, and availability.
+
+### Popular Registries
+
+* [ArtifactHub](https://artifacthub.io/) is an open source sandbox project that can store Helm charts, Tekton pipelines, OPA policies, Falco rules, Krew Kubectl plugins, KEDA scalers, CoreDNS plugins, etc.
+
+* [JFrog Artifactory](https://jfrog.com/artifactory/) is a universal artifact manager for Docker container images, Helm charts, OS images, App packages, App dependencies, etc.
+
+* [Docker Hub](https://hub.docker.com/) is a container image registry for Docker.
+
+* [Harbor](https://goharbor.io/) is an open source project that can store container images for K8s and Docker.
+
+* [Quay](https://quay.io/) is a registry service offered by Red Hat that integrates with GitHub and Bitbucket to manage container images for Podman, Docker, and Rkt.
+
+* [Google Container Registry](https://cloud.google.com/container-registry) is a Google Cloud service to manage container images for Docker.
+
+* [Amazon Elastic Container Registry](https://aws.amazon.com/ecr/) is an AWS service to manage container images for Docker, Helm charts, OS images, and K8s addons.
+
+* [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) is a service offered by Microsoft Azure to manage container images for Docker and Helm charts.
+
+* [Skopeo](https://github.com/containers/skopeo)
