@@ -2488,4 +2488,6 @@ Tools for Cloud Infrastructure: Image Building
 
 * A custom container image can be created with Podman by starting a container from a base image and, after making the required changes, you can use the `podman commit` command to save it to persistent storage, resulting in a new container image.
 
-* Like Docker, Podman can read instructions from a text file, and then generate the requested image.
+* Like Docker, Podman can read instructions from a text file, and then generate the requested image. Internally, it creates a container after each instruction and then commits it to persistent storage. The file can either be a [Containerfile](https://www.mankier.com/5/Containerfile) or a Dockerfile, offering more flexibility.
+
+* The `podman build` command is ran to build the container images from a Containerfile or Dockerfile. 
