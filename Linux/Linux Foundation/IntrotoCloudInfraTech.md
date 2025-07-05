@@ -2545,4 +2545,16 @@ Tools for Cloud Infrastructure: Image Building
 Tools for Cloud Infrastucture: Debugging, Logging, and Monitoring for Containerized Applications
 ----------------------------------------
 
+* Tools for debugging, monitoring, and logging that we should be familiar with:
 
+    * strace
+    * SAR (System Activity Reporter)
+    * tcpdump
+    * GDB (GNU Project Debugger)
+    * syslog
+    * Nagios
+    * Zabbix
+
+* We can use the same tools on bare metal and VMs, but containers bring additional challenges:
+
+    * Containers are ephemeral, so when they're deleted all of their metadata is also deleted (unless it gets stored in an alternate location, like a persistent storage.)
