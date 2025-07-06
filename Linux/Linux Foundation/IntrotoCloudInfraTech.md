@@ -2609,6 +2609,7 @@ Tools for Cloud Infrastucture: Debugging, Logging, and Monitoring for Containeri
 
 * "strace + tcpdump + htop + iftop + lsof + awesome sauce"
 
-* `sudo sysdig --write ~/test.scap`
+* `sudo sysdig -w ~/test.scap` (sysdig will write to the file until you manually end it with Ctrl-C)
+* `sudo sysdig -r ~/test.scap`
 
 * **Sysdig** saves low-level system information from a running Linux instance that can be filtered and further analyzed.
