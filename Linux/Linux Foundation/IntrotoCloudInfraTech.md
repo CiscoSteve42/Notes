@@ -2559,4 +2559,29 @@ Tools for Cloud Infrastucture: Debugging, Logging, and Monitoring for Containeri
 
     * Containers are ephemeral, so when they're deleted all of their metadata is also deleted (unless it gets stored in an alternate location, like a persistent storage.)
 
+    * Containers do not have kernel space components.
+
+    * We want to keep a container's footprint as small as possible, but installing monitoring and debugging tools makes that nearly impossible.
+
+    * Collecting per container stats, debugging information individually, and then analyzing data from multiple containers is a tedious process. 
+
+* Because of this, its beneficial to have external tools for monitoring and logging instead of collecting them directly from indivudal containers. Luckily the container just happens to be running on a host OS (because, like, that's how that works and stuff) that has complete control of the process.
+
+* Once we have collected the dsata from all the containers running on a system or in a cluster, we can run a logical mapping of all collected logs and gain a system/cluster-wide visibility, known as *observability*.
+
+* Tools that we can use for containerized apps:
+
+    * *Debugging*: Docker CLI, K8s CLI, Podman CLI, nerdctl CLI, crictl CLI, Sysdig
+
+    * *Logging*: Docker CLI, Docker Logging Driver, K8s CLI, Podman LI, Podman Logging Driver, nerdctl CLI, crictl CLI
+
+    * *Monitoring*: Docker CLI, K8s CLI, Podman CLI, nerdctl CLI, crictl CLI, Sysdig, cAdvisor, Prometheus, Datadog, New Relic
+
+### Native Features for Container Debugging
+
+* **Debugging**
+
+* **Logging**
+
+* **Monitoring**
 
