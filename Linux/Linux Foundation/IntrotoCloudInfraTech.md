@@ -2643,4 +2643,32 @@ Tools for Cloud Infrastucture: Debugging, Logging, and Monitoring for Containeri
 
 ### Using cAdvisor
 
+* You can use the following command to spin up a cAdvisor container that you can access at [127.0.0.1:8080]:
+```bash
+sudo docker run \
+  --volume=/:/rootfs:ro \
+  --volume=/var/run:/var/run:ro \
+  --volume=/sys:/sys:ro \
+  --volume=/var/lib/docker/:/var/lib/docker:ro \
+  --volume=/dev/disk/:/dev/disk:ro \
+  --publish=8080:8080 \
+  --detach=true \
+  --name=cadvisor \
+  --privileged \
+  --device=/dev/kmsg \
+  gcr.io/cadvisor/cadvisor:latest
+```
+
+* cAdvisor exposes container stats via a versioned remote REST API. It also supports exporting stats for [InfluxDB](https://www.influxdata.com/products/influxdb-overview/). cAdvisor exposes statistics as [Prometheus metrics](https://prometheus.io/).
+
+### Elasticsearch Overview
+
+* [Elasticsearch](https://www.elastic.co/elasticsearch/) is the distributed search and analytics engine at the core of the [Elastic Stack](https://www.elastic.co/elastic-stack). It is responsible for data indexing, search, and analysis.
+
+* [Kibana](https://www.elastic.co/kibana) is an interface that enables interactive data visualization while providing insights into the data.
+
+* Elasticsearch provides real-time search and analytics for structured or unstructured text, numerical data, or geospatial data. It is optimized to efficiently store and index data in order to speed up the search process.
+
+### Features and Benefits
+
 
