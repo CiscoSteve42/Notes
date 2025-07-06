@@ -2580,8 +2580,35 @@ Tools for Cloud Infrastucture: Debugging, Logging, and Monitoring for Containeri
 ### Native Features for Container Debugging
 
 * **Debugging**
+    
+    * `docker inspect`
+    * `podman inspect`
+    * `nerdctl inspect`
+    * `crictl inspect`
 
 * **Logging**
 
+    * `docker logs`
+    * `podman logs`
+    * `nerdctl logs`
+    * `crictl logs`
+    * [**Docker Logging Drivers**](https://docs.docker.com/config/containers/logging/configure/) With the logging driver, we can choose a Docker daemon-wide or per-container logging policy. Depending on the policy, Docker forwars the logs to the corresponding drivers. Docker supports several [drivers](https://docs.docker.com/config/containers/logging/configure/#supported-logging-drivers) SUCH AS jsonfile, syslog, jounald, gelf (Graylog Extended Log Format), fluentd, awslogs, and splunk. Once the logs are saved in a central location, we can use the tools on them.
+    * **Podman** also supports logging drivers: k8s-file, journald, none, and passthrough, with json-file aliased to k8s-file for scripting compatibility.
+
 * **Monitoring**
 
+    * `docker stats`
+    * `podman stats`
+    * `nerdctl stats`
+    * `crictl stats`
+    * `docker top`
+    * `podman top`
+    * `nerdctl top`
+
+### Sysdig Overview
+
+* "strace + tcpdump + htop + iftop + lsof + awesome sauce"
+
+* `sudo sysdig --write ~/test.scap`
+
+* **Sysdig** saves low-level system information from a running Linux instance that can be filtered and further analyzed.
