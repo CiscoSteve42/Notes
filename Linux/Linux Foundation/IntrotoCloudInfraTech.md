@@ -2613,3 +2613,34 @@ Tools for Cloud Infrastucture: Debugging, Logging, and Monitoring for Containeri
 * `sudo sysdig -r ~/test.scap`
 
 * **Sysdig** saves low-level system information from a running Linux instance that can be filtered and further analyzed.
+
+* **Sysdig Monitor** is a paid offering that provides full-stack monitoring and alerting in addition to the open source version, together with a dashboard and Prometheus compatibility.
+
+* **Sysdig Secure** another paid offering that can identify vulnerabilities, check compliance, block threats, and improve response time.
+
+* A Sysdig agent needs to be installed on all the nodes if we want to collect the info at a central location. In addition, a kernel component has to be installed in order to capture system calls and OS events.
+
+### Features of Sysdig Tools
+
+* Native support to many apps, infrastructure, and container technologies, such as Docker, K8s, Mesos, AWS, and GCP.
+* Paid offerings provide alerting, dashboard, and team management.
+* They offer a programmatic interface with every part of Sysdig Monitor.
+
+### Benefits of Sysdig Tools
+
+* The tools capture low-level system info from the running Linux instance and containers.
+* Native support for all Linux container technologies such as Docker and LXC.
+* Easy to install.
+* Built to run in production, minimizing performance overhead and the risk of crashes.
+* K8s-aware 
+* Provides security for containers, K8s and cloud infrastructure through DevSecOps.
+
+### cAdvisor Overview
+
+* [cAdvisor (Container Advisor)](https://github.com/google/cadvisor/) is an open source tool to collect resource usage and performance characteristics for the host system and running containers.
+
+* It collects, aggregates, processes, and exports info about running containers. Supports Docker and other container runtimes out of the box.
+
+### Using cAdvisor
+
+
