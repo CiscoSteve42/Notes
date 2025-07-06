@@ -2671,4 +2671,26 @@ sudo docker run \
 
 ### Features and Benefits
 
+* Its a distributed solution that is scalable, highly available, supporting cross-cluster and cross-datacenter replication.
+
+* It offers a variety of management tools and APIs to allow control over data, users, cluster operations, snapshots, and restores.
+
+* It secures both the access methods to data through encryption and the data itself.
+
+* It provides alerts when certain changes have been identified in the data.
+
+* It supports a variety of clients in addition to the standard RESTful APIs and JSON, such as Java, Python, SQL, and PHP.
+
+* Its functionality can be extended through plugins.
+
+* It can be deployed in the private, public, or hybrid cloud.
+
+* It supports tools that allow for data to be ingested and enriched through analyzers, tokenizers, and filtering.
+
+* It supports a variety of data types, such as text, numbers, vectors, histograms, data and time series, structured, and unstructured data.
+
+* It supports advanced searching mechanisms, analytics, aggregation, machine learning, and alerting.
+
+### Fluentd Overview
+
 
