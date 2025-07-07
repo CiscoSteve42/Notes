@@ -2762,4 +2762,24 @@ sudo docker run \
 
 ### Splunk Overview
 
+* [Splunk](https://www.splunk.com/) includes a family of products aiming to deliver highly scalable and fast real-time insight into enterprise data. It allows for data aggregation and analysis, with unique investigative methods.
+
+* It can be deployed on-prem or in the public cloud, while also capable to scale across many data sources. 
+
+* It provides highly customizable, interactive dashboards to visualize data and set up actions/alerts.
+
+### Features and Benefits
+
+* Easy data aggregation and analysis.
+
+* Reliable and can be deployed securely in the cloud as a highly scalable service.
+
+* It supports real-time data streaming while collecting, processing, and distributing the data.
+
+* Support for advanced features such as custom access control, performance acceleration, high availibility, and clustering as part of the Enterprise and Cloud platforms.
+
+* Enables DevSecOps through automation and orchestration of security threat detection, weakness discovery, and countering workflows.
+
+### OpenTelemetry Overview
+
 
