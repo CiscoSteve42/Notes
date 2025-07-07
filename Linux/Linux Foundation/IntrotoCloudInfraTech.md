@@ -2802,4 +2802,22 @@ sudo docker run \
 
 ### Dynatrace Overview
 
+* [Dynatrace Overview](https://www.dynatrace.com/) offers an AI-powered unified platform for observability, automation, and security that monitors on-prem infrastructure, hybrid and public clouds, microservices, and containers.
+
+* It optimizes DevOps and DevSecOps activities by optimizing the integration between AI and K8s to secure cloud native pipelines.
+
+* *Dynatrace OneAgent* provides out-of-the-box solutions for several cloud and K8s environments:
+
+    * **AWS** in conjunction with Keptn provides observability into EC2, ECS, Lambda, Fargate, EKS, ElastiCache, ElasticSearch, DynamoDB, VPC, EBS, S3, AWS Outposts, CloudWatch, AND MORE!
+
+    * **Azure** intelligent monitoring and auto-discovery of cloud services, App Service, FUnctions, HDinsight, Web Apps, Blockchain, AKS, Databases, etc.
+
+    * **GCP**
+
+    * **K8s**
+
+    * **OpenShift**
+
+    * **VMware Tanzu**
+
 
