@@ -2693,5 +2693,46 @@ sudo docker run \
 
 ### Fluentd Overview
 
+* [Fluentd](http://www.fluentd.org/) is:
+
+    * *"an open source data collector, which lets us unify the data collection and consumption for a better use and understanding of data.""*
+
+* Fluentd tries to structure the data in JSON as *MUCH* as possible. It supports [Over 9000 plugins](https://www.fluentd.org/plugins) to connect input sources to output sources, after performing filtering, buffering, and routing.
+
+### Docker Support for Fluentd
+
+* Docker supports [logging drivers](https://docs.docker.com/config/containers/logging/configure/), and Fluentd is one of them.
+
+* We can either configure the logging driver for the Docker daemon or specify it while starting a container.
+
+### Benefits of using Fluentd
+
+* It's an open source data collector.
+* Simple, fast, and flexible.
+* Performant and dev-friendly.
+
+### Datadog Overview
+
+* [Datadog](https://www.datadoghq.com/) provides monitoring and analytics with integrated security as a service for DevOps.
+
+* Through it's wide array of products, the Datadog platform can monitor the performance and security of the infrastructure, network devices, network performance, cloud workloads, databases, and entire CI environment. 
+
+* Systems, apps, and services it connects to are:
+
+    * Amazon EC2
+    * Apache
+    * Java
+    * MySQL
+    * CentOS
+
+* [At least 100 integrations](https://www.datadoghq.com/product/integrations/#all) can be found in the official documentation. We need to install an agent in the host system, which sends the data to the Datadog's server. Once the data is sent, we can:
+
+    * Build an interactive dashboard.
+    * Search and correlate matrices and events.
+    * Share the matrices and events.
+    * Receive alerts.
+
+### K8s Monitoring for Containers with Datadog
+
 
 
