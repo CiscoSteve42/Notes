@@ -2732,7 +2732,34 @@ sudo docker run \
     * Share the matrices and events.
     * Receive alerts.
 
-### K8s Monitoring for Containers with Datadog
+### Benefits of Using Datadog
 
+* It enables DevSecOps through a full stack of automated security threat detection and incident response workflows.
+* It comes pre-integrated with well-known third-party applications.
+* It provides a seamless workflow, regardless of platform, location, or language.
+* It configures information filtration to get only needed metrics.
+* It allows us to enable the system to send alerts or notifications when serious issues arise.
+* It offers tools for team collaboration.
+* It is scalable.
+
+### Prometheus Overview
+
+* [Prometheus](https://prometheus.io/) is an open source tool used for system monitoring and alerting. It was oriinally developed by SoundCloud and is now one of the graduated projects at the CNCF.
+
+* Prometheus is suitable for recording any purely numeric time-series data. It works well for both machine-centric monitoring like CPU, memory usage, and monitoring of highly dynamic service-oriented architectures.
+
+* It is primarily written in [Go](https://go.dev/)
+
+### Prometheus Features
+
+* Very reliable.
+* It supports multi-dimensional [data model](https://prometheus.io/docs/concepts/data_model/)
+* It supports a [query language](https://prometheus.io/docs/prometheus/latest/querying/basics/) to effectively query the collected time series data.
+* It supports metrics collection through a pull and push-based mechanism. (I think that's what they were trying to say, I almost had a stroke reading the actual bullet.)
+* It can discover target endpoints via service discovery or static configuration.
+* It can connect with external tools like Grafana and [PagerDuty](https://www.pagerduty.com/).
+* It supports [client libraries](https://prometheus.io/docs/instrumenting/clientlibs/) for programming languages like Go, Java, Python, Ruby, and Rust to add instrumentation to their code.
+
+### Splunk Overview
 
 
