@@ -2812,12 +2812,12 @@ sudo docker run \
 
     * **Azure** intelligent monitoring and auto-discovery of cloud services, App Service, FUnctions, HDinsight, Web Apps, Blockchain, AKS, Databases, etc.
 
-    * **GCP**
+    * **GCP** automated full stack monitoring of GCE, GKE, Anthos, and other services with the help of Keptn.
 
-    * **K8s**
+    * **K8s** the OneAgent Operator deploys Dynatrace to all cluster nodes to enable real-time discovery and observability from the infrastructure and environment to nodes, pods, containers, and microservices.
 
-    * **OpenShift**
+    * **OpenShift** the OneAgent Operator introduces CRI-O and Docker container monitoring at scale.
 
-    * **VMware Tanzu**
+    * **VMware Tanzu** In conjunction with Keptn provides real-time observabilty of VMware's Tanzu Application Services (TAS) and Tanzu K8s Grid (TKG) microservices and containerized processes.
 
-
+* [Keptn](https://keptn.sh/)
