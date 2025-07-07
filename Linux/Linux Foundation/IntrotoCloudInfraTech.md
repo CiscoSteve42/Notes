@@ -2782,4 +2782,24 @@ sudo docker run \
 
 ### OpenTelemetry Overview
 
+* [OpenTelemetry](https://opentelemetry.io/) is a set of tools, APIs, and SDKs that can be used to enable observability. 
+
+* It can create, retrieve, and export metrics, logs, and traces to help with software's performance and behavior analysis.
+
+* [OpenTelemetry Documentation](https://opentelemetry.io/docs/)
+
+* OpenTelemetry's core architectural component is a *Collector*, which is a vendor-agnostic single code base agent supporting telemetry data formats from Jaeger, Prometheus, Fluent Bit, etc.
+
+* It supports a wide variety of languages such as .NET, C++, Java, JS, Go, Python, PHP, Ruby, Rust, etc.
+
+### Features and Benefits
+
+* Open source and vendor-agnostic.
+* Supports many programming languages.
+* Supports many telemetry data formats from open source tools.
+* Relies on a Collector agent that requires to be deployed on each host of the desired environment.
+* Provides end-to-end creation, collection, process and export of metrics, logs, and trace data.
+
+### Dynatrace Overview
+
 
