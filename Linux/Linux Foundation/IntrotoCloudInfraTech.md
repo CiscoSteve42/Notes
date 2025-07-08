@@ -2820,4 +2820,42 @@ sudo docker run \
 
     * **VMware Tanzu** In conjunction with Keptn provides real-time observabilty of VMware's Tanzu Application Services (TAS) and Tanzu K8s Grid (TKG) microservices and containerized processes.
 
-* [Keptn](https://keptn.sh/)
+* [Keptn](https://keptn.sh/) is an open source project designed with GitOps in mind, aiming to automate cloud native software delivery operations for devs and SREs.
+
+### Features and Benefits
+
+* It automates cloud operations through the help of AI.
+* It enables cloud native DevOps CI pipelines.
+* Its optimized for dynamic containerized microservices and it natively supports the upstream K8s and its distributions.
+* Reliable and can be deployed securely in the public cloud, hybrid cloud, on prem, and edge of IoT for monitoring.
+* It uses Keptn to implement GitOps.
+
+
+Service Mesh 
+------------
+
+* *Service mesh* is a network communication infrastructure layer for a microservices-based app. When multiple microservices are communicating with each other, a service mesh allows us to decouple resilient communication patterns such as circuit breakers and timeouts from the application code.
+
+### Features and Implementation of Service Mesh
+
+* **Communication**
+
+* **Circuit Breakers**
+
+* **Routing**
+
+* **Retries and Timeouts**
+
+* **Service Discovery**
+
+* **Observability**
+
+* **Authentication and Authorization**
+
+* **TLS Encryption**
+
+
+
+
+
+
