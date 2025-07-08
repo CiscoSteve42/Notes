@@ -2840,19 +2840,21 @@ Service Mesh
 
 * **Communication** it provides flexible, reliable, and fast communication between various instances.
 
-* **Circuit Breakers**
+* **Circuit Breakers** restricts traffic to unhealthy service instances.
 
-* **Routing**
+* **Routing** passes a REST request for `/foo` from the local service instance to which the service is connected.
 
-* **Retries and Timeouts**
+* **Retries and Timeouts** it can automatically retry requests on certain failures and can time out requests after a specific period.
 
-* **Service Discovery**
+* **Service Discovery** it discovers healthy, available instances of services.
 
-* **Observability**
+* **Observability** it monitors latency, traces traffic flow, and generates access logs.
 
-* **Authentication and Authorization**
+* **Authentication and Authorization** it cawn authenticate and authorize incoming requests.
 
-* **TLS Encryption**
+* **TLS Encryption** it can secure service-to-service communication using TLS.
+
+### Data Plan and Control Plane
 
 
 
