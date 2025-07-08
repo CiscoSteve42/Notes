@@ -2864,6 +2864,39 @@ Service Mesh
 
 * [Consul](https://www.consul.io/) is an open source project aiming to provide a secure multi-cloud service networking through automated network configuration and service discovery.
 
+### Features and Benefits
+
+* Open source
+
+* Supports the Envoy proxy
+
+* Supports communication between services deployed across peered clusters through gateway proxies.
+
+* It can be deployed on any runtime or infrastructure (bare metal, VMs, any cloud, and K8s clusters.)
+
+* Deploys easily on K8s through Helm, and is injected as a sidecar container in K8s objects.
+
+* Integrates with CI/CD tools
+
+* Provides dynamic load balancing, service discovery, health checking, and reduced downtimes.
+
+* Provides good monitoring using statistics, logging, and distributed tracing.
+
+* Provides mTLS communication encryption between resources.
+
+### Envoy Overview
+
+* [Envoy](https://www.envoyproxy.io/) is an open source project that provides an L7 proxy and communication bus for large, modern, service-oriented architectures.
+
+### Features and Benefits
+
+* Open source
+
+* Makes the network transparent to applications.
+
+* Can be run alongside any lang or runtime.
+
+* Supports HTTP/2 and gRPC for both incoming and outgoing connections.
 
 
 
