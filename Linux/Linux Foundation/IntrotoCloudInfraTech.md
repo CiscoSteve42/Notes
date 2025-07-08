@@ -2856,7 +2856,13 @@ Service Mesh
 
 ### Data Plan and Control Plane
 
+* **Service Mesh Data Plane** touches every packet on the system.
 
+* **Service Mesh Control Plane** provides policy and configuration for the Data Plane. 
+
+### Consul Overview
+
+* [Consul](https://www.consul.io/) is an open source project aiming to provide a secure multi-cloud service networking through automated network configuration and service discovery.
 
 
 
