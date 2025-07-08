@@ -2838,7 +2838,7 @@ Service Mesh
 
 ### Features and Implementation of Service Mesh
 
-* **Communication**
+* **Communication** it provides flexible, reliable, and fast communication between various instances.
 
 * **Circuit Breakers**
 
