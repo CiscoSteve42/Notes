@@ -2952,3 +2952,23 @@ Service Mesh
 
 * [Linkerd](https://linkerd.io/) is an open source network proxy designed for K8s.
 
+* The Linkerd data plane is implemented by the Linkerd2-proxy, a micro-proxy designed to be lighter and less complex than Envoy proxy.
+
+### Features and Benefits
+
+* Open source.
+* It can be run on different platforms (bare-metal, VMs, or containers running in a K8s cluster.)
+* Fast, scalable, performant.
+* It implements it's own transparent micro-proxy that runs alongside existing applications and integrates with the existing infrastructure.
+* It supports cross-cluster traffic management.
+* Integrates with most service discovery systems.
+
+### Traefik Mesh Overview
+
+* [Traefik Mesh](https://traefik.io/traefik-mesh//) is a simple and easy to configure open source service mesh. It provides traffic visibility and management inside of a K8s cluster.
+
+* It improves cluster security through monitoring, logging, visibility, and access controls. Communication monitoring and tracing also help with traffic optimization and increased app performance.
+
+* It is able to reveal underutilized resources, or overloaded services, which helps with proper resource allocation.
+
+
