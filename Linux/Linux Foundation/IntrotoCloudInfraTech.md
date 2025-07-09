@@ -2938,4 +2938,17 @@ Service Mesh
 
 * **Universal Mode** Installed on a Linux-compatible system such as MacOS, VMs, or bare metal, including containers built
 
-* **K8s Mode**
+* **K8s Mode** When deployed on K8s, Kuma stores it's state and config directoly on the K8s API Server, which injects a proxy sidecar into desired Pods.
+
+### Features and Benefits
+
+* Universal, K8s-native, and platform-agnostic because it runs on bare-metal, VMs, and K8s.
+* Easy to use and automate.
+* Simple to deploy on any supported platform.
+* Built on top of the Envoy proxy.
+* Supports cluster or zone ingress and optional egress through dedicated proxies which act as traffic management gateways.
+
+### Linkerd Overview
+
+* [Linkerd](https://linkerd.io/) is an open source network proxy designed for K8s.
+
