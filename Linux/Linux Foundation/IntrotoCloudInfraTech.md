@@ -2926,4 +2926,16 @@ Service Mesh
 
 ### Kuma Overview
 
+* [Kuma](https://kuma.io/) is a platform-agnostic, modern and universal open source control plane for Service Mesh that can easily be set up on VMs, K8s, or bare-metal.
 
+### Kuma Architecture
+
+* **Control-Plane** Kuma is a control plane that creates and configures policies that mange services within the Service Mesh.
+
+* **Data-Plane** Implemented on top of the ENvoy proxy, runs as an instance together with every service to process incoming and outgoing requests.
+
+### Kuma Modes
+
+* **Universal Mode**
+
+* **K8s Mode**
