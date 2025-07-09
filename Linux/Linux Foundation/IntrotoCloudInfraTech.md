@@ -2936,6 +2936,6 @@ Service Mesh
 
 ### Kuma Modes
 
-* **Universal Mode**
+* **Universal Mode** Installed on a Linux-compatible system such as MacOS, VMs, or bare metal, including containers built
 
 * **K8s Mode**
