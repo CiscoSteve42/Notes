@@ -2902,6 +2902,28 @@ Service Mesh
 
 * [Istio](https://istio.io/) is one of the most popular service mesh solutions.
 
-* **Data Plane**
+* **Data Plane** is composed of a set of Envoy proxies deployed as sidecars to provide a medium for communication and to control all network communication between microservices. 
 
-* **Control Plane**
+* **Control Plane** manages and configures proxies to route traffic, enforces policies at runtime, and collects telemetry. Includes the Citadel, Gallery, and Pilot.
+
+### Istio Components
+
+* **Envoy Proxy** Istio uses an extended version of the Envoy proxy, using which it implements features like dynamic service discovery, load balancing, TLS termination, circuit breakers, health checks, etc. Envoy is deployed as sidecars.
+
+* **Istiod** Provides service discovery, configuration, and certificate management.
+
+### Features and Benefits
+
+* Traffic control to enforce fine-grained traffic control with rich routing rules and automatic load balancing for HTTP, gRPC, WebSocket, and TCP traffic.
+
+* Internal and External Gateway support for ingress and egress traffic management.
+
+* Network resiliency to set up retries, failovers, circuit breakers, and fault injection.
+
+* Security and authentication to enforce security policies and enforce access control and rate limiting defined through the configuration API.
+
+* Pluggable extensions model based on WebAssembly that allows for custom policy enforcement and telemetry generation for mesh traffic.
+
+### Kuma Overview
+
+
