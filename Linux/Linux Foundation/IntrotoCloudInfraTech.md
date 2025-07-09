@@ -2891,12 +2891,17 @@ Service Mesh
 ### Features and Benefits
 
 * Open source
-
 * Makes the network transparent to applications.
-
 * Can be run alongside any lang or runtime.
-
 * Supports HTTP/2 and gRPC for both incoming and outgoing connections.
+* Provides all the features of service mesh that we mentioned earlier, like load balancing, service discovery, circuit breakers, etc.
+* Provides good monitoring using statistics.
+* It can provide SSL communication.
 
+### Istio Architecture
 
+* [Istio](https://istio.io/) is one of the most popular service mesh solutions.
 
+* **Data Plane**
+
+* **Control Plane**
