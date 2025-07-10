@@ -2971,4 +2971,18 @@ Service Mesh
 
 * It is able to reveal underutilized resources, or overloaded services, which helps with proper resource allocation.
 
+* Traefik Mesh does not require any sidecar containers to be injected into K8s pods. Instead, it routes through proxy endpoints, called *mesh controllers*, that run on each node as dedicated pods.
 
+### Features and Benefits
+
+* Open source and prevents vendor lock-in.
+* Easy to install and non-invasive (no sidecar container injections.)
+* Supports OpenTracing and metrics through Prometheus and Grafana.
+* Supports HTTP, HTTP/2, native gRPC, Websockets, and TCP connection routing.
+* Supports weighted round-robin load balancing and canary deployments.
+* Offers resiliency with automated retries and failover, together with circuit breaker mechanisms and rate limits.
+* Secured by access control policies.
+
+### Tanzu Service Mesh Overview
+
+* [Tanzu Service Mesh](https://tanzu.vmware.com/service-mesh) is an enterprise-class service mesh that aims to simplify the connectivity, security, and monitoring of apps on any runtime and on any cloud. 
