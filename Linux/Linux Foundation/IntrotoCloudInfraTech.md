@@ -2985,4 +2985,23 @@ Service Mesh
 
 ### Tanzu Service Mesh Overview
 
-* [Tanzu Service Mesh](https://tanzu.vmware.com/service-mesh) is an enterprise-class service mesh that aims to simplify the connectivity, security, and monitoring of apps on any runtime and on any cloud. 
+* [Tanzu Service Mesh](https://tanzu.vmware.com/service-mesh) is an enterprise-class service mesh that aims to simplify the connectivity, security, and monitoring of apps on any runtime and on any cloud.
+
+* It consistently connects and secures apps running on all K8s multi-clusters and mutli-cloud environments.
+
+* **Global Namespaces (GNS)** further isolate apps from their K8s cluster namespace and networking, which helps the apps securely stretch across clusters and clouds. GNS introduce consistency in traffic routing, app resiliency, and security policies for applications across clouds.
+
+### Features and Benefits
+
+* Simplifies the service mesh lifecycle management through cross-platform portability.
+* Offers cross-cloud obserability of communication between users, data, and services.
+* Offers a unified policy to manage multi-cluster mesh topologies through federation.
+* Normalizes the communication infrastructure across multi-clouds.
+* Utilizes global namespaces for portabliity and isolation.
+* Allows users to manage and configure failover and service behavior policies.
+* Implements athe security and autiting of services running on multi-clouds.
+
+### Meshery Overview
+
+
+
