@@ -3003,5 +3003,45 @@ Service Mesh
 
 ### Meshery Overview
 
+* [Meshery](https://meshery.io/) is an open source, cloud native multi-cluster K8s manager.
+
+* It adds a Management plane on top of the existing Control and Data planes of typical service mesh implementations. It provides federation, backend system integration, expanded policy and governance, CD integration, workflow, chaos engineering, and app performance tuning.
+
+### Features and Benefits
+
+* Open source.
+* Runs in containers on Docker hosts or K8s
+* Manages service mesh deployments.
+* Manages K8s clusters, their infrastructure, and hosted apps and services with the help of over 200 integrations.
+* It provides a web UI that supports graphical design of cloud native artifacts.
+
+
+IoT
+---
+
+* Intarwebz of stuff
+
+### IoT Use Cases
+
+* **Consumer Applications**
+* **Infrastructure**
+* **Manufacturing**
+* **Agriculture**
+* **Energy Management**
+* **Environmental Monitoring**
+* **Medical and Healthcare**
+
+### Network for IoT
+
+* **Short-range Wireless**
+
+* **Medium-range Wireless**
+
+* **Long-range Wireless**
+
+* **Wired**
+
+
+
 
 
