@@ -3143,10 +3143,56 @@ Serverless Computing
 
 ### Google Cloud functions
 
+* [Google Cloud Functions](https://cloud.google.com/functions/) is essentially a FaaS (Function-as-a-Service).
 
+* [App Engine](https://cloud.google.com/appengine) allows users to build highly scalable apps on a fully managed serverless platform. It supports many different languages through custom runtime support. Scalability and fleibility are achieved by encapsulating the apps in Docker containers.
 
+* [Cloud Run](https://cloud.google.com/run) is a managed compute platform for fast and secure deployment and scaling of containerized apps. Supports many langs and improves the dev experience by integrating with services such as Cloud Code, Cloud Build, Cloud Monitoring, and CLoud Logging. Also enables app portability by implementing the Knative open standard and supporting the Docker runtime.
 
+* Google Cloud Functions can be written in Node.js, Python, Go, or Java and can be executed on Debian or Ubuntu systems on GCP.
 
+### Features and Benefits
 
+* **Integrating with other Google and AWS services** Connects well with GCP, Firebase, Google Assistant, Cloud Storage, Cloud Firestone, IoT Core, and Cloud VIsion API. Also connects with Amazon Simple Notification Service (SNS).
+
+* **Supports JS, Python, Go, and Java**
+
+### Azure Functions
+
+* [Azure Functions](https://azure.microsoft.com/en-us/services/functions/) is Microsoft doing the thing, along with Serverless K8s and Serverless app environments.
+
+* *Azure Functions* offers an event-driven environment. Available as a managed service in Azure and Azure Stack, but also works on K8s, Azure IoT Edge, on-prem, and other clouds.
+
+* *Serverless K8s* allows users to create serverless, K8s-based apps orchestrated with Azure K8s Serveice (AKS) and AKS virtual nodes.
+
+* *Azure Container Apps* allow containerized app deployments without infrastucture management.
+
+* *Serverless application environments* allow the running and scaling of web, mobile, and API apps on any platform of your choice through Azure App Service.
+
+* [Azure App Service](https://azure.microsoft.com/en-us/products/app-service/) is a thing.
+
+* Azure Functions supports apps and functions in C#, JS/TS, F#, Java, Python, and PowerShell.
+
+### Features and Benefits
+
+* **Integration with other Azure services**
+
+* **Bring your own dependencies** supports NPM and [NuGet](https://azure.microsoft.com/en-us/products/app-service/)
+
+* **Integrated security** Provides OAuth security for HTTP-triggered functions with OAuth providers such as Azure Acive Directory, Facebook, Google, Twitter, and Microsoft Account.
+
+* **Open source** Open source runtime.
+
+### Projects That Use Containers to Execute Serverless Apps
+
+* **Azure Container Instances**
+
+* **AWS Fargate**
+
+* **Fission**
+
+* **Fn Project**
+
+* **Virtual Kubelet**
 
 
