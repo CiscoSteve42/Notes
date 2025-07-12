@@ -128,4 +128,6 @@ K8s Features
 
 * **IPv4/IPv6 dual-stack** Kubernetes supports both IPv4 and IPv6 addresses.
 
+### Why Use K8s?
+
 
