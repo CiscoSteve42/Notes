@@ -3185,14 +3185,47 @@ Serverless Computing
 
 ### Projects That Use Containers to Execute Serverless Apps
 
-* **Azure Container Instances**
+* [**Azure Container Instances**](https://azure.microsoft.com/en-in/services/container-instances/) allows users to run containers without managing servers by providing hypervisor isolation for each container group to ensure containers run in isolation without sharing a kernel.
 
-* **AWS Fargate**
+* [**AWS Fargate**](https://aws.amazon.com/fargate/) runs containers on Amazon ECS and EKS services. 
 
-* **Fission**
+* [**Fission**](https://fission.io/) is an open source project from Platform9, which provides a serverless FaaS framework on K8s.
 
-* **Fn Project**
+* [**Fn Project**](https://fnproject.io/) is an open source container-native serverless platform that runs on any platform (local or cloud).
 
-* **Virtual Kubelet**
+* [**Virtual Kubelet**](https://virtual-kubelet.io/) connects K8s to other APIs (including ACI, Fargate, and IoT Edge) and masquerades as K8s nodes.
+
+### Knative
+
+* [Knative](https://knative.dev/docs/) is an open source platform based on K8s that allows for the deployment and management of serverless apps. Portable and runs on any K8s distro without vendor lock-in.
+
+* It's implemented in the form of controllers that get installed on the K8s cluster and then registers custom API resources with the K8s API Server.
+
+* Flexible and supports plugins for logging, monitoring, networking, and service mesh. Can be used with popular tools/frameworks such as Django, Ruby on Rails, and Spring.
+
+* Open source with commercial products available such as Google Cloud Run, Managed Knative for IBM Cloud K8s Service, and OpenShift Serverless.
+
+* Key Features:
+
+    * **Serving** it runs serverless apps in containers on K8s. Automates the networking, ingress, scaling, app deployment rollout and revisions, logging, and monitoring.
+
+    * **Eventing** Allows apps to publish and subscribe to event streams such as Kafka or Google Cloud Pub/Sub.
+
+### OpenFaaS
+
+* [OpenFaaS](https://www.openfaas.com/) is an open source project that aims to simplify functions and code deployment directly to K8s, OpenShift, or Docker Swarm.
+
+* It is easy to use through a web portal or one-click install.
+* Supports functions written in any lang for both Linux and Windows.
+* Support functions packaged in Docker/OCI image format.
+* Portable, runs on bare-metal, VMs, or in the cloud.
+* K8s, OpenShift, and Docker Swarm native.
+* Includes a YAML friendly CLI tool to build functions.
+* Auto-scales on demand.
+
+
+Distributed Tracing
+-------------------
+
 
 
