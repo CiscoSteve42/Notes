@@ -3227,5 +3227,11 @@ Serverless Computing
 Distributed Tracing
 -------------------
 
+* **Observability** is visibility of the entire system. Full observability is achieved through metrics, logs, and *distributed tracing*.
+
+* [OpenTelemetry](https://opentelemetry.io/) offers consistent, expressive, vendor-neutral APIs.
+
+### Tracing with OpenTelemetry
+
 
 
