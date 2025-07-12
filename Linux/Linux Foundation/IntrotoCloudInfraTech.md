@@ -3098,12 +3098,55 @@ Serverless Computing
 
 ### Drawbacks of Serverless computing
 
-* **Vendor Lock-In**
+* **Vendor Lock-In** Serverless features and implementation vary from vendor to vendor, so the same app/function may not behave in the same way if you change providers, which can incur additional expenses.
 
-* **Multitenancy and Security**
+* **Multitenancy and Security** You can not be sure what other apps/functions run alongside yours, which raises concerns.
 
-* **Performance**
+* **Performance** If the app is not in use, the service provider can take it down, which will affect performance.
 
-* **Resource Limits**
+* **Resource Limits** Cloud providers set resource limits for serverless apps/functions, therefore it is safer to not run high-performance or resource-intensive workloads using serverless solutions.
 
-* **Monitoring and Debugging**
+* **Monitoring and Debugging** It is more challenging to monitor serverless apps compared to apps running on traditional servers.
+
+### AWS Lambda Overview
+
+* [AWS Lambda](https://aws.amazon.com/lambda/) can be triggered in many different ways, such as a HTTP request, a new doc upload to S3, a scheduled job, an AWS Kinesis data stream, a notification from AWS Simple Notification Serice, or a REST API call through the Amazon API Gateway.
+
+* AWS Lambda natively supports the following languages:
+
+    * Node.js 
+    * Java
+    * C#
+    * Go 
+    * PowerShell
+    * Python
+    * Ruby
+    * Runtime API for additional language support
+
+* [Firecracker](https://firecracker-microvm.github.io/) virtualization relies on a virtual machine monitor (VMM) that creates microVMs leveraging KVM and is used by AWS to advance the efficiency and speed of Lambda services.
+
+### Features and Benefits
+
+* **Integrating with other AWS services** Provides built-in logging and monitoring through Amazon CloudWatch.
+
+* **Extending other AWS Services** It can provide custom logic to existing AWS resources such as S3 buckets, DynamoDB tables, or Kinesis streams. It can also use Lambda@Edge to run code in response to CloudFront events.
+
+* **Building custom bacckend services** It can create new backend services for apps that can be triggered using the Lambda API.
+
+* **Bringing user's own code** Multi-language support allows users to run and deploy their custom apps with AWS Lambda.
+
+* **Connecting to relational databases** It uses Amazon RDS Proxy to manage concurrent connections to relational databases such as MySqueal and Aurora.
+
+* **Connecting to shared filesystems** It supports secure reads and writes at any scale with the Elastic File System (EFS) for Lambda.
+
+* **Integrating security** It allows for secure access to AWS serviceswith integrated AWS IAM support. It supports VPC, SG, and NACL configurations, and it is HIPAA, ISO, and PCI compliant.
+
+### Google Cloud functions
+
+
+
+
+
+
+
+
