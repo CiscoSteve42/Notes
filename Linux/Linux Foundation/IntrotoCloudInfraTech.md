@@ -3279,4 +3279,17 @@ Distributed Tracing
 How to be Successful in the Cloud
 ---------------------------------
 
+* Git gud.
+
+### Developing the Necessary Skills Set 
+
+* Different cloud offerings (IaaS, PaaS, SaaS) and cloud models (public, private, hybrid)
+* Container technologies (Docker, Podman, K8s, Nomad, Swarm) and their ecosystems
+* DevOps, DevSecOps, GitOps
+* CI/CD Pipelines
+* Cloud Native CI/CD 
+* Software Defined Networking and Storage
+* Debugging, Logging, Monitoring, and Telemetry of cloud apps
+
+
 
