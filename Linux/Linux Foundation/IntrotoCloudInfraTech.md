@@ -3034,13 +3034,28 @@ IoT
 ### Network for IoT
 
 * **Short-range Wireless**
+    * [Bluetooth mesh networking](https://en.wikipedia.org/wiki/Bluetooth_mesh_networking)
+    * [Light fidelity (Li-Fi)](https://en.wikipedia.org/wiki/Li-Fi)
+    * [RFID](https://en.wikipedia.org/wiki/Radio-frequency_identification)
+    * [NFC](https://en.wikipedia.org/wiki/Near-field_communication)
+    * Wi-Fi
+    * [Zigbee](https://en.wikipedia.org/wiki/Zigbee)
 
 * **Medium-range Wireless**
+    * [Wi-Fi HaLow](https://en.wikipedia.org/wiki/IEEE_802.11ah)
+    * [LTE Advanced](https://en.wikipedia.org/wiki/LTE_Advanced)
 
 * **Long-range Wireless**
+    * [Low-Power Wide-Area Network (LPWAN)](https://en.wikipedia.org/wiki/LPWAN)
+    * [Very small aperture terminal (VSAT)](https://en.wikipedia.org/wiki/Very-small-aperture_terminal)
 
 * **Wired**
 
+    * Ethernet
+    * [Multimedia over Coax Alliance (MoCA)](https://en.wikipedia.org/wiki/Multimedia_over_Coax_Alliance)
+    * [Power-line communication (PLC)](https://en.wikipedia.org/wiki/Power-line_communication)
+
+### Computing for IoT
 
 
 
