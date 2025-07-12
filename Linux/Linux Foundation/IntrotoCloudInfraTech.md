@@ -3233,5 +3233,50 @@ Distributed Tracing
 
 ### Tracing with OpenTelemetry
 
+* A trace represents the details about a transaction, like how much time it took to call a specific function. It is referred by the directed acyclic graph (DAG) of spans. Each span can be referred to as a timed operation between contiguous segments of work. 
+
+* In distributed tracing, each service would contribute to its own span or set of spans. A parent can start other spans, either in serial or in parallel.
+
+### Language Support for OpenTelemetry
+
+* Go, Python, JS, Java, C#/.NET, Rust, C++, Ruby, PHP
+
+### OpenTelemetry Supported Tracers
+
+* [Jaeger](https://www.jaegertracing.io/) supports Java, Go, JS, Python, C++, and C#.
+* [ServiceNow Cloud Obervability](https://www.servicenow.com/) supports JS, Go, Python, Java, PHP, Objective-C, C++, and Ruby.
+* [Instana](https://www.ibm.com/products/instana) supports Crystal, Java, Go, JS, Ruby, and Python.
+* [Elastic APM](https://www.elastic.co/observability/application-performance-monitoring) supports Java, JS, Python, Ruby, RUM JS, and Go.
+* [Aria by VMware](https://docs.wavefront.com/opentelemetry_overview.html) supports Java, Python, and .NET.
+
+### Jaeger Overview/Architecture
+
+* [Jaeger](https://jaegertracing.io/) is an open source tracer compatible with the OpenTelemetry data model to support spans. I can be used for:
+
+    * Distributed content propagation
+    * Distributed transaction monitoring
+    * Root cause analysis
+    * Service dependency analysis
+    * Performance and latency optimization
+
+* It uses language-specific Instrumentation to generate tracing data.
+
+* Jaeger uses the OpenTelemetry SDK to export and push instrumented tracing data to the Jaeger collector.
+
+* The collector supports [Cassandra](https://www.jaegertracing.io/docs/2.8/deployment/#cassandra) and ElasticSearch as storage backends.
+
+### Features and Benefits
+
+* Open source tracer with native OpenTelemetry support.
+* Deployment to K8s is enabled by a Helm chart, operator, and templates.
+* Support for Java, Go, Python, JS, C++, .NET, and C#.
+* Highly scalable.
+* Supports multiple storage backends.
+* Modern web UI.
+* Observability via Prometheus and other metrics backends.
+
+
+How to be Successful in the Cloud
+---------------------------------
 
 
