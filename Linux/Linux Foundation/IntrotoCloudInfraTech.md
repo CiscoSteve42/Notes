@@ -3057,6 +3057,31 @@ IoT
 
 ### Computing for IoT
 
+* To handle situations such as latency and the sending of unnecessary data, *Distributed Computing Architecture* has evolved to include [edge](https://en.wikipedia.org/wiki/Edge_computing) and [fog](https://en.wikipedia.org/wiki/Fog_computing) computing, which bring computing apps, data, and services away from some central nodes (datacenter) to the other logical extreme (the edge) of the Internet.
 
+### Data Management and Analytics for IoT
+
+* [Apache Hadoop](https://en.wikipedia.org/wiki/Apache_Hadoop)
+
+### IoT Solutions Provided by Different Cloud Providers
+
+* [AWS IoT](https://aws.amazon.com/iot/) services offers a variety of products and services like Amazon FreeRTOS, AWS IoT Core, AWS IoT Device Management, AWS IoT Analytics, AND MORE.
+
+* [Azure IoT](https://azure.microsoft.com/en-us/solutions/iot/) offers services like Azure IoT Hub, Azure IoT Central, and Azure IoT Edge which provides AI, Azure services, and custom logic directly on cross-platform IoT devices.
+
+### IoT Challenges
+
+* **Scale**
+* **Security**
+* **Privacy**
+* **Interoperability**
+
+
+Serverless Computing
+--------------------
+
+* *serverless* is a method of running apps without concernsabout the provisioning of computer servers or any of the compute resources.
+
+### Serverless Computing Overview
 
 
