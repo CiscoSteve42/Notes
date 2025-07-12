@@ -3084,4 +3084,26 @@ Serverless Computing
 
 ### Serverless Computing Overview
 
+* The most common use case of serverless computing is to runany stateless apps like data processing or real-time stream processing, however it can also augment a stateful application. IoT and ChatBots are common use cases of serverless computing.
 
+### Features and Benefits
+
+* **No Server Management** When we use serverless offerings by cloud providers, no server management and capacity planning is required by us, its all handled by the cloud providers.
+
+* **Cost-Effective** We only pay for CPU time when our apps/functions are executed. 
+
+* **Flexible Scaling** We don't need to set up or tune autoscaling as apps are automatically scaled up/down based on demand.
+
+* **Automated High Avaiability and Fault Tolerance** Automatically included by the underlying cloud infrastucture providers. Devs are not required to specifically program for such features.
+
+### Drawbacks of Serverless computing
+
+* **Vendor Lock-In**
+
+* **Multitenancy and Security**
+
+* **Performance**
+
+* **Resource Limits**
+
+* **Monitoring and Debugging**
