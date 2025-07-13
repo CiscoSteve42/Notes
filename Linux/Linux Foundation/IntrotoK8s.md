@@ -9,17 +9,12 @@ Chapter 1
 * **Learning Objectives**
 
     * Explain what a monolith is
-
     * Discuss the monolith's chalenges in the cloud
-
     * Explain the concept of microservices
-
     * Discuss miscroservices advantages in the cloud
-
     * Describe the transformation path from a monolith to microservices
 
-
-### The Legacy Monolith * So basically, a bunch of apps were built without foresight and now maintaining them just kinda sucks. Mainly due to hardware requirements being very specific, they can't be moved to the cloud like a normal ass app. It's old and shitty and needs to be re-written in Rust. ### The Modern Microservice
+### The Modern Microservice
 * Microservices can be deployed individually on separate servers provisioned with fewer resources (only what is required by each service and the host system itself, helping to lower compute resources)
 
 * Microservices-based architecture is aligned with Event-driven Architecture and Service-Oriented Architecture (SOA) principals, where complex apps are composed of small independent processes which communicate through APIs over the network
@@ -44,13 +39,9 @@ Chapter 1
 ### Success Stories
 
 * **AppDirect**
-
 * **box**
-
 * **Crowdfire**
-
 * **GolfNow**
-
 * **Pinterest**
 
 
@@ -65,16 +56,6 @@ Container Orchestration
 
 * Containers encapsulate Microservices and their dependencies but do not run them directly. Containers run container images
 
-
-### What is Container Orchestration?
-
-* Wrong Answers only:
-    
-    * A symphony written for a group of boxes
-
-    * Not whatever the fuck was happening at the Suez Canal
-
-* Ummm sure, anywaayyyys....
 
 Kubernetes
 ----------
