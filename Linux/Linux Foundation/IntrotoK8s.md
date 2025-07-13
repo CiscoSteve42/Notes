@@ -143,9 +143,17 @@ K8s Architecture
 
 * **Container runtime** CRI-O, containerd, Docker Engine, [Mirantis Container Runtime](https://www.mirantis.com/software/container-runtime/)
 * **Node agent - kubelet** kubelet is an agent running on each node, control plane, and workers. Interacts with runtime and containers in the Pod, monitors health/resources of Pods running containers
-* **kubelet - CRI shims**
-* **Proxy - kube-proxy**
-* **Add-ons**
+* **kubelet - CRI shims** Shims are Container Runtime Interface (CRI) implementations, interfaces, or adapters specific to each container runtime supported by K8s. Examples include cri-containerd, CRI-O, dockershim and cri-dockerd
+* **Proxy - kube-proxy** network agent that runs on each node, control plane, and workers. Responsible for dynamic updates and maintenance of all networking rules on the node. Responsible for TCP, UDP, and SCTP stream forwarding or random forwarding across Pod app backends, implements user defined forwarding rules. Works in conjunction with iptables
+* **Add-ons** 3rd party plugins for DNS, Dashboard, Monitoring, Logging, and Device Plugins (GPU, FPGA, NIC, etc)
+
+### Networking Challenges
+
+* **Container-to-Container communication inside Pods** a *namespace* is an isolated network space created by the container runtime. A network namespace can be shared across containers, or with the host OS
+
+* **Pod-to-Pod communication across nodes**
+
+* **External-to-Pod communication**
 
 
 
