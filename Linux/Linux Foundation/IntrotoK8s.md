@@ -261,5 +261,39 @@ Minikube: Installing Local K8s Clusters
 
 ### Advanced Minkube Features (1)
 
+* Examples:
+```sh 
+$ minikube start --kubernetes-version=v1.27.10 \
+  --driver=podman --profile minipod
+
+$ minikube start --nodes=2 --kubernetes-version=v1.28.1 \
+  --driver=docker --profile doubledocker
+
+$ minikube start --driver=virtualbox --nodes=3 --disk-size=10g \
+  --cpus=2 --memory=6g --kubernetes-version=v1.27.12 --cni=calico \
+  --container-runtime=cri-o -p multivbox
+
+$ minikube start --driver=docker --cpus=6 --memory=8g \
+  --kubernetes-version="1.27.12" -p largedock
+
+$ minikube start --driver=virtualbox -n 3 --container-runtime=containerd \
+  --cni=calico -p minibox
+```
+
+* Once profiles are available, output will look like this:
+```sh 
+$ minikube profile list
+
+|----------|------------|---------|----------------|------|---------|---------|-------|--------|
+| Profile  | VM Driver  | Runtime |       IP       | Port | Version | Status  | Nodes | Active |
+|----------|------------|---------|----------------|------|---------|---------|-------|--------|
+| minibox  | virtualbox | crio    | 192.168.59.101 | 8443 | v1.25.3 | Running |     3 |        |
+| minikube | virtualbox | docker  | 192.168.59.100 | 8443 | v1.25.3 | Running |     1 | *      |
+|----------|------------|---------|----------------|------|---------|---------|-------|--------|
+```
+
+* Target cluster can be set to minibox with `$ minikube profile minibox` and back to minikube with `$ minikube profile minikube` OR `# minikube profile default`
+
+### Advanced Minikube Features (2)
 
 
