@@ -140,4 +140,35 @@ K8s Architecture
 
 ### Control Plane Node Overview
 
+ * Control plane provides running environment for control plane agents responsible for managing the state of a cluster.
+ * Brain behind all ops inside cluster
+ * CLI, Web UI, or API to send requests
+ * Losing control plane introduces downtime
+ * Increase fault tolerance with replicas in High-Availability (HA) mode
+ * Persistence is added my saving config data in a key-value store which ONLY holds cluster staet related data
+
+### Components 
+
+* **API server** coordinates all adminstrative tasks
+* **Scheduler** assigns new workload objects to nodes
+* **Controller managers** runs controllers or operator processes to regulate the cluster state
+* **Key-value data store** [etcd](https://etcd.io/) (also written in Go.)
+
+### Worker Node Overview
+
+* Provides a running environment for client apps
+
+### Components
+
+* **Container runtime** CRI-O, containerd, Docker Engine, [Mirantis Container Runtime](https://www.mirantis.com/software/container-runtime/)
+* **Node agent - kubelet** kubelet is an agent running on each node, control plane, and workers. Interacts with runtime and containers in the Pod, monitors health/resources of Pods running containers
+* **kubelet - CRI shims**
+* **Proxy - kube-proxy**
+* **Add-ons**
+
+
+
+
+
+
 
