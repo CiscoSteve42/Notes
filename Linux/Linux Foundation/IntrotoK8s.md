@@ -173,7 +173,11 @@ Installing K8s
 
 ### K8s Configuration 
 
-
+* **All-in-One Single-Node Installation**
+* **Single-Control Plane and Multi-Worker Installation**
+* **Single-Control Plane with Single-Node etcd, and Multi-Worker Installation**
+* **Multi-Control Plane and Multi-Worker Installation**
+* **Multi-Control Plane with Multi-Node etcd, and Multi-Worker Installation**
 
 
 
