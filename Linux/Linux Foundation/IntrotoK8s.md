@@ -243,4 +243,23 @@ Minikube: Installing Local K8s Clusters
 
 ### What is Minikube?
 
+* Minikube invokes the hypervisor of choice to provision the infrastructure VM(s) which will host the Kubernetes cluster node(s), or the runtime of choice to run infrastructure container(s) that host the cluster node(s).
+
+* It invokes [kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/) to bootstrap the K8s cluster components inside of the previously provisioned node(s).
+
+### Requirements for Running Minkube
+
+* **VT-x/AMD-v virtualization** they may need to be enabled on the local workstation for certain hypervisors
+
+* **kubectl** the cli client used to access and manage any K8s cluster, accessed with `minikube kubectl` command.
+
+* **Type-2 hypervisor or container runtime** VirtualBox, KVM2, QEMU, Docker, Podman on Linux. * Minikube supports a [`--driver=none`](https://minikube.sigs.k8s.io/docs/drivers/none/) on Linux that runs K8s components on bare metal, which requires a container runtime but no hypervisor, as it uses the host's kernel natively.
+
+* **Internet connection of first Minkube run** needed to download packages, dependencies, and updates needed to initialize cluster components.
+
+* [Minikube Documentation](https://minikube.sigs.k8s.io/docs/)
+
+### Advanced Minkube Features (1)
+
+
 
