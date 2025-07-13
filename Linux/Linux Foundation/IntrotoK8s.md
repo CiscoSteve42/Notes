@@ -151,10 +151,27 @@ K8s Architecture
 
 * **Container-to-Container communication inside Pods** a *namespace* is an isolated network space created by the container runtime. A network namespace can be shared across containers, or with the host OS
 
-* **Pod-to-Pod communication across nodes**
+* **Pod-to-Pod communication across nodes** Pods are expected to be able to communicated with all others in the Cluster without NAT. K8s treats pods as VMs with their own network interface, therefore a unique IP (called **IP-per-Pod**)
 
-* **External-to-Pod communication**
+    * [K8s Cluster Networking Documentation](https://kubernetes.io/docs/concepts/cluster-administration/networking/)
+    * [Container Network Interface (CNI)](https://www.cni.dev/)
+    * [CNI Plugins](https://github.com/containernetworking/plugins#plugins)
+    * Popular SDN plugins include Flannel, Weave, Calico, and Cilium
 
+* **External-to-Pod communication** "K8s enables external accessibility through Services, complex encapsulations of network routing rule definitions stored in iptables on cluster nodes and implemented by kube-proxy agents."
+
+
+Installing K8s
+--------------
+
+* Objectives:
+
+    * Discuss Kubernetes configuration options.
+    * Discuss infrastructure considerations before installing Kubernetes.
+    * Discuss infrastructure choices for a Kubernetes cluster deployment.
+    * Review Kubernetes installation tools and certified solutions.
+
+### K8s Configuration 
 
 
 
