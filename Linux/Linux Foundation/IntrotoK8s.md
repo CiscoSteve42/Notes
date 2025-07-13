@@ -173,12 +173,29 @@ Installing K8s
 
 ### K8s Configuration 
 
-* **All-in-One Single-Node Installation**
-* **Single-Control Plane and Multi-Worker Installation**
-* **Single-Control Plane with Single-Node etcd, and Multi-Worker Installation**
-* **Multi-Control Plane and Multi-Worker Installation**
-* **Multi-Control Plane with Multi-Node etcd, and Multi-Worker Installation**
+* **All-in-One Single-Node Installation** control plane an worker components installed, running on single-node. Good for development and testing, bad for production.
 
+* **Single-Control Plane and Multi-Worker Installation** single-control plane running a stacked etcd instance. Control plane can manage manage multiple worker nodes.
+
+* **Single-Control Plane with Single-Node etcd, and Multi-Worker Installation** single control-plane node with an external etcd instance. Can also manage multiple workers.
+
+* **Multi-Control Plane and Multi-Worker Installation** multiple control planes configured for HA in stacked etcd instance. etcd instances configured in HA etcd cluster, HA control plane can manage multiple worker nodes.
+
+* **Multi-Control Plane with Multi-Node etcd, and Multi-Worker Installation** multiple control plane nodes configured in HA mode, with each control plane node paired with an external etcd instance. The external etcd instances are also configured in an HA etcd cluster, and multiple worker nodes can be managed by the HA control plane. This is the most advanced cluster configuration recommended for production environments. 
+
+### Installing Local Learning Clusters 
+
+* Minkube, [Kind](https://kind.sigs.k8s.io/), Docker Desktop, Podman Desktop, [MicroK8s](https://microk8s.io/), [K3S](https://k3s.io/)
+
+### Installing Production Clusters with Deployment Tools
+
+* [Kubernetes the Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
+
+* **kubeadm**
+
+* **kubespray**
+
+* **kops**
 
 
 
