@@ -128,6 +128,16 @@ K8s Features
 
 * **IPv4/IPv6 dual-stack** Kubernetes supports both IPv4 and IPv6 addresses.
 
-### Why Use K8s?
+
+K8s Architecture
+----------------
+* Objectives:
+
+    * Discuss the Kubernetes architecture.
+    * Explain the different components of the control plane and worker nodes.
+    * Discuss cluster state management with etcd.
+    * Review the Kubernetes network setup requirements.
+
+### Control Plane Node Overview
 
 
