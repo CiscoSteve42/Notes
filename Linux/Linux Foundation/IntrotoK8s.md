@@ -191,11 +191,30 @@ Installing K8s
 
 * [Kubernetes the Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
 
-* **kubeadm**
+* [**kubeadm**](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/) secure and recommended method to bootstrap a multi-node, production ready, Highly Available cluster
 
-* **kubespray**
+* [**kubespray**](https://kubespray.io/#/) lets us install Highly Available production ready clusters in the cloud or on bare metal
 
-* **kops**
+* [**kops**](https://kops.sigs.k8s.io/) lets us create, upgrade, and maintain clusters from the command line
 
+### Hosted solutions
+
+* [Alibaba Cloud Container Service for Kubernetes (ACK)](https://www.alibabacloud.com/en/product/kubernetes?_p_lc=1)
+* [Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/)
+* [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/products/kubernetes-service/)
+* [DigitalOcean Kubernetes (DOKS)](https://www.digitalocean.com/products/kubernetes)
+* [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine)
+* [IBM Cloud Kubernetes Service](https://www.ibm.com/products/kubernetes-service)
+* [Oracle Container Engine for Kubernetes (OKE)](https://www.oracle.com/cloud/cloud-native/kubernetes-engine/)
+* [Red Hat OpenShift](https://www.redhat.com/en/technologies/cloud-computing/openshift)
+* [VMware Tanzu Kubernetes Grid](https://www.vmware.com/products/app-platform/tanzu-kubernetes-grid)
+
+### K8s on Inferior OSs
+
+* [K8s on Windows](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/).
+
+
+Minikube: Installing Local K8s Clusters
+---------------------------------------
 
 
