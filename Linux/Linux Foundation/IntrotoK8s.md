@@ -316,7 +316,20 @@ Accessing Minikube
 * **Web UI**
 * **APIs** the HTTP API directory tree of K8s can be divided into 3 group types:
 
-    * *Core group* (`/api/v1`)
-    * *Named Group* (`/apis/$NAME/$VERSION`)
-    * *System-wide* 
+    * *Core group* (`/api/v1`) includes Pods, Services, Nodes, ConfigMaps, Secrets, etc
+    * *Named Group* includes objects in the (`/apis/$NAME/$VERSION`) format  with different API versions implying different levels of stability/support:
+
+        - *Alpha level* may be dropped at any point in time (ie `/apis/batch/v2alpha1`)
+        - *Beta level* well-tested, but the semantics of objects may change in incompatible ways in a subsequent beta or stable release (ie `/apis/certificates.k8s.io/b1beta1`)
+        - *Stable level* appears in released software for many subsequent versions (ie `/apis/networking.k8s.io/v1`)
+    * *System-wide* system-wide API endpoints (`/healthz`, `/logs`, `/metrics`, `/ui`, etc)
+
+### kubectl
+
+* [kubectl documentation](https://kubernetes.io/docs/reference/kubectl/)
+
+### kubectl Configuration File 
+
+
+
 
