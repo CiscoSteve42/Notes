@@ -296,4 +296,24 @@ $ minikube profile list
 
 ### Advanced Minikube Features (2)
 
+* `minikube node list` lists nodes of a cluster
+* `minikube ip` will list the control plane node's IP 
 
+
+Accessing Minikube
+------------------
+
+* Objectives:
+
+    * Compare methods to access a Kubernetes cluster.
+    * Access the Minikube Kubernetes cluster with kubectl.
+    * Access the Minikube Kubernetes cluster from the Dashboard.
+    * Access the Minikube Kubernetes cluster via APIs.
+
+### Accessing Minikube
+
+* **CLI**
+
+* **Web UI**
+
+* **APIs**
