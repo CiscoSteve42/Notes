@@ -312,8 +312,11 @@ Accessing Minikube
 
 ### Accessing Minikube
 
-* **CLI**
-
+* **CLI** 
 * **Web UI**
+* **APIs** the HTTP API directory tree of K8s can be divided into 3 group types:
 
-* **APIs**
+    * *Core group* (`/api/v1`)
+    * *Named Group* (`/apis/$NAME/$VERSION`)
+    * *System-wide* 
+
