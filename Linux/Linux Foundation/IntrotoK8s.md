@@ -330,6 +330,36 @@ Accessing Minikube
 
 ### kubectl Configuration File 
 
+* By default, a config file is located in `~/.kube/config` (referred to as the [kubeconfig](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/))
+```sh 
+$ kubectl config view
 
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: /home/student/.minikube/ca.crt
+    server: htt‌ps://192.168.99.100:8443
+  name: minikube
+contexts:
+- context:
+    cluster: minikube
+    user: minikube
+  name: minikube
+current-context: minikube
+kind: Config
+preferences: {}
+users:
+- name: minikube
+  user:
+    client-certificate: /home/student/.minikube/profiles/minikube/client.crt
+    client-key: /home/student/.minikube/profiles/minikube/client.key
+```
 
+* `kubectl cluster-info`
 
+*  
+### K8s Dashboard
+
+* `minikube dashboard`
+
+* `minikube addons enable metrics-server`
