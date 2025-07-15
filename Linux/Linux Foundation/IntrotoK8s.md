@@ -357,9 +357,9 @@ users:
 
 * `kubectl cluster-info`
 
-*  
+* `minikube addons enable metrics-server` 
+
 ### K8s Dashboard
 
 * `minikube dashboard`
 
-* `minikube addons enable metrics-server`
