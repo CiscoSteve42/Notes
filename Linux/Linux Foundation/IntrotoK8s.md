@@ -361,5 +361,5 @@ users:
 
 ### K8s Dashboard
 
-* `minikube dashboard`
+* `minikube dashboard --url`
 
