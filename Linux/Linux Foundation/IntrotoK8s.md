@@ -419,3 +419,29 @@ K8s Building Blocks
 * [Resource quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/) help users limit the overall resources consumed within [Namespaces](https://kubernetes.io/docs/concepts/policy/limit-range/), while LimitRanges help limit the resources consumed by individual Containers and their enclosing objects in a Namespace.
 
 ### Pods
+
+* A [Pod](https://kubernetes.io/docs/concepts/workloads/pods/) is the smallest K8s workload object. It is the logical collection of one or more containers which represent a single instance of an app. It ensures that they:
+
+    - Are scheduled together on the same host with the Pod.
+    - Share the same network namespace/IP 
+    - Have access to the same common dependencies and external storage to mount to.
+
+* Examples of controllers: Deployments, ReplicaSets, DaemonSets, Jobs 
+
+Example of a stand-alone Pod object's definition in YAML:
+```YAML
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    run: nginx-pod
+spec:
+  containers:
+  - name: nginx-pod
+    image: nginx:1.22.1
+    ports:
+    - containerPort: 80
+```
+
+
