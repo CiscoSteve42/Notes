@@ -387,4 +387,35 @@ K8s Building Blocks
 
 ### K8s Object model
 
+* Entities described in object model:
 
+    * What containerized applications we are running.
+    * The nodes where the containerized applications are deployed.
+    * Application resource consumption.
+    * Policies attached to applications, like restart/upgrade policies, fault tolerance, ingress/egress, access control, etc.
+
+* Examples of object types are Nodes, Namespaces, Pods, ReplicaSets, Deployments, and DaemonSets
+
+* the API Server accepts object definitions in JSON, but `kubectl` can convert YAML to JSON.
+
+### Nodes
+
+* [**Nodes**](https://kubernetes.io/docs/concepts/architecture/nodes/) are virtual identities assigned by K8s to the systems part of the cluster.
+
+* Minikube uses the kubeadm bootstraping tool to initialize the control plane node during the *init* phase and grow the cluster by adding additional nodes with the *join* phase.
+
+* The control plane nodes run the control plane agents, such as the API Server, Scheduler, Controller Managers, and etcd in addition to the kubelet and kube-proxy node agents, the container runtime, and add-ons for container networking, monitoring, logging, DNS, etc.
+
+### Namespaces
+
+* [Namespaces Documentation](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
+
+* `kubectl get namespaces` lists namespaces
+
+* 4 Namespaces created out of the box: `kube-system`, `kube-public`, `kube-node-lease`, and `default`.
+
+* `kubectl create namespace new-namespace-name` creates a new namespace.
+
+* [Resource quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/) help users limit the overall resources consumed within [Namespaces](https://kubernetes.io/docs/concepts/policy/limit-range/), while LimitRanges help limit the resources consumed by individual Containers and their enclosing objects in a Namespace.
+
+### Pods
