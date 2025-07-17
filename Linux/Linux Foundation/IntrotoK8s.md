@@ -466,4 +466,18 @@ $ kubectl delete pod nginx-pod
 
 ### Labels 
 
+* [Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) re key-value pairs attached to K8s objects that are used to organize and select a subset of objects, based on the requirements in place.
+
+* Controllers use Labels to logically group together decoupled objects, rather than using objects' names or IDs.
+
+### Label Selectors
+
+* There are 2 types of [label selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors):
+
+    * **Equality-Based Selectors** allow filtering of objects based on Label keys and values. Matching is achieved using the `=, ==` or `!=` operators.
+
+    * **Set-Based Selectors** allow filtering of objects based on a set of values. We can use `in, notin` operators for Label values, and `exist/does not exist` operators for Label keys.
+
+### ReplicationControllers
+
 
