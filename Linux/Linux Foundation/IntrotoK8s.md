@@ -444,4 +444,26 @@ spec:
     - containerPort: 80
 ```
 
+* `kubectl create -f foo.yaml` creates a Pod from the yaml, you could also not use a yaml and get the same results with `kubectl run nginx-pod --image=nginx:1.22.1 --port=80`
+
+* You can generate the yaml with the following command:
+```sh 
+kubectl run nginx-pod --image=nginx:1.22.1 --port=80 \
+--dry-run=client -o yaml > nginx-pod.yaml
+```
+
+* You can also create a json by changing the type after the -o flag
+
+* Commands to be familiar with:
+```sh
+$ kubectl apply -f nginx-pod.yaml
+$ kubectl get pods
+$ kubectl get pod nginx-pod -o yaml
+$ kubectl get pod nginx-pod -o json
+$ kubectl describe pod nginx-pod
+$ kubectl delete pod nginx-pod
+```
+
+### Labels 
+
 
