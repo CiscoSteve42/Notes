@@ -482,4 +482,6 @@ $ kubectl delete pod nginx-pod
 
 * A [ReplicationController](https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/) is a complex operator that ensures a specified number of replicas of a Pod are running at any given time the desired version of the app container, by constantly comparing the actual state with the desired state of the managed app.
 
+### ReplicaSets (1)
+
 
