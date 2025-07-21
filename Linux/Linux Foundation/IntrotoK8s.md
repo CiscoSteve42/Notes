@@ -482,6 +482,76 @@ $ kubectl delete pod nginx-pod
 
 * A [ReplicationController](https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/) is a complex operator that ensures a specified number of replicas of a Pod are running at any given time the desired version of the app container, by constantly comparing the actual state with the desired state of the managed app.
 
-### ReplicaSets (1)
+### ReplicaSets
+
+* A [ReplicaSet](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) is basically a next-gen ReplicationController, it implements the replication and self-healing aspects of the ReplicationController.
+
+* They support both equality and set-based Selectors, as opposed to ReplicationControllers that only support eqality-based Selectors.
+
+* Common commands that utilize ReplicaSets:
+```sh
+$ kubectl create -f redis-rs.yaml
+$ kubectl apply -f redis-rs.yaml
+$ kubectl get replicasets
+$ kubectl get rs
+$ kubectl scale rs frontend --replicas=4
+$ kubectl get rs frontend -o yaml
+$ kubectl get rs frontend -o json
+$ kubectl describe rs frontend
+$ kubectl delete rs frontend
+```
+
+### Deployments
+
+* [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) objects provide declarative updates to Pods and ReplicaSets.
+
+* The DeploymentController is part of the control plane node's controller manager, and as a controller it also ensures that the current state always matches the desired state of our running containerized application.
+
+* Example of Deployment object's definition manifest in YAML:
+```YAML
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-deployment
+  template:
+    metadata:
+      labels:
+        app: nginx-deployment
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.20.2
+        ports:
+        - containerPort: 80
+```
+
+* Deployment commands:
+```sh 
+$ kubectl apply -f nginx-deploy.yaml --record
+$ kubectl get deployments
+$ kubectl get deploy -o wide
+$ kubectl scale deploy nginx-deployment --replicas=4
+$ kubectl get deploy nginx-deployment -o yaml
+$ kubectl get deploy nginx-deployment -o json
+$ kubectl describe deploy nginx-deployment
+$ kubectl rollout status deploy nginx-deployment
+$ kubectl rollout history deploy nginx-deployment
+$ kubectl rollout history deploy nginx-deployment --revision=1
+$ kubectl set image deploy nginx-deployment nginx=nginx:1.21.5 --record
+$ kubectl rollout history deploy nginx-deployment --revision=2
+$ kubectl rollout undo deploy nginx-deployment --to-revision=1
+$ kubectl get all -l app=nginx -o wide
+$ kubectl delete deploy nginx-deployment
+$ kubectl get deploy,rs,po -l app=nginx
+```
+
+### DaemonSets
 
 
