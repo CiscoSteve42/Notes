@@ -554,4 +554,3 @@ $ kubectl get deploy,rs,po -l app=nginx
 
 ### DaemonSets
 
-* This is a test
