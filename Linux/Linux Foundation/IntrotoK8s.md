@@ -554,3 +554,70 @@ $ kubectl get deploy,rs,po -l app=nginx
 
 ### DaemonSets
 
+* [DaemonSets](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) are operators designed to manage node agents.
+
+* Example of DaemonSet object definition in YAML:
+```YAML
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: fluentd-agent
+  namespace: default
+  labels:
+    k8s-app: fluentd-agent
+spec:
+  selector:
+    matchLabels:
+      k8s-app: fluentd-agent
+  template:
+    metadata:
+      labels:
+        k8s-app: fluentd-agent
+    spec:
+      containers:
+      - name: fluentd
+        image: quay.io/fluentd_elasticsearch/fluentd:v4.5.2
+```
+
+* DaemonSet commands to be familiar with:
+```sh 
+$ kubectl create -f fluentd-ds.yaml
+$ kubectl apply -f fluentd-ds.yaml --record
+$ kubectl get daemonsets
+$ kubectl get ds -o wide
+$ kubectl get ds fluentd-agent -o yaml
+$ kubectl get ds fluentd-agent -o json
+$ kubectl describe ds fluentd-agent
+$ kubectl rollout status ds fluentd-agent
+$ kubectl rollout history ds fluentd-agent
+$ kubectl rollout history ds fluentd-agent --revision=1
+$ kubectl set image ds fluentd-agent fluentd=quay.io/fluentd_elasticsearch/fluentd:v4.6.2 --record
+$ kubectl rollout history ds fluentd-agent --revision=2
+$ kubectl rollout undo ds fluentd-agent --to-revision=1
+$ kubectl get all -l k8s-app=fluentd-agent -o wide
+$ kubectl delete ds fluentd-agent
+$ kubectl get ds,po -l k8s-app=fluentd-agent
+```
+
+### Services
+
+* A **Service** involves a sophisticated solution involving the kube-proxy node agent, IP tables, routing rules, and cluster DNS server, all collectively implementing a micro-load balancing mechanisim that exposes a container's port to the cluster's network, or even the outside world.
+
+
+Authentication, Authorization, Admission Control 
+------------------------------------------------
+
+* Objectives:
+    - Discuss the authentication, authorization, and access control stages of the Kubernetes API access.
+    - Understand the different kinds of Kubernetes users.
+    - Explore the different modules for authentication and authorization.
+
+### Overview 
+
+* **Authentication** Authenticate a user based on credentials provided as part of API requests
+* **Authorization** Authorizes the API requests submitted by the authenticated user
+* **Admission Control** Software modules that validate and /or modify user requests
+
+### Authentication 
+
+
