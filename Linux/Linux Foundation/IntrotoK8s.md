@@ -620,4 +620,12 @@ Authentication, Authorization, Admission Control
 
 ### Authentication 
 
+* K8s does not have a *user* object or store *usernames* or other related details in it's object store.
 
+* K8s CAN use usernames for the [Authentication](https://kubernetes.io/docs/reference/access-authn-authz/authentication/) phase of the API access to control (also to request logging)
+
+* **Types of Users:**
+
+    - **Normal Users**
+
+    - **Service Accounts**
