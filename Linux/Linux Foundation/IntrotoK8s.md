@@ -554,4 +554,4 @@ $ kubectl get deploy,rs,po -l app=nginx
 
 ### DaemonSets
 
-
+* [DaemonSets](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) are operators designed to manage node agents.
