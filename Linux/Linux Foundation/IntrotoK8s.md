@@ -402,7 +402,7 @@ K8s Building Blocks
 
 * [**Nodes**](https://kubernetes.io/docs/concepts/architecture/nodes/) are virtual identities assigned by K8s to the systems part of the cluster.
 
-* Minikube uses the kubeadm bootstraping tool to initialize the control plane node during the *init* phase and grow the cluster by adding additional nodes with the *join* phase.
+* Minikube uses the kubeadm bootstrapping tool to initialize the control plane node during the *init* phase and grow the cluster by adding additional nodes with the *join* phase.
 
 * The control plane nodes run the control plane agents, such as the API Server, Scheduler, Controller Managers, and etcd in addition to the kubelet and kube-proxy node agents, the container runtime, and add-ons for container networking, monitoring, logging, DNS, etc.
 
@@ -634,21 +634,30 @@ Authentication, Authorization, Admission Control
 
 * [Authentication modules](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#authentication-strategies) for K8s:
 
-    - **X509 Client Certificates**
+    - **X509 Client Certificates** to enable cert authentication, we need to reference a file containing one or more certificate authorities by passing the `--client-ca-file=foo` option to the API server. The cert authorities mentioned in the file would validate the client certs presented by users to the API server.
 
-    - **Static Token File**
+    - **Static Token File** we can pass a file containing pre-defined bearer tokens with the `--token-auth-file=bar` option to the API server. These tokens last indefinitely and cannot be changed without restarting the API server.
 
-    - **Bootstrap Tokens**
+    - **Bootstrap Tokens** tokens used for bootstrapping new clusters
 
-    - **Service Account Tokens**
+    - **Service Account Tokens** automatically enabled authenticators that use signed bearer tokens to verify requests. These tokens get attached to Pods using the Service Account Admission Controller, which allows in-cluster processes to talk to the API server.
 
-    - **OpenID Connect Tokens**
+    - **OpenID Connect Tokens** OpenID Connect helps us connect with OAuth2 providers, such as Microsoft Entra ID (formerly Azure AD), Salesforce, and Google, to offload the authentication to external resources.
 
-    - **Webhook Token Authentication**
+    - **Webhook Token Authentication** verification of bearer tokens can be offloaded to a remote service.
 
-    - **Authenticating Proxy**
+    - **Authenticating Proxy** allows for the programming of additional authentication logic.
 
+### Authorization
 
+* with [authorization](https://kubernetes.io/docs/reference/access-authn-authz/authorization/), API request attributes (such as user, group, Resource, Namespace, or API group) are evaluated against policies, and the request is allowed or denied accordingly.
+
+* Types of Authorization Modes:
+
+    - **Node**
+    - **ABAC (Attribute-Based Access Control)**
+    - **Webhook**
+    - **RBAC (Role-Based Access Control)**
 
 
 
