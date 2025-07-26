@@ -654,11 +654,45 @@ Authentication, Authorization, Admission Control
 
 * Types of Authorization Modes:
 
-    - **Node**
-    - **ABAC (Attribute-Based Access Control)**
-    - **Webhook**
-    - **RBAC (Role-Based Access Control)**
+    - [**Node Authorization**](https://kubernetes.io/docs/reference/access-authn-authz/node/) is a special-purpose authorization mode that specifically authorizes API requests made by kubelets. It authorizes the kubelet's read operations for services, endpoints, or nodes, and writes operations for nodes, pods, and events.
+
+    - [**ABAC (Attribute-Based Access Control)**](https://kubernetes.io/docs/reference/access-authn-authz/abac/) K8s grants access to API requests, which combine policies with attributes. To enable ABAC mode, we start the API server with the `--authorization-mode=ABAC` option, while specifying the authorization policy with `authorization-policy-file=policyfile.json` 
+
+    - [**Webhook Mode**](https://kubernetes.io/docs/reference/access-authn-authz/webhook/) K8s can request authorization decisions to be made by third-party services. Enabled with `--authorization-webhook-config-file=thefilename`
+
+    - [**RBAC (Role-Based Access Control)**](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) access can be granted and restricted either individual or multiple users by granting Roles. 
+
+        * The 2 types of Roles:
+
+            - **Role** grants access to resources within a specific Namespace.
+            - **ClusterRole** grants the same permissions as Role does, but its scope is cluster-wide.
+
+        * 2 types of RoleBindings:
+
+            - **RoleBinding** allows us to bind users to the same namespace as a Role.
+            - **ClusterRoleBinding** allows us to grant access to resources at a cluster-level and to all Namespaces.
+
+### Admission Control
+
+* [Admission controllers](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/) are used to specify granular access control policies, which include allowing privileged containers, checking on resource quota, etc. They can be validating, mutating (where they can modify the requested object), or both. 
+
+* Can be enabled with the `--enable-admission-plugins=NameofPlugin1,NameofPlugin2`
+
+* [List of admission controllers](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#what-does-each-admission-controller-do`)
+
+* [Dynamic admission control](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/)
 
 
+Services
+--------
+
+* **Objectives:**
+
+    - Discuss the benefits of logically grouping Pods with Services to access an application.
+    - Explain the role of the kube-proxy daemon running on each node.
+    - Explore the Service discovery options available in Kubernetes.
+    - Discuss different Service types.
+
+### Accessing Application Pods
 
 
