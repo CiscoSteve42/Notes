@@ -695,8 +695,20 @@ Services
 
 ### Accessing Application Pods
 
-* *Service* logically groups Pods and defines a policy to access them, which is achieved via *Labels and Selectors*
+* *Service* logically groups Pods and defines a policy to access them, which is achieved via *Labels and Selectors*.
 
 ### Services
 
 * Labels and Selectors use a *key-value* pair format. `app` is the Label *key*, `frontend` and `db` are Label `values` for different Pods.
+
+* A *Service* is when we assign a name to a logical grouping, which is registered with the cluster's internal DNS service.
+
+* When exposing the Pods managed by an operator, the Service's Selector may use the same label(s) as the operator.
+
+* A clear benefit of a Service is that it watches application Pods for any changes in count and their respective IP addresses while automatically updating the list of corresponding endpoints.
+
+### kube-proxy
+
+* A [kube-proxy](https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies)is a node agent that watches the API server on the control plane node for the addition, updates, and removal of Services and endpoints.
+
+
