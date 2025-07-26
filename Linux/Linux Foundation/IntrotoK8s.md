@@ -695,4 +695,8 @@ Services
 
 ### Accessing Application Pods
 
+* *Service* logically groups Pods and defines a policy to access them, which is achieved via *Labels and Selectors*
 
+### Services
+
+* Labels and Selectors use a *key-value* pair format. `app` is the Label *key*, `frontend` and `db` are Label `values` for different Pods.
