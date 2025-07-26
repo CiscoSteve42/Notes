@@ -626,6 +626,30 @@ Authentication, Authorization, Admission Control
 
 * **Types of Users:**
 
-    - **Normal Users**
+    - **Normal Users** are managed outside of the K8s cluster via independent service like User/Client Certs, a file listing user/passwords, Google accounts, etc
 
-    - **Service Accounts**
+    - **Service Accounts** allow in-cluster processes to communicate with the API server to perform various operations.
+
+* [Anonymouse requests](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#anonymous-requests) and [user impersonation](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#user-impersonation) are also available with extra configuration.
+
+* [Authentication modules](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#authentication-strategies) for K8s:
+
+    - **X509 Client Certificates**
+
+    - **Static Token File**
+
+    - **Bootstrap Tokens**
+
+    - **Service Account Tokens**
+
+    - **OpenID Connect Tokens**
+
+    - **Webhook Token Authentication**
+
+    - **Authenticating Proxy**
+
+
+
+
+
+
