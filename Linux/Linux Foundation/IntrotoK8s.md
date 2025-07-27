@@ -711,4 +711,28 @@ Services
 
 * A [kube-proxy](https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies)is a node agent that watches the API server on the control plane node for the addition, updates, and removal of Services and endpoints.
 
+### Traffic Policies
+
+* [Traffic policies](https://kubernetes.io/docs/reference/networking/virtual-ips/#traffic-policies) allow users to instruct the kube-proxy on the conext of the traffic routing. The 2 options are:
+
+    - **Cluster** allows kube-proxy to target all ready Endpoints of the Serve in the load-balancing process. This is the default for a Service when not specified.
+
+    - **Local** isolates the load-balancing process to only include the Endpoints of the Service located on the same node as the requester Pod, or the node that captured inbound external traffic on its NodePort
+
+### Service Discovery
+
+* **Environment variables** As soon as the Pod starts on any worker node, the `kubelet` daemon running on that node adds a set of environment variables in the Pod for all active Services.
+
+* **DNS** K8s has a [DNS add-on](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/) that creates a DNS record for each Service with the format `my-svc.my-namespace.svc.cluster.local`. Services within the same Namespace find other Services just by their names.
+
+### ServiceType
+
+* We can choose whether a Service:
+
+    - Is only accessible within the cluster.
+    - Is accessible from within the cluster and the external world.
+    - Maps to an entity which resides either inside or outside the cluster.
+
+### ServiceType: ClusterIP and NodePort 
+
 
