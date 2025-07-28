@@ -735,4 +735,14 @@ Services
 
 ### ServiceType: ClusterIP and NodePort 
 
+* `ClusterIP` is the default [ServiceType](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types), where a Service receives a Virtual IP, known as its ClusterIP, which is used for communicating with the Service and is accessible only from within the cluster.
+
+* With the [NodePort](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport) ServiceType, in addition to a ClusterIP, a high-port, dynamically picked from the default range `30000-32767`, is mapped to the respective Service, from all the worker nodes.
+
+* `NodePort` is useful when we want to make our Services accessible from the external world.
+
+* To manage access to multiple app Services from the external world, adminns can configure a reverse proxy and define rules that target specific Services within the cluster.
+
+### ServiceType: LoadBalancer 
+
 
