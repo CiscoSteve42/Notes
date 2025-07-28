@@ -745,4 +745,47 @@ Services
 
 ### ServiceType: LoadBalancer 
 
+* With the [LoadBalancer](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) ServiceType:
+
+    - NodePort and ClusterIP are automatically created, and the external load balancer will route to them.
+    - The Service is exposed at a static port on each worker node.
+    - The Service is exposed externally using the underlying cloud provider's load balancer feature.
+
+### ServiceType: ExternalIP 
+
+* A Service can be mapped to an [ExternalIP](https://kubernetes.io/docs/concepts/services-networking/service/#external-ips) address if it can route to one or more of the worker nodes. Traffic that is ingressed into the cluster with the ExternalIP (as destination IP) on the Service port, gets routed to one of the Service endpoints.
+
+### ServiceType: ExternalName
+
+* [ExternalName](https://kubernetes.io/docs/concepts/services-networking/service/#externalname) is a ServiceType that has no Selectors and does not define any endpoints. When accessed within the cluster, it returns a `CNAME` record of an externally configured Service.
+
+* Primary use case is to make externally configured Services available to apps inside the cluster.
+
+### Multi-Port Services
+
+* Example of Multi-Port manifest:
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  selector:
+    app: myapp
+  type: NodePort
+  ports:
+  - name: http
+    protocol: TCP
+    port: 8080
+    targetPort: 80
+    nodePort: 31080
+  - name: https
+    protocol: TCP
+    port: 8443
+    targetPort: 443
+    nodePort: 31443
+```
+
+### Port Forwarding 
+
 
