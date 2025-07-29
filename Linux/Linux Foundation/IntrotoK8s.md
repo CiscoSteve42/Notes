@@ -807,4 +807,6 @@ Deploying a Standalone Application
 
 ### Deploying an App Using the Dashboard
 
+* `minikube start` then `minikube staus` then `minikube dashboard`
+
 
