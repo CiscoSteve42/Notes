@@ -793,3 +793,18 @@ spec:
 * An app port can be a Pod container port, Service port, or a Deployment container port.
 
 * Can be used with `kubectl port-forward`
+
+
+Deploying a Standalone Application
+----------------------------------
+
+* **Objectives:**
+
+    - Deploy an application from the dashboard.
+    - Deploy an application from a YAML file using kubectl.
+    - Expose a service using NodePort.
+    - Access the application from outside the Minikube cluster.
+
+### Deploying an App Using the Dashboard
+
+
