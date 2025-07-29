@@ -788,4 +788,8 @@ spec:
 
 ### Port Forwarding 
 
-* 
+* The port forwarding feature in K8s allows users to easily forward a local port to an app port.
+
+* An app port can be a Pod container port, Service port, or a Deployment container port.
+
+* Can be used with `kubectl port-forward`
