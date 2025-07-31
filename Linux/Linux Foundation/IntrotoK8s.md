@@ -809,4 +809,8 @@ Deploying a Standalone Application
 
 * `minikube start` then `minikube staus` then `minikube dashboard`
 
+* `kubectl get deployments`, `kubectl get replicasets`, `kubectl get pods` OR `kubectl get deploy,rs,po` to do all of those at once.
+
+### Exploring Labels and Selectors
+
 
