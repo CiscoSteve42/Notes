@@ -813,4 +813,6 @@ Deploying a Standalone Application
 
 ### Exploring Labels and Selectors
 
+* We can use the `kubectl describe` command to look at an object's details.
 
+* Using the `-L` flag with `kubectl get pods` will add an additional column with the Label keys and values.
