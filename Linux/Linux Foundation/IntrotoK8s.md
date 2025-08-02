@@ -816,3 +816,9 @@ Deploying a Standalone Application
 * We can use the `kubectl describe` command to look at an object's details.
 
 * Using the `-L` flag with `kubectl get pods` will add an additional column with the Label keys and values.
+
+* To use a selector, use the `-l` flag 
+
+### Deploying an Application Using the CLI 
+
+
