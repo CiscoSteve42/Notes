@@ -821,4 +821,22 @@ Deploying a Standalone Application
 
 ### Deploying an Application Using the CLI 
 
+* `kubectl apply` with the `-f` flag allows us to pass a TAML definition manifest as an object's specification, or a URL to a config file from the web.
+
+### Exposing an Application
+
+* Expose a deployment with the `kubectl expose` command.
+
+* `minikube ip` gets the IP of the Minikube VM.
+
+* You can use the `kubectl port-forward` command to forward a service to another port (ie 8080 to 80)
+
+* `minikube tunnel` allows the Service ClusterIP to be directly exposed on the host as an External IP.
+
+### Liveness, Readiness, and Startup Probes
+
+* [Liveness and Readiness Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/) allow the `kubelet` to control the health of the app running inside a Pod's container and force a container restart of an unresponsive app.
+
+### Liveness
+
 
