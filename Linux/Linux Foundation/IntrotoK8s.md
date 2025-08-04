@@ -929,4 +929,6 @@ ConfigMaps and Secrets
 
 ### ConfigMaps
 
+* [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/) allow us to decouple the config details from the container image.
+
 
