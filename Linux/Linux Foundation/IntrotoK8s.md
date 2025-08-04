@@ -912,4 +912,21 @@ Kubernetes Volume Management
 
 * A [PersistentVolumeClaim (PVC)](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) is a request for storage by a user.
 
+* Users request for PersistentVolume resources based on storage class, [access mode](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes), and optionally volume mode.
+
+* The 4 access modes are ReadWriteOnce, ReadOnlyMany, ReadWriteMany, and ReadWriteOncePod.
+
+* PersistentVolumes can be *reclaimed*, *deleted*, or *recycled* based on the config.
+
+
+ConfigMaps and Secrets
+----------------------
+
+* **Objectives**
+
+    - Discuss configuration management for applications in Kubernetes using ConfigMaps.
+    - Share sensitive data (such as passwords) using Secrets.
+
+### ConfigMaps
+
 
