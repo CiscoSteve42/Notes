@@ -866,4 +866,41 @@ Kubernetes Volume Management
 
 ### Volumes 
 
+* K8s uses ephemeral [Volumes](https://kubernetes.io/docs/concepts/storage/volumes/) as storage media. The ephemeral Volume is linked to a Pod and can be shared among the containers of that Pod. The ephemeral Volume outlives the containers of the Pod, allowing data to be preserved across container restarts.
+
+### Container Storage Interface (CSI)
+
+* [Container Storage Interface (CSI)](https://kubernetes.io/docs/concepts/storage/volumes/#csi)
+
+* [CSI Specifications](https://github.com/container-storage-interface/spec/blob/master/spec.md)
+
+### Volume Types
+
+* `emptyDir` created for the Pod as soon as it is scheduled on the worker node.
+
+* `hostPath` shares a dir between the host and the Pod.
+
+* `gcePersistentDisk` mounts a GCE disk into a Pod.
+
+* `awsElasticBlockStore` mounts an AWS EBS Volume into a Pod.
+
+* `azureDisk` mounts an Azure Data Disk into a Pod
+
+* `azureFile` mounts an Azure File Volume into a Pod.
+
+* `cephfs` allows an existing CephFS volume to be mounted into a Pod.
+
+* `nfs` mounts a NFS share into a Pod.
+
+* `iscsi` mounts an [iSCSI](https://github.com/kubernetes/examples/tree/master/volumes/iscsi) share into a Pod.
+
+* `secret` facilitates the supply of sensitive information to Pods.
+
+* `configMap` facilitates the supply of config data, or shell commands and arguments into a Pod.
+
+* `persistentVolumeClaim` a PersistentVolume is consumed.
+
+### Persistent Volumes 
+
+
 
