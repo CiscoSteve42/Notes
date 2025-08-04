@@ -839,4 +839,13 @@ Deploying a Standalone Application
 
 ### Liveness
 
+* *Liveness Probe* checks on an app's health, and if the health check fails, `kubelet` restarst the affected container automatically. It can be set by defining:
+
+    - Liveness command
+    - Liveness HTTP request 
+    - TCP Liveness probe 
+    - gRPC Liveness probe 
+
+### Readiness Probes 
+
 
