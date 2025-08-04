@@ -902,5 +902,14 @@ Kubernetes Volume Management
 
 ### Persistent Volumes 
 
+* The [PersistentVolume (PV( ͡° ͜ʖ ͡°))](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) subsystem for K8s provides APIs for users and admins to manage and consume persistent storage.
+
+* PersistentVolumes can be synamically provisioned based on the StorageClass resource.
+
+* A [StorageClass](https://kubernetes.io/docs/concepts/storage/storage-classes/) contains predefined provisioners and parameters to create a PersistentVolume.
+
+### PersistentVolumeClaims
+
+* A [PersistentVolumeClaim (PVC)](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) is a request for storage by a user.
 
 
