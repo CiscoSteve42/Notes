@@ -848,4 +848,22 @@ Deploying a Standalone Application
 
 ### Readiness Probes 
 
+* [Readiness Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-readiness-probes) wait for a certain condition to occur, and only then allow the app to serve traffic.
+
+### Startup Probes 
+
+* [Startup Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-startup-probes) delay Liveness and Readiness probes long enough for legacy apps to fully initialize.
+
+
+Kubernetes Volume Management
+----------------------------
+
+* **Objectives:**
+
+    - Explain the need for persistent data management.
+    - Compare Kubernetes Volume types.
+    - Discuss ephemeral Volumes, PersistentVolumes, and PersistentVolumeClaims.
+
+### Volumes 
+
 
