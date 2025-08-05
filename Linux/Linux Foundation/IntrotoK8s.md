@@ -948,4 +948,49 @@ Ingress
 
 ### Ingress 
 
+* **Ingress** a collection of rules that manage inbound connections to cluster Services.
+
+* To allow the inbound connection to reach the cluster Services, Ingress configures a Layer 7 HTTP/HTTPS load balancer for Services and provides the following:
+
+    - TLS (Transport Layer Security)
+    - Name-based virtual hosting
+    - Fanout routing
+    - Loadbalancing
+    - Custom rules.
+
+### Ingress Controller
+
+* An [Ingress Controller](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/) is an app watching the Control Plane Node's API server for changes in the Ingress resources and updates the Layer 7 Load Balancer accordingly.
+
+* Also known as Controllers, Ingress Proxy, Service Proxy, and Reverse Proxy.
+
+* Commonly used Ingress Controllers include [GCE L7 Load Balancer](https://github.com/kubernetes/ingress-gce/blob/master/README.md), [AWS Load Balancer](https://github.com/kubernetes-sigs/aws-load-balancer-controller#readme), and [Nginx Ingress Controller](https://github.com/kubernetes/ingress-nginx/blob/main/README.md)
+
+* `minikube addons enable ingress`
+
+
+Advanced Topics
+---------------
+
+* **Objectives:**
+    - Discuss advanced Kubernetes concepts: StatefulSets, Helm, Network Policy, Security Admission, Security Context, etc.
+
+### Annotations 
+
+* [Annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) allow us to attach arbitrary non-identifying metadata to any objects, in a key-value format.
+
+* `kubectl annotate pod mypod key1=value1 key2=value2`
+
+* Annotations can be used to:
+
+    - Store build/release IDs, PR numbers, git branch, etc.
+    - Phone/pager numbers of people responsible, or directory entries specifying where such information can be found.
+    - Pointers to logging, monitoring, analytics, audit repositories, debugging tools, etc.
+    - Ingress controller information.
+    - Deployment state and revision information.
+
+* `kubectl run saved --image=nginx:alpine --save-config=true`
+
+### Quota and Limits Management 
+
 
