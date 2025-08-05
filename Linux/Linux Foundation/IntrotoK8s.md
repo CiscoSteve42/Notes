@@ -931,4 +931,21 @@ ConfigMaps and Secrets
 
 * [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/) allow us to decouple the config details from the container image.
 
+### Secrets
+
+* A [Secret](https://kubernetes.io/docs/concepts/configuration/configmap/) object is a password, token, key-value pair, etc.
+
+* `kubectl get secret` `kubectl describe secret`
+
+
+Ingress
+-------
+
+* **Objectives:**
+    - Explain what Ingress and Ingress Controllers are.
+    - Understand when to use Ingress.
+    - Access an application from the external world using Ingress.
+
+### Ingress 
+
 
