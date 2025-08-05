@@ -993,4 +993,19 @@ Advanced Topics
 
 ### Quota and Limits Management 
 
+* The [ResourceQuota](https://kubernetes.io/docs/concepts/policy/resource-quotas/) API resource provides constraints that limit aggregate resource consumption per Namespace. 
+
+* Quota types per Namespace: 
+
+    - **Compute Resource Quota** We can limit the total sum of compute resources that can be requested in a given Namespace.
+    - **Storage Resource Quota** We can limit the total sum of storage resources that can be requested.
+    - **Object Count Quota** We can restrict the number of objects of a given type.
+
+* A [LimitRange](https://kubernetes.io/docs/concepts/policy/limit-range/) can:
+
+    - Set compute resources usage limits per Pod or Container in a namespace.
+    - Set storage request limits per PersistentVolumeClaim in a namespace.
+    - Set a request to limit ratio for a resource in a namespace.
+    - Set default requests and limits and automatically inject them into Containers' environments at runtime.
+
 
