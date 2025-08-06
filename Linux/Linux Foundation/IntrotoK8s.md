@@ -1082,14 +1082,3 @@ Advanced Topics
 * **Blue/Green Strategy** runs the same app release or 2 releases of the app on 2 isolated environments, but only 1 of them is actively receiving traffic, while the second environment is idle or may undergo rigorous testing prior to shifting traffic to it.
 
 
-Kubernetes Community 
---------------------
-
-* **Objectives:**
-    - Explain the importance of the Kubernetes community.
-    - Use different channels to interact with the Kubernetes community.
-    - List major CNCF events.
-
-### Kubernetes Community 
-
-
