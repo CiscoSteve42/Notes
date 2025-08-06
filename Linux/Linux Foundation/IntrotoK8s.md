@@ -1035,7 +1035,7 @@ Advanced Topics
 
 ### StatefulSets 
 
-* A [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) controller is used for staetful apps which require a unique identity.
+* A [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) controller is used for stateful apps which require a unique identity.
 
 ### Custom Resources 
 
@@ -1072,5 +1072,24 @@ Advanced Topics
 ### Service Mesh
 
 * Service Mesh is a third party solution alternative to the Kubernetes native application connectivity and exposure achieved with Services paired with Ingress Controllers. It is an implementation that relies on a proxy component part of the Data Plane, which is then managed through a Control Plane. The Control Plane runs agents responsible for the service discovery, telemetry, load balancing, network policy, and optionally ingress and/or egress gateway.
+
+* Implementations of Service Mesh are Consul, Istio, Kuma, Linkerd, Cilium, Traefik Mesh, and Tanzu Service Mesh.
+
+### Application Deployment Strategies 
+
+* **Canary Strategy** runs 2 app releases simultaneously managed by 2 independent Deployment controllers, both exposed by the same Service. The users can manage the amount of traffic each Deployment is exposed to by separately scaling up or down the 2 Deployment controllers, thus increasing or decreasing the number of their replicas receiving traffic.
+
+* **Blue/Green Strategy** runs the same app release or 2 releases of the app on 2 isolated environments, but only 1 of them is actively receiving traffic, while the second environment is idle or may undergo rigorous testing prior to shifting traffic to it.
+
+
+Kubernetes Community 
+--------------------
+
+* **Objectives:**
+    - Explain the importance of the Kubernetes community.
+    - Use different channels to interact with the Kubernetes community.
+    - List major CNCF events.
+
+### Kubernetes Community 
 
 
