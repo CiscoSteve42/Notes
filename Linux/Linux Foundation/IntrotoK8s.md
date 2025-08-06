@@ -1008,4 +1008,69 @@ Advanced Topics
     - Set a request to limit ratio for a resource in a namespace.
     - Set default requests and limits and automatically inject them into Containers' environments at runtime.
 
+* Autoscalers for K8s:
+
+    - **Horizontal Pod Autoscaler (HPA)** HPA is an algorithm-based controller API resource which automatically adjusts the number of replicas in a ReplicaSet, Deployment, or Replication Controller based on CPU utilization.
+
+    - **Vertical Pod Autoscaler (VPA)** VPA automatically sets Container resource requirements in a Pod and dynamically adjusts them at runtime, based on historical utilization data, current resource availability and real-time events.
+
+    - **Cluster Autoscaler** automatically re-sizes the cluster when there are insufficient resources available for new Pods expecting to be scheduled or when there are underutilized nodes in the cluster.
+
+### Jobs and CronJobs 
+
+* A [Job](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) creates one or more Pods to perform a given task.
+
+* Job configuration options include:
+
+    - **parallelism** to set the number of pods allowed to run in parallel
+    - **completions** to set the numberr of expected completions
+    - **activeDeadlineSeconds** to set the duration of the Job
+    - **backoffLimit** to set the number of retries before Job is marked as failed
+    - **ttlSecondsAfterFinished** to delay the cleanup of the finished Jobs
+
+* [CronJob](https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs/) config options include:
+
+    - **startingDeadlineSeconds** to set the deadline to start a Job if scheduled time was missed
+    - **concurrencyPolicy** to *allow* or *forbid* concurrent Jobs or to *replace* old jobs with new ones
+
+### StatefulSets 
+
+* A [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) controller is used for staetful apps which require a unique identity.
+
+### Custom Resources 
+
+* [**Custom Resource Definitions (CRDs)**](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) the easiest way to add custom resources, does not require programming knowledge.
+
+* [**API Aggregation**](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/apiserver-aggregation/) subordinate API services which sit behind the primary API Server. The primary API Server acts as a proxy for all incoming API requests - it handles the ones based on its capabilities and proxies over the other requests meant for the subordinate API services.
+
+### Security Contexts and Pod Security Admission
+
+* [Security Contexts](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/) allow us to set Discretionary Access Control for object access permissions, privileged running, capabilities, security labels, etc.
+
+* [Pod Security Admission](https://kubernetes.io/docs/concepts/security/pod-security-admission/) allows us to apply security settings to multiple Pods and Containers cluster-wide. It can enforce 3 [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/) at namespace level, by automating the security context restriction to Pods when they are deployed.
+
+### Network Policies
+
+* [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) are sets of rules which define how Pods are allowed to talk to other Pods and resources inside and outside of the cluster.
+
+### Monitoring, Logging, and Troubleshooting
+
+* [**Metrics Server**](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-metrics-pipeline/#metrics-server) is a cluster-wide aggregator of resource usage data - a relatively new feature in Kubernetes, available as a plugin. With the metrics-server installed, we can easily extract resource utilization data from the cluster with the help of the `kubectl top nodes` and `kubectl top pods` commands. 
+
+* [**Prometheus**](https://prometheus.io) can also be used to scrape the resource usage from different Kubernetes components and objects. Using its client libraries, we can also instrument the code of our application.
+
+* A popular method to collect cluster logs is using Elasticsearch with [Fluentd](http://www.fluentd.org/) with custom configuration as an agent on the nodes.
+
+* `kubectl logs pod-name`
+
+* `kubectl get events` `kubectl events`
+
+### Helm
+
+* [Helm](https://helm.sh) is a package manager for K8s.
+
+### Service Mesh
+
+* Service Mesh is a third party solution alternative to the Kubernetes native application connectivity and exposure achieved with Services paired with Ingress Controllers. It is an implementation that relies on a proxy component part of the Data Plane, which is then managed through a Control Plane. The Control Plane runs agents responsible for the service discovery, telemetry, load balancing, network policy, and optionally ingress and/or egress gateway.
+
 
